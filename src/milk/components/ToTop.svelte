@@ -1,7 +1,10 @@
-<button class="to-top" on:click={scrollToTop} title="Link to top of page.">
+<button class="to-top" title="Link to top of page.">
 	<span class="top-link"><span><slot>Back To Top</slot></span></span>
 </button>
 
+<!-- <button class="to-top" on:click={scrollToTop} title="Link to top of page.">
+	<span class="top-link"><span><slot>Back To Top</slot></span></span>
+</button> -->
 <script>
 	// import { onMount } from 'svelte';
 	// onMount(async () => {
