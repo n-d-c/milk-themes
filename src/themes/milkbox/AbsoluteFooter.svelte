@@ -36,7 +36,7 @@
 	/* ## Imports ## */
 	import Copyright from '$milk_components/Copyright.svelte';
 	import Credits from '$milk_components/Credits.svelte';
-	import ToTop from '../../milk/components/ToTop.svelte';
+	import ToTop from '$milk_components/ToTop.svelte';
 </script>
 
 <style>

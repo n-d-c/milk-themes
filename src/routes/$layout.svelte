@@ -1,5 +1,6 @@
 <Head_ContentType encoding="utf-8" mime_type="text/html" />
-{#if false || $milk?.config?.pwa}
+
+{#if $milk?.config?.pwa}
 	<Head_PWA />
 {:else}
 	<Head_Website />
