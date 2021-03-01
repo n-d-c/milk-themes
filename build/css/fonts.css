@@ -1,0 +1,37 @@
+/* ############################################################## */
+/* #### FONTS #### */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+:root {
+	--font-first: 'Proxima Nova','Open Sans','Gill Sans MT', 'Gill Sans', Corbel, Arial, sans-serif;
+	--font-second: 'Libre Baskerville', Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	--font-size-default: 16px;
+	--font-size-small: 15px;
+	--font-size-p: 19px;
+	--font-size-button: 28px;
+	--font-size-h1: 40px;
+	--font-size-h2: 36px;
+	--font-size-h3: 24px;
+	--font-size-h4: 22px;
+	--font-size-h5: 20px;
+	--font-size-h6: 18px;
+	--line-height-content: 1.25em;
+	--line-height-header: 1.25em;
+}
+html, body { font-family: var(--font-first, sans-serif); font-size: var(--font-size-default, 16px); line-height: 1em; }
+p { font-family: var(--font-first, sans-serif); font-size: var(--font-size-p, 19px); line-height: var(--line-height-content, 1.25em); }
+h1 { font-family: var(--font-second, serif); font-size: var(--font-size-h1, 55px); line-height: var(--line-height-header, 1.25em); font-weight: normal; }
+h2 { font-family: var(--font-second, serif); font-size: var(--font-size-h2, 55px); line-height: var(--line-height-header, 1.25em); font-weight: normal; }
+h3 { font-family: var(--font-first, sans-serif); font-size: var(--font-size-h3, 35px); line-height: var(--line-height-header, 1.25em); font-weight: bold; }
+h4 { font-family: var(--font-first, sans-serif); font-size: var(--font-size-h4, 32px); line-height: var(--line-height-header, 1.25em); font-weight: bold; }
+h5 { font-family: var(--font-first, sans-serif); font-size: var(--font-size-h5, 25px); line-height: var(--line-height-header, 1.25em); font-weight: bold; }
+h6 { font-family: var(--font-first, sans-serif); font-size: var(--font-size-h6, 20px); line-height: var(--line-height-header, 1.25em); font-weight: bold; }
+button { font-family: var(--font-first, sans-serif); font-size: var(--font-size-button, 28px); line-height: var(--line-height-header, 1.25em); }
+@media screen and (max-width: 800px) {
+	p { font-size: 15px; }
+	h1 { font-size: 40px; }
+	h2 { font-size: 30px; }
+	h3 { font-size: 28px; }
+	h4 { font-size: 25px; }
+	h5 { font-size: 20px; }
+}
+/* ############################################################## */

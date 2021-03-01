@@ -1,0 +1,95 @@
+# top-most EditorConfig file
+root = true
+
+# Every File
+[*]
+max_line_length = off
+
+# Config Files
+[*.{cfg,conf,dot,env]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+# Style Files
+[*.{css,sass,scss,less]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = false
+indent_style = tab
+indent_size = tab
+tab_size = 4
+tab_width = 4
+curly_bracket_next_line = false
+
+# Javascript Files
+[*.{js,jsx,vue,svelte}]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = false
+indent_style = tab
+indent_size = tab
+tab_size = 4
+tab_width = 4
+curly_bracket_next_line = false
+quote_type = single
+
+# Php Files
+[*.{php}]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = false
+indent_style = tab
+indent_size = tab
+tab_size = 4
+tab_width = 4
+curly_bracket_next_line = false
+quote_type = single
+
+# Shell Files
+[*.{sh}]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = tab
+indent_size = tab
+tab_size = 4
+tab_width = 4
+
+# Ruby Files
+[*.{rb,gem}]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = false
+indent_style = tab
+indent_size = tab
+tab_size = 4
+tab_width = 4
+
+# Database Files
+[*.{sql,sqlite}]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = tab
+indent_size = tab
+tab_size = 4
+tab_width = 4
+
+# Structured or Markup Files
+[*.{xlsx,xss,xml,html,htm,yml,haml}]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = false
+indent_style = tab
+indent_size = tab
+tab_size = 4
+tab_width = 4

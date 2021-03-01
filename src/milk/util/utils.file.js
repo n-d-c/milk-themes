@@ -1,0 +1,3 @@
+/* #### Files and Downloads #### */
+export const filenameFromUrl = (url) => { if (url) { let m = url.toString().match(/.*\/(.+?)\./); if (m && m.length > 1) { return m[1]; } }; return ''; }
+export const triggerFileDownload = (data, fileName, type="text/plain") => { const a = document.createElement("a"); a.style.display = "none"; a.setAttribute('target', '_blank'); document.body.appendChild(a); a.href = window.URL.createObjectURL(new Blob([data], { type })); a.setAttribute("download", fileName); a.click(); window.URL.revokeObjectURL(a.href); document.body.removeChild(a); }

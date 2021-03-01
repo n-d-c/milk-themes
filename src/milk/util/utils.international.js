@@ -1,0 +1,4 @@
+/* #### Internationalization and Formatting #### */
+export const getUserLocale = () => (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.userLanguage || navigator.language || navigator.browserLanguage || navigator.systemLanguage || 'en';
+export const formatCurrency = (amount = '0.00', currencyCode = 'CAD', userLocale = (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.userLanguage || navigator.language || navigator.browserLanguage || navigator.systemLanguage || 'en') => new Intl.NumberFormat(userLocale, { style: 'currency', currency: currencyCode }).format(amount);
+export const formatSecondsAsTime = (s = 0) => { s = parseInt(s); const h = Math.floor(s / 3600); const m = Math.floor((s - (h * 3600)) / 60); const r = s - (m * 60) - (h * 3600); return `${ (h>0) ? `${ `${ h }`.padStart(2,'0') }:` : '' }${ (h>0) ? `${ `${ m }`.padStart(2,'0') }:` : `${ m }:` }${ `${ r }`.padStart(2,'0') }`; }
