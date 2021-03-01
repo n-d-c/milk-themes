@@ -1,0 +1,8 @@
+/* #### MILK #### */
+.hide { position: absolute; max-width: 100vw; margin-left: -999vw; }
+/* ## Absolute Footer ## */
+.absolute-footer { text-align: center; }
+.absolute-footer-inner { margin: 0 auto; max-width: var(--content-width-max, auto); }
+.absolute-footer-inner>div { display: block; margin: var(--padding-small, 5px 20px); }
+.absolute-footer .copyright>div { display: inline-block; vertical-align: middle; }
+.absolute-footer .credits>div { display: inline-block; vertical-align: middle; }

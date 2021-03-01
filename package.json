@@ -5,6 +5,7 @@
 		"dev": "svelte-kit dev;",
 		"build": "svelte-kit build;",
 		"start": "svelte-kit start;",
+		"adapt": "svelte-kit adapt;",
 		"export": "svelte-kit build; svelte-kit adapt;"
 	},
 	"devDependencies": {
