@@ -6,7 +6,8 @@ import { theme } from '../config/theme.js';
 import { config } from '../config/config.js';
 import { site } from '../config/site.js';
 import { pwa } from '../config/pwa.js';
-import { source } from '../config/data.js';
+import { sources } from '../config/data.js';
+import { get, gql, post, rest } from  './data/data-adaptors.js';
 
 /* #### ADDITIONAL STATE #### */
 let browser = {
@@ -51,11 +52,10 @@ export const milk = writable({
 	browser: browser,
 	user: user,
 	data: {
-		source: source
+		sources: sources,
+		get: get,
+		post: post,
+		rest: rest,
+		gql: gql
 	}
-	// data: {
-	// 	get: get,
-	// 	post: post,
-	// 	rest: rest,
-	// 	gql: gql
 });

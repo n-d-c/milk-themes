@@ -11,12 +11,6 @@
 	<link rel="preconnect" href="https://google.com" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://storage.googleapis.com" />
-	<link
-		async
-		href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
-		rel="preload"
-		as="style"
-	/>
 </Head_Extra>
 <app>
 	<AbsoluteHeader />

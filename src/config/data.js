@@ -1,4 +1,4 @@
 /* #### DATA SOURCES #### */
-export const source = {
+export const sources = {
 	// sources go here;
 };

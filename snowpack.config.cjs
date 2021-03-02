@@ -15,7 +15,8 @@ module.exports = {
 			"@snowpack/plugin-svelte",
 			{
 				compilerOptions: {
-					hydratable: true
+					hydratable: true,
+					cssHash: ({ hash, css, name, filename }) => { return `milk-${hash(css)}`; }
 				}
 			}
 		]
