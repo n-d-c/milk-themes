@@ -668,13 +668,13 @@
 	</style>
 	<link
 		async
-		href={`/themes/${$milk.theme.theme}/style.css`}
+		href={`/themes/${$milk.theme.slug}/style.css`}
 		rel="preload"
 		as="style"
 	/>
 	<link
 		async
-		href={`/themes/${$milk.theme.theme}/style.css`}
+		href={`/themes/${$milk.theme.slug}/style.css`}
 		rel="stylesheet"
 	/>
 </svelte:head>

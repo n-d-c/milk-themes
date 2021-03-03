@@ -30,10 +30,10 @@
 	import Head_Favicon from '$milk_components/Head_Favicon.svelte';
 	import Head_MilkCSS from '$milk_components/Head_MilkCSS.svelte';
 	import Head_Extra from '$milk_components/Head_Extra.svelte';
-	import AbsoluteHeader from '$site_theme/AbsoluteHeader.svelte';
-	import Header from '$site_theme/Header.svelte';
-	import Footer from '$site_theme/Footer.svelte';
-	import AbsoluteFooter from '$site_theme/AbsoluteFooter.svelte';
+	import AbsoluteHeader from '$shared_components/AbsoluteHeader.svelte';
+	import Header from '$shared_components/Header.svelte';
+	import Footer from '$shared_components/Footer.svelte';
+	import AbsoluteFooter from '$shared_components/AbsoluteFooter.svelte';
 </script>
 
 <style>

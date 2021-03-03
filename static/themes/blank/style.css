@@ -1,4 +1,45 @@
 /* #### BLANK THEME #### */
+/* ## Colors ## */
+:root {
+	--color-white: #FFF;
+	--color-offwhite: #FCFCFC;
+	--color-grey-light: #EEE;
+	--color-grey: #CCC;
+	--color-grey-dark: #666;
+	--color-charcol: #333;
+	--color-black: #000;
+
+	--color-main-light: #FFF;
+	--color-main: #FFF;
+	--color-main-dark: #FFF;
+	--color-main-text: #000;
+	--color-main-highlight: #666;
+	--color-main-trim: #666;
+	--color-second-light: #FFF;
+	--color-second: #FFF;
+	--color-second-dark: #FFF;
+	--color-second-text: #000;
+	--color-second-highlight: #666;
+	--color-second-trim: #666;
+	--color-third-light: #FFF;
+	--color-third: #FFF;
+	--color-third-dark: #FFF;
+	--color-third-text: #000;
+	--color-third-highlight: #666;
+	--color-main-trim: #666;
+
+
+	--background-absolutefooter: var(--color-white, #FFF);
+	--color-absolutefooter: var(--color-black, #000);
+}
+/* ## Gradients ## */
+.gradient-main {
+	background: var(--color-main, #60154C);
+	background: linear-gradient(320deg, var(--color-main-dark, #3A0D2E) 0%, var(--color-main, #60154C) 50%, var(--color-main-light, #B32A51) 100%);
+}
+/* ## Fonts ## */
+
+/* ## Margin and Padding ## */
 /* ## Absolute Header ## */
 /* ## Header ## */
 /* ## Main Content ## */

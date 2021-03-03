@@ -29,7 +29,8 @@ module.exports = {
 		'src/milk/graphql': '/_milk/graphql',
 		'src/milk/util': '/_milk/util',
 		'src/milk/components': '/_milk/components',
-		'src/themes': `/_themes/${theme.theme}`,
+		'src/components': `/_components`,
+		'static/themes': `/_themes/${theme.theme}`,
 		'src/api': '/_api',
 		'src/graphql': '/_graphql',
 		'src/config': '/_config'
@@ -42,7 +43,8 @@ module.exports = {
 		$milk_graphql: './src/milk/graphql',
 		$milk_util: './src/milk/util',
 		$milk_components: './src/milk/components',
-		$site_theme: `./src/themes/${theme.theme}`,
+		$shared_components: './src/components',
+		$site_theme: `./static/themes/${theme.theme}`,
 		$site_api: './src/api',
 		$site_graphql: './src/graphql',
 		$site_config: './src/config'

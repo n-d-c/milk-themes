@@ -12,22 +12,33 @@
 	--color-main-light: #B32A51;
 	--color-main: #60154C;
 	--color-main-dark: #3A0D2E;
+	--color-main-text: #FFF;
+	--color-main-highlight: #FFF;
+	--color-main-trim: #000;
 	--color-second-light: #B32A51;
 	--color-second: #60154C;
 	--color-second-dark: #3A0D2E;
+	--color-second-text: #FFF;
+	--color-second-highlight: #FFF;
+	--color-second-trim: #000;
 	--color-third-light: #B32A51;
 	--color-third: #60154C;
 	--color-third-dark: #3A0D2E;
-
+	--color-third-text: #FFF;
+	--color-third-highlight: #FFF;
+	--color-third-trim: #000;
 
 	--background-absolutefooter: var(--color-main-dark, #3A0D2E);
 	--color-absolutefooter: var(--color-white, #FFF);
 }
-
+/* ## Gradients ## */
 .gradient-main {
 	background: var(--color-main, #60154C);
 	background: linear-gradient(320deg, var(--color-main-dark, #3A0D2E) 0%, var(--color-main, #60154C) 50%, var(--color-main-light, #B32A51) 100%);
 }
+/* ## Fonts ## */
+
+/* ## Margin and Padding ## */
 
 /* ## Absolute Header ## */
 /* ## Header ## */

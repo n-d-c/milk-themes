@@ -10,6 +10,7 @@
 	<div class="hero gradient-hero gradient-main">
 		<img src="/img/logo.svg" alt="Milk.js - It does a website good." />
 		<h1><span class="hide">MILK - </span>It does a website good.</h1>
+		{$milk?.theme?.name}
 	</div>
 	TEST {$milk.hello}
 	<div>{$milk?.site?.title}</div>

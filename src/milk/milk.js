@@ -1,13 +1,12 @@
 /* #### MILK #### */
-
-
 import { writable } from 'svelte/store';
-import { theme } from '../config/theme.js';
+// import { theme } from '../config/theme.js';
 import { config } from '../config/config.js';
 import { site } from '../config/site.js';
 import { pwa } from '../config/pwa.js';
 import { sources } from '../config/data.js';
 import { get, gql, post, rest } from  './data/data-adaptors.js';
+import { theme } from '$site_theme/info.js'
 
 /* #### ADDITIONAL STATE #### */
 let browser = {
@@ -46,6 +45,7 @@ export const milk = writable({
 		snowpack_url: 'https://www.snowpack.dev/'
 	},
 	theme: theme,
+	// theme_info: theme_info,
 	config: config,
 	site: site,
 	pwa: pwa,
