@@ -6,16 +6,12 @@
 />
 <Head_Facebook />
 <Head_Twitter />
-<div class="page">
-	<div class="hero gradient-hero gradient-main">
-		<img src="/img/logo.svg" alt="Milk.js - It does a website good." />
-		<h1><span class="hide">MILK - </span>It does a website good.</h1>
-		{$milk?.theme?.name}
-	</div>
-	TEST {$milk.hello}
+<Layout_Main>
+	<Documentation />
+	<h1>TEST {$milk.hello}</h1>
 	<div>{$milk?.site?.title}</div>
 	<div>{$milk?.theme?.theme}</div>
-</div>
+</Layout_Main>
 
 <script>
 	/* ## MILK ## */
@@ -25,29 +21,11 @@
 	import Head_HTML from '$milk_components/Head_HTML.svelte';
 	import Head_Facebook from '$milk_components/Head_Facebook.svelte';
 	import Head_Twitter from '$milk_components/Head_Twitter.svelte';
+	import Layout_Main from '$site_theme/Layout_Main.svelte';
+	import Documentation from '$site_theme/Documentation.svelte';
 </script>
 
 <style>
-	.hero {
-		width: 100%;
-		height: min(calc(100vw / 16 * 9), 100vh);
-		display: grid;
-		place-content: center;
-	}
-	.hero img {
-		width: 20vw;
-		height: auto;
-		margin: 0 -12% 0 12%;
-		position: relative;
-		min-width: 100px;
-	}
 	h1 {
-		color: var(--color-white, #fff);
 	}
-	/* .page {
-		display: block;
-	}
-	.page h1 {
-		color: var(--color-white, #fff);
-	} */
 </style>

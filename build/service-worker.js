@@ -1,21 +1,22 @@
+
+var debugging = true;
 /* eslint-disable no-console */
-console.log(`🤖ServiceWorker: 🎉Loaded!`)
+var debug = function() { if (debugging) { console.log.apply(this, arguments); }; };
+
+/* eslint-disable no-console */
+debug(`🤖MILK ServiceWorker: 🎉Loaded!`)
 
 // eslint-disable-next-line
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 // eslint-disable-next-line
-if (workbox) {
-	console.log(`📦Workbox: 🎉Loaded!`)
-} else {
-	console.log(`📦Workbox: 🚫Workbox Didn't Load.`)
-}
+if (workbox) { debug(`📦MILK Workbox: 🎉Loaded!`) } else { debug(`📦MILK Workbox: 🚫Workbox Didn't Load.`) }
 
 /* #### Workbox Debugging #### */
 // eslint-disable-next-line
 workbox.setConfig({
-	debug: true,
+	debug: debugging,
 })
-console.log(`📦Workbox: 🐞Debugging Turned On.`)
+debug(`📦MILK Workbox: 🐞Debugging Turned On.`)
 
 /* #### Enable Precaching And Routing #### */
 // eslint-disable-next-line
@@ -30,7 +31,7 @@ workbox.routing.registerRoute(
 		cacheName: 'api',
 	}),
 )
-console.log(`📦Workbox: (🛸Api) Caching Turned On Selectivly...`)
+debug(`📦MILK Workbox: (🛸Api) Caching Turned On Selectivly...`)
 
 /* #### Images #### */
 // eslint-disable-next-line
@@ -48,7 +49,7 @@ workbox.routing.registerRoute(
 		],
 	}),
 )
-console.log(`📦Workbox: (🖼Image) Caching Turned On.`)
+debug(`📦MILK Workbox: (🖼Image) Caching Turned On.`)
 
 /* #### Webfonts #### */
 if (!(/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor))) {
@@ -67,7 +68,7 @@ if (!(/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vend
 			],
 		}),
 	)
-	console.log(`📦Workbox: (🔤WebFont) Caching Turned On.`)
+	debug(`📦MILK Workbox: (🔤WebFont) Caching Turned On.`)
 };
 
 /* #### Google Fonts #### */
@@ -86,7 +87,7 @@ workbox.routing.registerRoute(
 		],
 	}),
 )
-console.log(`📦Workbox: (🕸GoogleFonts) Caching Turned On.`)
+debug(`📦MILK Workbox: (🕸GoogleFonts) Caching Turned On.`)
 
 /* #### Favicon #### */
 // eslint-disable-next-line
@@ -104,7 +105,7 @@ workbox.routing.registerRoute(
 		],
 	}),
 )
-console.log(`📦Workbox: (⭐ Favicon) Caching Turned On.`)
+debug(`📦MILK Workbox: (⭐ Favicon) Caching Turned On.`)
 
 /* #### WebApp #### */
 // eslint-disable-next-line
@@ -122,10 +123,10 @@ workbox.routing.registerRoute(
 		],
 	}),
 )
-console.log(`📦Workbox: (🎨stylesheet) Caching Turned On.`)
-console.log(`📦Workbox: (🛠javascript) Caching Turned On.`)
-console.log(`📦Workbox: (📝html) Caching Turned On.`)
-console.log(`📦Workbox: (🔗json) Caching Turned On.`)
+debug(`📦MILK Workbox: (🎨stylesheet) Caching Turned On.`)
+debug(`📦MILK Workbox: (🛠javascript) Caching Turned On.`)
+debug(`📦MILK Workbox: (📝html) Caching Turned On.`)
+debug(`📦MILK Workbox: (🔗json) Caching Turned On.`)
 
 /* #### Main App #### */
 // eslint-disable-next-line
@@ -157,4 +158,5 @@ workbox.routing.registerRoute(
 		],
 	}),
 )
-console.log(`📦Workbox: (🏆 Main App) Caching Turned On.`)
+debug(`📦MILK Workbox: (🏆 Main App) Caching Turned On.`)
+debug(`🤖MILK ServiceWorker: Workbox Caching Success 🎉!`)

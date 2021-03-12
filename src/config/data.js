@@ -1,4 +1,7 @@
+import { config } from '$site_config/config.js';
 /* #### DATA SOURCES #### */
-export const sources = {
+const sources = {
 	// sources go here;
 };
+if (config?.lock_config) { Object.freeze(sources); };
+export { sources };

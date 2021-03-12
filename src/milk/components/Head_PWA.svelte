@@ -94,16 +94,12 @@
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
 	/* ## Variables ## **/
-	let app_name = 'PWA Application';
-	let app_color = '#000';
-	let app_background = '#000';
-	$: app_name = app_name && app_name != '' ? app_name : $milk?.pwa?.app_name;
-	$: app_color =
-		app_color && app_color != '' ? app_color : $milk?.pwa?.app_color;
-	$: app_background =
-		app_background && app_background != ''
-			? app_background
-			: $milk?.pwa?.app_background;
+	let app_name;
+	let app_color;
+	let app_background;
+	$: app_name ||= $milk?.pwa?.app_name;
+	$: app_color ||= $milk?.pwa?.app_color;
+	$: app_background ||= $milk?.pwa?.app_background;
 	/* ## Exports ## **/
 	export { app_name, app_color, app_background };
 </script>

@@ -1,5 +1,18 @@
 /* #### MILK #### */
-.hide { position: absolute; max-width: 100vw; margin-left: -999vw; }
+.hero {
+	background: var(--color-main, #60154C);
+	background: linear-gradient(320deg,#3A0D2E 0%, #60154C 50%, #B32A51 100%);
+	color: var(--color-white, #FFF);
+}
+
+.hide { position: absolute; max-width: 100vw; margin-left: -999vw; visibility: hidden; }
+.remove { display: none; }
+.dark-mode .light-only { position: absolute; margin-left: -9999vw; }
+.dark-mode .light-mode .light-only { position: inherit; margin-left: inherit; }
+.light-mode .dark-only { position: absolute; margin-left: -9999vw; }
+.light-mode .dark-mode .dark-only { position: inherit; margin-left: inherit; }
+.monochrome { filter: grayscale(100%); }
+
 /* ## Absolute Footer ## */
 .absolute-footer { text-align: center; }
 .absolute-footer-inner { margin: 0 auto; max-width: var(--content-width-max, auto); }

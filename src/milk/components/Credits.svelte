@@ -32,7 +32,7 @@
 				class="built-with-milk"
 			>
 				<img
-					src={$milk?.credits?.logo}
+					src={$milk?.credits?.logo_mini}
 					width="20"
 					height="20"
 					alt={$milk?.credits?.title}

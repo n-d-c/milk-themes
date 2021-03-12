@@ -1,50 +1,187 @@
 /* #### MILKBOX THEME #### */
-/* ## Colors ## */
-:root {
+/* ### Color Schemes ### */
+/* ## Monochrome ## */
+:root,
+:root .light-mode,
+:root .dark-mode .light-mode {
+	--color-transparent: transparent;
 	--color-white: #FFF;
 	--color-offwhite: #FCFCFC;
 	--color-grey-light: #EEE;
 	--color-grey: #CCC;
 	--color-grey-dark: #666;
-	--color-charcol: #333;
+	--color-charcoal: #333;
 	--color-black: #000;
-
-	--color-main-light: #B32A51;
-	--color-main: #60154C;
-	--color-main-dark: #3A0D2E;
-	--color-main-text: #FFF;
-	--color-main-highlight: #FFF;
-	--color-main-trim: #000;
-	--color-second-light: #B32A51;
-	--color-second: #60154C;
-	--color-second-dark: #3A0D2E;
-	--color-second-text: #FFF;
-	--color-second-highlight: #FFF;
-	--color-second-trim: #000;
-	--color-third-light: #B32A51;
-	--color-third: #60154C;
-	--color-third-dark: #3A0D2E;
-	--color-third-text: #FFF;
-	--color-third-highlight: #FFF;
-	--color-third-trim: #000;
-
-	--background-absolutefooter: var(--color-main-dark, #3A0D2E);
-	--color-absolutefooter: var(--color-white, #FFF);
 }
+:root .dark-mode,
+:root .light-mode .dark-mode {
+	--color-transparent: transparent;
+	--color-white: #000;
+	--color-offwhite: #333;
+	--color-grey-light: #666;
+	--color-grey: #CCC;
+	--color-grey-dark: #EEE;
+	--color-charcoal: #FCFCFC;
+	--color-black: #FFF;
+}
+/* ## Colors ## */
+:root,
+:root .light-mode,
+:root .dark-mode .light-mode {
+	--color-one: #3A0D2E;
+	--color-two: #60154C;
+	--color-three: #B32A51;
+	--color-four: #CE1C4F;
+	--color-five: #FFCA28;
+	--color-six: #ffa128;
+	--color-seven: #4BCB70;
+	--color-eight: #FF3B2E;
+}
+:root .dark-mode,
+:root .light-mode .dark-mode { /* no changes */ }
+/* ## Notices and Alerts ## */
+:root,
+:root .light-mode,
+:root .dark-mode .light-mode {
+	--color-error: #FF3B2E;
+	--background-error: rgba(255,59,46,0.2);
+	--color-warn: #FFCA28;
+	--background-warn: rgba(255,202,40,0.2);
+	--color-success: #4BCB70;
+	--background-success: rgba(75,203,112,0.2);
+	--color-notice: #666;
+	--background-notice: rgba(102,102,102,0.2);
+	--background-call: #4BCB70;
+	--background-cancel: #FF3B2E;
+}
+:root .dark-mode,
+:root .light-mode .dark-mode { /* no changes */ }
+/* ## Extras ## */
+:root,
+:root .light-mode,
+:root .dark-mode .light-mode {
+	--highlight-background: rgba(255,202,40,0.8);
+	--highlight-color: #111;
+	--color-hamburger: var(--color-black);
+	--color-hamburger-hover: #4BCB70;
+	--color-cancel: var(--color-black);
+	--color-cancel-hover: #FF3B2E;
+	--color-call: #FFF;
+	--background-call: #4BCB70;
+	--color-call-cancel: #FFF;
+	--background-call-cancel: #FF3B2E;
+	--border-color: var(--color-black);
+	--button-border-color: var(--color-black);
+	--button-background: var(--color-white);
+	--button-color: var(--color-black);
+	--button-background-hover: var(--color-black);
+	--button-color-hover: var(--color-white);
+	--button-border-color-hover: var(--color-black);
+	--input-color: #000;
+	--input-background: #FFF;
+	--input-placeholder: #666;
+	--input-hue-rotate: 60deg;
+	--input-dark-adjust: 50%;
+	--table-head-background: var(--color-one);
+	--table-head-color: var(--color-white);
+	--table-row-even-background: var(--color-grey-light);
+	--table-row-even-color: var(--color-charcoal);
+	--table-row-odd-background: var(--color-offwhite);
+	--table-row-odd-color: var(--color-charcoal);
+}
+:root .dark-mode,
+:root .light-mode .dark-mode {
+	--color-hamburger: var(--color-black);
+	--color-cancel: var(--color-black);
+	--border-color: var(--color-black);
+	--button-border-color: var(--color-black);
+	--button-background: var(--color-white);
+	--button-color: var(--color-black);
+	--button-background-hover: var(--color-black);
+	--button-color-hover: var(--color-white);
+	--button-border-color-hover: var(--color-black);
+	--table-row-even-background: var(--color-offwhite);
+	--table-row-even-color: var(--color-charcoal);
+	--table-row-odd-background: var(--color-grey-light);
+	--table-row-odd-color: var(--color-charcoal);
+}
+/* #### Fonts #### */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+:root {
+	--font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-special: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--base-fontsize: 1rem;
+	--button-fontsize: 1rem;
+}
+h1, h2, h3, h5 { font-family: var(--font-special); }
+body, h4, h6, p, div, .content { font-family: var(--font-main); }
+/* #### Borders #### */
+:root,
+:root .light-mode,
+:root .dark-mode .light-mode {
+	--border-size: 1px;
+	--border-style: solid;
+	--outline-size: 1px;
+	--box-shadow: 0.04rem 0.07rem 0.15rem rgba(0,0,0,0.4);
+	--text-shadow: 0.05em 0.05em 0.10em rgba(0,0,0,0.4);
+	--button-border-size: 1px;
+	--button-border-style: solid;
+	--button-border-radius: 0px;
+}
+:root .dark-mode,
+:root .light-mode .dark-mode { /* no changes */ }
+/* #### Padding and Margins #### */
+:root {
+	--content-width-max: 1200px;
+	--padding-small: 5px 20px;
+	--padding-large: 5vw;
+	--margin-small: ;
+	--margin-large: ;
+	--button-padding: 0.5em 2em;
+	--button-margin: 0.5em 2em;
+	--table-cell-padding: 0.5em 2em;
+}
+/* #### Default Content #### */
+:root,
+:root .light-mode,
+:root .dark-mode .light-mode {
+	--background: var(--color-white);
+	--text-color: var(--color-black);
+	--link-color: var(--color-three);
+	--link-color-hover: var(--color-four);
+	--link-color-visited: var(--color-two);
+}
+:root .dark-mode,
+:root .light-mode .dark-mode {
+	--background: var(--color-white);
+	--text-color: var(--color-black);
+}
+
+/* ### Blocks ### */
+/* ## Heros ## */
+.hero {
+	background: var(--color-one);
+	background: linear-gradient(320deg, var(--color-one) 0%, var(--color-two) 50%, var(--color-three) 100%);
+}
+.hero, .hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero p { color: var(--color-white); }
+.dark-mode .hero { color: var(--color-black); }
+
 /* ## Gradients ## */
 .gradient-main {
-	background: var(--color-main, #60154C);
-	background: linear-gradient(320deg, var(--color-main-dark, #3A0D2E) 0%, var(--color-main, #60154C) 50%, var(--color-main-light, #B32A51) 100%);
+	background: var(--color-one);
+	background: linear-gradient(320deg, var(--color-one) 0%, var(--color-two) 50%, var(--color-three) 100%);
 }
-/* ## Fonts ## */
-
-/* ## Margin and Padding ## */
-
 /* ## Absolute Header ## */
 /* ## Header ## */
 /* ## Main Content ## */
+
 /* ## Footer ## */
 /* ## Absolute Footer ## */
+.absolute-footer { text-align: center; }
+.absolute-footer-inner { margin: 0 auto; max-width: var(--content-width-max, auto); }
+.absolute-footer-inner>div { display: block; margin: var(--padding-small, 5px 20px); }
+.absolute-footer .copyright>div { display: inline-block; vertical-align: middle; }
+.absolute-footer .credits>div { display: inline-block; vertical-align: middle; }
 .absolute-footer {
 	background: var(--background-absolutefooter, #3A0D2E);
 	color: var(--color-absolutefooter, #FFF);

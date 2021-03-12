@@ -1,61 +1,39 @@
 /* #### MILK #### */
 import { writable } from 'svelte/store';
-// import { theme } from '../config/theme.js';
-import { config } from '../config/config.js';
-import { site } from '../config/site.js';
-import { pwa } from '../config/pwa.js';
-import { sources } from '../config/data.js';
-import { get, gql, post, rest } from  './data/data-adaptors.js';
-import { theme } from '$site_theme/info.js'
+import { config } from '$site_config/config.js';
+import { site } from '$site_config/site.js';
+import { pwa } from '$site_config/pwa.js';
+import { sources } from '$site_config/data.js';
+import { get, gql, post, rest } from '$milk_data/data-adaptors.js';
+import { browser, user, credits } from '$milk_data/state-additional.js'
+import { theme } from '$site_theme/info.js';
+import { setupDebug, debug } from '$milk_util/debug.js'
 
-/* #### ADDITIONAL STATE #### */
-let browser = {
-	online: false
-};
-let user = {
-	loggedin: false,
-	userid: '',
-	username: '',
-	firstname: '',
-	lastname: '',
-	email: '',
-	phone: '',
-	fax: ''
-};
+const MILK_VERSION = '0.0.02';
+
+if (config?.debug) { setupDebug(config?.debug); };
+debug(`%c🥛MILK: Pouring you a glass of Milk.js v${MILK_VERSION}...`, 'font-weight: bold;')
 
 /* #### STATE OBJECT #### */
 export const milk = writable({
-	version: '0.0.01',
-	hello: 'Hello Milk!',
-	credits: {
-		title: 'Milk',
-		tagline: 'It does a website good.',
-		url: 'https://milkjs.com',
-		email: 'info@milkjs.com',
-		keywords: 'Made with MILK: Snowpack, Skypack, Svelte, PWA, WordPress, GraphQL, REST, JAMStack, SSR, SWR, Web Components by DevLove (https://devlove.us) & RandomUser (https://random-user.com)',
-		logo: '/milk/img/logo_milk.svg',
-		svelte_logo: '/milk/img/logo_svelte.svg',
-		svelte_title: 'Svelte',
-		svelte_url: 'https://svelte.dev/',
-		graphql_logo: '/milk/img/logo_graphql.svg',
-		graphql_title: 'GraphQL',
-		graphql_url: 'https://graphql.org/',
-		snowpack_logo: '/milk/img/logo_snowpack.svg',
-		snowpack_title: 'Snowpack',
-		snowpack_url: 'https://www.snowpack.dev/'
-	},
-	theme: theme,
-	// theme_info: theme_info,
-	config: config,
-	site: site,
-	pwa: pwa,
-	browser: browser,
-	user: user,
+	version: MILK_VERSION,
+	hello: config?.hello,
+	credits,
+	config,
+	theme,
+	site,
+	pwa,
+	browser,
+	user,
 	data: {
-		sources: sources,
-		get: get,
-		post: post,
-		rest: rest,
-		gql: gql
+		sources,
+		get,
+		post,
+		rest,
+		gql
 	}
 });
+
+debug('%c    🥛 Milk.js     ', "font-size: 8rem;background: linear-gradient(320deg, #3A0D2E 0%, #60154C 50%, #B32A51 100%); text-shadow: 0.5rem 0.5rem 0.25rem rgba(0,0,0,0.4); line-height: 30rem; vertical-align: top; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';");
+debug(`%c🥛MILK: %cPoured Milk.js v${MILK_VERSION}, Enjoy!.`, 'font-weight: bold;', 'font-weight: normal;')
+debug(`%c🪅MILKTHEME: %c${theme?.name} / ${theme?.slug} v${theme?.version}.`, 'font-weight: bold;', 'font-weight: normal;');

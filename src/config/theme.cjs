@@ -3,4 +3,5 @@
 const theme = {
 	theme: 'milkbox' // Set the theme
 };
+Object.freeze(theme);
 module.exports = theme;

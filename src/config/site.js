@@ -1,5 +1,6 @@
+import { config } from '$site_config/config.js';
 /* #### SITE #### */
-export const site = {
+const site = {
 	domain: 'milkjs.com',
 	url: 'https://milkjs.com',
 	photo: '/img/profile_1200x1200.jpg',
@@ -63,3 +64,5 @@ export const site = {
 	vcf_file: '',
 	calendar: ''
 };
+if (config?.lock_config) { Object.freeze(site); };
+export { site };
