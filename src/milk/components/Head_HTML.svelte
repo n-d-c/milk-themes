@@ -17,17 +17,15 @@
 	let canonical;
 	let win_location = '';
 	/* ## Observables ## */
-	$: title = title?.length > 0 ? title : $milk?.site?.title;
-	$: description =
-		description?.length > 0 ? description : $milk?.site?.description;
-	$: keywords = keywords?.length > 0 ? keywords : $milk?.site?.keywords;
-	$: canonical = canonical?.length > 0 ? canonical : win_location;
+	$: title ||= $milk?.site?.title || '';
+	$: description ||= $milk?.site?.description || '';
+	$: keywords ||= $milk?.site?.keywords || '';
+	$: canonical ||= win_location || '';
 	/* ## Main ## */
 	onMount(async () => {
-		win_location =
-			window && window?.location?.href?.length > 0
-				? window?.location?.href
-				: $milk?.site?.url;
+		win_location = window?.location?.href
+			? window?.location?.href
+			: $milk?.site?.url;
 	});
 	/* ## Exports ## **/
 	export { title, description, keywords, canonical };

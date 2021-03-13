@@ -12,10 +12,9 @@
 	let currency;
 	let availability; // Valid Status: instock, preorder, backorder, pending, out of stock, discontinued
 	/* ## Observables ## */
-	$: price = price && price != '' ? price : '0.00';
-	$: currency = currency && currency != '' ? currency : 'USD';
-	$: availability =
-		availability && availability != '' ? availability : 'instock';
+	$: price ||= '0.00';
+	$: currency ||= 'USD';
+	$: availability ||= 'instock';
 	/* ## Exports ## **/
 	export { price, currency, availability };
 </script>

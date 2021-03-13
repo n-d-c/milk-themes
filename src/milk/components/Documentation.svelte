@@ -20,10 +20,10 @@
 	let tagline;
 	let excerpt;
 	let logo;
-	$: title = title || $milk?.credits?.title;
-	$: tagline = tagline || $milk?.credits?.tagline;
-	$: excerpt = excerpt || $milk?.credits?.excerpt;
-	$: logo = logo || $milk?.credits?.logo;
+	$: title ||= $milk?.credits?.title || '';
+	$: tagline ||= $milk?.credits?.tagline || '';
+	$: excerpt ||= $milk?.credits?.excerpt || '';
+	$: logo ||= $milk?.credits?.logo || '';
 	/* ## Exports ## */
 	export { title, tagline, excerpt, logo };
 </script>

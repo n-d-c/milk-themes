@@ -21,24 +21,23 @@
 	let win_location = '';
 	let win_domain = '';
 	/* ## Observables ## */
-	$: image = image && image != '' ? image : $milk?.site?.twitter_photo;
-	$: title = title && title != '' ? title : $milk?.site?.title;
-	$: description =
-		description && description != ''
-			? description
-			: $milk?.site?.description;
+	$: image ||=
+		$milk?.site?.twitter_photo ||
+		$milk?.site?.facebook_photo ||
+		$milk?.credits?.social ||
+		'';
+	$: title ||= $milk?.site?.title || '';
+	$: description ||= $milk?.site?.description || '';
 	$: url = win_location;
 	$: domain = win_domain;
 	/* ## Main ## */
 	onMount(async () => {
-		win_location =
-			window && window?.location?.href?.length > 0
-				? window?.location?.href
-				: $milk?.site?.url;
-		win_domain =
-			window && window?.location?.host?.length > 0
-				? window?.location?.host
-				: $milk?.site?.domain;
+		win_location = window?.location?.href
+			? window?.location?.href
+			: $milk?.site?.url;
+		win_domain = window?.location?.host
+			? window?.location?.host
+			: $milk?.site?.domain;
 	});
 	/* ## Exports ## **/
 	export { image, title, description };

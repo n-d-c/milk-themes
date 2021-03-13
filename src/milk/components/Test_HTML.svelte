@@ -91,6 +91,7 @@
 					<em>emphasized</em>,
 					<strong>strong</strong>,
 					<u>underline</u>,
+					<cite>cite</cite>,
 					<strike>strike</strike>,
 					<sup>sup</sup>, and <sub>sub</sub> tags.
 				</p>

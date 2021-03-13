@@ -9,6 +9,8 @@
 		"export": "svelte-kit build; svelte-kit adapt;"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.13.10",
+		"@babel/preset-env": "^7.13.10",
 		"@snowpack/plugin-build-script": "^2.1.0",
 		"@snowpack/plugin-postcss": "^1.1.0",
 		"@sveltejs/adapter-node": "^1.0.0-next.3",

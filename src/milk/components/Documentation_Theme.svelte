@@ -310,10 +310,13 @@
 	let logo;
 	// let size = '45px';
 	// let size_small = '20px';
-	$: title = title || $milk?.theme?.name;
-	$: tagline = tagline || $milk?.theme?.tagline;
-	$: excerpt = excerpt || $milk?.theme?.excerpt;
-	$: logo = logo || `/themes/${$milk?.theme?.slug}/logo_theme.svg`;
+	$: title ||= $milk?.theme?.name || '';
+	$: tagline ||= $milk?.theme?.tagline || '';
+	$: excerpt ||= $milk?.theme?.excerpt || '';
+	$: logo ||=
+		`/themes/${$milk?.theme?.slug}/logo_theme.svg` ||
+		$milk?.credits?.logo ||
+		'';
 	/* ## Exports ## */
 	export { title, tagline, excerpt, logo };
 </script>

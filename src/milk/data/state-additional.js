@@ -8,6 +8,7 @@ const credits = {
 	keywords: 'Made with MILK: Snowpack, Skypack, Svelte, PWA, WordPress, GraphQL, REST, JAMStack, SSR, SWR, Web Components, CS-CSS, by DevLove (https://devlove.us) & RandomUser (https://random-user.com)',
 	logo_mini: '/milk/img/logo_milk.svg',
 	logo: '/milk/img/logo_milkjs.svg',
+	social: '/milk/img/socialmedia_1200x630.jpg',
 	svelte_logo: '/milk/img/logo_svelte.svg',
 	svelte_title: 'Svelte',
 	svelte_url: 'https://svelte.dev/',

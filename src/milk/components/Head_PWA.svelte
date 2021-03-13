@@ -97,9 +97,9 @@
 	let app_name;
 	let app_color;
 	let app_background;
-	$: app_name ||= $milk?.pwa?.app_name;
-	$: app_color ||= $milk?.pwa?.app_color;
-	$: app_background ||= $milk?.pwa?.app_background;
+	$: app_name ||= $milk?.pwa?.app_name || 'Milk based App';
+	$: app_color ||= $milk?.pwa?.app_color || '#60154C';
+	$: app_background ||= $milk?.pwa?.app_background || '#FFF';
 	/* ## Exports ## **/
 	export { app_name, app_color, app_background };
 </script>

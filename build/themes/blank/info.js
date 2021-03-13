@@ -1,5 +1,6 @@
+import { config } from '$site_config/config.js';
 /* #### THEME #### */
-export const theme = {
+const theme = {
 	name: 'Blank',
 	slug: 'blank',
 	version: '0.0.01',
@@ -9,3 +10,5 @@ export const theme = {
 	excerpt: 'Please feel free to take this theme and copy it to start your own if you desire.',
 	darkmode: true
 };
+if (config?.lock_config) { Object.freeze(theme); };
+export { theme };

@@ -20,20 +20,20 @@
 	let description;
 	let win_location = '';
 	/* ## Observables ## */
-	$: image = image && image != '' ? image : $milk?.site?.facebook_photo;
-	$: title = title && title != '' ? title : $milk?.site?.title;
-	$: type = type && type != '' ? type : $milk?.site?.facebook_type;
-	$: description =
-		description && description != ''
-			? description
-			: $milk?.site?.description;
+	$: image ||=
+		$milk?.site?.facebook_photo ||
+		$milk?.site?.twitter_photo ||
+		$milk?.credits?.social ||
+		'';
+	$: title ||= $milk?.site?.title;
+	$: type ||= $milk?.site?.facebook_type;
+	$: description ||= $milk?.site?.description;
 	$: url = win_location;
 	/* ## Main ## */
 	onMount(async () => {
-		win_location =
-			window && window?.location?.href?.length > 0
-				? window?.location?.href
-				: $milk?.site?.url;
+		win_location = window?.location?.href
+			? window?.location?.href
+			: $milk?.site?.url;
 	});
 	/* ## Exports ## **/
 	export { image, type, title, description };

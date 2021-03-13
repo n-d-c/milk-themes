@@ -12,6 +12,7 @@
 	<link rel="preconnect" href="https://storage.googleapis.com" />
 </Head_Extra>
 <app data-theme={$milk?.theme?.slug} class={$milk?.theme?.slug}><slot /></app>
+<slot />
 
 <script>
 	/* ## MILK ## */

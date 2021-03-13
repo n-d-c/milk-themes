@@ -8,9 +8,9 @@
 	let title;
 	let color;
 	let size;
-	$: title = title || '';
-	$: color = color || 'transparent';
-	$: size = size || '40px';
+	$: title ||= '';
+	$: color ||= 'transparent';
+	$: size ||= '40px';
 	export { title, size, color };
 </script>
 

@@ -80,6 +80,14 @@
 	--input-color: #000;
 	--input-background: #FFF;
 	--input-placeholder: #666;
+	--input-hue-rotate: 60deg;
+	--input-dark-adjust: 50%;
+	--table-head-background: var(--color-one);
+	--table-head-color: var(--color-white);
+	--table-row-even-background: var(--color-grey-light);
+	--table-row-even-color: var(--color-charcoal);
+	--table-row-odd-background: var(--color-offwhite);
+	--table-row-odd-color: var(--color-charcoal);
 }
 :root .dark-mode,
 :root .light-mode .dark-mode {
@@ -92,12 +100,17 @@
 	--button-background-hover: var(--color-black);
 	--button-color-hover: var(--color-white);
 	--button-border-color-hover: var(--color-black);
+	--table-row-even-background: var(--color-offwhite);
+	--table-row-even-color: var(--color-charcoal);
+	--table-row-odd-background: var(--color-grey-light);
+	--table-row-odd-color: var(--color-charcoal);
 }
 /* #### Fonts #### */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 :root {
 	--font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--font-special: "Comic Sans MS", "Comic Sans", cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-special: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--base-fontsize: 1rem;
 	--button-fontsize: 1rem;
 }
 h1, h2, h3, h5 { font-family: var(--font-special); }
@@ -108,6 +121,9 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 :root .dark-mode .light-mode {
 	--border-size: 1px;
 	--border-style: solid;
+	--outline-size: 1px;
+	--box-shadow: 0.04rem 0.07rem 0.15rem rgba(0,0,0,0.4);
+	--text-shadow: 0.05em 0.05em 0.10em rgba(0,0,0,0.4);
 	--button-border-size: 1px;
 	--button-border-style: solid;
 	--button-border-radius: 0px;
@@ -116,8 +132,14 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 :root .light-mode .dark-mode { /* no changes */ }
 /* #### Padding and Margins #### */
 :root {
+	--content-width-max: 1200px;
+	--padding-small: 5px 20px;
 	--padding-large: 5vw;
+	--margin-small: ;
+	--margin-large: ;
 	--button-padding: 0.5em 2em;
+	--button-margin: 0.5em 2em;
+	--table-cell-padding: 0.5em 2em;
 }
 /* #### Default Content #### */
 :root,
@@ -140,8 +162,8 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 .hero {
 	background: var(--color-one);
 	background: linear-gradient(320deg, var(--color-one) 0%, var(--color-two) 50%, var(--color-three) 100%);
-	color: var(--color-white);
 }
+.hero, .hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero p { color: var(--color-white); }
 .dark-mode .hero { color: var(--color-black); }
 
 /* ## Gradients ## */
@@ -155,6 +177,11 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 
 /* ## Footer ## */
 /* ## Absolute Footer ## */
+.absolute-footer { text-align: center; }
+.absolute-footer-inner { margin: 0 auto; max-width: var(--content-width-max, auto); }
+.absolute-footer-inner>div { display: block; margin: var(--padding-small, 5px 20px); }
+.absolute-footer .copyright>div { display: inline-block; vertical-align: middle; }
+.absolute-footer .credits>div { display: inline-block; vertical-align: middle; }
 .absolute-footer {
 	background: var(--background-absolutefooter, #3A0D2E);
 	color: var(--color-absolutefooter, #FFF);
