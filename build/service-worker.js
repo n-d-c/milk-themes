@@ -129,34 +129,34 @@ debug(`📦MILK Workbox: (📝html) Caching Turned On.`)
 debug(`📦MILK Workbox: (🔗json) Caching Turned On.`)
 
 /* #### Main App #### */
-// eslint-disable-next-line
-workbox.routing.registerRoute(
-	new RegExp('https://milkjs.com/'),
-	// eslint-disable-next-line
-	new workbox.strategies.StaleWhileRevalidate({
-		cacheName: 'mainapp',
-		plugins: [
-			// eslint-disable-next-line
-			new workbox.expiration.Plugin({
-				maxEntries: 30,
-				//maxAgeSeconds: 1 * 24 * 60 * 60, // 1 Days
-			}),
-		],
-	}),
-)
-workbox.routing.registerRoute(
-	new RegExp('/'),
-	// eslint-disable-next-line
-	new workbox.strategies.StaleWhileRevalidate({
-		cacheName: 'mainapp-noroute',
-		plugins: [
-			// eslint-disable-next-line
-			new workbox.expiration.Plugin({
-				maxEntries: 30,
-				//maxAgeSeconds: 1 * 24 * 60 * 60, // 1 Days
-			}),
-		],
-	}),
-)
-debug(`📦MILK Workbox: (🏆 Main App) Caching Turned On.`)
+// // eslint-disable-next-line
+// workbox.routing.registerRoute(
+// 	new RegExp('https://milkjs.com/'),
+// 	// eslint-disable-next-line
+// 	new workbox.strategies.StaleWhileRevalidate({
+// 		cacheName: 'mainapp',
+// 		plugins: [
+// 			// eslint-disable-next-line
+// 			new workbox.expiration.Plugin({
+// 				maxEntries: 30,
+// 				//maxAgeSeconds: 1 * 24 * 60 * 60, // 1 Days
+// 			}),
+// 		],
+// 	}),
+// )
+// workbox.routing.registerRoute(
+// 	new RegExp('/'),
+// 	// eslint-disable-next-line
+// 	new workbox.strategies.StaleWhileRevalidate({
+// 		cacheName: 'mainapp-noroute',
+// 		plugins: [
+// 			// eslint-disable-next-line
+// 			new workbox.expiration.Plugin({
+// 				maxEntries: 30,
+// 				//maxAgeSeconds: 1 * 24 * 60 * 60, // 1 Days
+// 			}),
+// 		],
+// 	}),
+// )
+// debug(`📦MILK Workbox: (🏆 Main App) Caching Turned On.`)
 debug(`🤖MILK ServiceWorker: Workbox Caching Success 🎉!`)
