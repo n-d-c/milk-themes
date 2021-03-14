@@ -5,7 +5,7 @@
 <style>
 	.hero {
 		width: 100%;
-		height: min(calc(100vw / 16 * 9), 100vh);
+		min-height: min(calc(100vw / 16 * 9), 100vh);
 		display: grid;
 		place-content: center;
 	}
