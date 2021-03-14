@@ -11,8 +11,8 @@
 		{#if logo}<img src={logo} alt={title} />{/if}
 		{#if title}<h1>{title}</h1>{/if}
 		{#if tagline}<h2>{tagline}</h2>{/if}
-		{#if excerpt}<p>{excerpt}</p>{/if}
-		<slot name="hero" />
+		{#if excerpt}<h3>{excerpt}</h3>{/if}
+		{#if details}<p>{details}</p>{/if}
 	</Hero>
 	<h1>Welcome to Milk.js</h1>
 	<div>
@@ -38,16 +38,17 @@
 	import Head_Facebook from '$milk_components/Head_Facebook.svelte';
 	import Head_Twitter from '$milk_components/Head_Twitter.svelte';
 	import Layout_Main from '$site_theme/Layout_Main.svelte';
-	import Documentation from '$site_theme/Documentation.svelte';
 	import Hero from '$milk_components/Hero.svelte';
 	/* ## Variables ## */
 	let title;
 	let tagline;
 	let excerpt;
+	let details;
 	let logo;
 	$: title ||= $milk?.credits?.title || '';
 	$: tagline ||= $milk?.credits?.tagline || '';
 	$: excerpt ||= $milk?.credits?.excerpt || '';
+	$: details ||= $milk?.credits?.details || '';
 	$: logo ||= $milk?.credits?.logo || '';
 </script>
 

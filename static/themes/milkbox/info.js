@@ -3,7 +3,7 @@ import { config } from '$site_config/config.js';
 const theme = {
 	name: 'MilkBox',
 	slug: 'milkbox',
-	version: '0.0.01',
+	version: '0.0.02',
 	date: '2021-03-13',
 	url: 'https://milkjs.com/themes/milkbox',
 	author: 'Random-User (DevLove)',
