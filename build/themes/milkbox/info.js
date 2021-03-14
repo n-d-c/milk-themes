@@ -4,6 +4,7 @@ const theme = {
 	name: 'MilkBox',
 	slug: 'milkbox',
 	version: '0.0.01',
+	date: '2021-03-13',
 	url: 'https://milkjs.com/themes/milkbox',
 	author: 'Random-User (DevLove)',
 	tagline: 'Example theme for Milk.js.',

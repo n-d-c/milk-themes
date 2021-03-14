@@ -1,7 +1,7 @@
 <div class="layout-main">
 	<AbsoluteHeader />
 	<Header />
-	<div class="content"><slot /></div>
+	<div class="page-content"><slot /></div>
 	<Footer />
 	<AbsoluteFooter />
 </div>
@@ -22,7 +22,7 @@
 		grid-template-rows: auto auto 1fr auto auto;
 		z-index: 10;
 	}
-	.content {
+	.page-content {
 		display: block;
 	}
 </style>

@@ -651,6 +651,15 @@
 			display: inline-block;
 			vertical-align: top;
 		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p {
+			color: currentColor;
+		}
 	</style>
 	<style type="text/css" data-note="Accessibility CSS">
 		/* #### ACCESSABILITY #### */
@@ -682,107 +691,6 @@
 			}
 		}
 	</style>
-	<style>
-		/* # The Rotating Marker # */
-		details summary::-webkit-details-marker {
-			display: none;
-		}
-		summary::before {
-			font-family: 'Hiragino Mincho ProN', 'Open Sans', sans-serif;
-			content: '▶';
-			position: absolute;
-			top: 1rem;
-			left: 0.8rem;
-			transform: rotate(0);
-			transform-origin: center;
-			transition: 0.2s transform ease;
-		}
-		details[open] > summary:before {
-			transform: rotate(90deg);
-			transition: 0.45s transform ease;
-		}
-		details {
-			max-width: 500px;
-			box-sizing: border-box;
-			margin-top: 5px;
-			background: white;
-		}
-		summary {
-			border: 4px solid transparent;
-			outline: none;
-			padding: 1rem;
-			display: block;
-			background: #666;
-			color: white;
-			padding-left: 2.2rem;
-			position: relative;
-			cursor: pointer;
-		}
-		details[open] summary,
-		summary:hover {
-			color: #ffca28;
-			background: #444;
-		}
-		summary:hover strong,
-		details[open] summary strong,
-		summary:hover::before,
-		details[open] summary::before {
-			color: #ffa128;
-		}
-		details .content {
-			padding: 10px;
-			border: 2px solid #888;
-			border-top: none;
-		}
-
-		/* # The Sliding Summary # */
-		details {
-			overflow: hidden;
-		}
-		details summary {
-			position: relative;
-			z-index: 10;
-		}
-		@keyframes details-show {
-			from {
-				margin-bottom: -80%;
-				opacity: 0;
-				transform: translateY(-100%);
-			}
-		}
-		details > *:not(summary) {
-			animation: details-show 500ms ease-in-out;
-			position: relative;
-			z-index: 1;
-			transition: all 0.3s ease-in-out;
-			color: transparent;
-			overflow: hidden;
-		}
-		details[open] > *:not(summary) {
-			color: inherit;
-		}
-
-		/* # Style 4 # */
-		details.faq summary {
-			padding-right: 2.2rem;
-			padding-left: 1rem;
-		}
-		details.faq summary::before {
-			content: '×';
-			color: #fff;
-			font-size: 2rem;
-			line-height: 1rem;
-			transform: rotate(-45deg);
-			top: 1.2rem;
-			left: unset;
-			right: 0.6rem;
-		}
-		details[open].faq > summary:before {
-			transform: rotate(90deg);
-			color: #f00 !important;
-			transition: color ease 2s, transform ease 1s;
-		}
-	</style>
 	<link
 		async
 		href={`/themes/${$milk.theme.slug}/style.css`}
@@ -794,7 +702,7 @@
 		href={`/themes/${$milk.theme.slug}/style.css`}
 		rel="stylesheet"
 	/>
-	<style>
+	<style type="text/css" data-note="Milk CSS">
 		body {
 			font-size: var(--base-fontsize, 16px);
 		}
@@ -927,8 +835,230 @@
 		.font-main {
 			font-family: var(--font-main);
 		}
-	</style>
-	<style>
+		body {
+			background: var(--background);
+		}
+		* {
+			color: var(--text-color);
+		}
+		input,
+		td,
+		th,
+		button,
+		textarea,
+		select {
+			border: var(--border-size) var(--border-style) var(--border-color);
+		}
+		a {
+			color: var(--link-color);
+		}
+		a:hover,
+		a:active {
+			color: var(--link-color-hover);
+		}
+		a:visited {
+			color: var(--link-color-visited);
+		}
+		::selection {
+			background: var(--highlight-background);
+			color: var(--highlight-color);
+			box-shadow: 0.04rem 0.07rem 0.15rem rgba(0, 0, 0, 0.4);
+		}
+		input,
+		textarea,
+		select {
+			background: var(--input-background);
+			color: var(--input-color);
+		}
+		::placeholder {
+			color: var(--input-placeholder);
+		}
+		button,
+		a.button {
+			transition: color ease 0.35s, background ease 0.35s;
+			display: inline-block;
+			vertical-align: middle;
+			text-decoration: none;
+			font-size: var(--button-fontsize);
+			color: var(--button-color);
+			background: var(--button-background);
+			padding: var(--button-padding);
+			border: var(--button-border-size) var(--button-border-style)
+				var(--button-border-color);
+			border-radius: var(--button-border-radius);
+			transform-origin: center;
+		}
+		button:hover,
+		a.button:hover,
+		button:active,
+		a.button:active {
+			color: var(--button-color-hover);
+			background: var(--button-background-hover);
+			border-color: var(--button-border-color-hover);
+		}
+		hr {
+			display: block;
+			height: var(--border-size);
+			background: transparent;
+			border: 0px none;
+			border-bottom: var(--border-size) var(--border-style)
+				var(--border-color);
+			max-width: calc(100% - var(--padding-large) - var(--padding-large));
+			margin-left: var(--padding-large);
+			margin-right: var(--padding-large);
+		}
+		input[type='checkbox'],
+		input[type='radio'],
+		input[type='range'] {
+			filter: hue-rotate(var(--input-hue-rotate, 40deg))
+				brightness(calc(10% + var(--input-brightness-adjust, 90%)));
+		}
+		progress {
+			filter: hue-rotate(var(--input-hue-rotate, 40deg))
+				brightness(calc(10% + var(--input-brightness-adjust, 90%)));
+		}
+		meter {
+			filter: saturate(150%)
+				hue-rotate(calc(100deg + var(--input-hue-rotate, 40deg)))
+				brightness(calc(var(--input-brightness-adjust, 90%) + 20%));
+		}
+		@-moz-document url-prefix() {
+			input[type='checkbox'],
+			input[type='radio'],
+			input[type='range'] {
+				filter: hue-rotate(calc(var(--input-hue-rotate, 40deg) + 10deg))
+					brightness(var(--input-brightness-adjust, 90%));
+			}
+			progress {
+				filter: saturate(200%) brightness(250%)
+					hue-rotate(calc(var(--input-hue-rotate, 40deg) + 126deg))
+					brightness(var(--input-brightness-adjust, 90%));
+			}
+			meter {
+				filter: brightness(
+						calc(15% + var(--input-brightness-adjust, 90%))
+					)
+					saturate(90%)
+					hue-rotate(calc(var(--input-hue-rotate, 40deg) + 140deg));
+			}
+		}
+		* {
+			--prepend: initial;
+			--append: initial;
+			--box-shadow: initial;
+			box-shadow: var(--box-shadow);
+		}
+		::before {
+			content: var(--prepend);
+		}
+		::after {
+			content: var(--append);
+		}
+		/* # The Rotating Marker # */
+		details summary::-webkit-details-marker {
+			display: none;
+		}
+		summary::before {
+			font-family: 'Hiragino Mincho ProN', 'Open Sans', sans-serif;
+			content: '▶';
+			position: absolute;
+			top: 1rem;
+			left: 0.8rem;
+			transform: rotate(0);
+			transform-origin: center;
+			transition: 0.2s transform ease;
+		}
+		details[open] > summary:before {
+			transform: rotate(90deg);
+			transition: 0.45s transform ease;
+		}
+		details {
+			max-width: 500px;
+			box-sizing: border-box;
+			margin-top: 5px;
+			background: var(--color-transparent);
+		}
+		summary {
+			border: 4px solid transparent;
+			outline: none;
+			padding: 1rem;
+			display: block;
+			background: #666;
+			color: white;
+			padding-left: 2.2rem;
+			position: relative;
+			cursor: pointer;
+		}
+		details[open] summary,
+		summary:hover {
+			color: #ffca28;
+			background: #444;
+		}
+		summary:hover strong,
+		details[open] summary strong,
+		summary:hover::before,
+		details[open] summary::before {
+			color: #ffa128;
+		}
+		details .content {
+			padding: 10px;
+			border: 2px solid #888;
+			border-top: none;
+			margin: 0;
+		}
+
+		/* # The Sliding Summary # */
+		details {
+			overflow: hidden;
+		}
+		details summary {
+			position: relative;
+			z-index: 10;
+		}
+		@keyframes details-show {
+			from {
+				margin-bottom: -80%;
+				opacity: 0;
+				transform: translateY(-100%);
+			}
+		}
+		details > *:not(summary) {
+			animation: details-show 500ms ease-in-out;
+			position: relative;
+			z-index: 1;
+			transition: all 0.3s ease-in-out;
+			color: transparent;
+			overflow: hidden;
+		}
+		details[open] > *:not(summary) {
+			color: inherit;
+		}
+		details summary :is(h1, h2, h3, h4, h5, h6) {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* # Style 4 # */
+		details.faq summary {
+			padding-right: 2.2rem;
+			padding-left: 1rem;
+		}
+		details.faq summary::before {
+			content: '×';
+			color: #fff;
+			font-size: 2rem;
+			line-height: 1rem;
+			transform: rotate(-45deg);
+			top: 1.2rem;
+			left: unset;
+			right: 0.6rem;
+		}
+		details[open].faq > summary:before {
+			transform: rotate(90deg);
+			color: #f00 !important;
+			transition: color ease 2s, transform ease 1s;
+		}
+
 		.hide {
 			position: absolute;
 			max-width: 100vw;
@@ -1008,6 +1138,7 @@
 		check {
 			text-decoration-line: underline;
 			text-decoration-style: solid;
+			text-decoration-color: var(--text-decoration-color, currentColor);
 		}
 		cage,
 		cage-wavy,
@@ -1045,6 +1176,7 @@
 		outline-offset,
 		outline-outset,
 		outline-ridge {
+			outline-color: var(--outline-color, currentColor);
 			outline-width: var(--outline-size, 1px);
 			outline-style: solid;
 		}
@@ -1163,6 +1295,10 @@
 			background: var(--color-error);
 			box-sizing: border-box;
 		}
+		table {
+			border: var(--border-size) var(--border-style) var(--border-color);
+			border-collapse: collapse;
+		}
 		table th {
 			color: var(--table-head-color);
 			background: var(--table-head-background);
@@ -1179,114 +1315,12 @@
 		table td {
 			padding: var(--table-cell-padding);
 		}
-	</style>
-	<style>
-		body {
-			background: var(--background);
+		.content {
+			margin: var(--margin-large, 5vw);
 		}
-		* {
-			color: var(--text-color);
-		}
-		input,
-		td,
-		th,
-		button,
-		textarea,
-		select {
-			border: var(--border-size) var(--border-style) var(--border-color);
-		}
-		a {
-			color: var(--link-color);
-		}
-		a:hover,
-		a:active {
-			color: var(--link-color-hover);
-		}
-		a:visited {
-			color: var(--link-color-visited);
-		}
-		::selection {
-			background: var(--highlight-background);
-			color: var(--highlight-color);
-			box-shadow: 0.04rem 0.07rem 0.15rem rgba(0, 0, 0, 0.4);
-		}
-		input,
-		textarea,
-		select {
-			background: var(--input-background);
-			color: var(--input-color);
-		}
-		::placeholder {
-			color: var(--input-placeholder);
-		}
-		button,
-		a.button {
-			transition: color ease 0.35s, background ease 0.35s;
-			display: inline-block;
-			vertical-align: middle;
-			text-decoration: none;
-			font-size: var(--button-fontsize);
-			color: var(--button-color);
-			background: var(--button-background);
-			padding: var(--button-padding);
-			border: var(--button-border-size) var(--button-border-style)
-				var(--button-border-color);
-			border-radius: var(--button-border-radius);
-			transform-origin: center;
-		}
-		button:hover,
-		a.button:hover,
-		button:active,
-		a.button:active {
-			color: var(--button-color-hover);
-			background: var(--button-background-hover);
-			border-color: var(--button-border-color-hover);
-		}
-		hr {
-			display: block;
-			height: var(--border-size);
-			background: transparent;
-			border: 0px none;
-			border-bottom: var(--border-size) var(--border-style)
-				var(--border-color);
-			max-width: calc(100% - var(--padding-large) - var(--padding-large));
-			margin-left: var(--padding-large);
-			margin-right: var(--padding-large);
-		}
-		input[type='checkbox'],
-		input[type='radio'],
-		input[type='range'] {
-			filter: hue-rotate(var(--input-hue-rotate, 40deg))
-				brightness(calc(10% + var(--input-brightness-adjust, 90%)));
-		}
-		progress {
-			filter: hue-rotate(var(--input-hue-rotate, 40deg))
-				brightness(calc(10% + var(--input-brightness-adjust, 90%)));
-		}
-		meter {
-			filter: saturate(150%)
-				hue-rotate(calc(100deg + var(--input-hue-rotate, 40deg)))
-				brightness(calc(var(--input-brightness-adjust, 90%) + 20%));
-		}
-		@-moz-document url-prefix() {
-			input[type='checkbox'],
-			input[type='radio'],
-			input[type='range'] {
-				filter: hue-rotate(calc(var(--input-hue-rotate, 40deg) + 10deg))
-					brightness(var(--input-brightness-adjust, 90%));
-			}
-			progress {
-				filter: saturate(200%) brightness(250%)
-					hue-rotate(calc(var(--input-hue-rotate, 40deg) + 126deg))
-					brightness(var(--input-brightness-adjust, 90%));
-			}
-			meter {
-				filter: brightness(
-						calc(15% + var(--input-brightness-adjust, 90%))
-					)
-					saturate(90%)
-					hue-rotate(calc(var(--input-hue-rotate, 40deg) + 140deg));
-			}
+		.content-inner {
+			margin: 0 auto;
+			max-width: var(--content-constrain, 100%);
 		}
 	</style>
 </svelte:head>

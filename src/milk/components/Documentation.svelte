@@ -4,10 +4,15 @@
 		{#if title}<h1>{title}</h1>{/if}
 		{#if tagline}<h2>{tagline}</h2>{/if}
 		{#if excerpt}<p>{excerpt}</p>{/if}
+		<slot name="hero" />
 	</Hero>
-	<slot>
-		<h2>Documentation Will Go Here</h2>
-	</slot>
+	<div class="content">
+		<div class="content-inner">
+			<slot>
+				<h2>Documentation Will Go Here</h2>
+			</slot>
+		</div>
+	</div>
 </div>
 
 <script>

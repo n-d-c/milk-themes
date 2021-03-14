@@ -1,5 +1,5 @@
 <div class="layout-blank">
-	<div class="content"><slot /></div>
+	<div class="page-content"><slot /></div>
 </div>
 
 <script>
@@ -7,7 +7,7 @@
 
 <style>
 	.layout-blank,
-	.content {
+	.page-content {
 		display: block;
 	}
 </style>

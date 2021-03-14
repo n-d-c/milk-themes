@@ -1,37 +1,12 @@
-<div class="color-pallet">
+<div class="color-pallets">
 	<h4>{title}</h4>
-	<div
-		class="color-pallet"
-		class:dark-mode={$milk?.browser?.darkmode}
-		class:light-mode={!$milk?.browser?.darkmode}
-	>
-		<h5 class="dark-only">Dark Mode</h5>
-		<h5 class="light-only">Light Mode</h5>
+	<div class="color-pallet">
 		{#each swatches as swatch}
 			<ColorSwatch title={swatch?.name} color={swatch?.color} {size} />
 		{:else}
 			No swatches found.
 		{/each}
 	</div>
-	{#if $milk?.theme?.darkmode}
-		<div
-			class="color-pallet"
-			class:dark-mode={!$milk?.browser?.darkmode}
-			class:light-mode={$milk?.browser?.darkmode}
-		>
-			<h5 class="dark-only">Dark Mode</h5>
-			<h5 class="light-only">Light Mode</h5>
-			{#each swatches as swatch}
-				<ColorSwatch
-					title={swatch?.name}
-					color={swatch?.color}
-					{size}
-				/>
-			{:else}
-				No swatches found.
-			{/each}
-		</div>
-	{/if}
 	<div class="color-pallet swatches-details">
 		<h5>Details</h5>
 		{#each swatches as swatch}
@@ -52,8 +27,6 @@
 </div>
 
 <script>
-	/* ## MILK ## */
-	import { milk } from '$milk/milk.js';
 	/* ## Components ## */
 	import ColorSwatch from '$milk_components/ColorSwatch.svelte';
 	/* ## Variables ## */
@@ -73,7 +46,7 @@
 		border: var(--border-size) var(--border-style) var(--border-color);
 		background: var(--background);
 		color: var(--text-color);
-		padding: 20px;
+		padding: var(--padding);
 	}
 	i {
 		font-size: smaller;

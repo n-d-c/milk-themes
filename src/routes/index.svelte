@@ -7,10 +7,26 @@
 <Head_Facebook />
 <Head_Twitter />
 <Layout_Main>
-	<Documentation />
-	<h1>TEST {$milk.hello}</h1>
-	<div>{$milk?.site?.title}</div>
-	<div>{$milk?.theme?.theme}</div>
+	<Hero>
+		{#if logo}<img src={logo} alt={title} />{/if}
+		{#if title}<h1>{title}</h1>{/if}
+		{#if tagline}<h2>{tagline}</h2>{/if}
+		{#if excerpt}<p>{excerpt}</p>{/if}
+		<slot name="hero" />
+	</Hero>
+	<h1>Welcome to Milk.js</h1>
+	<div>
+		<ul>
+			<li>
+				<a href="/documentation">Milk.js Documentation</a>
+			</li>
+			<li>
+				<a href="/documentation/theme">
+					Theme Documentation ({$milk?.theme?.name})
+				</a>
+			</li>
+		</ul>
+	</div>
 </Layout_Main>
 
 <script>
@@ -23,9 +39,24 @@
 	import Head_Twitter from '$milk_components/Head_Twitter.svelte';
 	import Layout_Main from '$site_theme/Layout_Main.svelte';
 	import Documentation from '$site_theme/Documentation.svelte';
+	import Hero from '$milk_components/Hero.svelte';
+	/* ## Variables ## */
+	let title;
+	let tagline;
+	let excerpt;
+	let logo;
+	$: title ||= $milk?.credits?.title || '';
+	$: tagline ||= $milk?.credits?.tagline || '';
+	$: excerpt ||= $milk?.credits?.excerpt || '';
+	$: logo ||= $milk?.credits?.logo || '';
 </script>
 
 <style>
-	h1 {
+	img {
+		width: 20vw;
+		height: auto;
+		margin: 0;
+		position: relative;
+		min-width: 100px;
 	}
 </style>

@@ -14,6 +14,6 @@
 		text-align: center;
 	}
 	.hero-content {
-		padding: var(--hero-padding, 20vw);
+		padding: 5vw var(--hero-padding, 20vw);
 	}
 </style>

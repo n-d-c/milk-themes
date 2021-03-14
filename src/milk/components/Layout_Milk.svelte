@@ -11,8 +11,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://storage.googleapis.com" />
 </Head_Extra>
+{#if $milk?.theme?.darkmode}
+	<Setup_DarkMode />
+{/if}
 <app data-theme={$milk?.theme?.slug} class={$milk?.theme?.slug}><slot /></app>
-<slot />
 
 <script>
 	/* ## MILK ## */
@@ -24,6 +26,7 @@
 	import Head_Favicon from '$milk_components/Head_Favicon.svelte';
 	import Head_MilkCSS from '$milk_components/Head_MilkCSS.svelte';
 	import Head_Extra from '$milk_components/Head_Extra.svelte';
+	import Setup_DarkMode from '$milk_components/Setup_DarkMode.svelte';
 </script>
 
 <style>
