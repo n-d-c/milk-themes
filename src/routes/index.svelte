@@ -8,24 +8,40 @@
 <Head_Twitter />
 <Layout_Main>
 	<Hero>
-		{#if logo}<img src={logo} alt={title} />{/if}
+		{#if logo}
+			<img
+				src={logo}
+				alt={title}
+				width={logo_width}
+				height={logo_height}
+			/>
+		{/if}
 		{#if title}<h1>{title}</h1>{/if}
 		{#if tagline}<h2>{tagline}</h2>{/if}
 		{#if excerpt}<h3>{excerpt}</h3>{/if}
 		{#if details}<p>{details}</p>{/if}
 	</Hero>
-	<h1>Welcome to Milk.js</h1>
-	<div>
-		<ul>
-			<li>
-				<a href="/documentation">Milk.js Documentation</a>
-			</li>
-			<li>
-				<a href="/documentation/theme">
-					Theme Documentation ({$milk?.theme?.name})
-				</a>
-			</li>
-		</ul>
+	<div class="content">
+		<div class="content-inner">
+			<h1>
+				Welcome to 🥛Milk<span
+					class="font-resize"
+					style="--font-size: 0.60">.js</span
+				>
+			</h1>
+			<div>
+				<ul>
+					<li>
+						<a href="/documentation">Milk.js Documentation</a>
+					</li>
+					<li>
+						<a href="/documentation/theme">
+							Theme Documentation ({$milk?.theme?.name})
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </Layout_Main>
 
@@ -45,11 +61,15 @@
 	let excerpt;
 	let details;
 	let logo;
+	let logo_width;
+	let logo_height;
 	$: title ||= $milk?.credits?.title || '';
 	$: tagline ||= $milk?.credits?.tagline || '';
 	$: excerpt ||= $milk?.credits?.excerpt || '';
 	$: details ||= $milk?.credits?.details || '';
 	$: logo ||= $milk?.credits?.logo || '';
+	$: logo_width ||= $milk?.credits?.logo_width || '200';
+	$: logo_height ||= $milk?.credits?.logo_height || '200';
 </script>
 
 <style>
@@ -59,5 +79,8 @@
 		margin: 0;
 		position: relative;
 		min-width: 100px;
+	}
+	.content-inner h1 {
+		text-align: center;
 	}
 </style>

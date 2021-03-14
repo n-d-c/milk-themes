@@ -1,6 +1,12 @@
 <div class="documentation">
 	<Hero>
-		{#if logo}<img src={logo} alt={title} />{/if}
+		{#if logo}<img
+				class="h-l"
+				src={logo}
+				alt={title}
+				width="200"
+				height="200"
+			/>{/if}
 		{#if title}<h1>{title}</h1>{/if}
 		{#if tagline}<h2>{tagline}</h2>{/if}
 		{#if excerpt}<p>{excerpt}</p>{/if}
@@ -34,7 +40,7 @@
 </script>
 
 <style>
-	img {
+	img.h-l {
 		width: 20vw;
 		height: auto;
 		margin: 0;

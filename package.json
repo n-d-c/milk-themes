@@ -1,12 +1,13 @@
 {
-	"name": "devlove-milk",
-	"version": "0.0.01",
+	"name": "milk",
+	"version": "0.0.02",
 	"scripts": {
 		"dev": "svelte-kit dev;",
 		"build": "svelte-kit build;",
 		"start": "svelte-kit start;",
 		"adapt": "svelte-kit adapt;",
-		"export": "svelte-kit build; svelte-kit adapt;"
+		"export": "svelte-kit build; svelte-kit adapt;",
+		"update": "git remote add updates https://github.com/rndm-user/devlove-milk.git; git fetch updates; git pull updates master; npm install;"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.13.10",

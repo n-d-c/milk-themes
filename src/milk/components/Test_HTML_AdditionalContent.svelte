@@ -6,56 +6,7 @@
 		<img src="" alt="Elephant at sunset" />
 		<figcaption>An elephant at sunset</figcaption>
 	</figure>
-	<div class="image-test">
-		<img
-			src="/milk/img/imagetest_200x200_jpg.jpg"
-			width="200"
-			height="200"
-			alt="JPG"
-		/>
-		<img
-			src="/milk/img/imagetest_200x200_mozjpg.jpg"
-			width="200"
-			height="200"
-			alt="MOZJPG"
-		/>
-		<img
-			src="/milk/img/imagetest_200x200_gif.gif"
-			width="200"
-			height="200"
-			alt="GIF"
-		/>
-		<img
-			src="/milk/img/imagetest_200x200_png8.png"
-			width="200"
-			height="200"
-			alt="PNG8"
-		/>
-		<img
-			src="/milk/img/imagetest_200x200_png24.png"
-			width="200"
-			height="200"
-			alt="PNG24"
-		/>
-		<img
-			src="/milk/img/imagetest_200x200_webp.webp"
-			width="200"
-			height="200"
-			alt="WEBP"
-		/>
-		<img
-			src="/milk/img/imagetest_200x200_avif.avif"
-			width="200"
-			height="200"
-			alt="AVIF"
-		/>
-		<img
-			src="/milk/img/imagetest_200x200_svg.svg"
-			width="200"
-			height="200"
-			alt="SVG"
-		/>
-	</div>
+	<Test_ImageSupport />
 </div>
 <div>
 	<details>
@@ -78,14 +29,13 @@
 	</details>
 </div>
 
+<script>
+	import Test_ImageSupport from '$milk_components/Test_ImageSupport.svelte';
+</script>
+
 <style>
-	.image-test {
-		width: 100px;
-		height: 100px;
-	}
-	.image-test img {
-		width: 100px;
-		height: 100px;
-		position: absolute;
+	img {
+		width: 100%;
+		height: auto;
 	}
 </style>

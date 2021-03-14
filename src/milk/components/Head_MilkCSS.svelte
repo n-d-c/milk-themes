@@ -835,10 +835,12 @@
 		.font-main {
 			font-family: var(--font-main);
 		}
+		.font-resize {
+			vertical-align: baseline;
+			font-size: calc(1em * var(--font-size));
+		}
 		body {
 			background: var(--background);
-		}
-		* {
 			color: var(--text-color);
 		}
 		input,
@@ -866,7 +868,9 @@
 		}
 		input,
 		textarea,
-		select {
+		select,
+		select optgroup,
+		select option {
 			background: var(--input-background);
 			color: var(--input-color);
 		}
