@@ -131,7 +131,7 @@ debug(`📦MILK Workbox: (🔗json) Caching Turned On.`)
 /* #### Main App #### */
 // eslint-disable-next-line
 workbox.routing.registerRoute(
-	new RegExp('https://svelte.immigrationlawnj.com/'),
+	new RegExp('https://milkjs.com/'),
 	// eslint-disable-next-line
 	new workbox.strategies.CacheFirst({
 		cacheName: 'mainapp',
