@@ -25,7 +25,7 @@ workbox.precaching.precacheAndRoute([]);
 /* #### Api #### */
 // eslint-disable-next-line
 workbox.routing.registerRoute(
-	new RegExp('https://admin.immigrationlawnj.com'),
+	new RegExp('https://graphql.milkjs.com'),
 	// eslint-disable-next-line
 	new workbox.strategies.NetworkFirst({
 		cacheName: 'api',
@@ -133,7 +133,7 @@ debug(`📦MILK Workbox: (🔗json) Caching Turned On.`)
 workbox.routing.registerRoute(
 	new RegExp('https://milkjs.com/'),
 	// eslint-disable-next-line
-	new workbox.strategies.CacheFirst({
+	new workbox.strategies.StaleWhileRevalidate({
 		cacheName: 'mainapp',
 		plugins: [
 			// eslint-disable-next-line
@@ -147,7 +147,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
 	new RegExp('/'),
 	// eslint-disable-next-line
-	new workbox.strategies.CacheFirst({
+	new workbox.strategies.StaleWhileRevalidate({
 		cacheName: 'mainapp-noroute',
 		plugins: [
 			// eslint-disable-next-line
