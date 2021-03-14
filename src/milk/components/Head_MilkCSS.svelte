@@ -959,7 +959,7 @@
 			content: var(--append);
 		}
 		/* # The Rotating Marker # */
-		details summary::-webkit-details-marker {
+		details summary::marker {
 			display: none;
 		}
 		summary::before {
