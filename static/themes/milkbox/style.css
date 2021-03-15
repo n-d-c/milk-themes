@@ -165,6 +165,18 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 
 
 
+/* ## Heros ## */
+.hero img.logo {
+	width: 20vw;
+	height: auto;
+	margin: 0;
+	position: relative;
+	min-width: 100px;
+}
+.hero h2 { font-size: 1.65em; }
+.hero p { font-size: 1.15em; font-weight: normal; color: var(--color-grey-light); line-height: 1.85em; margin: 2em auto; }
+/* ## Title and Headings ## */
+.content-inner h1 { text-align: center; }
 
 
 
@@ -176,11 +188,18 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 
 /* ## Footer ## */
 /* ## Absolute Footer ## */
+
+#footer-absolute .icon-top {
+	filter: invert(1);
+	margin-bottom: -5px;
+}
+
+
+
 .absolute-footer { text-align: center; }
 .absolute-footer-inner { margin: 0 auto; max-width: var(--content-width-max, auto); }
 .absolute-footer-inner>div { display: block; margin: var(--padding-small, 5px 20px); }
-.absolute-footer .copyright>div { display: inline-block; vertical-align: middle; }
-.absolute-footer .credits>div { display: inline-block; vertical-align: middle; }
+.absolute-footer :is(.copyright>div, .credits>div) { display: inline-block; vertical-align: middle; }
 .absolute-footer {
 	background: var(--background-absolutefooter, #3A0D2E);
 	color: var(--color-absolutefooter, #FFF);
@@ -248,3 +267,7 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 	height: 0;
 	overflow: hidden;
 }
+
+
+/* ## Homepage ## */
+#page-homepage #main-hero .details { display: none; }

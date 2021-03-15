@@ -1,6 +1,11 @@
-<div class="hero">
+<div {id} class="hero">
 	<div class="hero-inner"><div class="hero-content"><slot /></div></div>
 </div>
+
+<script>
+	let id;
+	export { id };
+</script>
 
 <style>
 	.hero {

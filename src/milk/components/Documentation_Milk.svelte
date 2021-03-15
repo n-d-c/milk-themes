@@ -7,6 +7,7 @@
 		</h4>
 	</div>
 	<h2>Milk.js</h2>
+	<pre><strong>Milk Version:</strong> {$milk?.version} on {$milk?.date}</pre>
 	<p>
 		<a href={$milk?.credits?.url} title="Milk.js">
 			{$milk?.credits?.url}
@@ -20,6 +21,10 @@
 			mkdir &lt;your_project&gt; && $_; npx degit
 			https://github.com/rndm-user/devlove-milk.git .; npm install;
 		</code>
+		<p>
+			Update domains in service-worker.js and edit the mainfest.js and
+			/src/config/* files.
+		</p>
 	</div>
 	<div>
 		<h3>Add to Your Source Control</h3>

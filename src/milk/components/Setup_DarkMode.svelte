@@ -17,7 +17,11 @@
 				window.localStorage.setItem('dark-mode', 'false');
 			}
 		};
-		if (window?.localStorage?.getItem('dark-mode') == 'true') {
+		if ($milk?.config?.darkmode == 'disabled') {
+			$milk.browser.darkmode = false;
+		} else if ($milk?.theme?.darkmode != true) {
+			$milk.browser.darkmode = false;
+		} else if (window?.localStorage?.getItem('dark-mode') == 'true') {
 			$milk.browser.darkmode = true;
 		} else if (window?.localStorage?.getItem('dark-mode') == 'false') {
 			$milk.browser.darkmode = false;
@@ -30,5 +34,9 @@
 				window?.matchMedia &&
 				window?.matchMedia('(prefers-color-scheme: dark)')?.matches;
 		}
+		$milk.browser.toggleDarkMode = toggleDarkMode;
 	});
+	export const toggleDarkMode = () => {
+		$milk.browser.darkmode = !$milk?.browser?.darkmode;
+	};
 </script>

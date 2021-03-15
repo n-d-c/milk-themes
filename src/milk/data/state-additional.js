@@ -1,8 +1,9 @@
 /* #### CREDITS #### */
 const credits = {
+	name: 'Milk.js',
 	title: 'Milk.js - It does a website good.',
-	tagline: 'Best Technologies ❤ Easiest Development',
-	excerpt: 'SSR + SWR + PWA + CS-CSS + JSON-LD + Microformats & Microdata + Serverless + Web Components + GraphQL + REST + Accessibility + Animations + SEO + So much more, all packed in a gooey JAMStack you can host anywhere.',
+	tagline: 'Best Developer Experience ❤ Best Finished Results',
+	excerpt: 'Svelte-Kit + Snowpack + SSR + SWR + PWA + CS-CSS + JSON-LD + Microformats & Microdata + Serverless + Web Components + GraphQL + REST + Accessibility + Animations + SEO + So much more, all packed in a gooey JAMStack you can host anywhere with Zero Dependency Deploys.  We handle it all so you can focus on creating amazing things, we look forward to seeing what you make. Have some Milk.',
 	details: "Have some Milk to go with that.  Milk sits lightly on top of the shoulders of GIANTS like: Svelte-kit, Snowpack, GraphQL, WorkBox, Wordpress, and many more.  Providing the quickest, cleantest, fastest, way to launch perfect headless websites.  We worry about all the tricky stuff so that you can just make amazing things.  We can't wait to see them.",
 	url: 'https://milkjs.com',
 	email: 'info@milkjs.com',

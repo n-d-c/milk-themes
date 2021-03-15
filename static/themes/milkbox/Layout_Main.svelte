@@ -1,16 +1,18 @@
-<div class="layout-main">
+<div {id} class="layout-main">
 	<AbsoluteHeader />
 	<Header />
 	<div class="page-content"><slot /></div>
 	<Footer />
-	<AbsoluteFooter />
+	<Block_AbsoluteFooter id="footer-absolute" />
 </div>
 
 <script>
 	import AbsoluteHeader from '$shared_components/AbsoluteHeader.svelte';
 	import Header from '$shared_components/Header.svelte';
 	import Footer from '$shared_components/Footer.svelte';
-	import AbsoluteFooter from '$shared_components/AbsoluteFooter.svelte';
+	import Block_AbsoluteFooter from '$shared_components/Block_AbsoluteFooter.svelte';
+	let id;
+	export { id };
 </script>
 
 <style>

@@ -7,7 +7,12 @@ const config = {
 	expires: 300, // Default Data Caching in Seconds Client Side before re-request
 	pwa: true, // Is PWA
 	lang: 'en', // Base Language 'en' by default
-	darkmode: 'user', // Initial dark mode: user (os/brower prefs), dark, light (on reload last state set by user is remembered)
+	darkmode: 'user', // Initial dark mode: user (os/brower prefs), dark/light (initial state, on reload last state set by user is remembered), disabled for completly disabled.
+	smoothscroll: true,
+	topanchor: true,
+	watch_scroll: true,
+	watch_resize: true,
+	watch_mouse: true,
 	credit: {
 		milk: true,
 		svelte: true,

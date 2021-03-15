@@ -835,9 +835,12 @@
 		.font-main {
 			font-family: var(--font-main);
 		}
+		.font-baseline,
 		.font-resize {
 			vertical-align: baseline;
-			font-size: calc(1em * var(--font-size));
+		}
+		[class*='font-resize'] {
+			font-size: var(--resize-to, calc(1em * var(--resize-by, 1)));
 		}
 		body {
 			background: var(--background);

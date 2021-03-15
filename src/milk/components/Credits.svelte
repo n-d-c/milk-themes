@@ -122,8 +122,6 @@
 		position: absolute;
 		margin-left: -999999vw;
 	}
-	a {
-	}
 	img {
 		display: inline-block;
 		vertical-align: middle;

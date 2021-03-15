@@ -6,10 +6,11 @@
 />
 <Head_Facebook />
 <Head_Twitter />
-<Layout_Main>
-	<Hero>
+<Layout_Main id="page-homepage">
+	<Hero id="main-hero">
 		{#if logo}
 			<img
+				class="logo"
 				src={logo}
 				alt={title}
 				width={logo_width}
@@ -17,16 +18,16 @@
 			/>
 		{/if}
 		{#if title}<h1>{title}</h1>{/if}
-		{#if tagline}<h2>{tagline}</h2>{/if}
-		{#if excerpt}<h3>{excerpt}</h3>{/if}
-		{#if details}<p>{details}</p>{/if}
+		{#if tagline}<h2>{tagline}</h2> {/if}
+		{#if excerpt}<p>{excerpt}</p>{/if}
+		{#if details}<div class="details">{details}</div>{/if}
 	</Hero>
 	<div class="content">
 		<div class="content-inner">
 			<h1>
 				Welcome to 🥛Milk<span
 					class="font-resize"
-					style="--font-size: 0.60">.js</span
+					style="--resize-by: 0.60">.js</span
 				>
 			</h1>
 			<div>
@@ -37,6 +38,11 @@
 					<li>
 						<a href="/documentation/theme">
 							Theme Documentation ({$milk?.theme?.name})
+						</a>
+					</li>
+					<li>
+						<a href="/documentation/browser">
+							Milk's Browser Tests
 						</a>
 					</li>
 				</ul>
@@ -73,14 +79,4 @@
 </script>
 
 <style>
-	img {
-		width: 20vw;
-		height: auto;
-		margin: 0;
-		position: relative;
-		min-width: 100px;
-	}
-	.content-inner h1 {
-		text-align: center;
-	}
 </style>

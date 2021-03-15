@@ -10,6 +10,7 @@ import { theme } from '$site_theme/info.js';
 import { setupDebug, debug } from '$milk_util/debug.js'
 
 const MILK_VERSION = '0.0.02';
+const MILK_DATE = '2021-03-13';  // Fresh Milk is best!
 
 if (config?.debug) { setupDebug(config?.debug); };
 debug(`%c🥛MILK: Pouring you a glass of Milk.js v${MILK_VERSION}...`, 'font-weight: bold;')
@@ -17,6 +18,7 @@ debug(`%c🥛MILK: Pouring you a glass of Milk.js v${MILK_VERSION}...`, 'font-we
 /* #### STATE OBJECT #### */
 export const milk = writable({
 	version: MILK_VERSION,
+	date: MILK_DATE,
 	hello: config?.hello,
 	credits,
 	config,

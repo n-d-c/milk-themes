@@ -1,8 +1,10 @@
-<div class="layout-blank">
+<div {id} class="layout-blank">
 	<div class="page-content"><slot /></div>
 </div>
 
 <script>
+	let id;
+	export { id };
 </script>
 
 <style>
