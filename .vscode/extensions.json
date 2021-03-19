@@ -1,7 +1,7 @@
 {
 	"recommendations": [
 		"dbaeumer.vscode-eslint",
-		"formulahendry.auto-rename-tag",
-		"svelte.svelte-vscode"
+		"svelte.svelte-vscode",
+		"laktak.hjson",
 	]
 }

@@ -1,16 +1,22 @@
 /* #### MILK #### */
 import { writable } from 'svelte/store';
-import { config } from '$site_config/config.js';
-import { site } from '$site_config/site.js';
-import { pwa } from '$site_config/pwa.js';
-import { sources } from '$site_config/data.js';
-import { get, gql, post, rest } from '$milk_data/data-adaptors.js';
-import { browser, user, credits } from '$milk_data/state-additional.js'
-import { theme } from '$site_theme/info.js';
-import { setupDebug, debug } from '$milk_util/debug.js'
+import { get, gql, post, rest } from '$milk/data/data-adaptors.js';
+import { browser, user, credits } from '$milk/data/state-additional.js'
+import { theme } from '$theme/info.js';
+import { setupDebug, debug } from '$milk/util/debug.js'
 
-const MILK_VERSION = '0.0.02';
-const MILK_DATE = '2021-03-13';  // Fresh Milk is best!
+const MILK_VERSION = '0.0.07';
+const MILK_DATE = '2021-03-20'; // Fresh Milk is best!
+const MILK_CWD = '_MILK_CWD'; // Magic Loading
+const MILK_CFG = JSON.parse(decodeURI('_MILK_CFG')); // Magic Loading
+const { config, site, pwa, sources } = MILK_CFG;
+
+if (config.lock_config) {
+	Object.freeze(config);
+	Object.freeze(site);
+	Object.freeze(pwa);
+	Object.freeze(sources);
+}
 
 if (config?.debug) { setupDebug(config?.debug); };
 debug(`%c🥛MILK: Pouring you a glass of Milk.js v${MILK_VERSION}...`, 'font-weight: bold;')
@@ -19,6 +25,7 @@ debug(`%c🥛MILK: Pouring you a glass of Milk.js v${MILK_VERSION}...`, 'font-we
 export const milk = writable({
 	version: MILK_VERSION,
 	date: MILK_DATE,
+	cwd: MILK_CWD,
 	hello: config?.hello,
 	credits,
 	config,

@@ -5,7 +5,7 @@
 	keywords="Milk, Website"
 />
 <Head_Facebook />
-<Head_Twitter />
+<!-- <Head_Twitter /> -->
 <Layout_Main id="page-homepage">
 	<Hero id="main-hero">
 		{#if logo}
@@ -55,12 +55,12 @@
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
 	/* ## Components ## */
-	import Head_Language from '$milk_components/Head_Language.svelte';
-	import Head_HTML from '$milk_components/Head_HTML.svelte';
-	import Head_Facebook from '$milk_components/Head_Facebook.svelte';
-	import Head_Twitter from '$milk_components/Head_Twitter.svelte';
-	import Layout_Main from '$site_theme/Layout_Main.svelte';
-	import Hero from '$milk_components/Hero.svelte';
+	import Head_Language from '$milk/lib/Head_Language.svelte';
+	import Head_HTML from '$milk/lib/Head_HTML.svelte';
+	import Head_Facebook from '$milk/lib/Head_Facebook.svelte';
+	// import Head_Twitter from '$milk/lin/Head_Twitter.svelte';
+	import Layout_Main from '$theme/Layout_Main.svelte';
+	import Hero from '$milk/lib/Hero.svelte';
 	/* ## Variables ## */
 	let title;
 	let tagline;

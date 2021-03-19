@@ -1,6 +1,5 @@
-.gitconfig
 .DS_Store
 node_modules
 /.svelte
-# /build
+/build
 /functions

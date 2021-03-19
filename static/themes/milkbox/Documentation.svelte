@@ -2,5 +2,5 @@
 
 <script>
 	/* ## Components ## */
-	import Documentation_Theme from '$milk_components/Documentation_Theme.svelte';
+	import Documentation_Theme from '$milk/lib/Documentation_Theme.svelte';
 </script>

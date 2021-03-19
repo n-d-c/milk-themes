@@ -1,0 +1,100 @@
+{
+	/* #### MILK CONFIG #### */
+	config: {
+		theme: 'milkbox', // the theme
+		debug: true,
+		lock_config: false, // Lock the configuration objects in production runtime otherwise dynamically reactive by default.
+		cache_swr: true, // Stale Until Invalidates on Refresh
+		cache: true, // Hard Caching Data on Client Side
+		expires: 300, // Default Data Caching in Seconds Client Side before re-request
+		pwa: true, // Is PWA
+		lang: 'en', // Base Language 'en' by default
+		darkmode: 'user', // Initial dark mode: user (os/brower prefs), dark/light (initial state, on reload last state set by user is remembered), disabled for completly disabled.
+		smoothscroll: true,
+		topanchor: true,
+		watch_scroll: true,
+		watch_resize: true,
+		watch_mouse: true,
+		credit: {
+			milk: true,
+			svelte: true,
+			graphql: true,
+			snowpack: true
+		} 
+	}
+	/* #### SITE CONFIG #### */
+	site: {
+		domain: 'milkjs.com',
+		url: 'https://milkjs.com',
+		photo: '/img/profile_1200x1200.jpg',
+		photo_avif: '/img/profile_1200x1200.avif',
+		photo_webp: '/img/profile_1200x1200.webp',
+		logo: '/milk/img/logo_milk.svg',
+		logo_width: '60',
+		logo_height: '60',
+		title: 'Milk',
+		tagline: 'Milk, it does a website good.',
+		organization: 'Milk.js',
+		first_name: 'Milk',
+		last_name: 'JS',
+		middle_name: '',
+		prefix_name: '',
+		suffix_name: '',
+		nick_name: '',
+		email_address: 'info@milkjs.com',
+		phone: '',
+		fax: '',
+		address: '',
+		address2: '',
+		city: '',
+		state: '',
+		state_abbr: '',
+		zip: '',
+		country: '',
+		country_abbr: '',
+		hours_of_operation: '',
+		hours_of_operation_dt: '',
+		price_range: '$',
+		category: '',
+		description: '',
+		keywords: '',
+		established: '',
+		latitude: '',
+		longitude: '',
+		google_maps: '', // shortened direct
+		google_maps_embed: '', // from ifram embed src
+		google_maps_image: '',
+		google_maps_image_webp: '',
+		google_maps_image_avif: '',
+		google_business: '',
+		facebook: '',
+		facebook_photo: 'https://milkjs.com/img/socialmedia_1200x630.jpg',
+		facebook_type: 'website',
+		twitter: '',
+		twitter_photo: 'https://milkjs.com/img/socialmedia_1200x630.jpg',
+		instagram: '',
+		linkedin: '',
+		youtube: '',
+		vimeo: '',
+		rss: '',
+		blog: '',
+		etsy: '',
+		yelp: '',
+		airbnb: '',
+		tiktok: '',
+		snapchat: '',
+		pinterest: '',
+		vcf_file: '',
+		calendar: '',
+	},
+	/* #### PWA CONFIG #### */
+	pwa: {
+		app_color: '#3A0D2E',
+		app_background: '#3A0D2E',
+		app_name: 'DevLove - Milk'
+	},
+	/* #### DATA SOURCES #### */
+	sources: {
+		// sources go here;
+	},
+}

@@ -10,10 +10,10 @@
 
 <script>
 	/* ## Components ## */
-	import Head_Language from '$milk_components/Head_Language.svelte';
-	import Head_HTML from '$milk_components/Head_HTML.svelte';
-	import Layout_Blank from '$site_theme/Layout_Blank.svelte';
-	import Documentation_Milk from '$milk_components/Documentation_Milk.svelte';
+	import Head_Language from '$milk/lib/Head_Language.svelte';
+	import Head_HTML from '$milk/lib/Head_HTML.svelte';
+	import Layout_Blank from '$theme/Layout_Blank.svelte';
+	import Documentation_Milk from '$milk/lib/Documentation_Milk.svelte';
 </script>
 
 <style>

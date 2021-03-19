@@ -1,1 +1,0 @@
-{"version":3,"file":"Layout_Blank.svelte-c54a8e13.css","sources":["../../../../../Layout_Blank.svelte"],"sourcesContent":["<div class=\"layout-blank\">\n\t<div class=\"content\"><slot /></div>\n</div>\n\n<script></script>\n\n<style>.content,.layout-blank{display:block}</style>\n"],"names":[],"mappings":"AAMO,uBAAQ,CAAC,4BAAa,CAAC,QAAQ,KAAK,CAAC"}
