@@ -27,10 +27,6 @@
 			name={$milk?.credits?.name}
 			url={$milk?.credits?.url}
 			email={$milk?.credits?.email}
-			credit_milk={$milk?.config?.credit?.milk}
-			credit_svelte={$milk?.config?.credit?.svelte}
-			credit_graphql={$milk?.config?.credit?.graphql}
-			credit_snowpack={$milk?.config?.credit?.snowpack}
 		/>
 	</div>
 </footer>

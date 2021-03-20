@@ -19,7 +19,8 @@
 			milk: true,
 			svelte: true,
 			graphql: true,
-			snowpack: true
+			vite: true,
+			rollup: true,
 		} 
 	}
 	/* #### SITE CONFIG #### */
