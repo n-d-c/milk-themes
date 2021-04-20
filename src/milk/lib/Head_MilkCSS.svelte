@@ -1331,6 +1331,19 @@
 			max-width: var(--content-constrain, 100%);
 		}
 	</style>
+	{#if $milk?.theme?.prismjs}
+		<link
+			async
+			href={`/themes/${$milk.theme.slug}/prismjs.css`}
+			rel="preload"
+			as="style"
+		/>
+		<link
+			async
+			href={`/themes/${$milk.theme.slug}/prismjs.css`}
+			rel="stylesheet"
+		/>
+	{/if}
 </svelte:head>
 
 <script>

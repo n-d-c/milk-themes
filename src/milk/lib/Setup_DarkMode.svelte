@@ -1,10 +1,10 @@
 <script>
 	import { onMount } from 'svelte';
 	/* ## MILK ## */
-	import { milk } from '$milk/milk.js';
+	import { milk, browser } from '$milk/milk.js';
 	let darkMode;
 	let setDarkMode = () => {};
-	$: darkMode = $milk.browser.darkmode || false;
+	$: darkMode = $browser?.darkmode || false;
 	$: setDarkMode(darkMode);
 	/* ## Main ## */
 	onMount(async () => {
@@ -18,25 +18,25 @@
 			}
 		};
 		if ($milk?.config?.darkmode == 'disabled') {
-			$milk.browser.darkmode = false;
+			$browser.darkmode = false;
 		} else if ($milk?.theme?.darkmode != true) {
-			$milk.browser.darkmode = false;
+			$browser.darkmode = false;
 		} else if (window?.localStorage?.getItem('dark-mode') == 'true') {
-			$milk.browser.darkmode = true;
+			$browser.darkmode = true;
 		} else if (window?.localStorage?.getItem('dark-mode') == 'false') {
-			$milk.browser.darkmode = false;
+			$browser.darkmode = false;
 		} else if ($milk?.config?.darkmode == 'dark') {
-			$milk.browser.darkmode = true;
+			$browser.darkmode = true;
 		} else if ($milk?.config?.darkmode == 'light') {
-			$milk.browser.darkmode = false;
+			$browser.darkmode = false;
 		} else {
-			$milk.browser.darkmode =
+			$browser.darkmode =
 				window?.matchMedia &&
 				window?.matchMedia('(prefers-color-scheme: dark)')?.matches;
 		}
-		$milk.browser.toggleDarkMode = toggleDarkMode;
+		$browser.toggleDarkMode = toggleDarkMode;
 	});
 	export const toggleDarkMode = () => {
-		$milk.browser.darkmode = !$milk?.browser?.darkmode;
+		$browser.darkmode = !$browser?.darkmode;
 	};
 </script>

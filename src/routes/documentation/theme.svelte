@@ -13,7 +13,7 @@
 	import Head_Language from '$milk/lib/Head_Language.svelte';
 	import Head_HTML from '$milk/lib/Head_HTML.svelte';
 	import Layout_Blank from '$theme/Layout_Blank.svelte';
-	import Documentation from '$theme/Documentation.svelte';
+	import Documentation from '$theme/Documentation.svelte.md';
 </script>
 
 <style>

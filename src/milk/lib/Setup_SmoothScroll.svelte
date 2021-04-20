@@ -1,16 +1,16 @@
 <script>
 	import { onMount } from 'svelte';
 	/* ## MILK ## */
-	import { milk } from '$milk/milk.js';
+	import { browser } from '$milk/milk.js';
 	/* ## Main ## */
 	onMount(async () => {
 		const html = document?.querySelector('html');
 		if (html?.scrollBehavior) {
 			html.scrollBehavior = `smooth`;
 		}
-		$milk.browser.scrollToTop = scrollToTop;
-		$milk.browser.scrollToElement = scrollToElement;
-		$milk.browser.scrollToPosition = scrollToPosition;
+		$browser.scrollToTop = scrollToTop;
+		$browser.scrollToElement = scrollToElement;
+		$browser.scrollToPosition = scrollToPosition;
 	});
 	export const scrollToTop = () => {
 		window.scroll({ behavior: 'smooth', left: 0, top: -100 });

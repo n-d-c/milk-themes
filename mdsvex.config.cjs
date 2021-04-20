@@ -1,5 +1,5 @@
 module.exports = {
-	extensions: [".svx", ".md"],
+	extensions: [".svelte.md", ".svx", ".md"],
 	smartypants: {
 		dashes: "oldschool",
 	},
@@ -16,4 +16,11 @@ module.exports = {
 			behavior: "wrap",
 		}],
 	],
+	layout: {
+		default: "./src/milk/lib/Layout_MDDefault.svelte",
+		themedoc: "./src/milk/lib/Layout_MDThemeDocumentation.svelte",
+		milkdoc: "./src/milk/lib/Layout_MDMilkDocumentation.svelte",
+		blank: "./src/milk/lib/Layout_MDBlank.svelte",
+		_: "./src/milk/lib/Layout_MDDefault.svelte"
+	}
 };

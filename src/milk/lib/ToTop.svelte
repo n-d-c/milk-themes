@@ -1,6 +1,6 @@
 <button
 	class="to-top"
-	on:click={$milk.browser.scrollToTop}
+	on:click={$browser.scrollToTop}
 	title="Link to top of page."
 >
 	<span class="top-link"><span><slot>Back To Top</slot></span></span>
@@ -8,7 +8,7 @@
 
 <script>
 	/* ## MILK ## */
-	import { milk } from '$milk/milk.js';
+	import { browser } from '$milk/milk.js';
 </script>
 
 <style>

@@ -3,7 +3,7 @@
 		<Toggle_DarkMode />
 	</div>
 	<h2>
-		Documentation for {$milk?.theme?.name} ({$milk?.theme?.slug}) theme.
+		{$milk?.theme?.name} ({$milk?.theme?.slug})
 	</h2>
 	<p>
 		<a href={$milk?.theme?.url} title={$milk?.theme?.name}>
@@ -13,6 +13,14 @@
 	<pre><strong>Version:</strong> {$milk?.theme?.version} on {$milk?.theme?.date}</pre>
 	<pre><strong>Author:</strong> {$milk?.theme?.author}</pre>
 
+	<hr />
+
+	<h2>Theme Documentation</h2>
+	<slot />
+
+	<hr />
+
+	<h2>Theme Tests</h2>
 	<details class="theme-documentation">
 		<summary><h3>Fonts</h3></summary>
 		<div class="content">
@@ -434,14 +442,6 @@
 			</div>
 		</div>
 	</details>
-	<!--
-	<div class="style-test">
-		<Test_HTML mode="light" />
-		<Test_HTML mode="dark" />
-	</div> -->
-
-	<hr />
-	<slot />
 </Documentation>
 
 <script>

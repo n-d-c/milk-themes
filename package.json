@@ -7,7 +7,8 @@
 		"start": "svelte-kit start;",
 		"adapt": "svelte-kit adapt;",
 		"export": "svelte-kit build; svelte-kit adapt;",
-		"update": "git remote add updates https://github.com/rndm-user/devlove-milk.git; git fetch updates; git pull updates master; npm install;"
+		"update": "git remote add updates https://github.com/rndm-user/devlove-milk.git; git fetch updates; git pull updates master; pnpm install; svelte-kit build; svelte-kit adapt;",
+		"prod": "svelte-kit build; svelte-kit adapt; rm -rf ./build/documentation;"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.13.10",
@@ -21,7 +22,7 @@
 		"cssnano": "^4.1.10",
 		"graphql": "^15.5.0",
 		"hjson": "^3.2.2",
-		"mdsvex": "^0.8.9",
+		"mdsvex": "^0.9.0",
 		"postcss": "^8.2.8",
 		"postcss-cli": "^8.3.1",
 		"postcss-load-config": "^3.0.1",
@@ -31,6 +32,7 @@
 		"remark-abbr": "^1.4.1",
 		"remark-github": "^10.0.1",
 		"rollup": "^2.41.5",
+		"rollup-plugin-visualizer": "^4.2.2",
 		"svelte": "^3.35.0",
 		"svelte-hmr": "0.13.1",
 		"svelte-preprocess": "^4.6.9",

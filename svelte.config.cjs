@@ -7,6 +7,7 @@ const replace = require('@rollup/plugin-replace');
 const graphql = require('@rollup/plugin-graphql');
 const { mdsvex } = require("mdsvex");
 const mdsvexConfig = require("./mdsvex.config.cjs");
+const visualizer = require('rollup-plugin-visualizer');
 
 // const pkg = JSON.parse(fs.readFileSync(join(process.cwd(), 'package.json')));
 const pkg = require('./package.json');
@@ -56,7 +57,11 @@ module.exports = {
 					_MILK_URL: `${cfg?.site?.url}`,
 					_MILK_CFG: encodeURI(String(JSON.stringify(cfg)))
 				}),
-				graphql()
+				graphql(),
+				visualizer({
+					filename: path.resolve('static/documentation/code_analysis.html'),
+					template: 'sunburst'
+				})
 			],
 			resolve: {
 				alias: {

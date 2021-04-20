@@ -53,7 +53,7 @@
 
 <script>
 	/* ## MILK ## */
-	import { milk } from '$milk/milk.js';
+	import { milk, browser } from '$milk/milk.js';
 	/* ## Components ## */
 	import Head_Language from '$milk/lib/Head_Language.svelte';
 	import Head_HTML from '$milk/lib/Head_HTML.svelte';
