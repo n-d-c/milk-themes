@@ -1,6 +1,6 @@
 {
-	"name": "svelte-kit",
-	"version": "0.0.1",
+	"name": "milkjs",
+	"version": "0.0.08",
 	"scripts": {
 		"dev": "svelte-kit dev;",
 		"build": "svelte-kit build;",
