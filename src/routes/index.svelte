@@ -33,7 +33,7 @@
 			<div>
 				<ul>
 					<li>
-						<a href="/documentation">Milk.js Documentation</a>
+						<a href="/documentation/milk">Milk.js Documentation</a>
 					</li>
 					<li>
 						<a href="/documentation/theme">
