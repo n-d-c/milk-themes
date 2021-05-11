@@ -57,3 +57,80 @@ pnpm run export;
 ## Auto Deployment
 
 Hook a webhook up to your Git repo and set the root to the distribution directory.
+
+## Setup Custom Theme
+
+Copy and edit and existing theme to get started.
+
+```zsh
+cp -rfp ./static/themes/blank ./static/themes/yourtheme
+```
+
+In the theme edit the file:
+
+```zsh
+code ./static/themes/yourtheme/info.js
+```
+
+to create the themes base settings.
+
+Replace the theme's logo at:
+
+```zsh
+code ./static/themes/yourtheme/logo_theme.svg
+```
+
+Set the theme fonts and colors in the theme's stylesheet
+
+```zsh
+code ./static/themes/yourtheme/style.css
+```
+
+Set the themes four main block styles in the theme's stylesheet
+
+```zsh
+code ./static/themes/yourtheme/style.css
+```
+
+Replace the images at
+
+```zsh
+./static/img/profile_1200x1200.*
+./static/img/socialmedia_1200x630.*
+```
+
+Replace ALL the images at
+
+```zsh
+./static/ico/*
+```
+
+Create your themes layouts make sure at a minimum to have Layout_Blank.svelte and Layout_Main.svelte
+
+```zsh
+code ./static/themes/yourtheme/Layout_Xxxxx.svelte
+```
+
+Set your data sources and update all values including setting the site to your new theme:
+
+```zsh
+code ./src/config/config.hjson
+```
+
+Run the site locally
+
+```zsh
+pnpm run dev;
+```
+
+Edit your site and create the site content at
+
+```zsh
+/src/routes/*
+```
+
+including the default layout file
+
+```zsh
+/src/routes/$layout.svelte
+```
