@@ -8,9 +8,9 @@
 
 <style data-svelte>undefined</style>
 
-<link rel="modulepreload" href="/./_app/start-8592f656.js">
+<link rel="modulepreload" href="/./_app/start-eec4f7f1.js">
 			<link rel="modulepreload" href="/./_app/chunks/milk-6677fc86.js">
-			<link rel="modulepreload" href="/./_app/pages/documentation/milk.svelte.md-08f658ef.js">
+			<link rel="modulepreload" href="/./_app/pages/documentation/milk.svelte.md-b4dbcfac.js">
 			<link rel="modulepreload" href="/./_app/chunks/Documentation-e7ebc05f.js">
 			<link rel="modulepreload" href="/./_app/chunks/Hero-a002f36a.js">
 			<link rel="stylesheet" href="/./_app/assets/start-525c3f9e.css">
@@ -19,7 +19,7 @@
 
 
 		<script type="module">
-			import { start } from "/./_app/start-8592f656.js";
+			import { start } from "/./_app/start-eec4f7f1.js";
 			start({
 				target: document.querySelector("#milk"),
 				paths: {"base":"","assets":"/."},
@@ -27,7 +27,7 @@
 				error: null,
 				session: void 0,
 				nodes: [
-					import("/./_app/pages/documentation/milk.svelte.md-08f658ef.js")
+					import("/./_app/pages/documentation/milk.svelte.md-b4dbcfac.js")
 				],
 				page: {
 					host: location.host,
@@ -87,7 +87,34 @@ git push origin master;</code></pre>
 <p>In order to export your site, please run:</p>
 <pre class="language-zsh"><code class="language-zsh">pnpm run export;</code></pre>
 <h2 id="auto-deployment"><a href="#auto-deployment">Auto Deployment</a></h2>
-<p>Hook a webhook up to your Git repo and set the root to the distribution directory.</p></div></div>
+<p>Hook a webhook up to your Git repo and set the root to the distribution directory.</p>
+<h2 id="setup-custom-theme"><a href="#setup-custom-theme">Setup Custom Theme</a></h2>
+<p>Copy and edit and existing theme to get started.</p>
+<pre class="language-zsh"><code class="language-zsh">cp -rfp ./static/themes/blank ./static/themes/yourtheme</code></pre>
+<p>In the theme edit the file:</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/info.js</code></pre>
+<p>to create the themes base settings.</p>
+<p>Replace the theme’s logo at:</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/logo_theme.svg</code></pre>
+<p>Set the theme fonts and colors in the theme’s stylesheet</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/style.css</code></pre>
+<p>Set the themes four main block styles in the theme’s stylesheet</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/style.css</code></pre>
+<p>Replace the images at</p>
+<pre class="language-zsh"><code class="language-zsh">./static/img/profile_1200x1200.*
+./static/img/socialmedia_1200x630.*</code></pre>
+<p>Replace ALL the images at</p>
+<pre class="language-zsh"><code class="language-zsh">./static/ico/*</code></pre>
+<p>Create your themes layouts make sure at a minimum to have Layout_Blank.svelte and Layout_Main.svelte</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/Layout_Xxxxx.svelte</code></pre>
+<p>Set your data sources and update all values including setting the site to your new theme:</p>
+<pre class="language-zsh"><code class="language-zsh">code ./src/config/config.hjson</code></pre>
+<p>Run the site locally</p>
+<pre class="language-zsh"><code class="language-zsh">pnpm run dev;</code></pre>
+<p>Edit your site and create the site content at</p>
+<pre class="language-zsh"><code class="language-zsh">/src/routes/*</code></pre>
+<p>including the default layout file</p>
+<pre class="language-zsh"><code class="language-zsh">/src/routes/$layout.svelte</code></pre></div></div>
 </div></app>
 
 
