@@ -1,7 +1,7 @@
 {
 	/* #### MILK CONFIG #### */
 	config: {
-		theme: 'milkbox', // the theme
+		theme: 'blank', // the theme
 		debug: true,
 		lock_config: false, // Lock the configuration objects in production runtime otherwise dynamically reactive by default.
 		cache_swr: true, // Stale Until Invalidates on Refresh

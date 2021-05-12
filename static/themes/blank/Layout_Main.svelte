@@ -1,16 +1,18 @@
-<div class="layout-main">
-	<AbsoluteHeader />
-	<Header />
-	<div class="content"><slot /></div>
-	<Footer />
-	<AbsoluteFooter />
+<div {id} class="layout-main">
+	<Block_AbsoluteHeader />
+	<Block_Header />
+	<div class="page-content"><slot /></div>
+	<Block_Footer />
+	<Block_AbsoluteFooter id="footer-absolute" />
 </div>
 
 <script>
-	import AbsoluteHeader from '$shared_components/AbsoluteHeader.svelte';
-	import Header from '$shared_components/Header.svelte';
-	import Footer from '$shared_components/Footer.svelte';
-	import AbsoluteFooter from '$shared_components/AbsoluteFooter.svelte';
+	import Block_AbsoluteHeader from '$lib/Block_AbsoluteHeader.svelte';
+	import Block_Header from '$lib/Block_Header.svelte';
+	import Block_Footer from '$lib/Block_Footer.svelte';
+	import Block_AbsoluteFooter from '$lib/Block_AbsoluteFooter.svelte';
+	let id;
+	export { id };
 </script>
 
 <style>
@@ -22,7 +24,7 @@
 		grid-template-rows: auto auto 1fr auto auto;
 		z-index: 10;
 	}
-	.content {
+	.page-content {
 		display: block;
 	}
 </style>
