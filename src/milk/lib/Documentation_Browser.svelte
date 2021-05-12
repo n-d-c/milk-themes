@@ -48,8 +48,21 @@
 		padding-right: 2.2rem;
 		padding-left: 1rem;
 		background: var(--background);
-		color: var(--text-color);
+		color: var(--text-color) !important;
 		border: 0px none;
+	}
+	.block-style01 summary :is(h1, h2, h3, h4, h5, h6, p),
+	.block-style02 summary :is(h1, h2, h3, h4, h5, h6, p),
+	.block-style03 summary :is(h1, h2, h3, h4, h5, h6, p),
+	.block-style04 summary :is(h1, h2, h3, h4, h5, h6, p) {
+		color: var(--color-black) !important;
+	}
+	:root
+		.dark-mode
+		details.theme-documentation
+		summary
+		:is(h1, h2, h3, h4, h5, h6, p) {
+		color: var(--text-color) !important;
 	}
 	details[open].theme-documentation > summary {
 		border-bottom: var(--border-size) var(--border-style)

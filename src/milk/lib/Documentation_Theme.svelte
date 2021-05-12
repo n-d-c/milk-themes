@@ -442,6 +442,278 @@
 			</div>
 		</div>
 	</details>
+
+	<details class="theme-documentation for-html">
+		<summary><h3>Block Style 01</h3></summary>
+		<div class="content block-style01">
+			<div class="cols">
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Headings</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Headings />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Lists</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Lists />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Tables</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Tables />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Content</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Content />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Additional Content</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_AdditionalContent />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Forms</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Forms />
+						</div>
+					</details>
+				</div>
+			</div>
+		</div>
+	</details>
+
+	<details class="theme-documentation for-html">
+		<summary><h3>Block Style 02</h3></summary>
+		<div class="content block-style02">
+			<div class="cols">
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Headings</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Headings />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Lists</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Lists />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Tables</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Tables />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Content</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Content />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Additional Content</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_AdditionalContent />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Forms</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Forms />
+						</div>
+					</details>
+				</div>
+			</div>
+		</div>
+	</details>
+
+	<details class="theme-documentation for-html">
+		<summary><h3>Block Style 03</h3></summary>
+		<div class="content block-style03">
+			<div class="cols">
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Headings</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Headings />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Lists</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Lists />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Tables</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Tables />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Content</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Content />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Additional Content</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_AdditionalContent />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Forms</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Forms />
+						</div>
+					</details>
+				</div>
+			</div>
+		</div>
+	</details>
+
+	<details class="theme-documentation for-html">
+		<summary><h3>Block Style 04</h3></summary>
+		<div class="content block-style04">
+			<div class="cols">
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Headings</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Headings />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Lists</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Lists />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Tables</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Tables />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Content</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Content />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Additional Content</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_AdditionalContent />
+						</div>
+					</details>
+				</div>
+				<div>
+					<details class="theme-documentation">
+						<summary>
+							<h4 class="main-font">Forms</h4>
+						</summary>
+						<div class="content">
+							<Test_HTML_Forms />
+						</div>
+					</details>
+				</div>
+			</div>
+		</div>
+	</details>
 </Documentation>
 
 <script>

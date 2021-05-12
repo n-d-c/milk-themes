@@ -149,6 +149,86 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 
 
 /* ### Blocks ### */
+/* ## Block Style 01 ## */
+.block-style01 {
+	background: var(--color-one);
+	color: var(--color-white);
+}
+.block-style01 :is(h1, h2, h3, h4, h5, h6, p) { color: var(--color-white); }
+.block-style01 a { color: var(--color-white); }
+.block-style01 a:hover,
+.block-style01 a:focus,
+.block-style01 a:active { color: var(--color-five); }
+:root .dark-mode .block-style01 {
+	background: var(--color-offwhite);
+	color: var(--color-black);
+}
+:root .dark-mode .block-style01 :is(h1, h2, h3, h4, h5, h6, p) { color: var(--color-black); }
+:root .dark-mode .block-style01 a { color: var(--color-black); }
+:root .dark-mode .block-style01 a:hover,
+:root .dark-mode .block-style01 a:focus,
+:root .dark-mode .block-style01 a:active { color: var(--color-five); }
+
+/* ## Block Style 02 ## */
+.block-style02 {
+	background: var(--color-five);
+	color: var(--color-black);
+}
+.block-style02 :is(h1, h2, h3, h4, h5, h6, p) { color: var(--color-black); }
+.block-style02 a { color: var(--color-charcoal); }
+.block-style02 a:hover,
+.block-style02 a:focus,
+.block-style02 a:active { color: var(--color-eight); }
+:root .dark-mode .block-style02 {
+	background: var(--color-five);
+	color: var(--color-white);
+}
+:root .dark-mode .block-style02 :is(h1, h2, h3, h4, h5, h6, p) { color: var(--color-white); }
+:root .dark-mode .block-style02 a { color: var(--color-charcoal); }
+:root .dark-mode .block-style02 a:hover,
+:root .dark-mode .block-style02 a:focus,
+:root .dark-mode .block-style02 a:active { color: var(--color-eight); }
+
+/* ## Block Style 03 ## */
+.block-style03 {
+	background: var(--color-six);
+	color: var(--color-black);
+}
+.block-style03 :is(h1, h2, h3, h4, h5, h6, p) { color: var(--color-black); }
+.block-style03 a { color: var(--color-charcoal); }
+.block-style03 a:hover,
+.block-style03 a:focus,
+.block-style03 a:active { color: var(--color-five); }
+:root .dark-mode .block-style03 {
+	background: var(--color-six);
+	color: var(--color-white);
+}
+:root .dark-mode .block-style03 :is(h1, h2, h3, h4, h5, h6, p) { color: var(--color-white); }
+:root .dark-mode .block-style03 a { color: var(--color-offwhite); }
+:root .dark-mode .block-style03 a:hover,
+:root .dark-mode .block-style03 a:focus,
+:root .dark-mode .block-style03 a:active { color: var(--color-five); }
+
+/* ## Block Style 04 ## */
+.block-style04 {
+	background: var(--color-charcoal);
+	color: var(--color-white);
+}
+.block-style04 :is(h1, h2, h3, h4, h5, h6, p) { color: var(--color-white); }
+.block-style04 a { color: var(--color-white); }
+.block-style04 a:hover,
+.block-style04 a:focus,
+.block-style04 a:active { color: var(--color-five); }
+:root .dark-mode .block-style04 {
+	background: var(--color-offwhite);
+	color: var(--color-black);
+}
+:root .dark-mode .block-style04 :is(h1, h2, h3, h4, h5, h6, p) { color: var(--color-black); }
+:root .dark-mode .block-style04 a { color: var(--color-black); }
+:root .dark-mode .block-style04 a:hover,
+:root .dark-mode .block-style04 a:focus,
+:root .dark-mode .block-style04 a:active { color: var(--color-five); }
+
 /* ## Heros ## */
 .hero {
 	background: var(--color-one);
