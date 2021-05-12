@@ -129,8 +129,8 @@ Edit your site and create the site content at
 /src/routes/*
 ```
 
-including the default layout file
+including the default layout file if needed although usually fine as it just loads other layouts and headers.
 
 ```zsh
-/src/routes/$layout.svelte
+code /src/routes/$layout.svelte
 ```

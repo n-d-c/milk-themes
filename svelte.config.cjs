@@ -68,7 +68,8 @@ module.exports = {
 					$milk: path.resolve('src/milk'),
 					$theme: path.resolve(`static/themes/${cfg?.config?.theme}`),
 					$lib: path.resolve('src/lib'),
-					$static: path.resolve('static')
+					$static: path.resolve('static'),
+					$graphql: path.resolve('src/graphql')
 				}
 			},
 			ssr: {
