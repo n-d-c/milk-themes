@@ -2,7 +2,7 @@
 layout: themedoc
 ---
 
-# Test
+# Testing
 
 <script>
  /*## MILK ##*/
