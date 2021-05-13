@@ -87,6 +87,9 @@
 		pinterest: '',
 		vcf_file: '',
 		calendar: '',
+		author: 'Nelson Design Collective',
+		author_url: 'http://nelsondesigncollective.com',
+		author_email: 'info@nelsondesigncollective.com',
 	},
 	/* #### PWA CONFIG #### */
 	pwa: {
