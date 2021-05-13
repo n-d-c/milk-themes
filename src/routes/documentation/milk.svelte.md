@@ -10,26 +10,6 @@ If you don't have pnpm installed, please installit.
 npm i -g pnpm
 ```
 
-Grab your carton of milk and make a copy from the git repo:
-
-```zsh
-mkdir <your_project> && $_;
-npx degit https://github.com/rndm-user/devlove-milk.git .;
-pnpm install;
-```
-
-Update domains in service-worker.js and edit the mainfest.js and /src/config/* files.
-
-## Source Control
-
-```zsh
-git init;
-git add .;
-git remote add origin <your_git_repo>;
-git commit;
-git push origin master;
-```
-
 ## Easy Updates
 
 In order to update the version of milk on your site, please run:
@@ -58,38 +38,22 @@ pnpm run export;
 
 Hook a webhook up to your Git repo and set the root to the distribution directory.
 
-## Setup Custom Theme
+## Setup New Site
 
-Copy and edit and existing theme to get started.
+Grab your carton of milk and make a copy from the git repo by forking the repo on github if you haven't already.
+Once you've forked and cloned the repo you can create a branch for each site you want to create where `<newsite>` is the site name.
 
 ```zsh
-cp -rfp ./static/themes/blank ./static/themes/yourtheme
+git branch <newsite>
+git checkout <newsite>
+git push origin <newsite>
 ```
 
-In the theme edit the file:
+Update domains in service-worker.js and edit the mainfest.js and /src/config/* files.
 
 ```zsh
-code ./static/themes/yourtheme/info.js
-```
-
-to create the themes base settings.
-
-Replace the theme's logo at:
-
-```zsh
-code ./static/themes/yourtheme/logo_theme.svg
-```
-
-Set the theme fonts and colors in the theme's stylesheet
-
-```zsh
-code ./static/themes/yourtheme/style.css
-```
-
-Set the themes four main block styles in the theme's stylesheet
-
-```zsh
-code ./static/themes/yourtheme/style.css
+code ./src/service-worker.js
+code ./src/mainfest.js
 ```
 
 Replace the images at
@@ -103,12 +67,6 @@ Replace ALL the images at
 
 ```zsh
 ./static/ico/*
-```
-
-Create your themes layouts make sure at a minimum to have Layout_Blank.svelte and Layout_Main.svelte
-
-```zsh
-code ./static/themes/yourtheme/Layout_Xxxxx.svelte
 ```
 
 Set your data sources and update all values including setting the site to your new theme:
@@ -133,4 +91,50 @@ including the default layout file if needed although usually fine as it just loa
 
 ```zsh
 code /src/routes/$layout.svelte
+```
+
+## Setup Custom Theme
+
+Copy and edit and existing theme to get started.
+
+```zsh
+cp -rfp ./static/themes/blank ./static/themes/<yourtheme>
+```
+
+In the theme edit the file:
+
+```zsh
+code ./static/themes/<yourtheme>/info.js
+```
+
+to create the themes base settings.
+
+Replace the theme's logo at:
+
+```zsh
+code ./static/themes/<yourtheme>/logo_theme.svg
+```
+
+Set the theme fonts and colors in the theme's stylesheet
+
+```zsh
+code ./static/themes/<yourtheme>/style.css
+```
+
+Set the themes four main block styles in the theme's stylesheet
+
+```zsh
+code ./static/themes/<yourtheme>/style.css
+```
+
+Create your themes layouts make sure at a minimum to have Layout_Blank.svelte and Layout_Main.svelte
+
+```zsh
+code ./static/themes/yourtheme/Layout_Xxxxx.svelte
+```
+
+Set your theme in the site config file and restart your dev server
+
+```zsh
+code ./src/config/config.hjson
 ```
