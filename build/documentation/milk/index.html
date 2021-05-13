@@ -8,18 +8,18 @@
 
 <style data-svelte>undefined</style>
 
-<link rel="modulepreload" href="/./_app/start-bdfffe5d.js">
-			<link rel="modulepreload" href="/./_app/chunks/milk-6677fc86.js">
-			<link rel="modulepreload" href="/./_app/pages/documentation/milk.svelte.md-47ebae10.js">
-			<link rel="modulepreload" href="/./_app/chunks/Documentation-e7ebc05f.js">
-			<link rel="modulepreload" href="/./_app/chunks/Hero-a002f36a.js">
+<link rel="modulepreload" href="/./_app/start-f361b890.js">
+			<link rel="modulepreload" href="/./_app/chunks/milk-26b44f61.js">
+			<link rel="modulepreload" href="/./_app/pages/documentation/milk.svelte.md-e41e25e5.js">
+			<link rel="modulepreload" href="/./_app/chunks/Documentation-43103379.js">
+			<link rel="modulepreload" href="/./_app/chunks/Hero-ac05a1b4.js">
 			<link rel="stylesheet" href="/./_app/assets/start-525c3f9e.css">
 			<link rel="stylesheet" href="/./_app/assets/Documentation-988102da.css">
 			<link rel="stylesheet" href="/./_app/assets/Hero-a78ecdf8.css">
 
 
 		<script type="module">
-			import { start } from "/./_app/start-bdfffe5d.js";
+			import { start } from "/./_app/start-f361b890.js";
 			start({
 				target: document.querySelector("#milk"),
 				paths: {"base":"","assets":"/."},
@@ -27,7 +27,7 @@
 				error: null,
 				session: void 0,
 				nodes: [
-					import("/./_app/pages/documentation/milk.svelte.md-47ebae10.js")
+					import("/./_app/pages/documentation/milk.svelte.md-e41e25e5.js")
 				],
 				page: {
 					host: location.host,
@@ -66,17 +66,6 @@
 	<h2 id="installation"><a href="#installation">Installation</a></h2>
 <p>If you don’t have pnpm installed, please installit.</p>
 <pre class="language-zsh"><code class="language-zsh">npm i -g pnpm</code></pre>
-<p>Grab your carton of milk and make a copy from the git repo:</p>
-<pre class="language-zsh"><code class="language-zsh">mkdir &lt;your_project&gt; &amp;&amp; $_;
-npx degit https://github.com/rndm-user/devlove-milk.git .;
-pnpm install;</code></pre>
-<p>Update domains in service-worker.js and edit the mainfest.js and /src/config/* files.</p>
-<h2 id="source-control"><a href="#source-control">Source Control</a></h2>
-<pre class="language-zsh"><code class="language-zsh">git init;
-git add .;
-git remote add origin &lt;your_git_repo&gt;;
-git commit;
-git push origin master;</code></pre>
 <h2 id="easy-updates"><a href="#easy-updates">Easy Updates</a></h2>
 <p>In order to update the version of milk on your site, please run:</p>
 <pre class="language-zsh"><code class="language-zsh">pnpm run update;</code></pre>
@@ -88,25 +77,20 @@ git push origin master;</code></pre>
 <pre class="language-zsh"><code class="language-zsh">pnpm run export;</code></pre>
 <h2 id="auto-deployment"><a href="#auto-deployment">Auto Deployment</a></h2>
 <p>Hook a webhook up to your Git repo and set the root to the distribution directory.</p>
-<h2 id="setup-custom-theme"><a href="#setup-custom-theme">Setup Custom Theme</a></h2>
-<p>Copy and edit and existing theme to get started.</p>
-<pre class="language-zsh"><code class="language-zsh">cp -rfp ./static/themes/blank ./static/themes/yourtheme</code></pre>
-<p>In the theme edit the file:</p>
-<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/info.js</code></pre>
-<p>to create the themes base settings.</p>
-<p>Replace the theme’s logo at:</p>
-<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/logo_theme.svg</code></pre>
-<p>Set the theme fonts and colors in the theme’s stylesheet</p>
-<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/style.css</code></pre>
-<p>Set the themes four main block styles in the theme’s stylesheet</p>
-<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/style.css</code></pre>
+<h2 id="setup-new-site"><a href="#setup-new-site">Setup New Site</a></h2>
+<p>Grab your carton of milk and make a copy from the git repo by forking the repo on github if you haven’t already.
+Once you’ve forked and cloned the repo you can create a branch for each site you want to create where <code>&lt;newsite&gt;</code> is the site name.</p>
+<pre class="language-zsh"><code class="language-zsh">git branch &lt;newsite&gt;
+git checkout &lt;newsite&gt;
+git push origin &lt;newsite&gt;</code></pre>
+<p>Update domains in service-worker.js and edit the mainfest.js and /src/config/* files.</p>
+<pre class="language-zsh"><code class="language-zsh">code ./src/service-worker.js
+code ./src/mainfest.js</code></pre>
 <p>Replace the images at</p>
 <pre class="language-zsh"><code class="language-zsh">./static/img/profile_1200x1200.*
 ./static/img/socialmedia_1200x630.*</code></pre>
 <p>Replace ALL the images at</p>
 <pre class="language-zsh"><code class="language-zsh">./static/ico/*</code></pre>
-<p>Create your themes layouts make sure at a minimum to have Layout_Blank.svelte and Layout_Main.svelte</p>
-<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/Layout_Xxxxx.svelte</code></pre>
 <p>Set your data sources and update all values including setting the site to your new theme:</p>
 <pre class="language-zsh"><code class="language-zsh">code ./src/config/config.hjson</code></pre>
 <p>Run the site locally</p>
@@ -114,7 +98,23 @@ git push origin master;</code></pre>
 <p>Edit your site and create the site content at</p>
 <pre class="language-zsh"><code class="language-zsh">/src/routes/*</code></pre>
 <p>including the default layout file if needed although usually fine as it just loads other layouts and headers.</p>
-<pre class="language-zsh"><code class="language-zsh">code /src/routes/$layout.svelte</code></pre></div></div>
+<pre class="language-zsh"><code class="language-zsh">code /src/routes/$layout.svelte</code></pre>
+<h2 id="setup-custom-theme"><a href="#setup-custom-theme">Setup Custom Theme</a></h2>
+<p>Copy and edit and existing theme to get started.</p>
+<pre class="language-zsh"><code class="language-zsh">cp -rfp ./static/themes/blank ./static/themes/&lt;yourtheme&gt;</code></pre>
+<p>In the theme edit the file:</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/&lt;yourtheme&gt;/info.js</code></pre>
+<p>to create the themes base settings.</p>
+<p>Replace the theme’s logo at:</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/&lt;yourtheme&gt;/logo_theme.svg</code></pre>
+<p>Set the theme fonts and colors in the theme’s stylesheet</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/&lt;yourtheme&gt;/style.css</code></pre>
+<p>Set the themes four main block styles in the theme’s stylesheet</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/&lt;yourtheme&gt;/style.css</code></pre>
+<p>Create your themes layouts make sure at a minimum to have Layout_Blank.svelte and Layout_Main.svelte</p>
+<pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/Layout_Xxxxx.svelte</code></pre>
+<p>Set your theme in the site config file and restart your dev server</p>
+<pre class="language-zsh"><code class="language-zsh">code ./src/config/config.hjson</code></pre></div></div>
 </div></app>
 
 

@@ -150,9 +150,9 @@
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
 	/* ## Variables ## */
-	let name = $milk?.credits?.name || 'Milk.js';
-	let url = $milk?.credits?.url || 'https://milkjs.com/';
-	let email = $milk?.credits?.email || 'info@milkjs.com';
+	let name = $milk?.site?.author || 'Milk.js';
+	let url = $milk?.site?.author_url || 'https://milkjs.com/';
+	let email = $milk?.site?.author_email || 'info@milkjs.com';
 	let credit_milk = $milk?.config?.credit?.milk ?? true;
 	let credit_svelte = $milk?.config?.credit?.svelte ?? true;
 	let credit_graphql = $milk?.config?.credit?.graphql ?? true;
