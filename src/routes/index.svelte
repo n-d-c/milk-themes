@@ -46,12 +46,15 @@
 						</a>
 					</li>
 				</ul>
+				<div>{the_title}</div>
 			</div>
 		</div>
 	</div>
 </Layout_Main>
 
 <script>
+	/* ## Svelte ## */
+	import { onMount, onDestroy } from 'svelte';
 	/* ## MILK ## */
 	import { milk, browser } from '$milk/milk.js';
 	/* ## Components ## */
@@ -76,6 +79,29 @@
 	$: logo ||= $milk?.credits?.logo || '';
 	$: logo_width ||= $milk?.credits?.logo_width || '200';
 	$: logo_height ||= $milk?.credits?.logo_height || '200';
+
+	/* ## Data Loading ## */
+	let unsubscribe = () => {};
+	let the_title = 'Loading...';
+	import { Q_GET_POST_BYID } from '$graphql/wordpress.graphql.js';
+	/* ## Main ## */
+	onMount(async () => {
+		let queryVariables = { id: 1 };
+		let getPost = $milk?.data?.gql(
+			Q_GET_POST_BYID,
+			$milk.data.sources.wordpress,
+			queryVariables
+		);
+		unsubscribe = await getPost?.subscribe(async (fetched_data) => {
+			let data = await fetched_data;
+			the_title = data?.postBy?.title;
+			// console.log(data);
+		});
+	});
+	/* ## Exit ## */
+	onDestroy(() => {
+		unsubscribe(); // important for garbage collection otherwise memory leak
+	});
 </script>
 
 <style>

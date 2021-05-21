@@ -11,4 +11,5 @@ const theme = {
 	darkmode: true,
 	prismjs: true
 };
-export { theme };
+const josh = 'j3';
+export { theme, josh };

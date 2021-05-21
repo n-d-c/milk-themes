@@ -8,18 +8,18 @@
 
 <style data-svelte>undefined</style>
 
-<link rel="modulepreload" href="/./_app/start-07691f65.js">
-			<link rel="modulepreload" href="/./_app/chunks/milk-26b44f61.js">
-			<link rel="modulepreload" href="/./_app/pages/documentation/milk.svelte.md-e41e25e5.js">
-			<link rel="modulepreload" href="/./_app/chunks/Documentation-43103379.js">
-			<link rel="modulepreload" href="/./_app/chunks/Hero-ac05a1b4.js">
+<link rel="modulepreload" href="/./_app/start-5cd1c996.js">
+			<link rel="modulepreload" href="/./_app/chunks/milk-8471538e.js">
+			<link rel="modulepreload" href="/./_app/pages/documentation/milk.svelte.md-b006e56b.js">
+			<link rel="modulepreload" href="/./_app/chunks/Documentation-dd944c1e.js">
+			<link rel="modulepreload" href="/./_app/chunks/Hero-b992c78c.js">
 			<link rel="stylesheet" href="/./_app/assets/start-525c3f9e.css">
 			<link rel="stylesheet" href="/./_app/assets/Documentation-988102da.css">
 			<link rel="stylesheet" href="/./_app/assets/Hero-a78ecdf8.css">
 
 
 		<script type="module">
-			import { start } from "/./_app/start-07691f65.js";
+			import { start } from "/./_app/start-5cd1c996.js";
 			start({
 				target: document.querySelector("#milk"),
 				paths: {"base":"","assets":"/."},
@@ -27,7 +27,7 @@
 				error: null,
 				session: void 0,
 				nodes: [
-					import("/./_app/pages/documentation/milk.svelte.md-e41e25e5.js")
+					import("/./_app/pages/documentation/milk.svelte.md-b006e56b.js")
 				],
 				page: {
 					host: location.host,
@@ -114,7 +114,78 @@ code ./src/mainfest.js</code></pre>
 <p>Create your themes layouts make sure at a minimum to have Layout_Blank.svelte and Layout_Main.svelte</p>
 <pre class="language-zsh"><code class="language-zsh">code ./static/themes/yourtheme/Layout_Xxxxx.svelte</code></pre>
 <p>Set your theme in the site config file and restart your dev server</p>
-<pre class="language-zsh"><code class="language-zsh">code ./src/config/config.hjson</code></pre></div></div>
+<pre class="language-zsh"><code class="language-zsh">code ./src/config/config.hjson</code></pre>
+<h2 id="requesting-data"><a href="#requesting-data">Requesting Data</a></h2>
+<p>Make sure you setup your data source for example:</p>
+<pre class="language-zsh"><code class="language-zsh">code ./src/config/config.hjson</code></pre>
+<pre class="language-json"><code class="language-json">sources<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    wordpress<span class="token operator">:</span> <span class="token string">"https://yourwordpresssite.com/graphql"</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>Stop <code>^C</code> and restart <code>pnpm run dev</code> your dev server to pickup configuration changes.</p>
+<p>You can now request data in your components like so</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">/* ## Data Loading ## */</span>
+<span class="token keyword">let</span> <span class="token function-variable function">unsubscribe</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> the_title <span class="token operator">=</span> <span class="token string">'Loading...'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> <span class="token constant">Q_GET_POST_HELLOWORLD</span> <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$graphql/wordpress.graphql.js'</span><span class="token punctuation">;</span>
+<span class="token comment">/* ## Main ## */</span>
+<span class="token function">onMount</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> getData <span class="token operator">=</span> $milk<span class="token operator">?.</span>data<span class="token operator">?.</span><span class="token function">gql</span><span class="token punctuation">(</span>
+        <span class="token constant">Q_GET_POST_HELLOWORLD</span><span class="token punctuation">,</span>
+        $milk<span class="token punctuation">.</span>data<span class="token punctuation">.</span>sources<span class="token punctuation">.</span>wordpress
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    unsubscribe <span class="token operator">=</span> <span class="token keyword">await</span> getData<span class="token operator">?.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">fetched_data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token keyword">await</span> fetched_data<span class="token punctuation">;</span>
+        the_title <span class="token operator">=</span> data<span class="token operator">?.</span>posts<span class="token operator">?.</span>nodes<span class="token operator">?.</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">?.</span>title<span class="token punctuation">;</span>
+        <span class="token comment">// console.log(data);</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/* ## Exit ## */</span>
+<span class="token comment">/* important for garbage collection otherwise memory leak */</span>
+<span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span> <span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Or pass in GraphQL varialbes like so</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">/* ## Data Loading ## */</span>
+<span class="token keyword">let</span> <span class="token function-variable function">unsubscribe</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> the_title <span class="token operator">=</span> <span class="token string">'Loading...'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> <span class="token constant">Q_GET_POST_BYID</span> <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$graphql/wordpress.graphql.js'</span><span class="token punctuation">;</span>
+<span class="token comment">/* ## Main ## */</span>
+<span class="token function">onMount</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> queryVariables <span class="token operator">=</span> <span class="token punctuation">&#123;</span> id<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> getData <span class="token operator">=</span> $milk<span class="token operator">?.</span>data<span class="token operator">?.</span><span class="token function">gql</span><span class="token punctuation">(</span>
+        <span class="token constant">Q_GET_POST_BYID</span><span class="token punctuation">,</span>
+        $milk<span class="token punctuation">.</span>data<span class="token punctuation">.</span>sources<span class="token punctuation">.</span>wordpress<span class="token punctuation">,</span>
+        queryVariables
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    unsubscribe <span class="token operator">=</span> <span class="token keyword">await</span> getData<span class="token operator">?.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">fetched_data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token keyword">await</span> fetched_data<span class="token punctuation">;</span>
+        the_title <span class="token operator">=</span> data<span class="token operator">?.</span>postBy<span class="token operator">?.</span>title<span class="token punctuation">;</span>
+        <span class="token comment">// console.log(data);</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/* ## Exit ## */</span>
+<span class="token comment">/* important for garbage collection otherwise memory leak */</span>
+<span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span> <span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Offset Pagination (First 8 Posts)</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">/* ## Data Loading ## */</span>
+<span class="token keyword">let</span> <span class="token function-variable function">unsubscribe</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> posts <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> <span class="token constant">Q_GET_POSTS</span> <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$graphql/wordpress.graphql.js'</span><span class="token punctuation">;</span>
+<span class="token comment">/* ## Main ## */</span>
+<span class="token function">onMount</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> queryVariables <span class="token operator">=</span> <span class="token punctuation">&#123;</span> offset<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> size<span class="token operator">:</span> <span class="token number">8</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> getData <span class="token operator">=</span> $milk<span class="token operator">?.</span>data<span class="token operator">?.</span><span class="token function">gql</span><span class="token punctuation">(</span>
+        <span class="token constant">Q_GET_POSTS</span><span class="token punctuation">,</span>
+        $milk<span class="token punctuation">.</span>data<span class="token punctuation">.</span>sources<span class="token punctuation">.</span>wordpress<span class="token punctuation">,</span>
+        queryVariables
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    unsubscribe <span class="token operator">=</span> <span class="token keyword">await</span> getData<span class="token operator">?.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">fetched_data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token keyword">await</span> fetched_data<span class="token punctuation">;</span>
+        posts <span class="token operator">=</span> data<span class="token operator">?.</span>posts<span class="token punctuation">;</span>
+        <span class="token comment">// console.log(data);</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/* ## Exit ## */</span>
+<span class="token comment">/* important for garbage collection otherwise memory leak */</span>
+<span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span> <span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
 </div></app>
 
 

@@ -2,9 +2,24 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"$app/*": [".svelte/dev/runtime/app/*", ".svelte/build/runtime/app/*"],
-			"$lib/*": ["src/lib/*"]
+			"$app/*": [
+				".svelte/dev/runtime/app/*",
+				".svelte/build/runtime/app/*"
+			],
+			"$lib/*": [
+				"src/lib/*"
+			],
+			"$milk/*": [
+				"src/milk/*"
+			],
+			"$theme/*": [
+				"static/themes/milkbox/*"
+			]
 		}
 	},
-	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
+	"include": [
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"src/**/*.svelte"
+	]
 }
