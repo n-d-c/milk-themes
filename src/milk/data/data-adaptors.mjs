@@ -1,10 +1,6 @@
 import { writable } from 'svelte/store';
 //import { get as idbGet, set as idbSet } from 'idb-keyval';
-// import { get as idbGet, set as idbSet } from 'idb-keyval';
-import { get as idbGet, set as idbSet } from '$milk/data/idb-keyval.js';
-// import pkg from 'idb-keyval';
-// const idbGet = pkg.get;
-// const idbSet = pkg.set;
+import { get as idbGet, set as idbSet } from 'idb-keyval'
 
 
 /* ## Config ## */

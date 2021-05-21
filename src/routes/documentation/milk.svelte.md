@@ -138,3 +138,95 @@ Set your theme in the site config file and restart your dev server
 ```zsh
 code ./src/config/config.hjson
 ```
+
+## Requesting Data
+
+Make sure you setup your data source for example:
+
+```zsh
+code ./src/config/config.hjson
+```
+
+```json
+sources: {
+    wordpress: "https://yourwordpresssite.com/graphql"
+}
+```
+
+Stop `^C` and restart `pnpm run dev` your dev server to pickup configuration changes.
+
+You can now request data in your components like so
+
+```js
+/* ## Data Loading ## */
+let unsubscribe = () => {};
+let the_title = 'Loading...';
+import { Q_GET_POST_HELLOWORLD } from '$graphql/wordpress.graphql.js';
+/* ## Main ## */
+onMount(async () => {
+    let getData = $milk?.data?.gql(
+        Q_GET_POST_HELLOWORLD,
+        $milk.data.sources.wordpress
+    );
+    unsubscribe = await getData?.subscribe(async (fetched_data) => {
+        let data = await fetched_data;
+        the_title = data?.posts?.nodes?.[0]?.title;
+        // console.log(data);
+    });
+});
+/* ## Exit ## */
+/* important for garbage collection otherwise memory leak */
+onDestroy(() => { unsubscribe(); });
+```
+
+Or pass in GraphQL varialbes like so
+
+```js
+/* ## Data Loading ## */
+let unsubscribe = () => {};
+let the_title = 'Loading...';
+import { Q_GET_POST_BYID } from '$graphql/wordpress.graphql.js';
+/* ## Main ## */
+onMount(async () => {
+    let queryVariables = { id: 1 };
+    let getData = $milk?.data?.gql(
+        Q_GET_POST_BYID,
+        $milk.data.sources.wordpress,
+        queryVariables
+    );
+    unsubscribe = await getData?.subscribe(async (fetched_data) => {
+        let data = await fetched_data;
+        the_title = data?.postBy?.title;
+        // console.log(data);
+    });
+});
+/* ## Exit ## */
+/* important for garbage collection otherwise memory leak */
+onDestroy(() => { unsubscribe(); });
+```
+
+Offset Pagination (First 8 Posts)
+
+```js
+/* ## Data Loading ## */
+let unsubscribe = () => {};
+let posts = {};
+import { Q_GET_POSTS } from '$graphql/wordpress.graphql.js';
+/* ## Main ## */
+onMount(async () => {
+    let queryVariables = { offset: 0, size: 8 };
+    let getData = $milk?.data?.gql(
+        Q_GET_POSTS,
+        $milk.data.sources.wordpress,
+        queryVariables
+    );
+    unsubscribe = await getData?.subscribe(async (fetched_data) => {
+        let data = await fetched_data;
+        posts = data?.posts;
+        // console.log(data);
+    });
+});
+/* ## Exit ## */
+/* important for garbage collection otherwise memory leak */
+onDestroy(() => { unsubscribe(); });
+```
