@@ -15,6 +15,7 @@
 		watch_scroll: true,
 		watch_resize: true,
 		watch_mouse: true,
+		pagination_size: 8,
 		credit: {
 			milk: true,
 			svelte: true,
@@ -99,6 +100,6 @@
 	},
 	/* #### DATA SOURCES #### */
 	sources: {
-		// sources go here;
+		wordpress: 'https://admin.immigrationlawnj.com/graphql'
 	},
 }

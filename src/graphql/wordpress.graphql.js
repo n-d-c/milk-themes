@@ -1,54 +1,50 @@
+/* ## Config ## */
+const MILK_CFG = JSON.parse(decodeURI('_MILK_CFG')); // Magic Loading
+const { config } = MILK_CFG;
+
+/* ## Queries ## */
+
+const PAGINATION = `pageInfo {
+	offsetPagination {
+		hasMore
+		hasPrevious
+		total
+	}
+}`;
+
 const POST_TAGS = `tags {
-	edges {
-		node {
-			contentNodes {
-				edges {
-					node {
-					id
-					}
-				}
-			}
-			count
-			id
-			link
-			name
-			slug
-			tagId
-			taxonomy {
-				node {
-					description
-					id
-					label
-					name
-				}
+	nodes {
+		count
+		id
+		link
+		name
+		slug
+		tagId
+		taxonomy {
+			node {
+				description
+				id
+				label
+				name
 			}
 		}
 	}
 }`;
 
 const POST_CATEGORIES = `categories {
-	edges {
-		node {
-			contentNodes {
-				edges {
-					node {
-					id
-					}
-				}
-			}
-			count
-			id
-			link
-			name
-			slug
-			categoryId
-			taxonomy {
-				node {
-					description
-					id
-					label
-					name
-				}
+	nodes {
+		count
+		id
+		link
+		name
+		slug
+		categoryId
+		taxonomy {
+			node {
+				description
+				id
+				label
+				name
 			}
 		}
 	}
@@ -126,164 +122,148 @@ ${POST_CATEGORIES}
 ${POST_TAGS}`;
 
 export const Q_LIST_ALL_POSTS = `query getPosts {
-	posts {
-		edges {
-			node {
-				cursor
-				${POST_LISTING}
-			}
+	posts(where: {offsetPagination: {offset: 0, size: 9999}}) {
+		${PAGINATION},
+		nodes {
+			${POST_LISTING}
 		}
 	}
 }`;
 
 export const Q_GET_ALL_POSTS = `query getPosts {
-	posts {
-		edges {
-			node {
-				cursor
-				${POST_CONTENT}
-			}
+	posts(where: {offsetPagination: {offset: 0, size: 9999}}) {
+		${PAGINATION},
+		nodes {
+			${POST_CONTENT}
 		}
 	}
 }`;
 
-export const Q_LIST_POSTS_BYCAT = `query getPosts($category: String = "Uncategorized") {
-	posts(where: {categoryName: $category}) {
-		edges {
-			node {
-				cursor
-				${POST_LISTING}
-			}
+export const Q_LIST_POSTS = `query getPosts($offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	posts(where: {offsetPagination: {offset: $offset, size: $size}}) {
+		${PAGINATION},
+		nodes {
+			${POST_LISTING}
 		}
 	}
 }`;
 
-export const Q_GET_POSTS_BYCAT = `query getPosts($category: String = "Uncategorized") {
-	posts(where: {categoryName: $category}) {
-		edges {
-			node {
-				cursor
-				${POST_CONTENT}
-			}
+export const Q_GET_POSTS = `query getPosts($offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	posts(where: {offsetPagination: {offset: $offset, size: $size}}) {
+		${PAGINATION},
+		nodes {
+			${POST_CONTENT}
 		}
 	}
 }`;
 
-export const Q_GET_POSTS_BYCATID = `query getPosts($category: Int = 1) {
-	posts(where: {categoryId: $category}) {
-		edges {
-			node {
-				cursor
-				${POST_CONTENT}
-			}
+export const Q_LIST_POSTS_BYCAT = `query getPosts($category: String = "Uncategorized", $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	posts(where: {offsetPagination: {offset: $offset, size: $size}, categoryName: $category}) {
+		${PAGINATION},
+		nodes {
+			${POST_LISTING}
 		}
 	}
 }`;
 
-export const Q_GET_POSTS_BYTAG = `query getPosts($tag: String = "test") {
-	posts(where: {tag: $tag}) {
-		edges {
-			node {
-				cursor
-				${POST_CONTENT}
-			}
+export const Q_GET_POSTS_BYCAT = `query getPosts($category: String = "Uncategorized", $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	posts(where: {offsetPagination: {offset: $offset, size: $size}, categoryName: $category}) {
+		${PAGINATION},
+		nodes {
+			${POST_CONTENT}
 		}
 	}
 }`;
 
-export const Q_GET_POSTS_BYTAGID = `query getPosts($tag: Int = 1) {
-	posts(where: {tagId: $tag}) {
-		edges {
-			node {
-				cursor
-				${POST_CONTENT}
-			}
+export const Q_GET_POSTS_BYCATID = `query getPosts($category: Int = 1, $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	posts(where: {offsetPagination: {offset: $offset, size: $size}, categoryId: $category}) {
+		${PAGINATION},
+		nodes {
+			${POST_CONTENT}
 		}
 	}
 }`;
 
-export const Q_GET_POSTS_BYAUTHORID = `query getPosts($author: Int = 1) {
-	posts(where: {author: $author}) {
-		edges {
-			node {
-				cursor
-				${POST_CONTENT}
-			}
+export const Q_GET_POSTS_BYTAG = `query getPosts($tag: String = "test", $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	posts(where: {offsetPagination: {offset: $offset, size: $size}, tag: $tag}) {
+		${PAGINATION},
+		nodes {
+			${POST_CONTENT}
 		}
 	}
 }`;
 
-export const Q_GET_POST_BYID = `query getPosts($id: Int = 1) {
+export const Q_GET_POSTS_BYTAGID = `query getPosts($tag: Int = 1, $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	posts(where: {offsetPagination: {offset: $offset, size: $size}, tagId: $tag}) {
+		${PAGINATION},
+		nodes {
+			${POST_CONTENT}
+		}
+	}
+}`;
+
+export const Q_GET_POSTS_BYAUTHORID = `query getPosts($author: Int = 1, $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	posts(where: {offsetPagination: {offset: $offset, size: $size}, author: $author}) {
+		${PAGINATION},
+		nodes {
+			${POST_CONTENT}
+		}
+	}
+}`;
+
+export const Q_GET_POST_BYID = `query getPost($id: Int = 1) {
 	postBy(postId: $id) {
-		edges {
-			node {
-				${POST_CONTENT}
-			}
-		}
+		${POST_CONTENT}
 	}
 }`;
 
-export const Q_GET_POST_BYSLUG = `query getPosts($slug: String = "hello-world") {
+export const Q_GET_POST_BYSLUG = `query getPost($slug: String = "hello-world") {
 	postBy(slug: $slug) {
-		edges {
-			node {
-				${POST_CONTENT}
-			}
+		${POST_CONTENT}
+	}
+}`;
+
+export const Q_GET_POST_HELLOWORLD = `query MyQuery {
+	posts(first: 1) {
+		nodes {
+			title
 		}
 	}
 }`;
 
 const PAGE_TAGS = `tags {
-	edges {
-		node {
-			contentNodes {
-				edges {
-					node {
-					id
-					}
-				}
-			}
-			count
-			id
-			link
-			name
-			slug
-			tagId
-			taxonomy {
-				node {
-					description
-					id
-					label
-					name
-				}
+	nodes {
+		count
+		id
+		link
+		name
+		slug
+		tagId
+		taxonomy {
+			node {
+				description
+				id
+				label
+				name
 			}
 		}
 	}
 }`;
 
 const PAGE_CATEGORIES = `categories {
-	edges {
-		node {
-			contentNodes {
-				edges {
-					node {
-					id
-					}
-				}
-			}
-			count
-			id
-			link
-			name
-			slug
-			categoryId
-			taxonomy {
-				node {
-					description
-					id
-					label
-					name
-				}
+	nodes {
+		count
+		id
+		link
+		name
+		slug
+		categoryId
+		taxonomy {
+			node {
+				description
+				id
+				label
+				name
 			}
 		}
 	}
@@ -361,110 +341,104 @@ ${PAGE_CATEGORIES}
 ${PAGE_TAGS}`;
 
 export const Q_LIST_ALL_PAGES = `query getPages {
-	pages {
-		edges {
-			node {
-				cursor
-				${PAGE_LISTING}
-			}
+	pages(where: {offsetPagination: {offset: 0, size: 9999}}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_LISTING}
 		}
 	}
 }`;
 
 export const Q_GET_ALL_PAGES = `query getPages {
-	pages {
-		edges {
-			node {
-				cursor
-				${PAGE_CONTENT}
-			}
+	pages(where: {offsetPagination: {offset: 0, size: 9999}}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_CONTENT}
 		}
 	}
 }`;
 
-export const Q_LIST_PAGES_BYCAT = `query getPages($category: String = "Uncategorized") {
-	pages(where: {categoryName: $category}) {
-		edges {
-			node {
-				cursor
-				${PAGE_LISTING}
-			}
+export const Q_LIST_PAGES = `query getPages($offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	pages(where: {offsetPagination: {offset: $offset, size: $size}}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_LISTING}
 		}
 	}
 }`;
 
-export const Q_GET_PAGES_BYCAT = `query getPages($category: String = "Uncategorized") {
-	pages(where: {categoryName: $category}) {
-		edges {
-			node {
-				cursor
-				${PAGE_CONTENT}
-			}
+export const Q_GET_PAGES = `query getPages($offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	pages(where: {offsetPagination: {offset: $offset, size: $size}}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_CONTENT}
 		}
 	}
 }`;
 
-export const Q_GET_PAGES_BYCATID = `query getPages($category: Int = 1) {
-	pages(where: {categoryId: $category}) {
-		edges {
-			node {
-				cursor
-				${PAGE_CONTENT}
-			}
+export const Q_LIST_PAGES_BYCAT = `query getPages($category: String = "Uncategorized", $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	pages(where: {offsetPagination: {offset: $offset, size: $size}, categoryName: $category}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_LISTING}
 		}
 	}
 }`;
 
-export const Q_GET_PAGES_BYTAG = `query getPages($tag: String = "test") {
-	pages(where: {tag: $tag}) {
-		edges {
-			node {
-				cursor
-				${PAGE_CONTENT}
-			}
+export const Q_GET_PAGES_BYCAT = `query getPages($category: String = "Uncategorized", $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	pages(where: {offsetPagination: {offset: $offset, size: $size}, categoryName: $category}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_CONTENT}
 		}
 	}
 }`;
 
-export const Q_GET_PAGES_BYTAGID = `query getPages($tag: Int = 1) {
-	pages(where: {tagId: $tag}) {
-		edges {
-			node {
-				cursor
-				${PAGE_CONTENT}
-			}
+export const Q_GET_PAGES_BYCATID = `query getPages($category: Int = 1, $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	pages(where: {offsetPagination: {offset: $offset, size: $size}, categoryId: $category}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_CONTENT}
 		}
 	}
 }`;
 
-export const Q_GET_PAGES_BYAUTHORID = `query getPages($author: Int = 1) {
-	pages(where: {author: $author}) {
-		edges {
-			node {
-				cursor
-				${PAGE_CONTENT}
-			}
+export const Q_GET_PAGES_BYTAG = `query getPages($tag: String = "test", $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	pages(where: {offsetPagination: {offset: $offset, size: $size}, tag: $tag}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_CONTENT}
+		}
+	}
+}`;
+
+export const Q_GET_PAGES_BYTAGID = `query getPages($tag: Int = 1, $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	pages(where: {offsetPagination: {offset: $offset, size: $size}, tagId: $tag}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_CONTENT}
+		}
+	}
+}`;
+
+export const Q_GET_PAGES_BYAUTHORID = `query getPages($author: Int = 1, $offset: Int = 0, $size: Int = ${config.pagination_size}) {
+	pages(where: {offsetPagination: {offset: $offset, size: $size}, author: $author}) {
+		${PAGINATION},
+		nodes {
+			${PAGE_CONTENT}
 		}
 	}
 }`;
 
 export const Q_GET_PAGE_BYID = `query getPages($id: Int = 1) {
 	pageBy(pageId: $id) {
-		edges {
-			node {
-				${PAGE_CONTENT}
-			}
-		}
+		${PAGE_CONTENT}
 	}
 }`;
 
 export const Q_GET_PAGE_BYSLUG = `query getPages($slug: String = "hello-world") {
 	pageBy(slug: $slug) {
-		edges {
-			node {
-				${PAGE_CONTENT}
-			}
-		}
+		${PAGE_CONTENT}
 	}
 }`;
 
@@ -479,25 +453,17 @@ cssClasses`;
 
 export const Q_GET_MENU_BYLOCATION = `query getMenu($location: String = "MENU_MAIN") {
 	menuItems(where: {location: $location) {
-		edges {
-			node {
-				${MENU_ITEM}
-				childItems {
-					edges {
-						node {
+		nodes {
+			${MENU_ITEM}
+			childItems {
+				nodes {
+					${MENU_ITEM}
+					childItems {
+						nodes {
 							${MENU_ITEM}
 							childItems {
-								edges {
-									node {
-										${MENU_ITEM}
-										childItems {
-											edges {
-												node {
-													${MENU_ITEM}
-												}
-											}
-										}
-									}
+								nodes {
+									${MENU_ITEM}
 								}
 							}
 						}

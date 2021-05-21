@@ -1,0 +1,95 @@
+import sveltePreprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-static';
+import path from 'path';
+import fs from 'fs';
+import process from 'process';
+import hjson from 'hjson';
+import commonjs from '@rollup/plugin-commonjs';
+import replace from '@rollup/plugin-replace';
+import graphql from '@rollup/plugin-graphql';
+import mdsvex from 'mdsvex';
+import mdsvexConfig from "./mdsvex.config.cjs";
+import visualizer from 'rollup-plugin-visualizer';
+
+const pkg = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json')));
+// import pkg from './package.json';
+const cfg = hjson.parse(String(fs.readFileSync(path.join(process.cwd(), './src/config/config.hjson'))));
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	extensions: [".svelte", ...mdsvexConfig.extensions],
+	preprocess: [
+		mdsvex.mdsvex(mdsvexConfig),
+		sveltePreprocess({
+			babel: {
+				presets: [
+					[
+					"@babel/preset-env",
+					{
+						loose: true,
+						// No need for babel to resolve modules
+						modules: false,
+						targets: {
+						// ! Very important. Target es6+
+						esmodules: true,
+						},
+					},
+					],
+				],
+			},
+			defaults: {
+				style: 'postcss'
+			},
+			postcss: true
+		}),
+	],
+	kit: {
+		// By default, `npm run build` will create a standard Node app.
+		// You can create optimized builds for different platforms by
+		// specifying a different adapter
+		// adapter: '@sveltejs/adapter-node',
+		adapter: adapter({
+			// default options are shown
+			pages: 'build',
+			assets: 'build',
+			fallback: null
+		}),
+
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#milk',
+		vite: {
+			// optimizeDeps: {
+			// 	include: ["idb-keyval"]
+			// },
+			plugins: [
+				commonjs(),
+				replace({
+					preventAssignment: true,
+					_MILK_CWD: process.cwd(),
+					_MILK_URL: `${cfg?.site?.url}`,
+					_MILK_CFG: encodeURI(String(JSON.stringify(cfg))),
+					_THEME: `${cfg?.config?.theme}`
+				}),
+				graphql(),
+				visualizer({
+					filename: path.resolve('static/documentation/code_analysis.html'),
+					template: 'sunburst'
+				})
+			],
+			resolve: {
+				alias: {
+					$milk: path.resolve('src/milk'),
+					$theme: path.resolve(`static/themes/${cfg?.config?.theme}`),
+					$lib: path.resolve('src/lib'),
+					$static: path.resolve('static'),
+					$graphql: path.resolve('src/graphql')
+				}
+			},
+			ssr: {
+				noExternal: Object.keys(pkg.dependencies || {})
+			}
+		}
+	}
+};
+
+export default config;
