@@ -8,11 +8,11 @@
 <Head_Twitter />
 <Layout_Main id="blog">
 	<Hero
-		id="hero-immigration-attorneys-01"
-		image_url="/img/hero_homepage_01.jpg"
-		img_srcset="/img/hero_homepage_01.jpg"
-		avif_srcset="/img/hero_homepage_01.avif"
-		webp_srcset="/img/hero_homepage_01.webp"
+		id="hero-immigration-blog-01"
+		image_url="/img/hero_blog_01.jpg"
+		img_srcset="/img/hero_blog_01.jpg"
+		avif_srcset="/img/hero_blog_01.avif"
+		webp_srcset="/img/hero_blog_01.webp"
 		title="Harlan York and Associates"
 		parallax="false"
 	>

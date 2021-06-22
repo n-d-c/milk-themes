@@ -37,7 +37,14 @@
 						"{testimonial?.Testimonial?.testimonial}"
 					</div>
 					{#if testimonial?.Testimonial?.rating}
-						<div>{testimonial?.Testimonial?.rating}</div>
+						<div
+							class="rating"
+							style={`width: ${
+								testimonial?.Testimonial?.rating * 18
+							}px`}
+						>
+							{testimonial?.Testimonial?.rating}
+						</div>
 					{/if}
 				</div>
 			</div>
@@ -75,7 +82,7 @@
 				// console.log(data);
 				let tmpArray = data?.testimonials?.nodes;
 				shuffleArray(tmpArray);
-				testimonials = tmpArray.slice(0, 10);
+				testimonials = tmpArray.slice(0, 20);
 				console.log(testimonials);
 			}
 		);
@@ -147,5 +154,12 @@
 	}
 	.testimonial-quote {
 		font-style: italic;
+	}
+	.rating {
+		margin: 10px 0;
+		height: 17px;
+		background: url(/img/icon-yellow-star.svg) left center repeat;
+		background-size: 18px;
+		color: transparent;
 	}
 </style>

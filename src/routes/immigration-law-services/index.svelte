@@ -9,15 +9,13 @@
 <Layout_Main id="immigration-attorneys">
 	<Hero
 		id="hero-immigration-services"
-		image_url="/img/hero_homepage_03.jpg"
-		img_srcset="/img/hero_homepage_03.jpg"
-		avif_srcset="/img/hero_homepage_03.avif"
-		webp_srcset="/img/hero_homepage_03.webp"
+		image_url="/img/hero_services_01.jpg"
+		img_srcset="/img/hero_services_01.jpg"
+		avif_srcset="/img/hero_services_01.avif"
+		webp_srcset="/img/hero_services_01.webp"
 		title="Harlan York and Associates"
-		parallax="false"
+		parallax="false">&nbsp;</Hero
 	>
-		<h1>We understand Immigration Law. It is all we do.</h1>
-	</Hero>
 	<Block_CallOutText
 		id="call-out-text"
 		blockstyle="block-style01"

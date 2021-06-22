@@ -9,10 +9,10 @@
 <Layout_Main id="immigration-attorneys">
 	<Hero
 		id="hero-immigration-attorneys-01"
-		image_url="/img/hero_homepage_01.jpg"
-		img_srcset="/img/hero_homepage_01.jpg"
-		avif_srcset="/img/hero_homepage_01.avif"
-		webp_srcset="/img/hero_homepage_01.webp"
+		image_url="/img/hero_attorneys_01.jpg"
+		img_srcset="/img/hero_attorneys_01.jpg"
+		avif_srcset="/img/hero_attorneys_01.avif"
+		webp_srcset="/img/hero_attorneys_01.webp"
 		title="Harlan York and Associates"
 		parallax="false">&nbsp;</Hero
 	>

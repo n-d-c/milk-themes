@@ -14,10 +14,8 @@
 		avif_srcset="/img/hero_homepage_02.avif"
 		webp_srcset="/img/hero_homepage_02.webp"
 		title="Client Testimonials"
-		parallax="false"
+		parallax="false">&nbsp;</Hero
 	>
-		<h1>What Our Clients Say</h1>
-	</Hero>
 	<Block_CallOutText
 		id="call-out-text"
 		blockstyle="block-style01"
