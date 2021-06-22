@@ -8,8 +8,8 @@
 		content="Harlan York & Associates – Immigration Attorneys"
 	/>
 	<link async rel="manifest" href="/manifest.json" />
-	<!-- <link async href="/register-service-workers.js" rel="preload" as="script" /> -->
-	<!-- <script async src="/register-service-workers.js"></script> -->
+	<link async href="/register-service-workers.js" rel="preload" as="script" />
+	<script async src="/register-service-workers.js"></script>
 	<meta name="theme-color" content={app_color} />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
