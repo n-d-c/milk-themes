@@ -1,7 +1,7 @@
 {
 	/* #### MILK CONFIG #### */
 	config: {
-		theme: 'milkbox', // the theme
+		theme: 'hya', // the theme
 		debug: true,
 		lock_config: false, // Lock the configuration objects in production runtime otherwise dynamically reactive by default.
 		cache_swr: true, // Stale Until Invalidates on Refresh
@@ -9,7 +9,7 @@
 		expires: 300, // Default Data Caching in Seconds Client Side before re-request
 		pwa: true, // Is PWA
 		lang: 'en', // Base Language 'en' by default
-		darkmode: 'user', // Initial dark mode: user (os/brower prefs), dark/light (initial state, on reload last state set by user is remembered), disabled for completly disabled.
+		darkmode: 'light', // Initial dark mode: user (os/brower prefs), dark/light (initial state, on reload last state set by user is remembered), disabled for completly disabled.
 		smoothscroll: true,
 		topanchor: true,
 		watch_scroll: true,
@@ -26,57 +26,58 @@
 	}
 	/* #### SITE CONFIG #### */
 	site: {
-		domain: 'milkjs.com',
-		url: 'https://milkjs.com',
+		domain: 'staging.immigrationlawnj.com',
+		url: 'https://staging.immigrationlawnj.com',
+		admin_url: 'https://admin.immigrationlawnj.com',
 		photo: '/img/profile_1200x1200.jpg',
 		photo_avif: '/img/profile_1200x1200.avif',
 		photo_webp: '/img/profile_1200x1200.webp',
-		logo: '/milk/img/logo_milk.svg',
-		logo_width: '60',
-		logo_height: '60',
-		title: 'Milk',
-		tagline: 'Milk, it does a website good.',
-		organization: 'Milk.js',
-		first_name: 'Milk',
-		last_name: 'JS',
+		logo: '/img/logo.svg',
+		logo_width: '186',
+		logo_height: '26',
+		title: 'Harlan York and Associates',
+		tagline: 'Immigration Attorneys',
+		organization: 'Harlan York and Associates',
+		first_name: 'Harlan',
+		last_name: 'York',
 		middle_name: '',
 		prefix_name: '',
 		suffix_name: '',
 		nick_name: '',
-		email_address: 'info@milkjs.com',
-		phone: '',
-		fax: '',
-		address: '',
-		address2: '',
-		city: '',
-		state: '',
-		state_abbr: '',
-		zip: '',
-		country: '',
-		country_abbr: '',
-		hours_of_operation: '',
-		hours_of_operation_dt: '',
-		price_range: '$',
-		category: '',
-		description: '',
-		keywords: '',
+		email_address: 'info@immigrationlawnj.com',
+		phone: '1.973.642.1111',
+		fax: '1.973.642.0022',
+		address: '60 Park Pl',
+		address2: 'Suite 1010',
+		city: 'Newark',
+		state: 'New Jersey',
+		state_abbr: 'NJ',
+		zip: '07102',
+		country: 'United States',
+		country_abbr: 'US',
+		hours_of_operation: '9:00am – 5:00pm / Monday – Friday',
+		hours_of_operation_dt: 'Mo,Tu,We,Th,Fr 09:00-17:00',
+		price_range: '$$',
+		category: 'Immigration Law',
+		description: 'Harlan York and Associates are the best immigration lawyers for Green Cards, Deportation, Family Immigration, and Naturalization in New York, New Jersey, and surrounding areas.',
+		keywords: 'Immigration Law, USA Immigration, Lawer, Attourney, Greencard, Visa',
 		established: '',
-		latitude: '',
-		longitude: '',
-		google_maps: '', // shortened direct
-		google_maps_embed: '', // from ifram embed src
-		google_maps_image: '',
-		google_maps_image_webp: '',
-		google_maps_image_avif: '',
+		latitude: '40.7385726',
+		longitude: '-74.1690402',
+		google_maps: 'https://bit.ly/3aPm8HF', // shortened direct
+		google_maps_embed: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1511.533014259071!2d-74.1690402!3d40.7385726!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25381b9bdf0fb%3A0x7681dbe37e1094d1!2sHarlan%20York%20%26%20Associates!5e0!3m2!1sen!2sca!4v1613362597071!5m2!1sen!2sca', // from ifram embed src
+		google_maps_image: '/img/google_maps_1350x922.jpg',
+		google_maps_image_webp: '/img/google_maps_1350x922.webp',
+		google_maps_image_avif: '/img/google_maps_1350x922.avif',
 		google_business: '',
-		facebook: '',
-		facebook_photo: 'https://milkjs.com/img/socialmedia_1200x630.jpg',
+		facebook: 'http://www.facebook.com/ImmigrationLawNJ',
+		facebook_photo: '/img/socialmedia_1200x630.jpg',
 		facebook_type: 'website',
-		twitter: '',
-		twitter_photo: 'https://milkjs.com/img/socialmedia_1200x630.jpg',
+		twitter: 'http://twitter.com/hyorklaw',
+		twitter_photo: '/img/socialmedia_1200x630.jpg',
 		instagram: '',
-		linkedin: '',
-		youtube: '',
+		linkedin: 'http://www.linkedin.com/in/harlanyork',
+		youtube: 'http://www.youtube.com/user/HYORKLAW',
 		vimeo: '',
 		rss: '',
 		blog: '',
@@ -86,17 +87,17 @@
 		tiktok: '',
 		snapchat: '',
 		pinterest: '',
-		vcf_file: '',
-		calendar: '',
+		vcf_file: '/harlan_york.vcf', //should be in root of site
+		calendar: 'https://calendly.com/immigrationlawnj/30min-consultation/',
 		author: 'Nelson Design Collective',
 		author_url: 'http://nelsondesigncollective.com',
 		author_email: 'info@nelsondesigncollective.com',
 	},
 	/* #### PWA CONFIG #### */
 	pwa: {
-		app_color: '#3A0D2E',
-		app_background: '#3A0D2E',
-		app_name: 'DevLove - Milk'
+		app_color: '#800E16',
+		app_background: '#800E16',
+		app_name: 'Harlan York and Associates – Immigration Attorneys'
 	},
 	/* #### DATA SOURCES #### */
 	sources: {

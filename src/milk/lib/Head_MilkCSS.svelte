@@ -1330,6 +1330,12 @@
 			margin: 0 auto;
 			max-width: var(--content-constrain, 100%);
 		}
+		a,
+		button,
+		a *,
+		button * {
+			cursor: pointer !important;
+		}
 	</style>
 	{#if $milk?.theme?.prismjs}
 		<link

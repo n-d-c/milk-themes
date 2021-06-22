@@ -195,4 +195,7 @@
 		line-height: 30px;
 		vertical-align: middle;
 	}
+	.credits > div {
+		display: inline-block;
+	}
 </style>

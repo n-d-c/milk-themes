@@ -4,7 +4,7 @@
 	<meta property="og:site_name" content={$milk?.site?.title} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<meta property="og:image" content={image} />
+	<meta property="og:image" content={`${url}${image}`} />
 	<slot />
 </svelte:head>
 

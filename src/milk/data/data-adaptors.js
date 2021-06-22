@@ -66,13 +66,13 @@ export const gql = (query, source, variables = {}, request_swr = config.cache_sw
 	const store = writable(new Promise(() => {}));
 	const loadData = async () => {
 		let cache_good = false;
-		let request_hash = hash(query);
-		if (config.cache_swr && request_swr) { if (cache_swr.has(request_hash)) { store.set(Promise.resolve(cache_swr.get(request_hash))); }; };
-		if (config.cache) {
+		let request_hash = hash(`${query}${variables}`);
+		if (request_swr && request_swr) { if (cache_swr.has(request_hash)) { store.set(Promise.resolve(cache_swr.get(request_hash))); }; };
+		if (request_cache) {
 			const cached_data = await idbGet(request_hash);
 			if (cached_data && cached_data.data && cached_data.timestamp) {
 				let cached_for = parseInt(((new Date().getTime() - new Date(cached_data.timestamp).getTime())/1000));
-				if (cached_for < config.expires) {
+				if (cached_for < expires) {
 					cache_good = true;
 					console.log('good cache');
 					store.set(Promise.resolve(cached_data.data));
@@ -83,7 +83,7 @@ export const gql = (query, source, variables = {}, request_swr = config.cache_sw
 				cache_good = false;
 			};
 		};
-		if (!config.cache || !cache_good) {
+		if (!request_cache || !cache_good) {
 			console.log('invalid cache');
 			const response = await fetch(source, {
 				method: 'POST',
@@ -91,12 +91,13 @@ export const gql = (query, source, variables = {}, request_swr = config.cache_sw
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({
 					query: query,
+					variables: variables,
 				}),
 			});
 			const data = await response.json();
 			console.log(data);
-			if (config.cache_swr) { cache_swr.set(request_hash, data.data); };
-			if (config.cache) { idbSet(request_hash, { timestamp: new Date(), data: data.data }); };
+			if (request_swr) { cache_swr.set(request_hash, data.data); };
+			if (request_cache) { idbSet(request_hash, { timestamp: new Date(), data: data.data }); };
 			store.set(Promise.resolve(data.data));
 		};
 	};

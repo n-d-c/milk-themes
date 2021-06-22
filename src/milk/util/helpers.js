@@ -19,6 +19,7 @@ export const debounce = (func, wait, immediate) => { let timeout; return functio
 export const poll = (fn, timeout, interval) => { let endTime = Number(new Date()) + (timeout || 2000); interval = interval || 100; let checkCondition = function(resolve, reject) { var result = fn(); if (result) { resolve(result); } else if (Number(new Date()) < endTime) { setTimeout(checkCondition, interval, resolve, reject); } else { reject(new Error('timed out for '+fn+': '+arguments)); }; }; return new Promise(checkCondition); };
 export const once = (fn, context) => { let result; return function() { if (fn) { result = fn.apply(context || this, arguments); fn = null; }; return result; }; };
 
+export const scrollToHash = () => { const elementId = window.location.hash.split('#').pop(); if (elementId) { const element = document.getElementById(elementId); if (element) { element.scrollIntoView(true); }; }; };
 
 // let myFunc = debounce(() => { console.log('ran'); }, 2000);
 

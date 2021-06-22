@@ -20,7 +20,7 @@ const credits = {
 	graphql_title: 'GraphQL',
 	graphql_url: 'https://graphql.org/',
 	vite_logo: '/milk/img/logo_vite.svg',
-	Vite_title: 'Vite',
+	vite_title: 'Vite',
 	vite_url: 'https://vitejs.dev/',
 	rollup_logo: '/milk/img/logo_rollup.svg',
 	rollup_title: 'Rollup',

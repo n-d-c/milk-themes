@@ -38,4 +38,7 @@
 	.hide {
 		display: none;
 	}
+	.copyright > div {
+		display: inline-block;
+	}
 </style>

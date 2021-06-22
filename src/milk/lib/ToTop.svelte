@@ -19,6 +19,7 @@
 		padding: 0;
 		margin: 0 auto;
 		background: none;
+		cursor: pointer;
 	}
 	.to-top:focus,
 	.to-top:active {

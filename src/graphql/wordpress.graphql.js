@@ -12,6 +12,28 @@ const PAGINATION = `pageInfo {
 	}
 }`;
 
+const SCRIPTS = `enqueuedScripts(first: 999) {
+	nodes {
+		id
+		args
+		extra
+		handle
+		src
+		version
+	}
+}`;
+
+const STYLESHEETS = `enqueuedStylesheets(first: 999) {
+	nodes {
+		id
+		args
+		extra
+		handle
+		src
+		version
+	}
+}`;
+
 const POST_TAGS = `tags {
 	nodes {
 		count
@@ -50,26 +72,17 @@ const POST_CATEGORIES = `categories {
 	}
 }`;
 
-const POST_LISTING = `id
-title(format: RENDERED)
-slug
-postId
-uri
-link
-excerpt(format: RENDERED)
-featuredImage {
+const POST_FEATURED_IMAGE = `featuredImage {
 	node {
-		uri
 		title(format: RENDERED)
 		srcSet
-		link
+		sourceUrl
 		altText
 		caption
 	}
-}
-date
-modified
-author {
+}`;
+
+const POST_AUTHOR = `author {
 	node {
 		avatar {
 			url
@@ -84,6 +97,41 @@ author {
 	}
 }`;
 
+const POST_SCRIPTS = `enqueuedScripts(first: 999) {
+	nodes {
+		id
+		args
+		extra
+		handle
+		src
+		version
+	}
+}`;
+
+
+const POST_CSS = `enqueuedStylesheets(first: 999) {
+	nodes {
+		id
+		src
+		version
+		extra
+		handle
+		args
+	}
+}`;
+
+const POST_LISTING = `id
+title(format: RENDERED)
+slug
+postId
+uri
+link
+excerpt(format: RENDERED)
+${POST_FEATURED_IMAGE}
+date
+modified
+${POST_AUTHOR}`;
+
 const POST_CONTENT = `id
 title(format: RENDERED)
 slug
@@ -91,35 +139,15 @@ postId
 uri
 link
 excerpt(format: RENDERED)
-featuredImage {
-	node {
-		uri
-		title(format: RENDERED)
-		srcSet
-		link
-		altText
-		caption
-	}
-}
+${POST_FEATURED_IMAGE}
 content(format: RENDERED)
 date
 modified
-author {
-	node {
-		avatar {
-			url
-		}
-		email
-		description
-		firstName
-		lastName
-		name
-		nicename
-		nickname
-	}
-}
+${POST_AUTHOR}
 ${POST_CATEGORIES}
-${POST_TAGS}`;
+${POST_TAGS}
+${POST_SCRIPTS}
+${POST_CSS}`;
 
 export const Q_LIST_ALL_POSTS = `query getPosts {
 	posts(where: {offsetPagination: {offset: 0, size: 9999}}) {
@@ -139,8 +167,8 @@ export const Q_GET_ALL_POSTS = `query getPosts {
 	}
 }`;
 
-export const Q_LIST_POSTS = `query getPosts($offset: Int = 0, $size: Int = ${config.pagination_size}) {
-	posts(where: {offsetPagination: {offset: $offset, size: $size}}) {
+export const Q_LIST_POSTS = `query getPosts($offset: Int = 0, $size: Int = ${config.pagination_size}, $search: String = "") {
+	posts(where: {search: $search, offsetPagination: {offset: $offset, size: $size}}) {
 		${PAGINATION},
 		nodes {
 			${POST_LISTING}
@@ -148,8 +176,8 @@ export const Q_LIST_POSTS = `query getPosts($offset: Int = 0, $size: Int = ${con
 	}
 }`;
 
-export const Q_GET_POSTS = `query getPosts($offset: Int = 0, $size: Int = ${config.pagination_size}) {
-	posts(where: {offsetPagination: {offset: $offset, size: $size}}) {
+export const Q_GET_POSTS = `query getPosts($offset: Int = 0, $size: Int = ${config.pagination_size}, $search: String = "") {
+	posts(where: {search: $search, offsetPagination: {offset: $offset, size: $size}}) {
 		${PAGINATION},
 		nodes {
 			${POST_CONTENT}
@@ -358,8 +386,8 @@ export const Q_GET_ALL_PAGES = `query getPages {
 	}
 }`;
 
-export const Q_LIST_PAGES = `query getPages($offset: Int = 0, $size: Int = ${config.pagination_size}) {
-	pages(where: {offsetPagination: {offset: $offset, size: $size}}) {
+export const Q_LIST_PAGES = `query getPages($offset: Int = 0, $size: Int = ${config.pagination_size}, $search: String = "") {
+	pages(where: {search: $search, offsetPagination: {offset: $offset, size: $size}}) {
 		${PAGINATION},
 		nodes {
 			${PAGE_LISTING}
@@ -367,8 +395,8 @@ export const Q_LIST_PAGES = `query getPages($offset: Int = 0, $size: Int = ${con
 	}
 }`;
 
-export const Q_GET_PAGES = `query getPages($offset: Int = 0, $size: Int = ${config.pagination_size}) {
-	pages(where: {offsetPagination: {offset: $offset, size: $size}}) {
+export const Q_GET_PAGES = `query getPages($offset: Int = 0, $size: Int = ${config.pagination_size}, $search: String = "") {
+	pages(where: {search: $search, offsetPagination: {offset: $offset, size: $size}}) {
 		${PAGINATION},
 		nodes {
 			${PAGE_CONTENT}

@@ -10,6 +10,7 @@
 	<link rel="preconnect" href="https://google.com" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://storage.googleapis.com" />
+	<link rel="stylesheet" href={themestyle} />
 </Head_Extra>
 {#if $milk?.theme?.darkmode}
 	<Setup_DarkMode />
@@ -47,6 +48,8 @@
 	import Setup_WatchResize from '$milk/lib/Setup_WatchResize.svelte';
 	import Setup_SmoothScroll from '$milk/lib/Setup_SmoothScroll.svelte';
 	import Setup_TopAnchorLink from '$milk/lib/Setup_TopAnchorLink.svelte';
+	let themestyle = '';
+	$: themestyle = `/themes/${$milk.config.theme}/style.css`;
 </script>
 
 <style>
