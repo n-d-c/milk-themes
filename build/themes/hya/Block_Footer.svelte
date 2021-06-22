@@ -57,9 +57,9 @@
 				vcf_file={$milk?.site?.vcf_file}
 			/>
 			<div class="extra-buttons">
-				<a href="">Call Us</a>
-				<a href="">Email</a>
-				<a href="">Consultation</a>
+				<a href="#" on:click|preventDefault={doCall}> Call Us </a>
+				<a href={`mailto:${$milk?.site?.email_address}`}> Email </a>
+				<a href="#"> Consultation </a>
 			</div>
 		</div>
 		<div class="google-maps">
@@ -85,6 +85,12 @@
 	let blockstyle = '';
 	let blockclass = 'footer';
 	$: blockclass = `footer ${blockstyle}`;
+	/* ## Methods and Functions ## */
+	const doCall = () => {
+		if (window?.callingCard?.show) {
+			window?.callingCard?.show();
+		}
+	};
 	export { id, blockstyle };
 </script>
 
