@@ -8,7 +8,7 @@
 		"adapt": "svelte-kit adapt;",
 		"export": "svelte-kit build; svelte-kit adapt;",
 		"update": "git remote add updates https://github.com/rndm-user/devlove-milk.git; rm -rf ./build; rm -rf ./.svelte; rm -rf ./.svelte-kit; rm ./static/documentation/code_analysis.html; git add .; git commit -m 'running updates'; git fetch updates; git pull updates master; pnpm install; svelte-kit build; svelte-kit adapt;",
-		"prod": "svelte-kit build; svelte-kit adapt; rm -rf ./build/documentation;"
+		"prod": "svelte-kit build; svelte-kit adapt; cp ./build/harlan_york.txt ./build/harlan_york.vcf;"
 	},
 	"devDependencies": {
 		"@babel/core": "7.13.10",
