@@ -22,15 +22,21 @@
 	{:else}
 		<picture>
 			{#if image_avif && image_avif != ''}
-				<source type="image/avif" srcset={image_avif} />
+				<source
+					type="image/avif"
+					srcset={`${$milk.site.url}${image_avif}`}
+				/>
 			{/if}
 			{#if image_webp && image_webp != ''}
-				<source type="image/webp" srcset={image_webp} />
+				<source
+					type="image/webp"
+					srcset={`${$milk.site.url}${image_webp}`}
+				/>
 			{/if}
 			<img
 				alt="map"
 				loading="lazy"
-				src={image}
+				src={`${$milk.site.url}${image}`}
 				width="270"
 				height="184"
 				on:load={() => {
@@ -39,7 +45,7 @@
 			/>
 		</picture>
 		<img
-			src={`/milk/img/onload_then_do_map.gif?cache=${cache_bust}`}
+			src={`${$milk.site.url}/milk/img/onload_then_do_map.gif?cache=${cache_bust}`}
 			rel="nocache"
 			data-dev="uncachable proximity loader"
 			alt="loader"
@@ -54,7 +60,11 @@
 </div>
 
 <script>
+	/* ## Svelte ## */
 	import { onMount } from 'svelte';
+	/* ## MILK ## */
+	import { milk } from '$milk/milk.js';
+	/* ## Variables ## */
 	let map_element;
 	let map_observer;
 	let url;
