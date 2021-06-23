@@ -380,8 +380,9 @@ a { transition: color var(--transition-speed); }
 /* ## Homepage ## */
 #page-homepage #main-hero .details { display: none; }
 .calltoaction { padding: 20px var(--padding) 40px; }
+.floating-calltoaction { position: relative; z-index: 200; margin-top: 0px; padding: 20px var(--padding) 40px; text-align: center; }
 @media screen and (min-width: 650px) {
-	.floating-calltoaction { position: relative; z-index: 200; max-width: 700px; margin: max(-15%, -175px) auto 0; border-radius: 0 75px 0 75px;	padding: 20px var(--padding) 40px; text-align: center; /* transition: margin ease 1s; */ }
+	.floating-calltoaction { position: relative; z-index: 200; max-width: 700px; margin: max(-15%, -175px) auto 0; border-radius: 0 75px 0 75px; padding: 20px var(--padding) 40px; text-align: center; /* transition: margin ease 1s; */ }
 }
 .calltoaction h2.title { padding-top: 35px; }
 .floating-calltoaction h2.title { display: none; padding-top: 35px; }
@@ -421,15 +422,26 @@ a { transition: color var(--transition-speed); }
 #page-homepage .posts-grid .post h3 .more { display: inline-block; vertical-align: middle; line-height: 100%; text-align: center; width: 35px; font-size: var(--small-fontsize);  padding: 20px 0; }
 #page-homepage .posts-grid .post h3 .more svg { width: 20px; height: auto; transition: all var(--transition-speed); }
 #page-homepage .posts-grid .post:hover h3 { background: var(--color-four); color: var(--color-six); transition: all var(--transition-speed); }
-@media screen and (max-width: 650px) {
-	#page-homepage #hero-home-01 img { margin-left: calc(calc(calc(650px / 2) - 50%) * -1); }
+@media screen and (max-width: 500px) {
+	#page-homepage #hero-home-01 img { margin-left: calc(calc(calc(110% / 2) - 50%) * -1); }
+}
+@media screen and (max-width: 450px) {
+	#page-homepage #hero-home-01 img { margin-left: calc(calc(calc(125% / 2) - 50%) * -1); }
+}
+@media screen and (max-width: 400px) {
+	#page-homepage #hero-home-01 img { margin-left: calc(calc(calc(145% / 2) - 50%) * -1); }
+}
+@media screen and (max-width: 350px) {
+	#page-homepage #hero-home-01 img { margin-left: calc(calc(calc(180% / 2) - 50%) * -1); }
 }
 .hamburger-container { display: inline-block; vertical-align: middle;; }
 
 /* ## Blog Posts ## */
 #blog-post .callout-content { text-align: center; }
 #blog .floating-calltoaction,
-#blog-post .floating-calltoaction { margin-top: max(-10%, -125px); }
+@media screen and (min-width: 650px) {
+	#blog-post .floating-calltoaction { margin-top: max(-10%, -125px); }
+}
 
 /* ## Immigration Attorneys ## */
 #immigration-attorneys .floating-calltoaction { margin-top: max(-10%, -125px); }
