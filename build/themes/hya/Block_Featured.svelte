@@ -38,6 +38,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
+	import { shuffleArray } from '$milk/util/helpers.js';
 	/* ## Variables ## */
 	let id;
 	let blockstyle = '';
@@ -50,7 +51,7 @@
 	import { Q_GET_FEATURED } from '$graphql/sitespecific.graphql.js';
 	/* ## Main ## */
 	onMount(async () => {
-		let queryVariables = { size: 4 };
+		let queryVariables = { size: 16 };
 		let getFeatrued = $milk?.data?.gql(
 			Q_GET_FEATURED,
 			$milk.data.sources.wordpress,
@@ -60,7 +61,9 @@
 			async (fetched_data) => {
 				let data = await fetched_data;
 				// console.log(data);
-				featured = data.featuredOns.nodes;
+				let tmpArray = data.featuredOns.nodes;
+				shuffleArray(tmpArray);
+				featured = tmpArray.slice(0, 4);
 			}
 		);
 	});
