@@ -58,8 +58,15 @@
 			/>
 			<div class="extra-buttons">
 				<a href="#" on:click|preventDefault={doCall}> Call Us </a>
-				<a href={`mailto:${$milk?.site?.email_address}`}> Email </a>
-				<a href="#"> Consultation </a>
+				<a
+					href={`mailto:${$milk?.site?.email_address}`}
+					on:click|preventDefault={doEmail}
+				>
+					Email
+				</a>
+				<a href="#" on:click|preventDefault={doCalendar}>
+					Consultation
+				</a>
 			</div>
 		</div>
 		<div class="google-maps">
@@ -89,6 +96,16 @@
 	const doCall = () => {
 		if (window?.callingCard?.show) {
 			window?.callingCard?.show();
+		}
+	};
+	const doEmail = () => {
+		if (window?.location) {
+			window.location = `mailto:${$milk?.site?.email_address}`;
+		}
+	};
+	const doCalendar = () => {
+		if (window?.calendarCard?.show) {
+			window?.calendarCard?.show();
 		}
 	};
 	export { id, blockstyle };

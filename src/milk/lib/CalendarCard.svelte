@@ -65,7 +65,7 @@
 		right: 4vw;
 		z-index: 9999;
 	}
-	.close:hover {
+	.close:hover img {
 		filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
 			brightness(70%) contrast(97%);
 	}
