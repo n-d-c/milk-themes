@@ -57,10 +57,10 @@
 	$: img_height = parallax != 'true' ? 'auto' : '100vh';
 	$: img_position = parallax != 'true' ? 'absolute' : 'fixed';
 	$: img_style = `width: ${img_width} !important; height: auto !important; min-height: 100%; position: ${img_position};`;
-	$: img_srcset =
-		img_srcset && img_srcset.length > 0
-			? addDomainIfMissing(img_srcset)
-			: addDomainIfMissing(image_url);
+	// $: img_srcset =
+	// 	img_srcset && img_srcset.length > 0
+	// 		? addDomainIfMissing(img_srcset)
+	// 		: addDomainIfMissing(image_url);
 	// let img = '';
 	// let wepb = '';
 	// let avif = '';
@@ -81,6 +81,10 @@
 	};
 	onMount(async () => {
 		if (!window?.location?.href?.includes('localhost')) {
+			img_srcset =
+				img_srcset && img_srcset.length > 0
+					? addDomainIfMissing(img_srcset)
+					: addDomainIfMissing(image_url);
 			image_url = addDomainIfMissing(image_url);
 			avif_srcset = addDomainIfMissing(avif_srcset);
 			webp_srcset = addDomainIfMissing(webp_srcset);
