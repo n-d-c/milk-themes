@@ -30,6 +30,8 @@
 </div>
 
 <script>
+	/* ## Svelte ## */
+	import { onMount } from 'svelte';
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
 	let id;
@@ -62,9 +64,9 @@
 	// let img = '';
 	// let wepb = '';
 	// let avif = '';
-	$: image_url = addDomainIfMissing(image_url);
-	$: avif_srcset = addDomainIfMissing(avif_srcset);
-	$: webp_srcset = addDomainIfMissing(webp_srcset);
+	// $: image_url = addDomainIfMissing(image_url);
+	// $: avif_srcset = addDomainIfMissing(avif_srcset);
+	// $: webp_srcset = addDomainIfMissing(webp_srcset);
 
 	const addDomainIfMissing = (tmp) => {
 		// return url;
@@ -77,6 +79,13 @@
 			return `${$milk.site.url}${tmp}`;
 		}
 	};
+	onMount(async () => {
+		if (!window?.location?.href?.includes('localhost')) {
+			image_url = addDomainIfMissing(image_url);
+			avif_srcset = addDomainIfMissing(avif_srcset);
+			webp_srcset = addDomainIfMissing(webp_srcset);
+		}
+	});
 	export {
 		id,
 		add_class,
