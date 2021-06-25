@@ -80,15 +80,18 @@
 		}
 	};
 	onMount(async () => {
-		if (!window?.location?.href?.includes('localhost')) {
-			img_srcset =
-				img_srcset && img_srcset.length > 0
-					? addDomainIfMissing(img_srcset)
-					: addDomainIfMissing(image_url);
-			image_url = addDomainIfMissing(image_url);
-			avif_srcset = addDomainIfMissing(avif_srcset);
-			webp_srcset = addDomainIfMissing(webp_srcset);
-		}
+		// if (!window?.location?.href?.includes('localhost')) {
+		img_srcset =
+			img_srcset && img_srcset.length > 0
+				? addDomainIfMissing(img_srcset)
+				: addDomainIfMissing(image_url);
+		image_url = addDomainIfMissing(image_url);
+		avif_srcset = addDomainIfMissing(avif_srcset);
+		webp_srcset = addDomainIfMissing(webp_srcset);
+		// } else {
+		// 	img_srcset =
+		// 		img_srcset && img_srcset.length > 0 ? img_srcset : image_url;
+		// }
 	});
 	export {
 		id,
