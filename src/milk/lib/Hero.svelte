@@ -30,6 +30,8 @@
 </div>
 
 <script>
+	/* ## MILK ## */
+	import { milk } from '$milk/milk.js';
 	let id;
 	let add_class = '';
 	let image_url = '';
@@ -54,7 +56,27 @@
 	$: img_position = parallax != 'true' ? 'absolute' : 'fixed';
 	$: img_style = `width: ${img_width} !important; height: auto !important; min-height: 100%; position: ${img_position};`;
 	$: img_srcset =
-		img_srcset && img_srcset.length > 0 ? img_srcset : image_url;
+		img_srcset && img_srcset.length > 0
+			? addDomainIfMissing(img_srcset)
+			: addDomainIfMissing(image_url);
+	// let img = '';
+	// let wepb = '';
+	// let avif = '';
+	$: image_url = addDomainIfMissing(image_url);
+	$: avif_srcset = addDomainIfMissing(avif_srcset);
+	$: webp_srcset = addDomainIfMissing(webp_srcset);
+
+	const addDomainIfMissing = (tmp) => {
+		// return url;
+		if (tmp == '' || (tmp && tmp.startsWith('http'))) {
+			// console.log(tmp);
+			return tmp;
+		} else {
+			// console.log(tmp);
+			// console.log(`${$milk.site.url}${tmp}`);
+			return `${$milk.site.url}${tmp}`;
+		}
+	};
 	export {
 		id,
 		add_class,

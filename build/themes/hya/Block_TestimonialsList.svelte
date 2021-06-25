@@ -161,5 +161,6 @@
 		background: url(/img/icon-yellow-star.svg) left center repeat;
 		background-size: 18px;
 		color: transparent;
+		font-size: 0;
 	}
 </style>

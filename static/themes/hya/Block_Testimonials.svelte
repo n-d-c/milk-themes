@@ -193,6 +193,9 @@
 		padding: var(--padding);
 		color: var(--color-white);
 	}
+	.testimonial:hover {
+		text-decoration: none;
+	}
 	.testimonial-quote {
 		font-style: italic;
 	}
@@ -224,6 +227,12 @@
 		height: 17px;
 		background: url(/img/icon-yellow-star.svg) left center repeat;
 		background-size: 18px;
+		color: transparent;
+		font-size: 0;
+	}
+	a:hover .rating {
+		text-decoration: none !important;
+		font-size: 0;
 		color: transparent;
 	}
 </style>

@@ -259,6 +259,48 @@ export const Q_GET_POST_HELLOWORLD = `query MyQuery {
 	}
 }`;
 
+export const Q_GET_POST_CATEGORIES = `query getPostCategories($size: Int = ${config.pagination_size}) {
+	categories(first: $size) {
+		nodes {
+			count
+			id
+			link
+			name
+			slug
+			categoryId
+			taxonomy {
+				node {
+					description
+					id
+					label
+					name
+				}
+			}
+		}
+	}
+}`;
+
+export const Q_GET_POST_TAGS = `query getPostTags($size: Int = ${config.pagination_size}) {
+	tags(first: $size) {
+		nodes {
+			count
+			id
+			link
+			name
+			slug
+			tagId
+			taxonomy {
+				node {
+					description
+					id
+					label
+					name
+				}
+			}
+		}
+	}
+}`;
+
 const PAGE_TAGS = `tags {
 	nodes {
 		count
@@ -501,3 +543,4 @@ export const Q_GET_MENU_BYLOCATION = `query getMenu($location: String = "MENU_MA
 		}
 	}
 }`;
+
