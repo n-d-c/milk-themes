@@ -92,6 +92,8 @@
 		author: 'Nelson Design Collective',
 		author_url: 'http://nelsondesigncollective.com',
 		author_email: 'info@nelsondesigncollective.com',
+		paypal: 'PayFees@immigrationlawnj.com',
+		lawpay: 'https://secure.lawpay.com/pages/immigrationlawnj/operating',
 	},
 	/* #### PWA CONFIG #### */
 	pwa: {

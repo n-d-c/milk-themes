@@ -6,6 +6,7 @@
 	<Block_AbsoluteFooter id="footer-absolute" blockstyle="block-style06" />
 	<CalendarCard />
 	<CallingCard />
+	<Block_PaymentCard />
 </div>
 
 <script>
@@ -16,6 +17,7 @@
 	import Block_AbsoluteFooter from '$milk/lib/Block_AbsoluteFooter.svelte';
 	import CalendarCard from '$milk/lib/CalendarCard.svelte';
 	import CallingCard from '$milk/lib/CallingCard.svelte';
+	import Block_PaymentCard from '$theme/Block_PaymentCard.svelte';
 	let id;
 	export { id };
 </script>

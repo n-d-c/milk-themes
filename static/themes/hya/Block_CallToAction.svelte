@@ -44,7 +44,7 @@
 				</button>
 			</div>
 			<div>
-				<button>
+				<button on:click={doPayment}>
 					<img
 						src="/img/icon-invoice.svg"
 						class="icon icon-invoice"
@@ -83,6 +83,11 @@
 	const doCalendar = () => {
 		if (window?.calendarCard?.show) {
 			window?.calendarCard?.show();
+		}
+	};
+	const doPayment = () => {
+		if (window?.paymentCard?.show) {
+			window?.paymentCard?.show();
 		}
 	};
 	/* ## Exports ## */
