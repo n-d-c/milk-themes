@@ -139,19 +139,13 @@
 			if (category != '') {
 				search = '';
 				offset = 0;
-				title = `Blog Category: ${category}`;
-			} else {
-				title = `Blog Posts`;
 			}
 			debouncedBlogListing();
 		};
 		doSearch = (search) => {
-			if (search != '') {
+			if (search && search != '') {
 				category = '';
 				offset = 0;
-				title = `Blog Search: ${search}`;
-			} else {
-				title = `Blog Posts`;
 			}
 			debouncedBlogListing();
 		};
@@ -192,10 +186,31 @@
 		);
 		unsubscribe_blogs = await getBlogs?.subscribe(async (fetched_data) => {
 			let data = await fetched_data;
-			console.log(data);
+			// console.log(data);
 			posts = data?.posts?.nodes;
 			count = data?.posts?.nodes?.length ?? 0;
-			console.log(count);
+			if (category != '') {
+				title = `Blog Category: ${category}`;
+			} else if (search && search != '') {
+				title = `Blog Search: ${search}`;
+				window.history.pushState(
+					{ additionalInformation: `Blog Search: ${search}` },
+					`Blog Search: ${search}`,
+					`${
+						window.location.href.split('?')[0]
+					}?s=${encodeURIComponent(search)}`
+				);
+			} else {
+				title = `Blog Posts`;
+				if (window?.location?.href?.split('?')?.[1]) {
+					window.history.pushState(
+						{ additionalInformation: `Blog Listing` },
+						`Blog Listing`,
+						`${window.location.href.split('?')[0]}`
+					);
+				}
+			}
+			// console.log(count);
 		});
 	};
 	const debouncedBlogListing = debounce(

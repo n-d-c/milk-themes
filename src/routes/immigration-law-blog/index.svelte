@@ -47,7 +47,7 @@
 	/>
 	<div class="pagination">
 		<div class="pagination-inner">
-			<Block_WP_BlogPerPage bind:size />
+			<Block_WP_BlogPerPage bind:size options={[1, 10, 20, 50, 100]} />
 			<Block_WP_BlogPagination bind:count bind:offset bind:size />
 		</div>
 	</div>

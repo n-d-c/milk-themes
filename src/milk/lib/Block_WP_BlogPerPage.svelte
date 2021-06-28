@@ -16,7 +16,7 @@
 	import { scrollToElement } from '$milk/util/scroll.js';
 	/* ## Vairables ## */
 	let size = 10;
-	let options = [1, 10, 20, 50, 100];
+	let options = [10, 20, 50, 100];
 	const scrollToTop = () => {
 		let element = document.getElementById('BlogTop');
 		if (element) {
