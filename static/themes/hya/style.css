@@ -272,7 +272,7 @@ a { transition: color var(--transition-speed); }
 .header .header-content { border-bottom: 1px solid var(--color-white); padding-bottom: 0; }
 .header div.logo { float: left; padding-bottom: var(--padding); }
 .header-content::after { content: ''; display: block; clear: both; }
-.header .contact { float: right; font-size: var(--extrasmall-fontsize); text-align: right; line-height:  var(--small-fontsize); }
+.header .contact { float: right; font-size: calc(var(--extrasmall-fontsize) + 2px); text-align: right; line-height:  var(--small-fontsize); }
 @media screen and (min-width: 650px) {
 	.hamburger-container{ display: none !important; }
 }
@@ -394,11 +394,16 @@ a { transition: color var(--transition-speed); }
 }
 @media screen and (min-width: 650px) {
 	#page-homepage .blog {
-		position: relative; z-index: 200; max-width: 700px; margin: max(-15%, -175px) auto 0;
+		position: relative; z-index: 200; max-width: 800px; margin: max(-15%, -175px) auto 0;
 	}
 }
 #page-homepage .blog h2 {
 	font-size: var(--extralarge-fontsize); line-height: calc(var(--extralarge-fontsize) * 0.75);
+}
+#page-homepage .blog p {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 #page-homepage .posts-grid {
 	text-align: center;

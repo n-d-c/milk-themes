@@ -47,33 +47,35 @@
 		title="Helping Clients"
 		parallax="false">&nbsp;</Hero
 	>
-	<Block_WP_BlogListingByCategory
-		id="featured-blogposts"
-		blockstyle=""
-		blog_path="/immigration-law-blog"
-		category="Featured"
-		offset="0"
-		size="2"
-		pagination="false"
-	>
-		<span slot="before">
-			<h2>Latest News</h2>
-			<h2>Immigration Law Blog</h2>
-			<div class="block-content">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas sollicitudin luctus purus at euismod. Mauris
-					ultrices magna in libero porttitor, id posuere velit
-					venenatis. Fusce in lectus ut nulla ultrices euismod.
-				</p>
-			</div>
-		</span>
-		<span slot="after">
-			<a href="#" class="fancy-link">
-				<span>View Our Blog</span>
-			</a>
-		</span>
-	</Block_WP_BlogListingByCategory>
+	<div style="background: #F4F4F4">
+		<Block_WP_BlogListingByCategory
+			id="featured-blogposts"
+			blockstyle=""
+			blog_path="/immigration-law-blog"
+			category="Featured"
+			offset="0"
+			size="2"
+			pagination="false"
+		>
+			<span slot="before">
+				<h2>Latest News</h2>
+				<h2>Immigration Law Blog</h2>
+				<div class="block-content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Maecenas sollicitudin luctus purus at euismod. Mauris
+						ultrices magna in libero porttitor, id posuere velit
+						venenatis. Fusce in lectus ut nulla ultrices euismod.
+					</p>
+				</div>
+			</span>
+			<span slot="after">
+				<a href="#" class="fancy-link">
+					<span>View Our Blog</span>
+				</a>
+			</span>
+		</Block_WP_BlogListingByCategory>
+	</div>
 	<Block_Featured id="featured" blockstyle="" />
 	<FeaturedVideo
 		id="featured-video"

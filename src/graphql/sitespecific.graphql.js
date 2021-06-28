@@ -111,3 +111,93 @@ export const Q_GET_TEAM = `query getTeam($size: Int = ${config.pagination_size})
 		}
 	}
 }`;
+
+export const Q_GET_EBOOKBYSLUG = `query getEBook($slug: String) {
+	eBookBy(slug: $slug) {
+		slug
+		title(format: RENDERED)
+		date
+		eBook {
+			avifImage {
+				sourceUrl
+			}
+			jpegImage {
+				sourceUrl
+			}
+			pdf {
+				sourceUrl
+			}
+			webpImage {
+				sourceUrl
+			}
+			shortDescription
+		}
+	}
+}`;
+
+export const Q_GET_EBOOKS = `query getEBooks($size: Int = ${config.pagination_size}) {
+	eBooks(first: $size) {
+		nodes {
+			slug
+			title(format: RENDERED)
+			date
+			eBook {
+				avifImage {
+					sourceUrl
+				}
+				jpegImage {
+					sourceUrl
+				}
+				pdf {
+					sourceUrl
+				}
+				webpImage {
+					sourceUrl
+				}
+				shortDescription
+			}
+		}
+	}
+}`;
+
+export const Q_GET_VIDEOBYSLUG = `query getVideo($slug: String) {
+	videoBy(slug: $slug) {
+		slug
+		title(format: RENDERED)
+		date
+		Video {
+			avifImage {
+				sourceUrl
+			}
+			jpegImage {
+				sourceUrl
+			}
+			webpImage {
+				sourceUrl
+			}
+			video
+		}
+	}
+}`;
+
+export const Q_GET_VIDEOS = `query getVideos($size: Int = ${config.pagination_size}) {
+	videos(first: $size) {
+		nodes {
+			slug
+			title(format: RENDERED)
+			date
+			eBook {
+				avifImage {
+					sourceUrl
+				}
+				jpegImage {
+					sourceUrl
+				}
+				webpImage {
+					sourceUrl
+				}
+				video
+			}
+		}
+	}
+}`;

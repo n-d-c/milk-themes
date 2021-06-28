@@ -3,6 +3,7 @@
 	<meta name="description" content={description} />
 	<meta name="keywords" content={keywords} />
 	<link rel="canonical" href={canonical} />
+	<meta name="developer" content="Joshua Jarman (josh@redesigned.com)" />
 	<slot />
 </svelte:head>
 
