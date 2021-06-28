@@ -40,7 +40,8 @@
 	import { onMount, onDestroy } from 'svelte';
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
-	import { scrollToHash, stripTags } from '$milk/util/helpers.js';
+	import { stripTags } from '$milk/util/helpers.js';
+	import { scrollToHash } from '$milk/util/scroll.js';
 	let id;
 	let blockstyle = '';
 	let blockclass = 'services';

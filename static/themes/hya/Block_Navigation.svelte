@@ -71,7 +71,17 @@
 					/>
 				</svg>
 			</a>
-			<a href="#" title="search" class="search">
+			<a
+				href="/immigration-law-blog"
+				on:click|preventDefault={() => {
+					if (window?.searchCard?.show) {
+						window?.searchCard?.show();
+					}
+				}}
+				title="search"
+				rel="noreferrer"
+				class="search"
+			>
 				<svg
 					aria-hidden="true"
 					focusable="false"

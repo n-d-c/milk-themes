@@ -71,5 +71,7 @@ export const setupTopLinkAnchor = () => {
 }
 /* ## scrollTo ## */
 export const scrollToElement = (element) => { window.scroll({ behavior: 'smooth', left: 0, top: element.offsetTop }); }
-export const scrollToTop = () => { window.scroll({ behavior: 'smooth', left: 0, top: -100 }); }
 export const scrollToPosition = (xPosition, yPosition) => { window.scroll({ behavior: 'smooth', left: xPosition, top: yPosition }); }
+export const scrollToHash = () => { const elementId = window.location.hash.split('#').pop(); if (elementId) { const element = document.getElementById(elementId); if (element) { element.scrollIntoView(true); }; }; };
+export const scrollToTop = () => { window.scroll({ behavior: 'smooth', left: 0, top: -100 }); }
+export const scrollToBottom = () => { window.scroll({ behavior: 'smooth', left: 0, bottom: Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) }); }

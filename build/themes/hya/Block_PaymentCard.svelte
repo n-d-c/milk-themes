@@ -19,6 +19,7 @@
 					alt="PayPal"
 					class="logo-paypal"
 					src="/img/logo-paypal.svg"
+					loading="lazy"
 				/>
 			</h2>
 			<p><em>(No PayPal account is necessary)</em></p>
@@ -72,7 +73,7 @@
 				<input type="hidden" name="item_name" bind:value={itemdesc} />
 				<input type="hidden" name="item_number" value="1" />
 				<input type="hidden" name="no_shipping" value="1" />
-				<input type="hidden" name="no_note" value="1" />
+				<input type="hidden" name="no_note" value="0" />
 				<input type="hidden" name="currency_code" value="USD" />
 				<input type="hidden" name="lc" value="US" />
 				<input type="hidden" name="bn" value="PP-BuyNowBF" />
@@ -119,12 +120,17 @@
 					src="https://www.paypal.com/en_AU/i/scr/pixel.gif"
 					width="1"
 					height="1"
+					loading="lazy"
 				/>
 			</form>
 			<hr />
 			<h2 class="pay-with pay-with-lawpay">
 				Pay with
-				<img class="logo-lawpay" src="/img/logo-lawpay.svg" />
+				<img
+					class="logo-lawpay"
+					src="/img/logo-lawpay.svg"
+					loading="lazy"
+				/>
 			</h2>
 			<a
 				href={$milk?.site?.lawpay}
@@ -251,6 +257,11 @@
 		filter: drop-shadow(
 			var(--drop-shadow-hover, 2px 2px 1px rgba(0, 0, 0, 0.4))
 		);
+	}
+	button:focus,
+	button:active {
+		border: 0 none;
+		background: transparent;
 	}
 	.hide {
 		display: block;

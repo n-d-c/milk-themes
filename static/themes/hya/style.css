@@ -438,10 +438,33 @@ a { transition: color var(--transition-speed); }
 
 /* ## Blog Posts ## */
 #blog-post .callout-content { text-align: center; }
-#blog .floating-calltoaction,
 @media screen and (min-width: 650px) {
 	#blog-post .floating-calltoaction { margin-top: max(-10%, -125px); }
+	#blog .floating-calltoaction { margin-top: max(-10%, -125px) !important; }
 }
-
+.blog-categories,
+.blog-search,
+.blog-perpage,
+.blog-pagination {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 var(--padding) 10px;;
+}
+@media screen and (min-width: 600px) {
+	.blog-search,
+	.blog-pagination { float: right; }
+}
+@media screen and (max-width: 599px) {
+	.blog-categories,
+	.blog-search,
+	.blog-perpage,
+	.blog-pagination {
+		display: block;
+	}
+	#blog .pagination label { display: block; }
+	#blog .controls label { display: block; }
+}
 /* ## Immigration Attorneys ## */
-#immigration-attorneys .floating-calltoaction { margin-top: max(-10%, -125px); }
+@media screen and (min-width: 650px) {
+	#immigration-attorneys .floating-calltoaction { margin-top: max(-10%, -125px); }
+}

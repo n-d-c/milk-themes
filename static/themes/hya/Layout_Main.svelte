@@ -7,6 +7,7 @@
 	<CalendarCard />
 	<CallingCard />
 	<Block_PaymentCard />
+	<Block_SearchCard />
 </div>
 
 <script>
@@ -18,6 +19,7 @@
 	import CalendarCard from '$milk/lib/CalendarCard.svelte';
 	import CallingCard from '$milk/lib/CallingCard.svelte';
 	import Block_PaymentCard from '$theme/Block_PaymentCard.svelte';
+	import Block_SearchCard from '$theme/Block_SearchCard.svelte';
 	let id;
 	export { id };
 </script>

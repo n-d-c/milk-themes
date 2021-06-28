@@ -54,7 +54,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
-	import { scrollToHash } from '$milk/util/helpers.js';
+	import { scrollToHash } from '$milk/util/scroll.js';
 	let id;
 	let blockstyle = '';
 	let blockclass = 'attorneys';
