@@ -283,10 +283,10 @@ body { padding-top: 40px; }
 }
 .header .address a { color: #FFF !important; }
 .header .address a:hover { color: #F4BA38 !important; }
-.blog-nav { padding-left: 0 !important; text-align: center; }
-/* @media screen and (max-width: 800px) {
-	.blog-nav { padding-left: 2.5vw !important; }
-} */
+.blog-nav { padding-left: 0 !important; padding-right: 2.5vw !important; text-align: center; }
+@media screen and (max-width: 800px) {
+	.blog-nav { padding-right: 1vw !important; }
+}
 body:not(.scroll-neartop) .sticky-header[data-type='sticky-hide'] nav {
 	display: inline-block !important;
 	position: relative;
