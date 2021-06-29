@@ -27,7 +27,7 @@
 		parallax="false"
 	>
 		<h1>
-			Protecting the Rights of Immigrants across America for a Quarter
+			Protecting the Rights of Immigrants Across America<wbr /> for a Quarter
 			Century
 		</h1>
 	</Hero>
