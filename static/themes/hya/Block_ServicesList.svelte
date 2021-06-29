@@ -89,7 +89,7 @@
 	}
 	.services-inner {
 		margin: 0 auto;
-		max-width: var(--content-width-max, 1020px);
+		max-width: var(--content-constrain);
 	}
 	/* 	
 	.attorneys-list {

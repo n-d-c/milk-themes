@@ -2,7 +2,7 @@
 <Head_HTML {title} {description} keywords={$milk?.site?.keywords} />
 <Head_Facebook {title} {description} image="/img/hero_services_01.jpg" />
 <Head_Twitter {title} {description} image="/img/hero_services_01.jpg" />
-<Layout_Main id="immigration-attorneys">
+<Layout_Main id="immigration-resources">
 	<Hero
 		id="hero-immigration-resources-01"
 		image_url="/img/hero_services_01.jpg"
@@ -27,6 +27,7 @@
 			<h1>Resource Library</h1>
 		</div>
 	</div>
+	<Block_eBooksList id="ebooks" />
 	<Block_CallToAction
 		id="call-to-action"
 		blockstyle="block-style01"
@@ -50,7 +51,7 @@
 	import Layout_Main from '$theme/Layout_Main.svelte';
 	import Hero from '$milk/lib/Hero.svelte';
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
-	// import Block_Attorneys from '$theme/Block_Attorneys.svelte';
+	import Block_eBooksList from '$theme/Block_eBooksList.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
 	import Block_Languages from '$theme/Block_Languages.svelte';
@@ -60,8 +61,11 @@
 	/* ## Variables ## */
 	const title = `Immigration Resources - ${$milk?.site?.title}`;
 	const description =
-		'Please feel free to access our Free Resource Library. If you have any questions our Attorneys are available for consultation.';
+		'Please feel free to access our Free Resource Library. If you have any questions our Attorneys are available for consultation.  Immigration law is a constantly changing legal field. What makes Harlan York the best lawyer in the field is his knowledge, and passion for staying up to date with trending legal challenges that could affect your case. Harlan’s Immigration Resource Library and Blog is filled with informative and practical advice from getting a green card through marriage, to detailed explanations of litigation, business immigration, citizenship, waivers and appeals.';
 </script>
 
 <style>
+	.content {
+		margin-bottom: 0;
+	}
 </style>

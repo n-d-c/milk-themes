@@ -105,7 +105,7 @@
 	.controls-inner,
 	.pagination-inner {
 		margin: 0 auto;
-		max-width: var(--content-width-max, 1020px);
+		max-width: var(--content-constrain);
 		padding: 0 var(--padding);
 	}
 	.pagination,

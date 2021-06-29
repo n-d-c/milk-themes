@@ -112,8 +112,8 @@ export const Q_GET_TEAM = `query getTeam($size: Int = ${config.pagination_size})
 	}
 }`;
 
-export const Q_GET_EBOOKBYSLUG = `query getEBook($slug: String) {
-	eBookBy(slug: $slug) {
+export const Q_GET_EBOOKBYID = `query getEBook($id: ID) {
+	eBookBy(id: $id) {
 		slug
 		title(format: RENDERED)
 		date
@@ -125,7 +125,7 @@ export const Q_GET_EBOOKBYSLUG = `query getEBook($slug: String) {
 				sourceUrl
 			}
 			pdf {
-				sourceUrl
+				mediaItemUrl
 			}
 			webpImage {
 				sourceUrl
@@ -149,7 +149,7 @@ export const Q_GET_EBOOKS = `query getEBooks($size: Int = ${config.pagination_si
 					sourceUrl
 				}
 				pdf {
-					sourceUrl
+					mediaItemUrl
 				}
 				webpImage {
 					sourceUrl

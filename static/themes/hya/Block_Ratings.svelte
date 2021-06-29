@@ -76,7 +76,7 @@
 	.ratings-inner {
 		padding: var(--padding-large);
 		margin: 0 auto;
-		max-width: var(--content-width-max, 1020px);
+		max-width: var(--content-constrain);
 		background: var(--background-offwhite, #f4f4f4);
 	}
 	h2,

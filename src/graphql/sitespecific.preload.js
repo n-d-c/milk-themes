@@ -218,7 +218,7 @@ export const preload_featured = [
 			"webpImage": {
 				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_njcom.webp"
 			},
-			"link": "http://www.nj.com/"
+			"link": "https://www.nj.com/"
 		}
 	},
 	{
@@ -234,7 +234,7 @@ export const preload_featured = [
 			"webpImage": {
 				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_telemundo.webp"
 			},
-			"link": "http://www.telemundo.com/"
+			"link": "https://www.telemundo.com/"
 		}
 	},
 	{
@@ -393,5 +393,48 @@ export const preload_testimonials = [
 		},
 		"slug": "202",
 		"title": "Adriana"
+	}
+];
+
+export const preload_ebooks = [
+	{
+		"slug": "stop-deportation",
+		"title": "Stop Deportation",
+		"date": "2021-06-28T22:49:40",
+		"eBook": {
+			"avifImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/ebook-stop-deportation.avif"
+			},
+			"jpegImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/ebook-stop-deportation.jpg"
+			},
+			"pdf": {
+				"mediaItemUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/ebook-stop-deportation.pdf"
+			},
+			"webpImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/ebook-stop-deportation.webp"
+			},
+			"shortDescription": "<div>As of today about 1 Million immigrants await removal / deportation hearings. Many of those who are waiting sit in jails. 3 million immigrants were ‘removed’ by President Obama.  Of course, President Trump has made immigration a focus of his administration.</div>\n<p>America deports many people who might be contributing members of our society. You could be deported for immigration violations, DUIs, illegal entry, or for a shoplifting conviction that happened over a decade previously – even if you have rehabilitated your life in the meantime.</p>\n<p>Our legal team got together and outlined the seven best ways to deal with the threat of deportation and removal, and are sharing it with you for free! Why? Immigration law is very complicated, and proper information is the key. We want our clients, and others to understand what they are facing, and what they might have to apply for in order to remain in the country.</p>\n"
+		}
+	},
+	{
+		"slug": "getting-a-green-card-through-marriage",
+		"title": "Getting a Green Card Through Marriage",
+		"date": "2021-06-28T22:46:47",
+		"eBook": {
+			"avifImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/ebook-green-card-through-marriage.avif"
+			},
+			"jpegImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/ebook-green-card-through-marriage.jpg"
+			},
+			"pdf": {
+				"mediaItemUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/ebook-green-card-through-marriage.pdf"
+			},
+			"webpImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/ebook-green-card-through-marriage.webp"
+			},
+			"shortDescription": "<p>You have a handful of choices when seeking permanent residence in the United States. Family based immigration, statistically, has been shown to result in more green cards than any other category. Even so, over the last two decades of working as an immigration lawyer I have seen many people make mistakes when applying for their green card through marriage. Once mistakes are made in the process it can be very difficult to continue down this path.</p>\n<p>Our lawyers at Harlan York and Associates have put together a guide to help you understand the process, rules, and what will be expected of you in the process of getting your green card through marriage…and more importantly outline the risks and pitfalls that are most commonly made.</p>\n"
+		}
 	}
 ];

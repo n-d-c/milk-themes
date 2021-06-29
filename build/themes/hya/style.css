@@ -141,7 +141,7 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 /* :root .dark-mode {} */
 /* #### Padding and Margins #### */
 :root {
-	--content-constrain: 1200px;
+	--content-constrain: 1100px;
 	--padding-small: 0.5em 2em;
 	--padding-nav: 0.5em 1em;
 	--padding: 1em;

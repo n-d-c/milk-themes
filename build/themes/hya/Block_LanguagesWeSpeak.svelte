@@ -11,7 +11,7 @@
 <style>
 	.content-inner {
 		margin: 0 auto;
-		max-width: var(--content-width-max, 1020px);
+		max-width: var(--content-constrain);
 	}
 	.languages-we-speak {
 		padding: calc(var(--padding) * 3) var(--padding-large)
