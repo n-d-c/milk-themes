@@ -26,8 +26,8 @@
 		<h1 class="title">Our Services</h1>
 	</div>
 	<Block_ServicesList id="services" blockstyle="" />
+	<Block_eBook id="marriage-ebook" wpid="cG9zdDoyNDY=" blockstyle="" />
 	<Block_Testimonials id="testimonials" blockstyle="block-style05" />
-
 	<Block_CallToAction
 		id="call-to-action"
 		blockstyle="block-style01"
@@ -53,6 +53,7 @@
 	import Hero from '$milk/lib/Hero.svelte';
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
 	import Block_ServicesList from '$theme/Block_ServicesList.svelte';
+	import Block_eBook from '$theme/Block_eBook.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
 	import Block_Languages from '$theme/Block_Languages.svelte';

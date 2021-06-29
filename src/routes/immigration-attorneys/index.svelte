@@ -23,7 +23,7 @@
 		</p>
 	</Block_CallOutText>
 	<Block_Attorneys id="attorneys" blockstyle="" />
-	<Block_eBook id="marriage-ebook" wpid="cG9zdDoyNDY=" blockstyle="" />
+	<Block_3DBook id="3dbook-book" blockstyle="" />
 	<Block_CallToAction
 		id="call-to-action"
 		blockstyle="block-style01"
@@ -49,7 +49,7 @@
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
 	import Block_Attorneys from '$theme/Block_Attorneys.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
-	import Block_eBook from '$theme/Block_eBook.svelte';
+	import Block_3DBook from '$theme/Block_3DBook.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
 	import Block_Languages from '$theme/Block_Languages.svelte';
 	import Block_Featured from '$theme/Block_Featured.svelte';
