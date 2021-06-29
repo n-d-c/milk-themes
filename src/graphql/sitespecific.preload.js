@@ -142,19 +142,19 @@ export const preload_featured = [
 		}
 	},
 	{
-		"slug": "pbs",
-		"title": "PBS",
+		"slug": "bloomberg-law",
+		"title": "Bloomberg Law",
 		"FeaturedOn": {
 			"avifImage": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_pbs.avif"
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_bloomberglaw.avif"
 			},
 			"pngImage": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_pbs.png"
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_bloomberglaw.png"
 			},
 			"webpImage": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_pbs.webp"
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_bloomberglaw.webp"
 			},
-			"link": "https://www.pbs.org/"
+			"link": "https://www.bna.com/bloomberglaw/"
 		}
 	},
 	{
@@ -174,19 +174,83 @@ export const preload_featured = [
 		}
 	},
 	{
-		"slug": "bloomberg-law",
-		"title": "Bloomberg Law",
+		"slug": "pbs",
+		"title": "PBS",
 		"FeaturedOn": {
 			"avifImage": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_bloomberglaw.avif"
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_pbs.avif"
 			},
 			"pngImage": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_bloomberglaw.png"
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_pbs.png"
 			},
 			"webpImage": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_bloomberglaw.webp"
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/04/featured_logo_pbs.webp"
 			},
-			"link": "https://www.bna.com/bloomberglaw/"
+			"link": "https://www.pbs.org/"
+		}
+	},
+	{
+		"slug": "univision",
+		"title": "Univision",
+		"FeaturedOn": {
+			"avifImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_univision.avif"
+			},
+			"pngImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_univision.png"
+			},
+			"webpImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_univision.webp"
+			},
+			"link": "https://www.univision.com/"
+		}
+	},
+	{
+		"slug": "nj-com",
+		"title": "NJ.com",
+		"FeaturedOn": {
+			"avifImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_njcom.avif"
+			},
+			"pngImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_njcom.png"
+			},
+			"webpImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_njcom.webp"
+			},
+			"link": "http://www.nj.com/"
+		}
+	},
+	{
+		"slug": "telemundo",
+		"title": "Telemundo",
+		"FeaturedOn": {
+			"avifImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_telemundo.avif"
+			},
+			"pngImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_telemundo.png"
+			},
+			"webpImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_telemundo.webp"
+			},
+			"link": "http://www.telemundo.com/"
+		}
+	},
+	{
+		"slug": "cbs-news",
+		"title": "CBS News",
+		"FeaturedOn": {
+			"avifImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_cbs.avif"
+			},
+			"pngImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_cbs.png"
+			},
+			"webpImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/featured_logo_cbs.webp"
+			},
+			"link": "https://www.cbsnews.com/"
 		}
 	}
 ];

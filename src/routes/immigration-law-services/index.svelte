@@ -1,11 +1,7 @@
 <Head_Language lang="en" />
-<Head_HTML
-	title={`Immigration Services - ${$milk?.site?.title}`}
-	description={$milk?.site?.description}
-	keywords={$milk?.site?.keywords}
-/>
-<Head_Facebook />
-<Head_Twitter />
+<Head_HTML {title} {description} keywords={$milk?.site?.keywords} />
+<Head_Facebook {title} {description} image="/img/hero_services_01.jpg" />
+<Head_Twitter {title} {description} image="/img/hero_services_01.jpg" />
 <Layout_Main id="immigration-attorneys">
 	<Hero
 		id="hero-immigration-services"
@@ -23,10 +19,7 @@
 		title="Immigation Services"
 	>
 		<p>
-			At Harlan York & Associates our immigration attorneys use their
-			extensive experience on thousands of cases and daily reviews of new
-			developments in the constantly changing field of immigration law to
-			give you the best legal counsel available.
+			{description}
 		</p>
 	</Block_CallOutText>
 	<div class="content">
@@ -68,6 +61,10 @@
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
+	/* ## Variables ## */
+	const title = `Immigration Services - ${$milk?.site?.title}`;
+	const description =
+		'At Harlan York & Associates our immigration attorneys use their extensive experience on thousands of cases and daily reviews of new developments in the constantly changing field of immigration law to give you the best legal counsel available.';
 </script>
 
 <style>

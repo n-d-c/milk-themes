@@ -138,7 +138,14 @@
 						<span>Español</span>
 					</a>
 				</li>
-				<li><a href="#"><span>Resources</span></a></li>
+				<li>
+					<a
+						href="/immigration-resources"
+						class:current={checkCurrent('/immigration-resources')}
+					>
+						<span>Resources</span>
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</div>

@@ -46,12 +46,14 @@
 	$: blockclass = `featured ${blockstyle}`;
 	/* ## Data Loading ## */
 	import { preload_featured } from '$graphql/sitespecific.preload.js';
-	let featured = preload_featured;
+	let preload = preload_featured;
+	shuffleArray(preload);
+	let featured = preload.slice(0, 4);
 	let unsubscribe_featured = () => {};
 	import { Q_GET_FEATURED } from '$graphql/sitespecific.graphql.js';
 	/* ## Main ## */
 	onMount(async () => {
-		let queryVariables = { size: 16 };
+		let queryVariables = { size: 99 };
 		let getFeatrued = $milk?.data?.gql(
 			Q_GET_FEATURED,
 			$milk.data.sources.wordpress,
@@ -60,7 +62,7 @@
 		unsubscribe_featured = await getFeatrued?.subscribe(
 			async (fetched_data) => {
 				let data = await fetched_data;
-				// console.log(data);
+				//console.log(data);
 				let tmpArray = data.featuredOns.nodes;
 				shuffleArray(tmpArray);
 				featured = tmpArray.slice(0, 4);

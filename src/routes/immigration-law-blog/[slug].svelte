@@ -22,13 +22,9 @@
 </svelte:head>
 
 <Head_Language lang="en" />
-<Head_HTML
-	title={`Immigration Services - ${$milk?.site?.title}`}
-	description={$milk?.site?.description}
-	keywords={$milk?.site?.keywords}
-/>
-<Head_Facebook />
-<Head_Twitter />
+<Head_HTML {title} {description} keywords={$milk?.site?.keywords} />
+<Head_Facebook {title} {description} {image} />
+<Head_Twitter {title} {description} {image} />
 <Layout_Main id="blog-post">
 	{#each blog_posts as blog_post}
 		<Head_Article author={blog_post?.author?.node?.name} pubdate={blog_post?.date} />
@@ -108,6 +104,9 @@
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
 	/* ## Variables ## */
+	let title = `Immigration Services - ${$milk?.site?.title}`;
+	let description = $milk?.site?.description;
+	let image = $milk?.site?.facebook_photo;
 	let slug = $page.params.slug;
 	let themestyle = '';
 	$: themestyle = `/themes/${$milk.config.theme}/style.css`;
@@ -149,6 +148,9 @@
 			blog_css = data?.postBy?.enqueuedStylesheets?.nodes || [];
 			blog_scripts = data?.postBy?.enqueuedScripts?.nodes || [];
 			blog_posts = [data?.postBy];
+			title = data?.title;
+			description = data?.excerpt;
+			image = data?.featuredImage?.node?.sourceUrl;
 		});
 	});
 	/* ## Exit ## */

@@ -4,8 +4,18 @@
 	description={$milk?.site?.description}
 	keywords={$milk?.site?.keywords}
 />
-<Head_Facebook />
-<Head_Twitter />
+<Head_Facebook
+	image="/img/hero_homepage_01.jpg"
+	title="Harlan York Immigration Law"
+	description="Protecting the Rights of Immigrants across America for a Quarter
+	Century"
+/>
+<Head_Twitter
+	image="/img/hero_homepage_01.jpg"
+	title="Harlan Your Immigration Law"
+	description="Protecting the Rights of Immigrants across America for a Quarter
+	Century"
+/>
 <Layout_Main id="page-homepage">
 	<Hero
 		id="hero-home-01"

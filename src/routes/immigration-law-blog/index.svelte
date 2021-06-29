@@ -1,11 +1,7 @@
 <Head_Language lang="en" />
-<Head_HTML
-	title={`Immigration Services - ${$milk?.site?.title}`}
-	description={$milk?.site?.description}
-	keywords={$milk?.site?.keywords}
-/>
-<Head_Facebook />
-<Head_Twitter />
+<Head_HTML {title} {description} keywords={$milk?.site?.keywords} />
+<Head_Facebook {title} {description} image="/img/hero_blog_01.jpg" />
+<Head_Twitter {title} {description} image="/img/hero_blog_01.jpg" />
 <Layout_Main id="blog">
 	<Hero
 		id="hero-immigration-blog-01"
@@ -23,9 +19,7 @@
 		title="Immigation Law Blog"
 	>
 		<p>
-			Immigration law is a constantly changing legal field. Immigration
-			lawyer Harlan York provides this blog so you can stay up to date on
-			how legal trends affect immigration law cases.
+			{description}
 		</p>
 	</Block_CallOutText>
 	<div class="controls">
@@ -83,6 +77,10 @@
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
+	/* ## Variables ## */
+	const title = `Immigration Blog - ${$milk?.site?.title}`;
+	const description =
+		'Immigration law is a constantly changing legal field. Immigration lawyer Harlan York provides this blog so you can stay up to date on how legal trends affect immigration law cases.';
 	let category = '';
 	let search = '';
 	let count = 0;

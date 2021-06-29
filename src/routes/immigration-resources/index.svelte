@@ -1,32 +1,32 @@
 <Head_Language lang="en" />
 <Head_HTML {title} {description} keywords={$milk?.site?.keywords} />
-<Head_Facebook {title} {description} image="/img/hero_homepage_02.jpg" />
-<Head_Twitter {title} {description} image="/img/hero_homepage_02.jpg" />
+<Head_Facebook {title} {description} image="/img/hero_services_01.jpg" />
+<Head_Twitter {title} {description} image="/img/hero_services_01.jpg" />
 <Layout_Main id="immigration-attorneys">
 	<Hero
-		id="hero-client-testimonials-02"
-		image_url="/img/hero_homepage_02.jpg"
-		img_srcset="/img/hero_homepage_02.jpg"
-		avif_srcset="/img/hero_homepage_02.avif"
-		webp_srcset="/img/hero_homepage_02.webp"
-		title="Client Testimonials"
+		id="hero-immigration-resources-01"
+		image_url="/img/hero_services_01.jpg"
+		img_srcset="/img/hero_services_01.jpg"
+		avif_srcset="/img/hero_services_01.avif"
+		webp_srcset="/img/hero_services_01.webp"
+		title="Harlan York and Associates"
 		parallax="false">&nbsp;</Hero
 	>
 	<Block_CallOutText
 		id="call-out-text"
 		blockstyle="block-style01"
 		extraclasses="floating-calltoaction"
-		title="Immigation Services"
+		title="Immigration Resources"
 	>
 		<p>
 			{description}
 		</p>
 	</Block_CallOutText>
 	<div class="content">
-		<h1 class="title">Client Testimonials</h1>
+		<div class="content-inner">
+			<h1>Resource Library</h1>
+		</div>
 	</div>
-	<Block_TestimonialsList id="testimonials" blockstyle="" />
-
 	<Block_CallToAction
 		id="call-to-action"
 		blockstyle="block-style01"
@@ -50,25 +50,18 @@
 	import Layout_Main from '$theme/Layout_Main.svelte';
 	import Hero from '$milk/lib/Hero.svelte';
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
+	// import Block_Attorneys from '$theme/Block_Attorneys.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
 	import Block_Languages from '$theme/Block_Languages.svelte';
-	import Block_TestimonialsList from '$theme/Block_TestimonialsList.svelte';
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
 	/* ## Variables ## */
-	const title = `Client Testimonials - ${$milk?.site?.title}`;
+	const title = `Immigration Resources - ${$milk?.site?.title}`;
 	const description =
-		'Our Immigration Attorneys help thousands of clients avoid deportation, get their green cards and become US citizens. See what our clients and colleagues have to say about how Harlan York & Associates helped them with their case.';
+		'Please feel free to access our Free Resource Library. If you have any questions our Attorneys are available for consultation.';
 </script>
 
 <style>
-	.content {
-		text-align: center;
-	}
-	.title {
-		position: relative;
-		margin-bottom: -100px;
-	}
 </style>
