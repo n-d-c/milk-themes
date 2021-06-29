@@ -129,6 +129,7 @@
 					<a
 						href="/immigration-law-blog"
 						class:current={checkIfBlog('/immigration-law-blog')}
+						class="blog-nav"
 					>
 						<span>Blog</span>
 					</a>

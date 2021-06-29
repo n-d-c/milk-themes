@@ -278,6 +278,15 @@ a { transition: color var(--transition-speed); }
 }
 .header .address a { color: #FFF !important; }
 .header .address a:hover { color: #F4BA38 !important; }
+@media screen and (min-width: 651px) {
+	.blog-nav { padding-left: 25px !important; padding-right: 15px !important; }
+}
+@media screen and (min-width: 700px) {
+	.blog-nav { padding-left: 30px !important; padding-right: 30px !important; }
+}
+@media screen and (min-width: 800px) {
+	.blog-nav { padding-left: 40px !important; padding-right: 40px !important; }
+}
 /* ## Main Content ## */
 
 /* ## Social Media ## */
