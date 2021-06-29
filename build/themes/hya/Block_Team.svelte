@@ -105,7 +105,7 @@
 	onDestroy(() => {
 		unsubscribe_team(); // important for garbage collection otherwise memory leak
 	});
-
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 
@@ -140,11 +140,6 @@
 			column-gap: 3em;
 		}
 	}
-	/* .attorneys-container {
-		overflow-x: hidden;
-		width: 100%;
-		max-width: 100vw;
-	} */
 	.attorneys {
 		padding: var(--padding-large) 0 0;
 		text-align: left;

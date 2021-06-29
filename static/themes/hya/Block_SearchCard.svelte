@@ -36,11 +36,8 @@
 <script>
 	import { onMount } from 'svelte';
 	/* ## MILK ## */
-	// import { milk } from '$milk/milk.js';
-	/* ## Components ## */
 	/* ## Variables ## */
 	let display = false;
-
 	/* ## Main ## */
 	onMount(async () => {
 		if (!window?.searchCard) {

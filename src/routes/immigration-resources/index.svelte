@@ -18,9 +18,7 @@
 		extraclasses="floating-calltoaction"
 		title="Immigration Resources"
 	>
-		<p>
-			{description}
-		</p>
+		<p>{description}</p>
 	</Block_CallOutText>
 	<div class="content">
 		<div class="content-inner">

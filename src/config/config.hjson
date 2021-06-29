@@ -14,7 +14,7 @@
 		topanchor: true,
 		watch_scroll: true,
 		watch_resize: true,
-		watch_mouse: true,
+		watch_mouse: false,
 		pagination_size: 8,
 		credit: {
 			milk: true,

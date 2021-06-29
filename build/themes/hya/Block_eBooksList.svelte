@@ -64,7 +64,6 @@
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
 	import { stripTags } from '$milk/util/helpers.js';
-	// import { scrollToHash } from '$milk/util/scroll.js';
 	let id;
 	let blockstyle = '';
 	let blockclass = 'ebooks';
@@ -93,7 +92,6 @@
 				let data = await fetched_data;
 				// console.log(data);
 				ebooks = data.eBooks.nodes;
-				// setTimeout(scrollToHash, 1000);
 			}
 		);
 	});
@@ -101,6 +99,7 @@
 	onDestroy(() => {
 		unsubscribe_ebooks(); // important for garbage collection otherwise memory leak
 	});
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 

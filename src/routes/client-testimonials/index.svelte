@@ -18,9 +18,7 @@
 		extraclasses="floating-calltoaction"
 		title="Immigation Services"
 	>
-		<p>
-			{description}
-		</p>
+		<p>{description}</p>
 	</Block_CallOutText>
 	<div class="content">
 		<h1 class="title">Client Testimonials</h1>

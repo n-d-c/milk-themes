@@ -18,9 +18,7 @@
 		extraclasses="floating-calltoaction"
 		title="Immigation Law Blog"
 	>
-		<p>
-			{description}
-		</p>
+		<p>{description}</p>
 	</Block_CallOutText>
 	<div class="controls">
 		<div class="controls-inner">

@@ -130,6 +130,7 @@
 					class="logo-lawpay"
 					src="/img/logo-lawpay.svg"
 					loading="lazy"
+					alt="Pay with LawPay"
 				/>
 			</h2>
 			<a
@@ -166,7 +167,6 @@
 	import { onMount } from 'svelte';
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
-	/* ## Components ## */
 	/* ## Variables ## */
 	let display = false;
 	let fullname = '';

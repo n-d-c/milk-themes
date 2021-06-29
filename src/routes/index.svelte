@@ -1,21 +1,7 @@
 <Head_Language lang="en" />
-<Head_HTML
-	title={$milk?.site?.title}
-	description={$milk?.site?.description}
-	keywords={$milk?.site?.keywords}
-/>
-<Head_Facebook
-	image="/img/hero_homepage_01.jpg"
-	title="Harlan York Immigration Law"
-	description="Protecting the Rights of Immigrants across America for a Quarter
-	Century"
-/>
-<Head_Twitter
-	image="/img/hero_homepage_01.jpg"
-	title="Harlan Your Immigration Law"
-	description="Protecting the Rights of Immigrants across America for a Quarter
-	Century"
-/>
+<Head_HTML {title} {description} keywords={$milk?.site?.keywords} />
+<Head_Facebook {title} {description} image="/img/hero_homepage_01.jpg" />
+<Head_Twitter {title} {description} image="/img/hero_homepage_01.jpg" />
 <Layout_Main id="page-homepage">
 	<Hero
 		id="hero-home-01"
@@ -26,10 +12,7 @@
 		title="Harlan York and Associates"
 		parallax="false"
 	>
-		<h1>
-			Protecting the Rights of Immigrants Across America<wbr /> for a Quarter
-			Century
-		</h1>
+		<h1>{description}</h1>
 	</Hero>
 	<Block_CallToAction
 		id="call-to-action-02"
@@ -123,6 +106,10 @@
 	import FeaturedVideo from '$milk/lib/FeaturedVideo.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
+	/* ## Variables ## */
+	let title = $milk?.site?.title;
+	let description =
+		'Protecting The Rigths of Immigrants Accross America for a Quarter a Century';
 </script>
 
 <style>

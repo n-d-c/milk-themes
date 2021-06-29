@@ -24,6 +24,18 @@
 			document?.querySelector('body')?.classList?.remove('scroll-down');
 			document?.querySelector('body')?.classList?.add('scroll-up');
 		}
+		if (y == 0) {
+			document?.querySelector('body')?.classList?.add('scroll-attop');
+		} else {
+			document?.querySelector('body')?.classList?.remove('scroll-attop');
+		}
+		if (y < 10) {
+			document?.querySelector('body')?.classList?.add('scroll-neartop');
+		} else {
+			document
+				?.querySelector('body')
+				?.classList?.remove('scroll-neartop');
+		}
 		document?.documentElement?.style?.setProperty?.('--scroll-x', x);
 		$browser.scroll_x = x;
 		document?.documentElement?.style?.setProperty?.('--scroll-x-last', x);
@@ -43,12 +55,14 @@
 		window.addEventListener('scroll', () => {
 			let y = window?.pageYOffset ?? 0;
 			let x = window?.pageXOffset ?? 0;
-			let ly = document?.documentElement?.style?.getPropertyValue?.(
-				'--scroll-y'
-			);
-			let lx = document?.documentElement?.style?.getPropertyValue?.(
-				'--scroll-x'
-			);
+			let ly =
+				document?.documentElement?.style?.getPropertyValue?.(
+					'--scroll-y'
+				);
+			let lx =
+				document?.documentElement?.style?.getPropertyValue?.(
+					'--scroll-x'
+				);
 			let yd = y > ly ? 'down' : 'up';
 			let xd = x > lx ? 'right' : 'left';
 			document?.documentElement?.style?.setProperty?.('--scroll-y', y);
@@ -94,6 +108,22 @@
 					?.querySelector('body')
 					?.classList?.remove('scroll-right');
 				document?.querySelector('body')?.classList?.add('scroll-left');
+			}
+			if (y == 0) {
+				document?.querySelector('body')?.classList?.add('scroll-attop');
+			} else {
+				document
+					?.querySelector('body')
+					?.classList?.remove('scroll-attop');
+			}
+			if (y < 10) {
+				document
+					?.querySelector('body')
+					?.classList?.add('scroll-neartop');
+			} else {
+				document
+					?.querySelector('body')
+					?.classList?.remove('scroll-neartop');
 			}
 		});
 	});

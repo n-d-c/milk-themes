@@ -1,6 +1,8 @@
 <div {id} class="layout-main">
-	<Block_Header id="header" blockstyle="block-style03" />
-	<Block_Navigation id="main-nav" blockstyle="block-style03" />
+	<Block_StickyHeader type="sticky-hide">
+		<Block_Header id="header" blockstyle="block-style03" />
+		<Block_Navigation id="main-nav" blockstyle="block-style03" />
+	</Block_StickyHeader>
 	<div class="page-content"><slot /></div>
 	<Block_Footer id="footer" blockstyle="block-style04" />
 	<Block_AbsoluteFooter id="footer-absolute" blockstyle="block-style06" />
@@ -11,7 +13,7 @@
 </div>
 
 <script>
-	// import Block_AbsoluteHeader from '$lib/Block_AbsoluteHeader.svelte';
+	import Block_StickyHeader from '$milk/lib/Block_StickyHeader.svelte';
 	import Block_Header from '$theme/Block_Header.svelte';
 	import Block_Navigation from '$theme/Block_Navigation.svelte';
 	import Block_Footer from '$theme/Block_Footer.svelte';

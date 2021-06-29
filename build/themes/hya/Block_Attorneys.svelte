@@ -83,7 +83,7 @@
 	onDestroy(() => {
 		unsubscribe_team(); // important for garbage collection otherwise memory leak
 	});
-
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 

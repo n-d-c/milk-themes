@@ -78,6 +78,7 @@
 	onDestroy(() => {
 		unsubscribe_services(); // important for garbage collection otherwise memory leak
 	});
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 
@@ -91,120 +92,18 @@
 		margin: 0 auto;
 		max-width: var(--content-constrain);
 	}
-	/* 	
-	.attorneys-list {
-		margin-top: -100px;
-	}
-	@media screen and (min-width: 650px) {
-		.attorneys-list {
-			text-align: left;
-		}
-	}
-	.attorney {
-		padding: var(--padding-large);
-	}
-	.attorney img {
-		margin: 0 var(--padding-large) var(--padding-large);
-	}
-	.attorney:nth-child(even) {
-		background: var(--color-offwhite);
-	}
-	.attorney:nth-child(odd) {
-	}
-	@media screen and (min-width: 650px) {
-		.attorney:nth-child(even) img {
-			float: right;
-			margin: 0 0 var(--padding-large) var(--padding-large);
-		}
-		.attorney:nth-child(odd) img {
-			float: left;
-			margin: 0 var(--padding-large) var(--padding-large) 0;
-		}
-	}
-	.attorney::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-	.attorney .email {
-		position: relative;
-		margin: -10px 0 10px;
-	}
-	.attorney .email a {
-		color: var(--color-one);
-	}
-	details {
-		max-width: unset !important;
-	}
-	summary {
-		background: var(--color-white);
-		color: var(--color-black);
-		cursor: pointer;
-		padding: 1rem 0;
-	}
-	.attorney:nth-child(even) summary {
-		background: var(--color-offwhite);
-	}
-	summary::before {
-		content: '';
-	}
-	summary span {
-		cursor: pointer;
-		text-transform: uppercase;
-		font-weight: bold;
-		display: inline-block;
-		width: auto;
-		position: relative;
-	}
-	summary .less {
-		display: none;
-	}
-	details[open] summary .less {
-		display: inline-block;
-	}
-	details[open] summary .more {
-		display: none;
-	}
-	details .content {
-		border: 0px none;
-	}
-
-	summary span::after {
-		height: 2px;
-		background-color: transparent;
-		position: absolute;
-		content: '';
-		width: 0;
-		margin: 0 50%;
-		display: block;
-		bottom: 0;
-		left: 0;
-		transition: margin 0.5s, width 0.5s, opacity 0.5s, color 0.5s,
-			background-color 0.5s;
-	}
-	summary:hover span::after {
-		margin: 0 -10%;
-		width: 120%;
-		opacity: 1;
-		background-color: var(--color-three);
-	} */
 	.service {
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
-		/* border: 4px solid var(--color-yellow-vibrant, #f4ba38); */
-		/* width: 275px; */
 		max-width: 80%;
 		height: auto;
 		margin: clamp(10px, 4vw, 30px) auto;
-		/* border-radius: 75px; */
-		/* background: var(--background-white, #fff); */
 		transition: all 0.3s ease;
 		transform-origin: center;
 		-webkit-transform: scale(1);
 		-ms-transform: scale(1);
 		transform: scale(1);
-		/* filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)); */
 		padding: 20px 15px;
 		border: 3px solid transparent;
 		border-radius: 45px;
@@ -215,11 +114,6 @@
 		-ms-transform: scale(1.1);
 		transform: scale(1.1);
 		background: rgba(0, 0, 0, 0.05);
-		/* filter: drop-shadow(
-			var(--drop-shadow-hover, 2px 2px 1px rgba(0, 0, 0, 0.4))
-		);
-		border: 3px solid #000; */
-		/* background: var(--background-offwhite, #f4f4f4) !important; */
 	}
 	.service h4 {
 		font-weight: normal;

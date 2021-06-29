@@ -64,14 +64,12 @@
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
 	import { stripTags } from '$milk/util/helpers.js';
-	// import { scrollToHash } from '$milk/util/scroll.js';
 	let id;
 	let wpid;
 	let blockstyle = '';
 	let blockclass = 'ebooks';
 	$: blockclass = `ebooks ${blockstyle}`;
 	/* ## Data Loading ## */
-	// import { preload_ebooks } from '$graphql/sitespecific.preload.js';
 	let ebooks = [];
 	let unsubscribe_ebooks = () => {};
 	import { Q_GET_EBOOKBYID } from '$graphql/sitespecific.graphql.js';
@@ -94,7 +92,6 @@
 				let data = await fetched_data;
 				console.log(data);
 				ebooks = [data.eBookBy];
-				// setTimeout(scrollToHash, 1000);
 			}
 		);
 	});
@@ -102,6 +99,7 @@
 	onDestroy(() => {
 		unsubscribe_ebooks(); // important for garbage collection otherwise memory leak
 	});
+	/* ## Exports ## */
 	export { id, blockstyle, wpid };
 </script>
 

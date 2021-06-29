@@ -55,7 +55,7 @@
 	onDestroy(() => {
 		unsubscribe_faqs(); // important for garbage collection otherwise memory leak
 	});
-
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 

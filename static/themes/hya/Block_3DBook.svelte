@@ -1,8 +1,8 @@
 <div {id} class={blockclass}>
-	<div class="ebooks-inner">
-		<div class="ebooks-list">
-			<div class="ebook block-style02">
-				<div class="ebook-img">
+	<div class="books-inner">
+		<div class="books-list">
+			<div class="book block-style02">
+				<div class="book-img">
 					<a
 						href="https://3degreesoflaw.com/"
 						target="_blank"
@@ -27,7 +27,7 @@
 						</picture>
 					</a>
 				</div>
-				<div class="ebook-content">
+				<div class="book-content">
 					<h2>
 						<a
 							href="https://3degreesoflaw.com/"
@@ -37,7 +37,7 @@
 							Three Dregrees of Law
 						</a>
 					</h2>
-					<div class="ebook-description">
+					<div class="book-description">
 						<h3>
 							UNLOCKING THE SECRETS TO HAPPINESS IN THE LEGAL
 							UNIVERSE
@@ -74,90 +74,53 @@
 </div>
 
 <script>
-	/* ## Svelte ## */
-	// import { onMount, onDestroy } from 'svelte';
-	/* ## MILK ## */
-	// import { milk } from '$milk/milk.js';
-	// import { stripTags } from '$milk/util/helpers.js';
-	// import { scrollToHash } from '$milk/util/scroll.js';
+	/* ## Variables ## */
 	let id;
-	// let wpid;
 	let blockstyle = '';
-	let blockclass = 'ebooks';
-	$: blockclass = `ebooks ${blockstyle}`;
-	/* ## Data Loading ## */
-	// import { preload_ebooks } from '$graphql/sitespecific.preload.js';
-	// let ebooks = [];
-	// let unsubscribe_ebooks = () => {};
-	// import { Q_GET_EBOOKBYID } from '$graphql/sitespecific.graphql.js';
-	// /* ## Main ## */
-	// let cleanUp = (html) => {
-	// 	return html.replace(/\u00a0/g, ' ');
-	// };
-	// onMount(async () => {
-	// 	cleanUp = (html) => {
-	// 		return stripTags(html).replace(/\u00a0/g, ' ');
-	// 	};
-	// 	let queryVariables = { id: wpid };
-	// 	let getEBooks = $milk?.data?.gql(
-	// 		Q_GET_EBOOKBYID,
-	// 		$milk.data.sources.wordpress,
-	// 		queryVariables
-	// 	);
-	// 	unsubscribe_ebooks = await getEBooks?.subscribe(
-	// 		async (fetched_data) => {
-	// 			let data = await fetched_data;
-	// 			console.log(data);
-	// 			ebooks = [data.eBookBy];
-	// 			// setTimeout(scrollToHash, 1000);
-	// 		}
-	// 	);
-	// });
-	/* ## Exit ## */
-	// onDestroy(() => {
-	// 	unsubscribe_ebooks(); // important for garbage collection otherwise memory leak
-	// });
+	let blockclass = 'books';
+	$: blockclass = `books ${blockstyle}`;
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 
 <style>
-	.ebooks {
+	.books {
 		display: block;
 		padding: 0;
 		text-align: center;
 	}
 	@media screen and (min-width: 650px) {
-		.ebooks {
+		.books {
 			padding: 50px var(--padding-inner, 20px);
 		}
 	}
-	.ebooks-inner {
+	.books-inner {
 		margin: 0 auto;
 		max-width: var(--content-constrain);
 	}
-	.ebook {
+	.book {
 		text-align: center;
 		padding: 25px;
 		margin-bottom: 2em;
 	}
 	@media screen and (min-width: 450px) {
-		.ebook {
+		.book {
 			text-align: left;
 			display: grid;
 			column-gap: 2em;
 			grid-template-columns: 30% 60%;
 		}
 	}
-	.ebook-img {
+	.book-img {
 		position: relative;
 	}
-	.ebook-img img {
+	.book-img img {
 		width: 100%;
 		height: auto;
 		max-width: 200px;
 		margin-bottom: 20px;
 	}
-	.ebook-description {
+	.book-description {
 		font-size: var(--small-fontsize);
 		font-style: italic;
 	}
@@ -165,11 +128,11 @@
 		text-decoration: none;
 	}
 
-	.ebooks-list {
+	.books-list {
 		margin: auto;
 	}
 	@media screen and (min-width: 650px) {
-		.ebooks-list {
+		.books-list {
 			position: relative;
 			z-index: 200;
 			max-width: 700px;

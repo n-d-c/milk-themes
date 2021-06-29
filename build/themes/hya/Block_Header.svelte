@@ -52,12 +52,12 @@
 <script>
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
-	/* ## Components ## */
 	/* ## Vairables ## */
 	let id;
 	let blockstyle = '';
 	let blockclass = 'header';
 	$: blockclass = `header ${blockstyle}`;
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 

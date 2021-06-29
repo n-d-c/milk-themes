@@ -18,9 +18,7 @@
 		extraclasses="floating-calltoaction"
 		title="Our Attorneys"
 	>
-		<p>
-			{description}
-		</p>
+		<p>{description}</p>
 	</Block_CallOutText>
 	<Block_Attorneys id="attorneys" blockstyle="" />
 	<Block_3DBook id="3dbook-book" blockstyle="" />

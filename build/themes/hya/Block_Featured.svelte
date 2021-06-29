@@ -73,6 +73,7 @@
 	onDestroy(() => {
 		unsubscribe_featured(); // important for garbage collection otherwise memory leak
 	});
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 

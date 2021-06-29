@@ -91,7 +91,7 @@
 	onDestroy(() => {
 		unsubscribe_testimonials(); // important for garbage collection otherwise memory leak
 	});
-
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 

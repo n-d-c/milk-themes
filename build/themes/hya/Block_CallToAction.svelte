@@ -117,9 +117,6 @@
 		-webkit-transform: scale(1.1);
 		-ms-transform: scale(1.1);
 		transform: scale(1.1);
-		/* filter: drop-shadow(
-			var(--drop-shadow-hover, 2px 2px 1px rgba(0, 0, 0, 0.4))
-		); */
 	}
 	button.call-button {
 		color: var(--color-white, #fff);
@@ -176,9 +173,6 @@
 	.actions button:hover {
 		filter: brightness(0.55) sepia(1) saturate(300%) hue-rotate(5deg)
 			brightness(1.16) saturate(85%);
-		/* drop-shadow(
-				var(--drop-shadow-hover, 2px 2px 1px rgba(0, 0, 0, 0.4))
-			); */
 	}
 	.actions button span {
 		display: block;

@@ -194,6 +194,7 @@
 			'/'
 		)}`;
 	});
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 
@@ -298,7 +299,7 @@
 		opacity: 1;
 		background-color: var(--color-one);
 	}
-	@media screen and (max-width: 650px) {
+	@media screen and (max-width: 700px) {
 		.navigation-inner {
 			width: 100%;
 			padding-top: 10px;
@@ -307,13 +308,15 @@
 		.nav-logo {
 			display: inline-block;
 			vertical-align: middle;
+			margin-top: -5px;
 		}
 		.nav-extra {
 			width: auto;
 			display: inline-block;
 			float: right;
-			vertical-align: middle;
+			vertical-align: top;
 			margin-right: 0;
+			margin-top: -10px;
 		}
 		.nav-extra .map,
 		.nav-extra .call,
@@ -326,11 +329,11 @@
 		nav {
 			display: grid;
 			place-content: center;
-			height: calc(100vh - 50px);
-			width: 100vw;
+			height: calc(100vh - 40px);
+			width: 100vw !important;
 			overflow: scroll;
 			position: fixed;
-			top: 50px;
+			top: 40px;
 			left: 0;
 			text-align: center;
 			background: var(--color-six);

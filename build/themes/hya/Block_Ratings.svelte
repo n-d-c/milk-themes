@@ -64,6 +64,7 @@
 	onDestroy(() => {
 		unsubscribe_ratings(); // important for garbage collection otherwise memory leak
 	});
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 

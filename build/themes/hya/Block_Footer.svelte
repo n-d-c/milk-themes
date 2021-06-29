@@ -108,6 +108,7 @@
 			window?.calendarCard?.show();
 		}
 	};
+	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
 
