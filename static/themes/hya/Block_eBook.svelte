@@ -108,20 +108,30 @@
 <style>
 	.ebooks {
 		display: block;
-		padding: 50px var(--padding-inner, 20px);
+		padding: 0;
 		text-align: center;
+	}
+	@media screen and (min-width: 650px) {
+		.ebooks {
+			padding: 50px var(--padding-inner, 20px);
+		}
 	}
 	.ebooks-inner {
 		margin: 0 auto;
 		max-width: var(--content-constrain);
 	}
 	.ebook {
-		text-align: left;
+		text-align: center;
 		padding: 25px;
-		display: grid;
-		column-gap: 2em;
-		grid-template-columns: 30% 60%;
 		margin-bottom: 2em;
+	}
+	@media screen and (min-width: 450px) {
+		.ebook {
+			text-align: left;
+			display: grid;
+			column-gap: 2em;
+			grid-template-columns: 30% 60%;
+		}
 	}
 	.ebook-img {
 		position: relative;
@@ -129,6 +139,8 @@
 	.ebook-img img {
 		width: 100%;
 		height: auto;
+		max-width: 200px;
+		margin-bottom: 20px;
 	}
 	.ebook-description {
 		font-size: var(--small-fontsize);
