@@ -541,7 +541,7 @@ body:not(.scroll-neartop) .sticky-header[data-type='sticky-hide'] header {
 	}
 }
 @supports (-webkit-touch-callout: none) {
-	.hero img { right: -50vw; }
+	.hero img { right: -48vw; }
 }
 
 /* ## Blog Posts ## */
