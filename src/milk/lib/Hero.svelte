@@ -53,7 +53,7 @@
 		parallax != 'true'
 			? 'calc(100% + 2px) auto'
 			: 'auto max(100vh, calc(100vw / 16 * 9))';
-	$: img_width = parallax != 'true' ? '100vw' : '100vw';
+	$: img_width = parallax != 'true' ? 'max(100vw, 100%)' : 'max(100vw, 100%)';
 	$: img_height = parallax != 'true' ? 'auto' : '100vh';
 	$: img_position = parallax != 'true' ? 'absolute' : 'fixed';
 	$: img_style = `width: ${img_width} !important; height: auto !important; min-height: 100%; position: ${img_position};`;
@@ -109,7 +109,7 @@
 
 <style>
 	.hero {
-		width: 100%;
+		width: max(100vw, 100vw);
 		/* min-height: min(calc(100vw / 16 * 9), 100vh); */
 		display: grid;
 		place-items: center;
@@ -121,7 +121,7 @@
 		min-height: 50vh;
 	}
 	.hero-background {
-		width: 100vw;
+		width: max(100vw, 100vw);
 		height: 100%;
 		position: absolute;
 		top: 0;
