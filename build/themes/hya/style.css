@@ -240,11 +240,20 @@ a { transition: color var(--transition-speed); }
 /* ## Block Style 06 - Dark ## */
 /* :root .dark-mode .block-style06 {} */
 
+body { max-width: 100vw; }
+
 /* ## Heros ## */
 .hero {
 	background: var(--color-one);
 	background: linear-gradient(320deg, var(--color-one) 0%, var(--color-two) 50%, var(--color-three) 100%);
 }
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero h5,
+.hero h6,
+.hero p { color: var(--color-white); font-family: var(--font-main); text-transform: uppercase; font-weight: 400; margin-top: max(6vw, 35px); }
 .hero :is(h1, h2, h3, h4, h5, h6, p) { color: var(--color-white); font-family: var(--font-main); text-transform: uppercase; font-weight: 400; margin-top: max(6vw, 35px); }
 .hero img.logo {
 	width: 20vw;
@@ -508,25 +517,27 @@ body:not(.scroll-neartop) .sticky-header[data-type='sticky-hide'] header {
 		width: calc(100% + calc(calc(calc(110% / 2) - 50%) * -1)) !important;
 	}
 }
-@media screen and (max-width: 450px) {
-	#page-homepage #hero-home-01 img,
-	#page-homepage #hero-home-02 img {
-		margin: 0 calc(calc(calc(125% / 2) - 50%) * -1);
-		width: calc(100% + calc(calc(calc(125% / 2) - 50%) * -1)) !important;
+@supports not (-webkit-touch-callout: none) {
+	@media screen and (max-width: 450px) {
+		#page-homepage #hero-home-01 img,
+		#page-homepage #hero-home-02 img {
+			margin: 0 calc(calc(calc(125% / 2) - 50%) * -1);
+			width: calc(100% + calc(calc(calc(125% / 2) - 50%) * -1)) !important;
+		}
 	}
-}
-@media screen and (max-width: 400px) {
-	#page-homepage #hero-home-01 img,
-	#page-homepage #hero-home-02 img {
-		margin-left: calc(calc(calc(145% / 2) - 50%) * -1);
-		width: calc(100% + calc(calc(calc(145% / 2) - 50%) * -1)) !important;
+	@media screen and (max-width: 400px) {
+		#page-homepage #hero-home-01 img,
+		#page-homepage #hero-home-02 img {
+			margin-left: calc(calc(calc(145% / 2) - 50%) * -1);
+			width: calc(100% + calc(calc(calc(145% / 2) - 50%) * -1)) !important;
+		}
 	}
-}
-@media screen and (max-width: 350px) {
-	#page-homepage #hero-home-01 img
-	#page-homepage #hero-home-02 img {
-		margin-left: calc(calc(calc(180% / 2) - 50%) * -1);
-		width: calc(100% + calc(calc(calc(180% / 2) - 50%) * -1)) !important;
+	@media screen and (max-width: 350px) {
+		#page-homepage #hero-home-01 img
+		#page-homepage #hero-home-02 img {
+			margin-left: calc(calc(calc(180% / 2) - 50%) * -1);
+			width: calc(100% + calc(calc(calc(180% / 2) - 50%) * -1)) !important;
+		}
 	}
 }
 

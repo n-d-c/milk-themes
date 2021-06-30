@@ -23,10 +23,10 @@
 	<Block_Team id="team" blockstyle="block-style02" />
 	<Hero
 		id="hero-home-02"
-		image_url="/img/hero_homepage_02.jpg"
-		img_srcset="/img/hero_homepage_02.jpg"
-		avif_srcset="/img/hero_homepage_02.avif"
-		webp_srcset="/img/hero_homepage_02.webp"
+		image_url="/img/hero_homepage_02_alt.jpg"
+		img_srcset="/img/hero_homepage_02_alt.jpg"
+		avif_srcset="/img/hero_homepage_02_alt.avif"
+		webp_srcset="/img/hero_homepage_02_alt.webp"
 		title="Working with Clients"
 		parallax="false">&nbsp;</Hero
 	>

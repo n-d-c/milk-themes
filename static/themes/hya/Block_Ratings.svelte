@@ -98,7 +98,7 @@
 		border: 4px solid var(--color-yellow-vibrant, #f4ba38);
 		width: 150px;
 		height: 150px;
-		margin: clamp(20px, 4vw, 40px);
+		margin: clamp(10px, 4vw, 40px);
 		border-radius: 75px;
 		background: var(--background-white, #fff);
 		transition: all 0.3s ease;
@@ -159,6 +159,14 @@
 			grid-template-columns: 1fr 2fr;
 			text-align: left;
 			column-gap: 3em;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.our-ratings {
+			padding: 0;
+		}
+		.rating {
+			margin: 5px;
 		}
 	}
 </style>
