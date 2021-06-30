@@ -1,5 +1,5 @@
 <div class="calendarcard" class:hide={!display}>
-	<button class="close" on:click={hideCalendarCard}>
+	<button class="close" on:click={hideCalendarCard} title="Close">
 		<img
 			alt="Close"
 			height="40"

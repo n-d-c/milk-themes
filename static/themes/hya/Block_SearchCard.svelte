@@ -1,5 +1,5 @@
 <div class="searchcard" class:hide={!display}>
-	<button class="close" on:click={hideSearchCard}>
+	<button class="close" on:click={hideSearchCard} title="Close">
 		<img
 			alt="Close"
 			height="40"
@@ -23,7 +23,12 @@
 			</div>
 			<br />
 			<div class="form-row button-row">
-				<button type="submit" value="Submit" alt="Search Our Blog">
+				<button
+					type="submit"
+					value="Submit"
+					alt="Search Our Blog"
+					title="Search"
+				>
 					Search
 				</button>
 			</div>

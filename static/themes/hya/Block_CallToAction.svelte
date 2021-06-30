@@ -2,7 +2,7 @@
 	<div class="calltoaction-inner">
 		<h2 class="title">Let Us Get To Work On Your Case Now</h2>
 		<div>
-			<button class="call-button" on:click={doCall}>
+			<button class="call-button" on:click={doCall} title="Make Call">
 				<img
 					src="/img/icon-phone-yellow.svg"
 					class="icon icon-phone"
@@ -18,7 +18,7 @@
 		<hr />
 		<div class="actions">
 			<div>
-				<button on:click={doEmail}>
+				<button on:click={doEmail} title="Send Email">
 					<img
 						src="/img/icon-email.svg"
 						class="icon icon-email"
@@ -31,7 +31,7 @@
 				</button>
 			</div>
 			<div>
-				<button on:click={doCalendar}>
+				<button on:click={doCalendar} title="Consultation Calendar">
 					<img
 						src="/img/icon-pen.svg"
 						class="icon icon-pen"
@@ -44,7 +44,7 @@
 				</button>
 			</div>
 			<div>
-				<button on:click={doPayment}>
+				<button on:click={doPayment} title="Make Payment">
 					<img
 						src="/img/icon-invoice.svg"
 						class="icon icon-invoice"

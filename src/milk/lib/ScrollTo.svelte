@@ -1,5 +1,5 @@
 <div class="scroll-to">
-	<button on:click={scrollTo(target)}>
+	<button on:click={scrollTo(target)} title="ScrollTo">
 		<svg
 			aria-hidden="true"
 			focusable="false"
