@@ -13,12 +13,14 @@
 		parallax="false"
 	>
 		<h1>{description}</h1>
+		<ScrollTo direction="down" target="#AfterMainHero" />
 	</Hero>
 	<Block_CallToAction
 		id="call-to-action-02"
 		blockstyle="block-style01"
 		extraclasses="floating-calltoaction"
 	/>
+	<div id="AfterMainHero" />
 	<Block_Services id="services" blockstyle="" />
 	<Block_Team id="team" blockstyle="block-style02" />
 	<Hero
@@ -97,6 +99,7 @@
 	import Head_Twitter from '$milk/lib/Head_Twitter.svelte';
 	import Layout_Main from '$theme/Layout_Main.svelte';
 	import Hero from '$milk/lib/Hero.svelte';
+	import ScrollTo from '$milk/lib/ScrollTo.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_Team from '$theme/Block_Team.svelte';
 	import Block_Services from '$theme/Block_Services.svelte';
