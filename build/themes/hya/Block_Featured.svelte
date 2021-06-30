@@ -115,4 +115,12 @@
 	.featured-on-listing {
 		margin: 5px 0 10px;
 	}
+	@media screen and (max-width: 650px) {
+		.featured-on {
+			margin-bottom: -60px;
+		}
+		.featured-on:last-of-type {
+			margin-bottom: 40px;
+		}
+	}
 </style>

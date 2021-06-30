@@ -152,9 +152,9 @@
 		-webkit-transform: scale(1.25);
 		-ms-transform: scale(1.25);
 		transform: scale(1.25);
-		filter: drop-shadow(
+		/* filter: drop-shadow(
 			var(--drop-shadow-hover, 2px 2px 1px rgba(0, 0, 0, 0.4))
-		);
+		); */
 	}
 	.phone-button img {
 		width: 25px;
@@ -220,10 +220,12 @@
 	.tel {
 		margin: 15px 0;
 	}
-	.hide {
-		display: block;
-		width: 100vw;
-		position: absolute;
-		left: -100vw;
+	.callingcard:not(.hide) {
+		margin-left: 0vw;
+		transition: all 0.5s;
+	}
+	.callingcard:is(.hide) {
+		margin-left: 100vw;
+		transition: all 0.2s;
 	}
 </style>

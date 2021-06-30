@@ -13,7 +13,7 @@
 		smoothscroll: true,
 		topanchor: true,
 		watch_scroll: true,
-		watch_resize: true,
+		watch_resize: false,
 		watch_mouse: false,
 		pagination_size: 8,
 		credit: {

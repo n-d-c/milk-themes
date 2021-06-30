@@ -64,7 +64,6 @@
 				{/each}
 			</div>
 		</div>
-		<div class="long-arrow"><a href="/immigration-attorneys">⟶</a></div>
 		<div>
 			<a href="/immigration-attorneys" class="fancy-link">
 				<span>View Our Attorneys</span>
@@ -142,14 +141,7 @@
 	}
 	.attorneys {
 		padding: var(--padding-large) 0 0;
-		text-align: left;
-		white-space: nowrap;
-		overflow-x: hidden;
-	}
-	@media screen and (min-width: 1200px) {
-		.attorneys {
-			overflow-x: visible;
-		}
+		text-align: center;
 	}
 	.attorney {
 		display: inline-block;
@@ -159,16 +151,15 @@
 	}
 	@media screen and (max-width: 650px) {
 		.attorneys {
-			padding: var(--padding-large);
+			padding: var(--padding);
 		}
 		.attorney {
-			display: none;
-			margin: 0 auto;
+			margin: 0 0 var(--padding);
 		}
 		.attorney:first-child {
 			display: block;
 		}
-		.attorney:first-child img {
+		.attorney img {
 			width: 100%;
 			height: auto;
 		}
@@ -191,19 +182,6 @@
 	}
 	.attorney:hover .name .go {
 		color: var(--color-three);
-		transition: color var(--transition-speed);
-	}
-	.long-arrow {
-		font-size: calc(var(--extralarge-fontsize) * 2);
-		text-align: right;
-		line-height: 45px;
-		margin-bottom: 20px;
-	}
-	.long-arrow a {
-		transition: color var(--transition-speed);
-	}
-	.long-arrow a:hover {
-		text-decoration: none;
 		transition: color var(--transition-speed);
 	}
 </style>

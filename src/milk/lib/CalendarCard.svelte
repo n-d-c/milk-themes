@@ -1,15 +1,15 @@
-{#if display}
-	<div class="calendarcard" class:hide={!display}>
-		<button class="close" on:click={hideCalendarCard}>
-			<img
-				alt="Close"
-				height="40"
-				width="40"
-				loading="lazy"
-				src="/img/icon-close.svg"
-				class="icon"
-			/>
-		</button>
+<div class="calendarcard" class:hide={!display}>
+	<button class="close" on:click={hideCalendarCard}>
+		<img
+			alt="Close"
+			height="40"
+			width="40"
+			loading="lazy"
+			src="/img/icon-close.svg"
+			class="icon"
+		/>
+	</button>
+	{#if display}
 		<iframe
 			src={$milk?.site?.calendar}
 			loading="lazy"
@@ -19,8 +19,8 @@
 			tabindex="0"
 			title="Calendar"
 		/>
-	</div>
-{/if}
+	{/if}
+</div>
 
 <script>
 	import { onMount } from 'svelte';
@@ -91,18 +91,20 @@
 		-webkit-transform: scale(1.1);
 		-ms-transform: scale(1.1);
 		transform: scale(1.1);
-		filter: drop-shadow(
+		/* filter: drop-shadow(
 			var(--drop-shadow-hover, 2px 2px 1px rgba(0, 0, 0, 0.4))
-		);
+		); */
 	}
 	iframe {
 		width: 100%;
 		height: 100%;
 	}
-	.hide {
-		display: block;
-		width: 100vw;
-		position: absolute;
-		left: -100vw;
+	.calendarcard:not(.hide) {
+		margin-left: 0vw;
+		transition: all 0.5s;
+	}
+	.calendarcard:is(.hide) {
+		margin-left: 100vw;
+		transition: all 0.2s;
 	}
 </style>

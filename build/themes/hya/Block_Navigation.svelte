@@ -341,7 +341,7 @@
 		}
 		nav:not(.open) {
 			margin-left: 100vw !important;
-			transition: all 1s;
+			transition: all 0s;
 		}
 		nav:is(.open) {
 			margin-left: 0vw !important;

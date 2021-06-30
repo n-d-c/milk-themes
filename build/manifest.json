@@ -1,10 +1,10 @@
 {
-	"name": "DevLove - Milk",
-	"short_name": "devlove-milk",
+	"name": "Harlan York and Associates",
+	"short_name": "Harlan York and Associates",
 	"start_url": "/",
 	"display": "minimal-ui",
-	"theme_color": "#3A0D2E",
-	"background_color": "#3A0D2E",
+	"theme_color": "#7D0E15",
+	"background_color": "#7D0E15",
 	"permissions": [
 		"notifications",
 		"activeTab"

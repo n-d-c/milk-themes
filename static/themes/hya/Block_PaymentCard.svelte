@@ -1,167 +1,155 @@
-{#if display}
-	<div class="paymentcard" class:hide={!display}>
-		<button class="close" on:click={hidePaymentCard}>
+<div class="paymentcard" class:hide={!display}>
+	<button class="close" on:click={hidePaymentCard}>
+		<img
+			alt="Close"
+			height="40"
+			width="40"
+			loading="lazy"
+			src="/img/icon-close.svg"
+			class="icon"
+		/>
+	</button>
+	<div class="contents">
+		<h1>Make a Payment</h1>
+		<hr />
+		<h2 class="pay-with pay-with-paypal">
+			Pay with
 			<img
-				alt="Close"
-				height="40"
-				width="40"
+				alt="PayPal"
+				class="logo-paypal"
+				src="/img/logo-paypal.svg"
 				loading="lazy"
-				src="/img/icon-close.svg"
-				class="icon"
 			/>
-		</button>
-		<div class="contents">
-			<h1>Make a Payment</h1>
-			<hr />
-			<h2 class="pay-with pay-with-paypal">
-				Pay with
-				<img
-					alt="PayPal"
-					class="logo-paypal"
-					src="/img/logo-paypal.svg"
-					loading="lazy"
-				/>
-			</h2>
-			<p><em>(No PayPal account is necessary)</em></p>
-			<div class="form-row">
-				<label for="fullname">Full Name:</label>
-				<input
-					type="text"
-					name="fulname"
-					bind:value={fullname}
-					placeholder="Full Name"
-				/>
-			</div>
-			<div class="form-row">
-				<label for="email">Email Address:</label>
-				<input
-					type="email"
-					name="email"
-					bind:value={email}
-					placeholder="Email Address"
-				/>
-			</div>
-			<div class="form-row">
-				<label for="case">Phone Number:</label>
-				<input
-					type="text"
-					name="phone"
-					bind:value={phone}
-					placeholder="Phone Number"
-				/>
-			</div>
-			<div class="form-row">
-				<label for="casenum">Case Number:</label>
-				<input
-					type="text"
-					name="casenum"
-					bind:value={casenum}
-					placeholder="Case Number"
-				/>
-			</div>
-			<form
-				action="https://www.paypal.com/cgi-bin/webscr"
-				method="post"
-				target="_blank"
-			>
-				<input type="hidden" name="cmd" value="_xclick" />
-				<input
-					type="hidden"
-					name="business"
-					value={$milk?.site?.paypal}
-				/>
-				<input type="hidden" name="item_name" bind:value={itemdesc} />
-				<input type="hidden" name="item_number" value="1" />
-				<input type="hidden" name="no_shipping" value="1" />
-				<input type="hidden" name="no_note" value="0" />
-				<input type="hidden" name="currency_code" value="USD" />
-				<input type="hidden" name="lc" value="US" />
-				<input type="hidden" name="bn" value="PP-BuyNowBF" />
-				<div class="form-row">
-					<label for="amount">Amount:</label>
-					<input
-						type="number"
-						name="amount"
-						step="0.01"
-						value="0.00"
-						placeholder="0.00"
-						onblur="this.value = parseFloat(this.value).toFixed(2)"
-					/>
-				</div>
-				<div class="form-row button-row">
-					<button
-						type="submit"
-						value="Submit"
-						alt="PayPal - The safer, easier way to pay online."
-					>
-						<picture>
-							<source
-								type="image/avif"
-								srcset="/img/button_paypal.avif"
-							/>
-							<source
-								type="image/webp"
-								srcset="/img/button_paypal.webp"
-							/>
-							<img
-								src="/img/button_paypal.png"
-								alt="Pay with PayPal"
-								loading="lazy"
-								width="300"
-								height="171"
-								class="button-paypal-img"
-							/>
-						</picture>
-					</button>
-				</div>
-				<img
-					alt="PayPal Tracking Pixel"
-					border="0"
-					src="https://www.paypal.com/en_AU/i/scr/pixel.gif"
-					width="1"
-					height="1"
-					loading="lazy"
-				/>
-			</form>
-			<hr />
-			<h2 class="pay-with pay-with-lawpay">
-				Pay with
-				<img
-					class="logo-lawpay"
-					src="/img/logo-lawpay.svg"
-					loading="lazy"
-					alt="Pay with LawPay"
-				/>
-			</h2>
-			<a
-				href={$milk?.site?.lawpay}
-				target="_blank"
-				rel="noreferrer"
-				title="Pay with LawPay"
-				class="lawpay-link button"
-			>
-				<picture>
-					<source
-						type="image/avif"
-						srcset="/img/button_lawpay.avif"
-					/>
-					<source
-						type="image/webp"
-						srcset="/img/button_lawpay.webp"
-					/>
-					<img
-						src="/img/button_lawpay.png"
-						alt="Pay with LawPay"
-						loading="lazy"
-						width="229"
-						height="86"
-						class="button-lawpay-img"
-					/>
-				</picture>
-			</a>
+		</h2>
+		<p><em>(No PayPal account is necessary)</em></p>
+		<div class="form-row">
+			<label for="fullname">Full Name:</label>
+			<input
+				type="text"
+				name="fulname"
+				bind:value={fullname}
+				placeholder="Full Name"
+			/>
 		</div>
+		<div class="form-row">
+			<label for="email">Email Address:</label>
+			<input
+				type="email"
+				name="email"
+				bind:value={email}
+				placeholder="Email Address"
+			/>
+		</div>
+		<div class="form-row">
+			<label for="case">Phone Number:</label>
+			<input
+				type="text"
+				name="phone"
+				bind:value={phone}
+				placeholder="Phone Number"
+			/>
+		</div>
+		<div class="form-row">
+			<label for="casenum">Case Number:</label>
+			<input
+				type="text"
+				name="casenum"
+				bind:value={casenum}
+				placeholder="Case Number"
+			/>
+		</div>
+		<form
+			action="https://www.paypal.com/cgi-bin/webscr"
+			method="post"
+			target="_blank"
+		>
+			<input type="hidden" name="cmd" value="_xclick" />
+			<input type="hidden" name="business" value={$milk?.site?.paypal} />
+			<input type="hidden" name="item_name" bind:value={itemdesc} />
+			<input type="hidden" name="item_number" value="1" />
+			<input type="hidden" name="no_shipping" value="1" />
+			<input type="hidden" name="no_note" value="0" />
+			<input type="hidden" name="currency_code" value="USD" />
+			<input type="hidden" name="lc" value="US" />
+			<input type="hidden" name="bn" value="PP-BuyNowBF" />
+			<div class="form-row">
+				<label for="amount">Amount:</label>
+				<input
+					type="number"
+					name="amount"
+					step="0.01"
+					value="0.00"
+					placeholder="0.00"
+					onblur="this.value = parseFloat(this.value).toFixed(2)"
+				/>
+			</div>
+			<div class="form-row button-row">
+				<button
+					type="submit"
+					value="Submit"
+					alt="PayPal - The safer, easier way to pay online."
+				>
+					<picture>
+						<source
+							type="image/avif"
+							srcset="/img/button_paypal.avif"
+						/>
+						<source
+							type="image/webp"
+							srcset="/img/button_paypal.webp"
+						/>
+						<img
+							src="/img/button_paypal.png"
+							alt="Pay with PayPal"
+							loading="lazy"
+							width="300"
+							height="171"
+							class="button-paypal-img"
+						/>
+					</picture>
+				</button>
+			</div>
+			<img
+				alt="PayPal Tracking Pixel"
+				border="0"
+				src="https://www.paypal.com/en_AU/i/scr/pixel.gif"
+				width="1"
+				height="1"
+				loading="lazy"
+			/>
+		</form>
+		<hr />
+		<h2 class="pay-with pay-with-lawpay">
+			Pay with
+			<img
+				class="logo-lawpay"
+				src="/img/logo-lawpay.svg"
+				loading="lazy"
+				alt="Pay with LawPay"
+			/>
+		</h2>
+		<a
+			href={$milk?.site?.lawpay}
+			target="_blank"
+			rel="noreferrer"
+			title="Pay with LawPay"
+			class="lawpay-link button"
+		>
+			<picture>
+				<source type="image/avif" srcset="/img/button_lawpay.avif" />
+				<source type="image/webp" srcset="/img/button_lawpay.webp" />
+				<img
+					src="/img/button_lawpay.png"
+					alt="Pay with LawPay"
+					loading="lazy"
+					width="229"
+					height="86"
+					class="button-lawpay-img"
+				/>
+			</picture>
+		</a>
 	</div>
-{/if}
+</div>
 
 <script>
 	import { onMount } from 'svelte';
@@ -263,11 +251,13 @@
 		border: 0 none;
 		background: transparent;
 	}
-	.hide {
-		display: block;
-		width: 100vw;
-		position: absolute;
-		left: -100vw;
+	.paymentcard:not(.hide) {
+		margin-left: 0vw;
+		transition: all 0.5s;
+	}
+	.paymentcard:is(.hide) {
+		margin-left: 100vw;
+		transition: all 0.2s;
 	}
 	.contents {
 		margin: auto;
@@ -295,9 +285,9 @@
 		transform: scale(1.1);
 		transition: all 0.3s ease;
 		transform-origin: center;
-		filter: drop-shadow(
+		/* filter: drop-shadow(
 			var(--drop-shadow-hover, 2px 2px 1px rgba(0, 0, 0, 0.4))
-		);
+		); */
 	}
 	.form-row {
 		padding: 2px;

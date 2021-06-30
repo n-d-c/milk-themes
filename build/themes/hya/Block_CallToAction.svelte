@@ -86,9 +86,10 @@
 		}
 	};
 	const doPayment = () => {
-		if (window?.paymentCard?.show) {
-			window?.paymentCard?.show();
-		}
+		// if (window?.paymentCard?.show) {
+		// 	window?.paymentCard?.show();
+		// }
+		window.open($milk?.site?.lawpay, '_blank');
 	};
 	/* ## Exports ## */
 	export { id, blockstyle, extraclasses };
@@ -123,12 +124,12 @@
 		text-decoration: none;
 		font-size: var(--large-fontsize);
 		display: inline-block;
-		padding: 10px 25px 10px 12px;
+		padding: 10px 35px 10px 12px;
 		border: 3px solid var(--color-white, #fff);
 		background: transparent;
 		margin: 25px 10px 15px;
 		white-space: nowrap;
-		min-width: 215px;
+		min-width: 225px;
 		display: inline-block;
 	}
 	button.call-button:hover {

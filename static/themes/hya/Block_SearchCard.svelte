@@ -1,37 +1,35 @@
-{#if display}
-	<div class="searchcard" class:hide={!display}>
-		<button class="close" on:click={hideSearchCard}>
-			<img
-				alt="Close"
-				height="40"
-				width="40"
-				loading="lazy"
-				src="/img/icon-close.svg"
-				class="icon"
-			/>
-		</button>
-		<div class="contents">
-			<h1>Search Our Blog</h1>
-			<form action="/immigration-law-blog" method="get">
-				<div class="form-row">
-					<label for="s">Search:</label>
-					<input
-						type="TEXT"
-						name="s"
-						value=""
-						placeholder="Search For..."
-					/>
-				</div>
-				<br />
-				<div class="form-row button-row">
-					<button type="submit" value="Submit" alt="Search Our Blog">
-						Search
-					</button>
-				</div>
-			</form>
-		</div>
+<div class="searchcard" class:hide={!display}>
+	<button class="close" on:click={hideSearchCard}>
+		<img
+			alt="Close"
+			height="40"
+			width="40"
+			loading="lazy"
+			src="/img/icon-close.svg"
+			class="icon"
+		/>
+	</button>
+	<div class="contents">
+		<h1>Search Our Blog</h1>
+		<form action="/immigration-law-blog" method="get">
+			<div class="form-row">
+				<label for="s">Search:</label>
+				<input
+					type="TEXT"
+					name="s"
+					value=""
+					placeholder="Search For..."
+				/>
+			</div>
+			<br />
+			<div class="form-row button-row">
+				<button type="submit" value="Submit" alt="Search Our Blog">
+					Search
+				</button>
+			</div>
+		</form>
 	</div>
-{/if}
+</div>
 
 <script>
 	import { onMount } from 'svelte';
@@ -85,11 +83,13 @@
 			left: 4vw;
 		}
 	}
-	.hide {
-		display: block;
-		width: 100vw;
-		position: absolute;
-		left: -100vw;
+	.searchcard:not(.hide) {
+		margin-left: 0vw;
+		transition: all 0.5s;
+	}
+	.searchcard:is(.hide) {
+		margin-left: 100vw;
+		transition: all 0.2s;
 	}
 	.contents {
 		margin: auto;
@@ -113,9 +113,9 @@
 		-webkit-transform: scale(1.1);
 		-ms-transform: scale(1.1);
 		transform: scale(1.1);
-		filter: drop-shadow(
+		/* filter: drop-shadow(
 			var(--drop-shadow-hover, 2px 2px 1px rgba(0, 0, 0, 0.4))
-		);
+		); */
 	}
 	button.close:focus,
 	button.close:active {
