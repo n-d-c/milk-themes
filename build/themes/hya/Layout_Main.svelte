@@ -10,7 +10,7 @@
 	<CallingCard />
 	<!-- <Block_PaymentCard /> -->
 	<Block_SearchCard />
-	<Block_GoogleTagManager />
+	<!-- <Block_GoogleTagManager /> -->
 </div>
 
 <script>

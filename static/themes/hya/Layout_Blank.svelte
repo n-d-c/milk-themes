@@ -1,6 +1,6 @@
 <div {id} class="layout-blank">
 	<div class="page-content"><slot /></div>
-	<Block_GoogleTagManager />
+	<!-- <Block_GoogleTagManager /> -->
 </div>
 
 <script>
