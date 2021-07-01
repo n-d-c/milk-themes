@@ -10,6 +10,7 @@
 	<link rel="preconnect" href="https://google.com" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://storage.googleapis.com" />
+	<link rel="preconnect" href="https://www.googletagmanager.com" />
 	<link rel="stylesheet" href={themestyle} />
 </Head_Extra>
 {#if $milk?.theme?.darkmode}

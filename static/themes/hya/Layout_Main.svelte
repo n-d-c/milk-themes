@@ -10,6 +10,7 @@
 	<CallingCard />
 	<!-- <Block_PaymentCard /> -->
 	<Block_SearchCard />
+	<Block_GoogleTagManager />
 </div>
 
 <script>
@@ -22,6 +23,7 @@
 	import CallingCard from '$milk/lib/CallingCard.svelte';
 	// import Block_PaymentCard from '$theme/Block_PaymentCard.svelte';
 	import Block_SearchCard from '$theme/Block_SearchCard.svelte';
+	import Block_GoogleTagManager from '$theme/Block_GoogleTagManager.svelte';
 	let id;
 	export { id };
 </script>
