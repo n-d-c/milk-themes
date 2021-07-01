@@ -73,7 +73,7 @@
 	$: blockclass = `services ${blockstyle}`;
 	/* ## Data Loading ## */
 	import { preload_services } from '$graphql/sitespecific.preload.js';
-	let services = preload_services;
+	let services = preload_services.slice(0, 6);
 	let unsubscribe_services = () => {};
 	import { Q_GET_SERVICES } from '$graphql/sitespecific.graphql.js';
 	/* ## Main ## */
@@ -84,7 +84,7 @@
 		cleanUp = (html) => {
 			return stripTags(html).replace(/\u00a0/g, ' ');
 		};
-		let queryVariables = { size: 6 };
+		let queryVariables = { size: 999 };
 		let getServices = $milk?.data?.gql(
 			Q_GET_SERVICES,
 			$milk.data.sources.wordpress,
@@ -94,7 +94,7 @@
 			async (fetched_data) => {
 				let data = await fetched_data;
 				// console.log(data);
-				services = data.services.nodes;
+				services = data.services.nodes.slice(0, 6);
 			}
 		);
 	});

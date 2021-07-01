@@ -308,47 +308,14 @@ export const preload_ratings = [
 
 export const preload_services = [
 	{
-		"slug": "employment-immigration-and-work-visas",
-		"title": "Employment Immigration and Work Visas",
+		"slug": "marriage-and-family-based-immigration",
+		"title": "Marriage and Family Based Immigration",
 		"Services": {
 			"icon": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/circle-regular.svg"
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
 			},
-			"excerpt": "<div>\n<div>We offer creative solutions for many entities seeking visas in categories such as H-1B, L-1, O-1, TN, E-1, E-2, J-1, and many other nonimmigrant work visas.</div>\n</div>\n",
-			"description": "<p>At Harlan York &amp; Associates, we pride ourselves on resolving cases for clients from all over the world, who are sponsored by companies from small businesses to Fortune 500 corporations.</p>\n"
-		}
-	},
-	{
-		"slug": "business-immigration",
-		"title": "Business Immigration",
-		"Services": {
-			"icon": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/circle-regular.svg"
-			},
-			"excerpt": "<div>\n<div>We give daily guidance to companies with immigrant employees in areas ranging from restaurants to construction to agriculture, to academic institutions and research labs.</div>\n</div>\n",
-			"description": "<p>From architects to dentists, librarians to engineers and teachers to every type of information technology specialist imaginable, our office has been able to secure long-term and permanent immigration status for a wide range of professionals.</p>\n"
-		}
-	},
-	{
-		"slug": "deportation-and-criminal-defense",
-		"title": "Deportation and Criminal Defense",
-		"Services": {
-			"icon": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/circle-regular.svg"
-			},
-			"excerpt": "<div>\n<div>It is your Constitutionally guaranteed Sixth Amendment right to have your criminal counsel work with us on ensuring the best way to avoid deportation at all times.</div>\n</div>\n",
-			"description": "<p>It is your Constitutionally guaranteed Sixth Amendment right to have your criminal counsel work with us on ensuring the best way to avoid deportation at all times.</p>\n"
-		}
-	},
-	{
-		"slug": "citizenship",
-		"title": "Citizenship",
-		"Services": {
-			"icon": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/circle-regular.svg"
-			},
-			"excerpt": "<div>\n<div>Our firm successfully represents applicants for naturalization and derivative citizenship.</div>\n</div>\n",
-			"description": "<p>Whether you have a complicated case due to prior mistakes with the criminal justice system, tax problems or allegations of fraud, we will consult and advise if citizenship is right for you.  Do not forget, the 2014 version of the naturalization application is 21 pages long. Even those of you who think that the process looks simple, be careful, please. Call 973.642.1111 or email HYork@ImmigrationLawNJ.com for a consultation now.</p>\n"
+			"excerpt": "<div>\n<div>Whether your husband or wife is outside the United States or already stateside, we are here to help.</div>\n</div>\n",
+			"description": "<p>There has never been a better time to get your spouse a green card. Whether your husband or wife is outside the United States or already stateside, we are here to help.</p>\n<p>If you are an immigrant or a US citizen, you don’t need to be afraid.</p>\n<p>We’ve been helping immigrants become green card holders and US citizens for a quarter-century. We stay current on all the daily changes to immigration law and have a history of solving complicated immigration issues.</p>\n"
 		}
 	},
 	{
@@ -356,21 +323,175 @@ export const preload_services = [
 		"title": "Appellate Litigation",
 		"Services": {
 			"icon": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/circle-regular.svg"
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
 			},
 			"excerpt": "<div>\n<div>Harlan York and Associates regularly files and wins appeals in federal courts throughout the US on a host of immigration issues.</div>\n</div>\n",
 			"description": "<p>We have successfully stopped deportation on many occasions.  Additionally, our firm has filed arguments in cases where our clients’ green card and citizenship applications were unreasonably delayed.  Whether you need a review of an asylum denial or visa refusal, a federal appeal might be appropriate.  We have taken on novel issues and made them work.</p>\n"
 		}
 	},
 	{
-		"slug": "marriage-and-family-based-immigration",
-		"title": "Marriage and Family Based Immigration",
+		"slug": "business-immigration",
+		"title": "Business Immigration",
 		"Services": {
 			"icon": {
-				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/circle-regular.svg"
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
 			},
-			"excerpt": "<div>\n<div>Whether your husband or wife is outside the United States or already stateside, we are here to help.</div>\n</div>\n",
-			"description": "<p>There has never been a better time to get your spouse a green card. Whether your husband or wife is outside the United States or already stateside, we are here to help.</p>\n<p>If you are an immigrant or a US citizen, you don’t need to be afraid.</p>\n<p>We’ve been helping immigrants become green card holders and US citizens for a quarter-century. We stay current on all the daily changes to immigration law and have a history of solving complicated immigration issues.</p>\n"
+			"excerpt": "<p>We give daily guidance to companies with immigrant employees in areas ranging from restaurants to construction to agriculture, to academic institutions and research labs.</p>\n",
+			"description": "<p>From architects to dentists, librarians to engineers and teachers to every type of information technology specialist imaginable, our office has been able to secure long-term and permanent immigration status for a wide range of professionals.</p>\n"
+		}
+	},
+	{
+		"slug": "citizenship",
+		"title": "Citizenship",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<div>\n<div>Our firm successfully represents applicants for naturalization and derivative citizenship.</div>\n</div>\n",
+			"description": "<p>Whether you have a complicated case due to prior mistakes with the criminal justice system, tax problems or allegations of fraud, we will consult and advise if citizenship is right for you.  Do not forget, the 2014 version of the naturalization application is 21 pages long. Even those of you who think that the process looks simple, be careful, please. Call 973.642.1111 or email HYork@ImmigrationLawNJ.com for a consultation now.</p>\n"
+		}
+	},
+	{
+		"slug": "deportation-and-criminal-defense",
+		"title": "Deportation and Criminal Defense",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>We frequently work with criminal defense lawyers as co-counsel in post-conviction relief motions as well as advising attorneys on the proper pleas to negotiate for immigrants accused of crimes.</p>\n",
+			"description": "<p>It is your Constitutionally guaranteed Sixth Amendment right to have your criminal counsel work with us on ensuring the best way to avoid deportation at all times.</p>\n"
+		}
+	},
+	{
+		"slug": "employment-immigration-and-work-visas",
+		"title": "Employment Immigration and Work Visas",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>We offer creative solutions for many entities seeking visas in categories such as H-1B, L-1, O-1, TN, E-1, E-2, J-1, and many other nonimmigrant work visas.</p>\n",
+			"description": "<p>At Harlan York &amp; Associates, we pride ourselves on resolving cases for clients from all over the world, who are sponsored by companies from small businesses to Fortune 500 corporations.</p>\n"
+		}
+	},
+	{
+		"slug": "green-cards",
+		"title": "Green Cards",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>There are a variety of ways to get your green card. At Harlan York &amp; Associates, we know them all, including obscure parts of immigration law that you will not hear about from “jack of all trades” lawyers.</p>\n",
+			"description": "<p>Our constant, thorough review of the latest progress – in the ever-changing procedures by which to secure legal permanent residence status – will help you achieve the best outcome possible on your green card application.</p>\n"
+		}
+	},
+	{
+		"slug": "waivers-of-indamissibility-and-deportation",
+		"title": "Waivers of Inadmissibility and Deportation",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>Many times, a green card or visa may be denied due to a violation of immigration or criminal law. Before this happens to you, speak with us about how to seek a waiver from Immigration.</p>\n",
+			"description": "<p>Harlan York &amp; Associates has gained ground in the various waivers such as I-601s, I-212s, I-601As plus waivers under Sections 237(a)(1)(H) as well as 212(d)(3).</p>\n"
+		}
+	},
+	{
+		"slug": "removal-and-deportation",
+		"title": "Removal and Deportation",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>Since 1997, when Congress began calling deportation “removal,” the numbers of people returned to their countries has skyrocketed.</p>\n",
+			"description": "<p>Do not find yourself in the two million-plus removed under the current presidential administration.  Contact us regardless of where you live if you are facing removal and we will do everything we can to find a solution before you are taken away from your loved ones.</p>\n"
+		}
+	},
+	{
+		"slug": "k-visas",
+		"title": "K Visas for Fiancées",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>A popular area of immigration law, K visas are utilized by immigrants engaged to US citizens. We have assisted hundreds of couples beginning a new life together in America.</p>\n",
+			"description": "<p>The procedure is often fraught with challenges ranging from document review to time delays to questions as to the validity of the relationship. You deserve to be united with your true love as soon as possible. We will do everything we can to return your emails and calls as soon as possible. Our immigration firm has assisted American citizens whose fiancées are all over the world waiting to enter the US.</p>\n"
+		}
+	},
+	{
+		"slug": "labor-certification-perm",
+		"title": "Labor Certification (PERM)",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>Typically used for skilled laborers and immigrants with advanced degrees, the PERM process is a necessary part of acquiring a green card for thousands of immigrants annually.</p>\n",
+			"description": "<p>We will outline and execute PERM cases for you, no matter what industry. We know the ins and outs of carefully crafting job duties and responsibilities. Recruitment and “ability to pay” issues are carefully reviewed in order to have the best results.</p>\n"
+		}
+	},
+	{
+		"slug": "national-interest-waivers",
+		"title": "National Interest Waivers / PERM Bypass",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>Immigrants wishing to bypass PERM often have exceptional ability and do not require a sponsor through the National Interest Waiver.</p>\n",
+			"description": "<p>Harlan York &amp; Associates has won many such cases by demonstrating that it is in the interest of the US to allow immigrants in this category to live here. These cases have gotten more challenging in recent years, and we will provide the support needed to overcome the difficulties.</p>\n"
+		}
+	},
+	{
+		"slug": "orphan-and-adoption",
+		"title": "Orphans and Adoption Cases",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>Adopting a child from another country can be a long and time consuming process.</p>\n",
+			"description": "<p>We have helped thousands of families successfully navigate this process as quickly and painlessly as possible, ensuring that precious years are spent with your family and not in court. US citizens adopting a child from another country must ensure legal status is conferred on their child. We are here to help you make this happen.</p>\n"
+		}
+	},
+	{
+		"slug": "political-asylum",
+		"title": "Political Asylum",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>Political asylum is one of the most difficult areas in immigration law. Our office fights and wins asylum for immigrants fearful of return to their home countries due to persecution based on race, religion, nationality, political opinion, and social group.</p>\n",
+			"description": "<p>The system is tricky and overwhelming. New caselaw commonly results in a need to keep up with how to win, given the obstacles of a backlogged bureaucracy. We have a proven record and are up to the task.</p>\n"
+		}
+	},
+	{
+		"slug": "temporary-protected-status-sanctuary",
+		"title": "Temporary Protected Status / Sanctuary",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>If your country was affected by a natural disaster or civil strife, we might be able to help you stay here and receive both employment and travel authorization through a Temporary Protected Status.</p>\n",
+			"description": "<p>There are a handful of nations whose citizens qualify for TPS, and we have helped hundreds and hundreds of these applicants seek sanctuary in the United States.</p>\n"
+		}
+	},
+	{
+		"slug": "u-visas-victims-of-violence",
+		"title": "U Visas and Related Petitions for Victims of Violence",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>Mr. York has spoken on National Television and at seminars in New York and New Jersey on this new area of immigration law.</p>\n",
+			"description": "<p>If you have been the victim of a crime or violent act, call us today at 973-642-1111 to discuss your rights and how you may qualify to receive legal status. There is a growing interest in our government to deter violence by encouraging immigrants to apply for legal status after suffering as victims of many criminal acts.  We can help you.</p>\n"
+		}
+	},
+	{
+		"slug": "sciences-arts-sports-entertainment-immigration",
+		"title": "Sciences, Arts, Sports and Entertainment Immigration",
+		"Services": {
+			"icon": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/06/hya-services-star.svg"
+			},
+			"excerpt": "<p>PhDs. Musicians. Journalists. Athletes. Actors. Harlan York &amp; Associates proudly assists immigrants who wish to reside in the US based upon their contributions to the arts, sciences, sports, film, television, and stage.</p>\n",
+			"description": "<p>Winners of international and national awards have graced us with their presence, and we have represented them in their visa and green card filings with aplomb.</p>\n"
 		}
 	}
 ];
