@@ -186,7 +186,7 @@ export const Q_GET_VIDEOS = `query getVideos($size: Int = ${config.pagination_si
 			slug
 			title(format: RENDERED)
 			date
-			eBook {
+			Video {
 				avifImage {
 					sourceUrl
 				}

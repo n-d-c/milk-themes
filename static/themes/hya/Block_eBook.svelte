@@ -8,6 +8,7 @@
 							href={ebook?.eBook?.pdf?.mediaItemUrl}
 							target="_blank"
 							rel="noreferrer"
+							title="Read eBook"
 						>
 							<picture>
 								<source
@@ -34,6 +35,7 @@
 								href={ebook?.eBook?.pdf?.mediaItemUrl}
 								target="_blank"
 								rel="noreferrer"
+								title="Read eBook"
 							>
 								{ebook?.title}
 							</a>
@@ -47,6 +49,7 @@
 								target="_blank"
 								rel="noreferrer"
 								class="fancy-link"
+								title="Read eBook"
 							>
 								<span> Download The FREE eBook </span>
 							</a>

@@ -7,6 +7,7 @@
 						href="https://3degreesoflaw.com/"
 						target="_blank"
 						rel="noreferrer"
+						title="Purchase the Book"
 					>
 						<picture>
 							<source
@@ -33,6 +34,7 @@
 							href="https://3degreesoflaw.com/"
 							target="_blank"
 							rel="noreferrer"
+							title="Purchase the Book"
 						>
 							Three Dregrees of Law
 						</a>
@@ -63,6 +65,7 @@
 							target="_blank"
 							rel="noreferrer"
 							class="fancy-link"
+							title="Purchase the Book"
 						>
 							<span> Purchase the Book </span>
 						</a>

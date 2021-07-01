@@ -23,9 +23,19 @@
 	<div class="content">
 		<div class="content-inner">
 			<h1>Resource Library</h1>
+			<br /><br />
+		</div>
+		<div class="content-inner">
+			<h2>eBooks</h2>
 		</div>
 	</div>
 	<Block_eBooksList id="ebooks" />
+	<div class="content">
+		<div class="content-inner">
+			<h2>Videos</h2>
+		</div>
+	</div>
+	<Block_VideosList id="videos" />
 	<Block_CallToAction
 		id="call-to-action"
 		blockstyle="block-style01"
@@ -50,6 +60,7 @@
 	import Hero from '$milk/lib/Hero.svelte';
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
 	import Block_eBooksList from '$theme/Block_eBooksList.svelte';
+	import Block_VideosList from '$theme/Block_VideosList.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
 	import Block_Languages from '$theme/Block_Languages.svelte';
@@ -65,5 +76,8 @@
 <style>
 	.content {
 		margin-bottom: 0;
+	}
+	.content-inner h2 {
+		text-align: center;
 	}
 </style>

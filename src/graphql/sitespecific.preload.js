@@ -438,3 +438,40 @@ export const preload_ebooks = [
 		}
 	}
 ];
+
+export const preload_videos = [
+	{
+		"slug": "harlan-york-immigration-update",
+		"title": "Harlan York Immigration Update",
+		"date": "2021-07-01T03:49:01",
+		"Video": {
+			"avifImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/07/video_harlan_york_immigration_update.avif"
+			},
+			"jpegImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/07/video_harlan_york_immigration_update.jpg"
+			},
+			"webpImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/07/video_harlan_york_immigration_update.webp"
+			},
+			"video": "https://www.youtube.com/watch?v=Lpd6OypxPyU"
+		}
+	},
+	{
+		"slug": "getting-a-green-card-through-marriage",
+		"title": "Getting a Green Card Through Marriage",
+		"date": "2021-07-01T03:45:30",
+		"Video": {
+			"avifImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/07/video_green_card_through_marriage.avif"
+			},
+			"jpegImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/07/video_green_card_through_marriage.jpg"
+			},
+			"webpImage": {
+				"sourceUrl": "https://admin.immigrationlawnj.com/wp-content/uploads/2021/07/video_green_card_through_marriage.webp"
+			},
+			"video": "https://www.youtube.com/watch?v=sjMF8A2FLHc"
+		}
+	}
+];
