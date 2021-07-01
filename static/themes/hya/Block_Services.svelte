@@ -53,7 +53,7 @@
 			{/each}
 		</div>
 		<div>
-			<a href="/immigration-law-service" class="fancy-link">
+			<a href="/immigration-law-services" class="fancy-link">
 				<span>View All Services</span>
 			</a>
 		</div>

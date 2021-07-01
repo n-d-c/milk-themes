@@ -17,7 +17,7 @@
 		<div class="caption">We return most calls within 24 hours</div>
 		<hr />
 		<div class="actions">
-			<div>
+			<div class="action">
 				<button on:click={doEmail} title="Send Email">
 					<img
 						src="/img/icon-email.svg"
@@ -30,7 +30,7 @@
 					<span>EMAIL US</span>
 				</button>
 			</div>
-			<div>
+			<div class="action">
 				<button on:click={doCalendar} title="Consultation Calendar">
 					<img
 						src="/img/icon-pen.svg"
@@ -43,7 +43,7 @@
 					<span>CONSULTATION</span>
 				</button>
 			</div>
-			<div>
+			<div class="action">
 				<button on:click={doPayment} title="Make Payment">
 					<img
 						src="/img/icon-invoice.svg"
@@ -226,6 +226,17 @@
 	@media screen and (max-width: 400px) {
 		.actions {
 			display: block;
+			margin-left: -2vw;
+			margin-right: -2vw;
 		}
+		/* .action {
+			display: inline-block !important;
+		}
+		.action button {
+			padding: 10px;
+		}
+		.calltoaction {
+			padding: 1vw !important;
+		} */
 	}
 </style>

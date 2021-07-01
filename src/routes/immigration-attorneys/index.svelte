@@ -56,7 +56,7 @@
 	/* ## Variables ## */
 	const title = `Immigration Attorneys - ${$milk?.site?.title}`;
 	const description =
-		'We understand Immigration Law. It is all we do. We have helped thousands of immigrants and their families get green cards, specialized visas, stop deportation, and handle just about any immigration related issue. Our immigration attorneys will answer your questions in a way that you cna understand, without complicated legal jargon. We charge reasonable fees and our entire law firm works directly on your case.';
+		'We understand Immigration Law. It is all we do. We have helped thousands of immigrants and their families get green cards, specialized visas, stop deportation, and handle just about any immigration related issue. Our immigration attorneys will answer your questions in a way that you can understand, without complicated legal jargon. We charge reasonable fees and our entire law firm works directly on your case.';
 </script>
 
 <style>
