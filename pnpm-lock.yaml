@@ -28,6 +28,7 @@ specifiers:
   svelte: 3.35.0
   svelte-hmr: 0.13.1
   svelte-preprocess: 4.6.9
+  svelte-sitemap: ^1.0.0
   vite: 2.1.2
 
 devDependencies:
@@ -58,6 +59,7 @@ devDependencies:
   svelte: 3.35.0
   svelte-hmr: 0.13.1_svelte@3.35.0
   svelte-preprocess: 4.6.9_677028a18525ad73ef85d5ac51178983
+  svelte-sitemap: 1.0.0
   vite: 2.1.2
 
 packages:
@@ -1052,6 +1054,35 @@ packages:
       fastq: 1.11.0
     dev: true
 
+  /@oozcitak/dom/1.15.8:
+    resolution: {integrity: sha512-MoOnLBNsF+ok0HjpAvxYxR4piUhRDCEWK0ot3upwOOHYudJd30j6M+LNcE8RKpwfnclAX9T66nXXzkytd29XSw==}
+    engines: {node: '>=8.0'}
+    dependencies:
+      '@oozcitak/infra': 1.0.8
+      '@oozcitak/url': 1.0.4
+      '@oozcitak/util': 8.3.8
+    dev: true
+
+  /@oozcitak/infra/1.0.8:
+    resolution: {integrity: sha512-JRAUc9VR6IGHOL7OGF+yrvs0LO8SlqGnPAMqyzOuFZPSZSXI7Xf2O9+awQPSMXgIWGtgUf/dA6Hs6X6ySEaWTg==}
+    engines: {node: '>=6.0'}
+    dependencies:
+      '@oozcitak/util': 8.3.8
+    dev: true
+
+  /@oozcitak/url/1.0.4:
+    resolution: {integrity: sha512-kDcD8y+y3FCSOvnBI6HJgl00viO/nGbQoCINmQ0h98OhnGITrWR3bOGfwYCthgcrV8AnTJz8MzslTQbC3SOAmw==}
+    engines: {node: '>=8.0'}
+    dependencies:
+      '@oozcitak/infra': 1.0.8
+      '@oozcitak/util': 8.3.8
+    dev: true
+
+  /@oozcitak/util/8.3.8:
+    resolution: {integrity: sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==}
+    engines: {node: '>=8.0'}
+    dev: true
+
   /@rollup/plugin-commonjs/19.0.0_rollup@2.41.5:
     resolution: {integrity: sha512-adTpD6ATGbehdaQoZQ6ipDFhdjqsTgpOAhFiPwl+dzre4pPshsecptDPyEFb61JMJ1+mGljktaC4jI8ARMSNyw==}
     engines: {node: '>= 8.0.0'}
@@ -1171,6 +1202,10 @@ packages:
 
   /@types/node/14.14.35:
     resolution: {integrity: sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==}
+    dev: true
+
+  /@types/node/15.12.5:
+    resolution: {integrity: sha512-se3yX7UHv5Bscf8f1ERKvQOD6sTyycH3hdaoozvaLxgUiY5lIGEeH37AD0G0Qi9kPqihPn0HOfd2yaIEN9VwEg==}
     dev: true
 
   /@types/parse-json/4.0.0:
@@ -2284,6 +2319,14 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    dev: true
+
+  /js-yaml/3.14.0:
+    resolution: {integrity: sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==}
+    hasBin: true
+    dependencies:
+      argparse: 1.0.10
+      esprima: 4.0.1
     dev: true
 
   /js-yaml/3.14.1:
@@ -3610,6 +3653,15 @@ packages:
       svelte: 3.35.0
     dev: true
 
+  /svelte-sitemap/1.0.0:
+    resolution: {integrity: sha512-ua5WBoN6Qct8pqbWQRBmDJWAk9gvS7WWI96zqUVKYoG6mwHd8/x52FO5g1Stm6nqK6TGKeC12tJb15NSen0s4g==}
+    engines: {node: '>= 10'}
+    hasBin: true
+    dependencies:
+      minimist: 1.2.5
+      xmlbuilder2: 2.4.1
+    dev: true
+
   /svelte/3.35.0:
     resolution: {integrity: sha512-gknlZkR2sXheu/X+B7dDImwANVvK1R0QGQLd8CNIfxxGPeXBmePnxfzb6fWwTQRsYQG7lYkZXvpXJvxvpsoB7g==}
     engines: {node: '>= 8'}
@@ -3788,6 +3840,17 @@ packages:
 
   /wrappy/1.0.2:
     resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=}
+    dev: true
+
+  /xmlbuilder2/2.4.1:
+    resolution: {integrity: sha512-vliUplZsk5vJnhxXN/mRcij/AE24NObTUm/Zo4vkLusgayO6s3Et5zLEA14XZnY1c3hX5o1ToR0m0BJOPy0UvQ==}
+    engines: {node: '>=10.0'}
+    dependencies:
+      '@oozcitak/dom': 1.15.8
+      '@oozcitak/infra': 1.0.8
+      '@oozcitak/util': 8.3.8
+      '@types/node': 15.12.5
+      js-yaml: 3.14.0
     dev: true
 
   /y18n/5.0.5:

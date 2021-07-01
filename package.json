@@ -8,7 +8,7 @@
 		"adapt": "svelte-kit adapt;",
 		"export": "svelte-kit build; svelte-kit adapt;",
 		"update": "git remote add updates https://github.com/rndm-user/devlove-milk.git; rm -rf ./build; rm -rf ./.svelte; rm -rf ./.svelte-kit; rm ./static/documentation/code_analysis.html; git add .; git commit -m 'running updates'; git fetch updates; git pull updates master; pnpm install; svelte-kit build; svelte-kit adapt;",
-		"prod": "svelte-kit build; svelte-kit adapt; rm -rf ./build/documentation;"
+		"prod": "svelte-kit build; svelte-kit adapt; rm -rf ./build/documentation; svelte-sitemap --domain https://staging.immigarationlawnj.com --reset-time;"
 	},
 	"devDependencies": {
 		"@babel/core": "7.13.10",
@@ -38,6 +38,7 @@
 		"svelte": "3.35.0",
 		"svelte-hmr": "0.13.1",
 		"svelte-preprocess": "4.6.9",
+		"svelte-sitemap": "^1.0.0",
 		"vite": "2.1.2"
 	},
 	"type": "module",

@@ -168,7 +168,7 @@
 		color: var(--color-black);
 	}
 	.icon {
-		width: 40px;
+		width: 50px;
 		height: auto;
 		margin-bottom: 10px;
 	}
