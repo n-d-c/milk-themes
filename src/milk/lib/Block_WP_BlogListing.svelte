@@ -5,10 +5,7 @@
 			<div id="BlogTop" />
 			{#each posts as post}
 				<div class="post">
-					<div
-						href={`${blog_path}/${post?.slug}`}
-						title={`${post?.title}`}
-					>
+					<div title={`${post?.title}`}>
 						<a
 							href={`${blog_path}/${post?.slug}`}
 							title={`${post?.title}`}

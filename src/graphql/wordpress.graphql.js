@@ -150,7 +150,7 @@ ${POST_SCRIPTS}
 ${POST_CSS}`;
 
 export const Q_LIST_ALL_POSTS = `query getPosts {
-	posts(where: {offsetPagination: {offset: 0, size: 9999}}) {
+	posts(first: 9999) {
 		${PAGINATION},
 		nodes {
 			${POST_LISTING}
@@ -159,7 +159,7 @@ export const Q_LIST_ALL_POSTS = `query getPosts {
 }`;
 
 export const Q_GET_ALL_POSTS = `query getPosts {
-	posts(where: {offsetPagination: {offset: 0, size: 9999}}) {
+	posts(first: 9999) {
 		${PAGINATION},
 		nodes {
 			${POST_CONTENT}
@@ -410,8 +410,8 @@ author {
 ${PAGE_CATEGORIES}
 ${PAGE_TAGS}`;
 
-export const Q_LIST_ALL_PAGES = `query getPages {
-	pages(where: {offsetPagination: {offset: 0, size: 9999}}) {
+export const Q_LIST_ALL_PAGES = `query getAllPages {
+	pages(first: 9999) {
 		${PAGINATION},
 		nodes {
 			${PAGE_LISTING}
@@ -419,8 +419,8 @@ export const Q_LIST_ALL_PAGES = `query getPages {
 	}
 }`;
 
-export const Q_GET_ALL_PAGES = `query getPages {
-	pages(where: {offsetPagination: {offset: 0, size: 9999}}) {
+export const Q_GET_ALL_PAGES = `query getAllPages {
+	pages(first: 9999) {
 		${PAGINATION},
 		nodes {
 			${PAGE_CONTENT}

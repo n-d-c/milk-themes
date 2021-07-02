@@ -43,6 +43,7 @@
 			<Block_WP_BlogPagination bind:count bind:offset bind:size />
 		</div>
 	</div>
+	<Block_WP_BlogListAllPages blog_path="/immigration-law-blog" />
 	<Block_CallToAction
 		id="call-to-action"
 		blockstyle="block-style01"
@@ -68,6 +69,7 @@
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_Languages from '$theme/Block_Languages.svelte';
 	import Block_WP_BlogListing from '$milk/lib/Block_WP_BlogListing.svelte';
+	import Block_WP_BlogListAllPages from '$milk/lib/Block_WP_BlogListAllPages.svelte';
 	import Block_WP_BlogCategorySelector from '$milk/lib/Block_WP_BlogCategorySelector.svelte';
 	import Block_WP_BlogSearch from '$milk/lib/Block_WP_BlogSearch.svelte';
 	import Block_WP_BlogPerPage from '$milk/lib/Block_WP_BlogPerPage.svelte';
