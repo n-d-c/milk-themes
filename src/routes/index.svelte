@@ -112,7 +112,7 @@
 	/* ## Variables ## */
 	let title = $milk?.site?.title;
 	let description =
-		'Protecting The Rigths of Immigrants Accross America for a Quarter a Century';
+		'Protecting The Rights of Immigrants Across America for a Quarter Century';
 </script>
 
 <style>

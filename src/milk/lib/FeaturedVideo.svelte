@@ -11,7 +11,7 @@
 	<div class="video-inner">
 		{#if show_video}
 			<iframe
-				src="//player.vimeo.com/video/108146056"
+				src={video_source}
 				title="Video"
 				frameborder="0"
 				webkitallowfullscreen

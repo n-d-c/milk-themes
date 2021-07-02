@@ -20,7 +20,7 @@
 									srcset={video?.Video?.webpImage?.sourceUrl}
 								/>
 								<img
-									src={video?.Video?.jpgImage?.sourceUrl}
+									src={video?.Video?.jpegImage?.sourceUrl}
 									alt={video?.title}
 									loading="lazy"
 									width="300"

@@ -579,3 +579,10 @@ body:not(.scroll-neartop) .sticky-header[data-type='sticky-hide'] header {
 @media screen and (min-width: 650px) {
 	#immigration-attorneys .floating-calltoaction { margin-top: max(-10%, -125px); }
 }
+
+/* ## Abogado de Inmigración ##*/
+@media screen and (min-width: 650px) {
+	#immigration-espanol .floating-calltoaction {
+		margin: max(-15%, -125px) auto 0;
+	}
+}

@@ -37,7 +37,7 @@
 									?.sourceUrl}
 							/>
 							<img
-								src={attorney?.Attorney?.pngImage?.sourceUrl}
+								src={attorney?.Attorney?.jpegImage?.sourceUrl}
 								alt={attorney?.title}
 								loading="lazy"
 								width="260"
