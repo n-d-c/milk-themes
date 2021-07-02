@@ -135,7 +135,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="/espanol" class:current={checkCurrent('/espanol')}>
+					<a href="/espanol" class:current={checkIfBlog('/espanol')}>
 						<span>Español</span>
 					</a>
 				</li>
