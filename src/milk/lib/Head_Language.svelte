@@ -3,12 +3,16 @@
 </svelte:head>
 
 <script>
+	/* ## Svelte ## */
+	import { onMount } from 'svelte';
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
 	/* ## Variables ## **/
 	let lang = 'en';
 	$: lang ||= $milk?.config?.lang || 'en';
-	// TODO: onmount switch the html container language.
+	onMount(async () => {
+		document.documentElement.setAttribute('lang', lang);
+	});
 	/* ## Exports ## **/
 	export { lang };
 </script>
