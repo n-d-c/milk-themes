@@ -24,6 +24,24 @@
 		<h1 class="title">Our Services</h1>
 	</div>
 	<Block_ServicesList id="services" blockstyle="" />
+	<div class="service-area">
+		<p>
+			Harlan York and Associates practices law in the areas of
+			Immigration, Deportation Defense, Family Immigration, Corporate
+			Immigration, Naturalization throughout Essex County – Hudson County
+			– Morris County – Passaic County – Somerset County – Middlesex
+			County – Bergen County – New Jersey -Immigration Lawyer – NJ
+			Immigration Lawyer – Jersey City-Newark-Paterson Passaic Elizabeth
+			Edison Woodbridge Toms River Hamilton Trenton Camden Clifton Passaic
+			Garfield Wallington Cherry Hill East Orange Passaic Union City
+			Bayonne Irvington Old Bridge Lakewood North Bergen Vineland Union
+			Wayne Parsippany-Troy Hills New Brunswick Plainfield Bloomfield
+			Perth Amboy East Brunswick West New York West Orange Hackensack
+			Atlantic City Kearny Mount Laurel Montclair Essex Hoboken North
+			Brunswick Belleville. In addition to serving clients in New York,
+			Pennsylvania, the greater United States, and Internationally.
+		</p>
+	</div>
 	<Block_eBook id="marriage-ebook" wpid="cG9zdDoyNDY=" blockstyle="" />
 	<Block_Testimonials id="testimonials" blockstyle="block-style05" />
 	<Block_CallToAction
@@ -73,5 +91,16 @@
 	.title {
 		position: relative;
 		margin-bottom: -100px;
+	}
+	.service-area {
+		text-align: center;
+	}
+	.service-area p {
+		text-align: left;
+		margin: auto;
+		max-width: 800px;
+		font-style: italic;
+		color: #666;
+		margin-bottom: 45px;
 	}
 </style>
