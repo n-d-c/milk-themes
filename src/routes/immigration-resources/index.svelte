@@ -36,6 +36,28 @@
 		</div>
 	</div>
 	<Block_VideosList id="videos" />
+	<div class="content view-more">
+		<div class="content-inner">
+			<h3>
+				View More Videos on
+				<a
+					href="https://www.youtube.com/user/HYORKLAW/videos"
+					target="_blank"
+					rel="noreferrer"
+				>
+					YouTube
+				</a>
+				and
+				<a
+					href="https://vimeo.com/user33052863"
+					target="_blank"
+					rel="noreferrer"
+				>
+					Vimeo
+				</a>
+			</h3>
+		</div>
+	</div>
 	<Block_CallToAction
 		id="call-to-action"
 		blockstyle="block-style01"
@@ -79,5 +101,9 @@
 	}
 	.content-inner h2 {
 		text-align: center;
+	}
+	.view-more {
+		text-align: center;
+		margin: -40px 25px 100px;
 	}
 </style>
