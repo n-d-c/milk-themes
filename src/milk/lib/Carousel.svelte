@@ -48,6 +48,7 @@
 			top: 0;
 			box-sizing: border-box;
 			margin: 0 auto;
+			overflow-y: hidden;
 		}
 		.carousel .slides > .slideInLeft {
 			animation: slideInLeft var(--slide-speed, 1000ms) ease 0s 1 normal
@@ -217,7 +218,7 @@
 			sliderHeight =
 				el.offsetHeight > sliderHeight ? el.offsetHeight : sliderHeight;
 		});
-		sliderHeight = sliderHeight + 10;
+		sliderHeight = sliderHeight + 20;
 		console.log(sliderHeight);
 	};
 	const removeAll = () => {

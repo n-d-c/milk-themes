@@ -65,7 +65,11 @@
 				</div>
 			</span>
 			<span slot="after">
-				<a href="#" class="fancy-link">
+				<a
+					href="/immigration-law-blog"
+					class="fancy-link"
+					sveltekit:prefetch
+				>
 					<span>View Our Blog</span>
 				</a>
 			</span>

@@ -7,6 +7,7 @@
 					<a
 						href={`${blog_path}/${post?.slug}`}
 						title={`${post?.title}`}
+						sveltekit:prefetch
 					>
 						<picture>
 							{#if post?.featuredImage?.node?.srcSet}
