@@ -546,6 +546,25 @@ body:not(.scroll-neartop) .sticky-header[data-type='sticky-hide'] header {
 @supports (-webkit-touch-callout: none) {
 	.hero img { right: -45vw; }
 }
+.testimonials .prevButton,
+.testimonials .nextButton { border: 0px none !important;  background: var(--color-four) !important; color: var(--color-six); width: 40px !important; text-align: center; padding: 0; }
+.testimonials .prevButton:focus,
+.testimonials .nextButton:focus,
+.testimonials .prevButton:active,
+.testimonials .nextButton:active,
+.testimonials .prevButton:hover,
+.testimonials .nextButton:hover { outline: 0 none; color: var(--color-white); }
+.testimonials .prevButton { left: 0px !important; }
+.testimonials .nextButton { right: 0px !important; }
+.testimonials .pagination { margin: 0 auto 10px; }
+.testimonials .pagination button { border: 0px none !important; color: transparent; font-size: 0; width: 14px; height: 14px; border-radius: 50%; margin: 0 5px;  }
+.testimonials .pagination button:focus,
+.testimonials .pagination button:focus,
+.testimonials .pagination button:active,
+.testimonials .pagination button:active,
+.testimonials .pagination button:hover,
+.testimonials .pagination button:hover,
+.testimonials .pagination button.active { outline: 0 none; background: var(--color-four); }
 
 /* ## Blog Posts ## */
 #blog-post .callout-content { text-align: center; }

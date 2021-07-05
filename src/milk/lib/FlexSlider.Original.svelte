@@ -148,40 +148,40 @@
 		webComponentMount();
 	});
 	let webComponentMount = async () => {
-		if (id === undefined) {
-			await tick;
-			webComponentMount();
-		} else {
-			carouselComponent = thisComponent.getRootNode().host;
-			slides = carouselComponent.querySelectorAll(`div[slot='slides']>*`);
-			setHeight();
-			slides.forEach(function (el) {
-				removeAllAnimations(el);
-				el.classList.add('outRight');
-			});
-			slide(slides[currentSlide], 'in', 'right');
-			disableButtons(slide_speed * disable_ratio);
-			if (play == 'true') {
-				setTimeout(start, interval);
-			}
-			// imgs = slides.querySelectorAll('img');
-			// imgs.forEach(function (el) {
-			// 	el.setAttribute('draggable', false);
-			// });
-		}
+		// if (id === undefined) {
+		// 	await tick;
+		// 	webComponentMount();
+		// } else {
+		// 	carouselComponent = thisComponent.getRootNode().host;
+		// 	slides = carouselComponent.querySelectorAll(`div[slot='slides']>*`);
+		// 	setHeight();
+		// slides.forEach(function (el) {
+		// 	removeAllAnimations(el);
+		// 	el.classList.add('outRight');
+		// });
+		// slide(slides[currentSlide], 'in', 'right');
+		// disableButtons(slide_speed * disable_ratio);
+		// if (play == 'true') {
+		// 	setTimeout(start, interval);
+		// }
+		// imgs = slides.querySelectorAll('img');
+		// imgs.forEach(function (el) {
+		// 	el.setAttribute('draggable', false);
+		// });
+		// }
 	};
-	let doNext = () => {
-		slide(slides[currentSlide], 'out', 'left');
-		currentSlide = currentSlide < slides.length - 1 ? currentSlide + 1 : 0;
-		slide(slides[currentSlide], 'in', 'right');
-		disableButtons(slide_speed * disable_ratio);
-	};
-	let doPrev = () => {
-		slide(slides[currentSlide], 'out', 'right');
-		currentSlide = currentSlide == 0 ? slides.length - 1 : currentSlide - 1;
-		slide(slides[currentSlide], 'in', 'left');
-		disableButtons(slide_speed * disable_ratio);
-	};
+	// let doNext = () => {
+	// 	slide(slides[currentSlide], 'out', 'left');
+	// 	currentSlide = currentSlide < slides.length - 1 ? currentSlide + 1 : 0;
+	// 	slide(slides[currentSlide], 'in', 'right');
+	// 	disableButtons(slide_speed * disable_ratio);
+	// };
+	// let doPrev = () => {
+	// 	slide(slides[currentSlide], 'out', 'right');
+	// 	currentSlide = currentSlide == 0 ? slides.length - 1 : currentSlide - 1;
+	// 	slide(slides[currentSlide], 'in', 'left');
+	// 	disableButtons(slide_speed * disable_ratio);
+	// };
 	let jumpTo = (newSlide) => {
 		if (newSlide < currentSlide) {
 			slide(slides[currentSlide], 'out', 'right');
@@ -194,54 +194,54 @@
 		}
 		disableButtons(slide_speed * disable_ratio);
 	};
-	let slide = (el, send = 'in', direction = 'right') => {
-		direction = firstCap(direction);
-		send = firstCap(send);
-		removeAllAnimations(el);
-		el.classList.add(`slide${send}${direction}`);
-	};
-	let removeAllAnimations = (el) => {
-		el.classList.remove('slideInRight');
-		el.classList.remove('slideInLeft');
-		el.classList.remove('slideOutLeft');
-		el.classList.remove('slideOutRight');
-		el.classList.remove('outLeft');
-		el.classList.remove('outRight');
-	};
-	let setHeight = () => {
-		sliderHeight = 0;
-		slides.forEach(function (el) {
-			sliderHeight =
-				el.offsetHeight > sliderHeight ? el.offsetHeight : sliderHeight;
-		});
-	};
-	let disableButtons = (milsec) => {
-		controlsEnabled = false;
-		setTimeout(() => {
-			controlsEnabled = true;
-		}, milsec);
-	};
-	let autoplay = () => {
-		// console.log('play tick');
-		if (play == 'true') {
-			doNext();
-			setTimeout(autoplay, interval);
-		}
-	};
-	let stop = () => {
-		play = 'false';
-		playing = false;
-	};
-	let start = () => {
-		if (!playing) {
-			play = 'true';
-			playing = true;
-			autoplay();
-		}
-	};
-	let firstCap = (str = '') => {
-		return `${str.charAt(0).toUpperCase()}${str.slice(1).toLowerCase()}`;
-	};
+	// let slide = (el, send = 'in', direction = 'right') => {
+	// 	direction = firstCap(direction);
+	// 	send = firstCap(send);
+	// 	removeAllAnimations(el);
+	// 	el.classList.add(`slide${send}${direction}`);
+	// };
+	// let removeAllAnimations = (el) => {
+	// 	el.classList.remove('slideInRight');
+	// 	el.classList.remove('slideInLeft');
+	// 	el.classList.remove('slideOutLeft');
+	// 	el.classList.remove('slideOutRight');
+	// 	el.classList.remove('outLeft');
+	// 	el.classList.remove('outRight');
+	// };
+	// let setHeight = () => {
+	// 	sliderHeight = 0;
+	// 	slides.forEach(function (el) {
+	// 		sliderHeight =
+	// 			el.offsetHeight > sliderHeight ? el.offsetHeight : sliderHeight;
+	// 	});
+	// };
+	// let disableButtons = (milsec) => {
+	// 	controlsEnabled = false;
+	// 	setTimeout(() => {
+	// 		controlsEnabled = true;
+	// 	}, milsec);
+	// };
+	// let autoplay = () => {
+	// 	// console.log('play tick');
+	// 	if (play == 'true') {
+	// 		doNext();
+	// 		setTimeout(autoplay, interval);
+	// 	}
+	// };
+	// let stop = () => {
+	// 	play = 'false';
+	// 	playing = false;
+	// };
+	// let start = () => {
+	// 	if (!playing) {
+	// 		play = 'true';
+	// 		playing = true;
+	// 		autoplay();
+	// 	}
+	// };
+	// let firstCap = (str = '') => {
+	// 	return `${str.charAt(0).toUpperCase()}${str.slice(1).toLowerCase()}`;
+	// };
 	let startTouch = (e) => {
 		stop();
 		initialX = e.touches[0].clientX;
