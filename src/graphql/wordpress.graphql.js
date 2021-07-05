@@ -544,3 +544,25 @@ export const Q_GET_MENU_BYLOCATION = `query getMenu($location: String = "MENU_MA
 	}
 }`;
 
+export const Q_GET_MENU_BYSLUG = `query getMenu($slug: String = "main-menu") {
+	menuItems(where: {slug: $slug) {
+		nodes {
+			${MENU_ITEM}
+			childItems {
+				nodes {
+					${MENU_ITEM}
+					childItems {
+						nodes {
+							${MENU_ITEM}
+							childItems {
+								nodes {
+									${MENU_ITEM}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}`;
