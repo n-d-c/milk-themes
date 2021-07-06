@@ -16,6 +16,12 @@ RewriteBase /
 RewriteCond %{HTTPS} !=on [NC]
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L,R=301]
 
+# Rewrite Dymanic Blog Slugs to Querystrings
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/immigration-law-blog/([0-9a-zA-Z-]+)$ /immigration-law-blog/blog?slug=$1 [L,QSA]
+
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
 ExpiresActive On
