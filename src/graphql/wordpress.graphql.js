@@ -521,8 +521,8 @@ target
 path
 cssClasses`;
 
-export const Q_GET_MENU_BYLOCATION = `query getMenu($location: String = "MENU_MAIN") {
-	menuItems(where: {location: $location) {
+export const Q_GET_MENU_BYLOCATION = `query getMenu($location: MenuLocationEnum = "MENU_MAIN") {
+	menuItems(where: {location: $location}) {
 		nodes {
 			${MENU_ITEM}
 			childItems {
@@ -545,7 +545,7 @@ export const Q_GET_MENU_BYLOCATION = `query getMenu($location: String = "MENU_MA
 }`;
 
 export const Q_GET_MENU_BYSLUG = `query getMenu($slug: String = "main-menu") {
-	menuItems(where: {slug: $slug) {
+	menuItems(where: {slug: $slug}) {
 		nodes {
 			${MENU_ITEM}
 			childItems {
