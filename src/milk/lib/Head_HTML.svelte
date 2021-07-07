@@ -2,7 +2,10 @@
 	<title>{title}</title>
 	<meta name="description" content={description} />
 	<meta name="keywords" content={keywords} />
-	<link rel="canonical" href={canonical} />
+	<link
+		rel="canonical"
+		href={canonical.replace('blog/?slug=', '').replace('blog?slug=', '')}
+	/>
 	<meta name="developer" content="Joshua Jarman (josh@redesigned.com)" />
 	<slot />
 </svelte:head>

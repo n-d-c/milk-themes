@@ -1,0 +1,2 @@
+# place in the nginx additional directives for the site and turn off pass through to apache
+rewrite ^\/immigration-law-blog\/((?!blog?)[^\/]+)$ /immigration-law-blog/blog?slug=$1 last;

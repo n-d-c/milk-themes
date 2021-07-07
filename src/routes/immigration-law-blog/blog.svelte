@@ -140,7 +140,7 @@
 		} else {
 			slug = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 		};
-		console.log({slug});
+		// console.log({slug});
 		let queryVariables = { slug: slug };
 		let getPost = $milk?.data?.gql(
 			Q_GET_POST_BYSLUG,
@@ -158,6 +158,9 @@
 			title = data?.title;
 			description = data?.excerpt;
 			image = data?.featuredImage?.node?.sourceUrl;
+			if (window.location.href.includes('blog/?slug=') || window.location.href.includes('blog?slug=')) {
+				window.history.replaceState({ additionalInformation: 'Dynamic Blog Routing' }, title, window.location.href.replace('blog/?slug=', '').replace('blog?slug=', ''));
+			};
 		});
 	});
 	/* ## Exit ## */
