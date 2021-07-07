@@ -82,7 +82,7 @@ const POST_FEATURED_IMAGE = `featuredImage {
 	}
 }`;
 
-/* ## HYA Specific Author Data ## */
+
 // const POST_AUTHOR = `author {
 // 	node {
 // 		avatar {
@@ -97,6 +97,7 @@ const POST_FEATURED_IMAGE = `featuredImage {
 // 		nickname
 // 	}
 // }`;
+/* ## HYA Specific Author Data ## */
 const POST_AUTHOR = `author {
 	node {
 		avatar {

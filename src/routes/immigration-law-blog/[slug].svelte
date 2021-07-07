@@ -61,8 +61,10 @@
 						›
 						<a href={`/immigration-law-blog/${blog_post?.slug}`}>{blog_post?.title}</a>
 					</div>
-				</div>	
-				{@html blog_post?.content}
+				</div>
+				<div class="blog-content">
+					{@html blog_post?.content}
+				</div>
 				<div class="author">
 					<div class="author-image">
 						<picture>
@@ -221,7 +223,7 @@
 	}
 	.author-content { padding: 20px; }
 	.author-content h2 { color: var(--color-white); }
-	a { color: var(--color-white) !important; }
-	a.button { background: var(--color-four); text-transform: uppercase; font-weight: bold; margin-right: 25px; border: 0 none; }
-	a.button:hover { background: var(--color-black); }
+	.content .author a { color: var(--color-white) !important; }
+	.content .author a.button { background: var(--color-four); text-transform: uppercase; font-weight: bold; margin-right: 25px; border: 0 none; }
+	.content .author a.button:hover { background: var(--color-black); }
 </style>

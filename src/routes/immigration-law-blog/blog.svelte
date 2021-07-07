@@ -230,7 +230,7 @@
 	}
 	.author-content { padding: 20px; }
 	.author-content h2 { color: var(--color-white); }
-	a { color: var(--color-white) !important; }
-	a.button { background: var(--color-four); text-transform: uppercase; font-weight: bold; margin-right: 25px; border: 0 none; }
-	a.button:hover { background: var(--color-black); }
+	.content .author a { color: var(--color-white) !important; }
+	.content .author a.button { background: var(--color-four); text-transform: uppercase; font-weight: bold; margin-right: 25px; border: 0 none; }
+	.content .author a.button:hover { background: var(--color-black); }
 </style>

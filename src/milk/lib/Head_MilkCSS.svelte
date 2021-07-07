@@ -354,7 +354,9 @@
 		figure {
 			margin: 0 0 1em;
 		}
-		iframe,
+		iframe {
+			max-width: 100%;
+		}
 		img,
 		input,
 		select,
