@@ -601,6 +601,8 @@ body:not(.scroll-neartop) .sticky-header[data-type='sticky-hide'] header {
 .blog-content h4,
 .blog-content h5,
 .blog-content h6 { font-family: var(--font-main); color: var(--color-one); }
+.blog-content h3,
+.blog-content h5 { color: var(--color-black); font-weight: bold; }
 #blog-post #languages button {
 	border-color: var(--button-border-color);
 	background: var(--button-background);
