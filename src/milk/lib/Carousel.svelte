@@ -93,6 +93,7 @@
 			stop();
 			doPrev();
 		}}
+		title="Previous Item"
 		disabled
 	>
 		<slot name="prev">
@@ -118,6 +119,7 @@
 			stop();
 			doNext();
 		}}
+		title="Next Item"
 		disabled
 	>
 		<slot name="next">
@@ -166,6 +168,7 @@
 					style={index == currentSlide
 						? pagedot_activestyle
 						: pagedot_inactivestyle}
+					title={`Go to Item ${index}`}
 					disabled={!controlsEnabled ? 'disabled' : ''}
 				>
 					{index}
