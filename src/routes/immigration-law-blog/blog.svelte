@@ -63,6 +63,47 @@
 					</div>
 				</div>	
 				{@html blog_post?.content}
+				<div class="author">
+					<div class="author-image">
+						<picture>
+							<source
+								type="image/avif"
+								srcset={blog_post?.author?.node?.Users?.avifImage
+									?.sourceUrl}
+							/>
+							<source
+								type="image/webp"
+								srcset={blog_post?.author?.node?.Users?.webpImage
+									?.sourceUrl}
+							/>
+							<img
+								src={blog_post?.author?.node?.Users?.jpegImage?.sourceUrl}
+								alt={blog_post?.author?.node?.name}
+								loading="lazy"
+								width="260"
+								height="260"
+							/>
+						</picture>
+					</div>
+					<div class="author-content">
+						<h2>About {blog_post?.author?.node?.name}</h2>
+						<p>{blog_post?.author?.node?.description}</p>
+						<div class="author-links">
+							{#if blog_post?.author?.node?.Users?.attorneyLink}
+								<a
+									href={blog_post?.author?.node?.Users?.attorneyLink}
+									title={blog_post?.author?.node?.name}
+									class="button"
+								>
+									View Full Bio
+								</a>
+							{/if}
+							<a href="/immigration-attorneys" class="fancy-link">
+								<span>See Our Attorneys</span>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	{/each}
@@ -175,4 +216,21 @@
 	.breadcrumbs { font-size: var(--small-fontsize); }
 	.breadcrumbs a { color: var(--color-black); }
 	.breadcrumbs a:hover { color: var(--color-four); }
+	.author { background: var(--color-seven); color: var(--color-white); text-align: center; margin: 75px auto 25px; }
+	.author-image { text-align: center; position: relative; }
+	.author-image img { border-radius: 50%; overflow: hidden; margin: 25px; width: 80%; max-width: 250px; height: auto; }
+	@media screen and (min-width: 650px) {
+		.author {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			text-align: left;
+			column-gap: 3em;
+		}
+		.author-image { text-align: center; }
+	}
+	.author-content { padding: 20px; }
+	.author-content h2 { color: var(--color-white); }
+	a { color: var(--color-white) !important; }
+	a.button { background: var(--color-four); text-transform: uppercase; font-weight: bold; margin-right: 25px; border: 0 none; }
+	a.button:hover { background: var(--color-black); }
 </style>

@@ -3,7 +3,7 @@
 		<h2>Immigration Law Is All We Do</h2>
 		<div class="blurb">
 			<h3>
-				When Your Freedom Is On The Line Why Hire Lawyers Who Only
+				When Your Freedom Is On The Line, Why Hire Lawyers Who Only
 				Dabble In Immigration?
 			</h3>
 			<div class="block-content">
@@ -13,18 +13,18 @@
 				</p>
 				<p>
 					Using our extensive experience on thousands of immigration
-					cases and daily reviews of new developments in the
-					constantly changing field of immigration law we offer you
-					the best legal counsel available. Best Lawyers, the most
-					respected publication in the legal profession.
+					cases and daily reviews of new developments in the changing
+					field of immigration law, we offer you the best legal
+					counsel available. Best Lawyers, the most respected
+					publication in the legal profession.
 				</p>
 				<p>
 					Harlan York & Associates are the best immigration lawyers
 					for Green Cards, Deportation, Family Immigration, and
-					Naturalization in New York, New Jersey, and area. Harlan
-					York is the first attorney in the state of New Jersey to be
-					named Immigration Lawyer of the Year by Best Lawyers, the
-					most respected publication in the legal profession.
+					Naturalization in New York, New Jersey, and the area. Harlan
+					York is the first attorney in New Jersey to be named
+					Immigration Lawyer of the Year by Best Lawyers, the most
+					respected publication in the legal profession.
 				</p>
 			</div>
 		</div>

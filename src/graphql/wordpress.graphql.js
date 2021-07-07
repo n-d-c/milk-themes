@@ -82,6 +82,21 @@ const POST_FEATURED_IMAGE = `featuredImage {
 	}
 }`;
 
+/* ## HYA Specific Author Data ## */
+// const POST_AUTHOR = `author {
+// 	node {
+// 		avatar {
+// 			url
+// 		}
+// 		email
+// 		description
+// 		firstName
+// 		lastName
+// 		name
+// 		nicename
+// 		nickname
+// 	}
+// }`;
 const POST_AUTHOR = `author {
 	node {
 		avatar {
@@ -94,6 +109,18 @@ const POST_AUTHOR = `author {
 		name
 		nicename
 		nickname
+		Users {
+			attorneyLink
+			avifImage {
+				sourceUrl
+			}
+			jpegImage {
+				sourceUrl
+			}
+			webpImage {
+				sourceUrl
+			}
+		}
 	}
 }`;
 
