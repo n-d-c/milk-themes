@@ -23,8 +23,24 @@
 	<div class="content">
 		<h1 class="title">Client Testimonials</h1>
 	</div>
+	<FeaturedVideo
+		id="testimonial-video-01"
+		blockstyle=""
+		video_source="//www.youtube.com/embed/l071-FSWk4E"
+		video_jpg="/img/testimonial-video-01.jpg"
+		video_webp="/img/testimonial-video-01.webp"
+		video_avif="/img/testimonial-video-01.avif"
+	/>
 	<Block_TestimonialsList id="testimonials" blockstyle="" />
-
+	<FeaturedVideo
+		id="testimonial-video-02"
+		blockstyle=""
+		video_source="//www.youtube.com/embed/13GqCdXBr80"
+		video_jpg="/img/espanol-video-02.jpg"
+		video_webp="/img/espanol-video-02.webp"
+		video_avif="/img/espanol-video-02.avif"
+	/>
+	<br /><br />
 	<Block_CallToAction
 		id="call-to-action"
 		blockstyle="block-style01"
@@ -48,6 +64,7 @@
 	import Layout_Main from '$theme/Layout_Main.svelte';
 	import Hero from '$milk/lib/Hero.svelte';
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
+	import FeaturedVideo from '$milk/lib/FeaturedVideo.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
 	import Block_Languages from '$theme/Block_Languages.svelte';
@@ -68,5 +85,8 @@
 	.title {
 		position: relative;
 		margin-bottom: -100px;
+	}
+	h1 {
+		padding-bottom: 50px;
 	}
 </style>
