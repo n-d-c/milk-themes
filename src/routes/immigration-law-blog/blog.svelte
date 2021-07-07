@@ -61,8 +61,10 @@
 						›
 						<a href={`/immigration-law-blog/${blog_post?.slug}`}>{blog_post?.title}</a>
 					</div>
-				</div>	
-				{@html blog_post?.content}
+				</div>
+				<div class="blog-content">
+					{@html blog_post?.content}
+				</div>
 				<div class="author">
 					<div class="author-image">
 						<picture>
