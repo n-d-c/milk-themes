@@ -601,6 +601,18 @@ body:not(.scroll-neartop) .sticky-header[data-type='sticky-hide'] header {
 .blog-content h4,
 .blog-content h5,
 .blog-content h6 { font-family: var(--font-main); color: var(--color-one); }
+#blog-post #languages button {
+	border-color: var(--button-border-color);
+	background: var(--button-background);
+	color: var(--button-color);
+	font-size: var(--button-fontsize);
+	border-radius: 0;
+}
+#blog-post #languages button:hover {
+	background: var(--button-background-hover);
+	color: var(--button-color-hover);
+	border-color: var(--button-border-color-hover);
+}
 
 /* ## Immigration Attorneys ## */
 @media screen and (min-width: 650px) {
