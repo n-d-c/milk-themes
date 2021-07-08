@@ -176,6 +176,7 @@
 	import { Q_GET_POST_BYSLUG } from '$graphql/wordpress.graphql.js';
 	/* ## Main ## */
 	onMount(async () => {
+		window.history.replaceState({ additionalInformation: 'Dynamic Blog Routing' }, 'Immigation Blog', window.location.href.replace('blog/?slug=', '').replace('blog?slug=', ''));
 		const urlParams = new URLSearchParams(window.location.search);
 		const checkSlug = urlParams.get('slug');
 		if (checkSlug && checkSlug.length > 1) {
