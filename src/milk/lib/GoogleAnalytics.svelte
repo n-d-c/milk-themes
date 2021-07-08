@@ -20,7 +20,7 @@
 				(ga.q = ga.q || []).push(arguments);
 			};
 		ga.l = +new Date();
-		ga('create', '${gacode}', 'auto');
+		ga('create', gacode, 'auto', { clientId: getClientIdFromUrl() });
 		ga('send', 'pageview');
 	});
 	export { gacode };
