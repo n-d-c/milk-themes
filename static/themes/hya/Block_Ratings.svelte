@@ -141,6 +141,7 @@
 	}
 	.rating a h4 {
 		font-size: calc(var(--font-size-small, 15px) - 2px);
+		line-height: calc(var(--font-size-small, 15px) - 2px);
 		text-transform: uppercase;
 		font-family: var(--font-main);
 		font-weight: bold;
