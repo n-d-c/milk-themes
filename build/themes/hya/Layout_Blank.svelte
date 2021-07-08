@@ -1,10 +1,10 @@
 <div {id} class="layout-blank">
 	<div class="page-content"><slot /></div>
-	<!-- <Block_GoogleTagManager /> -->
+	<GoogleAnalytics gacode="UA-5989226-33" />
 </div>
 
 <script>
-	import Block_GoogleTagManager from '$theme/Block_GoogleTagManager.svelte';
+	import GoogleAnalytics from '$milk/lib/GoogleAnalytics.svelte';
 	let id;
 	export { id };
 </script>

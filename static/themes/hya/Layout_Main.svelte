@@ -11,6 +11,7 @@
 	<!-- <Block_PaymentCard /> -->
 	<Block_SearchCard />
 	<!-- <Block_GoogleTagManager /> -->
+	<GoogleAnalytics gacode="UA-5989226-33" />
 </div>
 
 <script>
@@ -23,7 +24,8 @@
 	import CallingCard from '$milk/lib/CallingCard.svelte';
 	// import Block_PaymentCard from '$theme/Block_PaymentCard.svelte';
 	import Block_SearchCard from '$theme/Block_SearchCard.svelte';
-	import Block_GoogleTagManager from '$theme/Block_GoogleTagManager.svelte';
+	// import Block_GoogleTagManager from '$theme/Block_GoogleTagManager.svelte';
+	import GoogleAnalytics from '$milk/lib/GoogleAnalytics.svelte';
 	let id;
 	export { id };
 </script>
