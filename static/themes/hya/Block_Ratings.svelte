@@ -146,6 +146,7 @@
 		font-family: var(--font-main);
 		font-weight: bold;
 		margin-top: 6px;
+		margin-bottom: 6px;
 	}
 	.rating a h5 {
 		font-size: calc(var(--font-size-small, 15px) - 3px);
