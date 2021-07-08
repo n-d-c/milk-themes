@@ -11,7 +11,7 @@
 	<!-- <Block_PaymentCard /> -->
 	<Block_SearchCard />
 	<!-- <Block_GoogleTagManager /> -->
-	<GoogleAnalytics gacode="UA-5989226-33" />
+	<GoogleAnalytics gacode="UA-5989226-33" rootdomain="immigrationlawnj.com" />
 </div>
 
 <script>
