@@ -12,8 +12,8 @@
 				</p>
 				<p>
 					We answer emails on nights and weekends, use texting during
-					emergency cases, while our entire firm works together to win
-					your case as your dedicated legal team.
+					emergency cases. At the same time, our entire firm works
+					together to win your case as your dedicated legal team.
 				</p>
 			</div>
 		</div>

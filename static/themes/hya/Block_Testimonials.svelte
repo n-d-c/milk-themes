@@ -13,7 +13,6 @@
 					See what our clients and colleagues have to say about how
 					Harlan York & Associates helped them with their case.
 				</p>
-				<p>Lorem Ipsum</p>
 			</div>
 		</div>
 		<br /><br />
@@ -25,7 +24,7 @@
 					{#each testimonials as testimonial}
 						<div class="testimonial-slide">
 							<div title={testimonial?.title} class="testimonial">
-								<picture>
+								<!-- <picture>
 									{#if testimonial?.Testimonial?.avifImage?.sourceUrl}
 										<source
 											type="image/avif"
@@ -49,7 +48,7 @@
 										width="130"
 										height="130"
 									/>
-								</picture>
+								</picture> -->
 								<div class="testimonial-content">
 									<div class="testimonial-title">
 										<strong>{testimonial?.title}</strong>,
@@ -198,11 +197,12 @@
 		background: var(--color-six);
 		text-align: center;
 		margin: 0 40px;
+		padding: 10px 25px 0px;
 	}
 	@media screen and (min-width: 650px) {
 		.testimonial {
-			display: grid;
-			grid-template-columns: 200px calc(100% - 240px - 4em);
+			/* display: grid;
+			grid-template-columns: 200px calc(100% - 240px - 4em); */
 			text-align: left;
 			column-gap: 2em;
 			background: var(--color-six);

@@ -3,8 +3,8 @@
 		<h2>Languages</h2>
 		<p>
 			If you are looking to translate our site, please choose a language
-			from the options below and Google will automatically translate the
-			page for you.
+			from the options below. Google will automatically translate the page
+			for you.
 		</p>
 		<hr />
 		<h3>Convert Language With Google</h3>

@@ -5,10 +5,10 @@
 <Layout_Main id="immigration-espanol">
 	<Hero
 		id="hero-espanol"
-		image_url="/img/hero_homepage_02_alt.jpg"
-		img_srcset="/img/hero_homepage_02_alt.jpg"
-		avif_srcset="/img/hero_homepage_02_alt.avif"
-		webp_srcset="/img/hero_homepage_02_alt.webp"
+		image_url="/img/hero_espanol_01.jpg"
+		img_srcset="/img/hero_espanol_01.jpg"
+		avif_srcset="/img/hero_espanol_01.avif"
+		webp_srcset="/img/hero_espanol_01.webp"
 		title="Harlan York and Associates"
 		parallax="false">&nbsp;</Hero
 	>
@@ -454,7 +454,7 @@
 	/* ## Variables ## */
 	const title = `Abogado de Inmigración - ${$milk?.site?.title}`;
 	const description =
-		'Llame a un bufete de abogados de inmigracion dedicados y con mucha experiencia para tener la mejor posibilidad de luchar.';
+		'Llame a un bufete de abogados de inmigración dedicados y con mucha experiencia para tener la mejor posibilidad de luchar.';
 </script>
 
 <style>

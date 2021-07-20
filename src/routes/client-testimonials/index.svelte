@@ -5,10 +5,10 @@
 <Layout_Main id="immigration-attorneys">
 	<Hero
 		id="hero-client-testimonials-02"
-		image_url="/img/hero_homepage_02_alt.jpg"
-		img_srcset="/img/hero_homepage_02_alt.jpg"
-		avif_srcset="/img/hero_homepage_02_alt.avif"
-		webp_srcset="/img/hero_homepage_02_alt.webp"
+		image_url="/img/hero_testimonial_01.jpg"
+		img_srcset="/img/hero_testimonial_01.jpg"
+		avif_srcset="/img/hero_testimonial_01.avif"
+		webp_srcset="/img/hero_testimonial_01.webp"
 		title="Client Testimonials"
 		parallax="false">&nbsp;</Hero
 	>
@@ -16,7 +16,7 @@
 		id="call-out-text"
 		blockstyle="block-style01"
 		extraclasses="floating-calltoaction"
-		title="Immigation Services"
+		title="Immigation Testimonials"
 	>
 		<p>{description}</p>
 	</Block_CallOutText>

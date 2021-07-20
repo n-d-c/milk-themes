@@ -594,6 +594,9 @@ body:not(.scroll-neartop) .sticky-header[data-type='sticky-hide'] header {
 	#blog .pagination label { display: block; }
 	#blog .controls label { display: block; }
 }
+@media screen and (min-width: 650px) {
+	.blog-content { width: 80%; margin: 0 auto; }
+}
 .blog-content a { color: var(--color-one) !important; }
 .blog-content a:hover { color: var(--color-one) !important; text-decoration: underline; }
 .blog-content h2,
@@ -615,6 +618,7 @@ body:not(.scroll-neartop) .sticky-header[data-type='sticky-hide'] header {
 	color: var(--button-color-hover);
 	border-color: var(--button-border-color-hover);
 }
+.posts-listing .post img { width: 375px; height: auto; }
 
 /* ## Immigration Attorneys ## */
 @media screen and (min-width: 650px) {

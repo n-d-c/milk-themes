@@ -16,7 +16,7 @@
 		id="call-out-text"
 		blockstyle="block-style01"
 		extraclasses="floating-calltoaction"
-		title="Immigation Law Blog"
+		title="Immigration Law Blog"
 	>
 		<p>{description}</p>
 	</Block_CallOutText>
@@ -80,7 +80,7 @@
 	/* ## Variables ## */
 	const title = `Immigration Blog - ${$milk?.site?.title}`;
 	const description =
-		'Immigration law is a constantly changing legal field. Immigration lawyer Harlan York provides this blog so you can stay up to date on how legal trends affect immigration law cases.';
+		'Immigration law is a constantly changing legal field. Immigration lawyer Harlan York provides this blog, so you can stay up to date on how legal trends affect immigration law cases.';
 	let category = '';
 	let search = '';
 	let count = 0;

@@ -1,7 +1,7 @@
 <div {id} class={blockclass}>
 	<div class="calltoaction-inner">
 		<h2 class="title">Let Us Get To Work On Your Case Now</h2>
-		<div>
+		<div class="call-button">
 			<button class="call-button" on:click={doCall} title="Make Call">
 				<img
 					src="/img/icon-phone-yellow.svg"
@@ -238,5 +238,10 @@
 		.calltoaction {
 			padding: 1vw !important;
 		} */
+	}
+	@media screen and (max-width: 650px) {
+		.call-button span {
+			font-size: 0.9em;
+		}
 	}
 </style>

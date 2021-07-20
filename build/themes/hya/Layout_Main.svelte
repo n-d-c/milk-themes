@@ -21,7 +21,7 @@
 	import Block_Footer from '$theme/Block_Footer.svelte';
 	import Block_AbsoluteFooter from '$milk/lib/Block_AbsoluteFooter.svelte';
 	import CalendarCard from '$milk/lib/CalendarCard.svelte';
-	import CallingCard from '$milk/lib/CallingCard.svelte';
+	import CallingCard from '$theme/CallingCard.svelte';
 	// import Block_PaymentCard from '$theme/Block_PaymentCard.svelte';
 	import Block_SearchCard from '$theme/Block_SearchCard.svelte';
 	// import Block_GoogleTagManager from '$theme/Block_GoogleTagManager.svelte';

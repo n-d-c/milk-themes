@@ -5,10 +5,10 @@
 <Layout_Main id="immigration-resources">
 	<Hero
 		id="hero-immigration-resources-01"
-		image_url="/img/hero_services_01.jpg"
-		img_srcset="/img/hero_services_01.jpg"
-		avif_srcset="/img/hero_services_01.avif"
-		webp_srcset="/img/hero_services_01.webp"
+		image_url="/img/hero_resources_01.jpg"
+		img_srcset="/img/hero_resources_01.jpg"
+		avif_srcset="/img/hero_resources_01.avif"
+		webp_srcset="/img/hero_resources_01.webp"
 		title="Harlan York and Associates"
 		parallax="false">&nbsp;</Hero
 	>
@@ -92,7 +92,7 @@
 	/* ## Variables ## */
 	const title = `Immigration Resources - ${$milk?.site?.title}`;
 	const description =
-		'Please feel free to access our Free Resource Library. If you have any questions our Attorneys are available for consultation.  Immigration law is a constantly changing legal field. What makes Harlan York the best lawyer in the field is his knowledge, and passion for staying up to date with trending legal challenges that could affect your case. Harlan’s Immigration Resource Library and Blog is filled with informative and practical advice from getting a green card through marriage, to detailed explanations of litigation, business immigration, citizenship, waivers and appeals.';
+		'Please feel free to access our Free Resource Library. If you have any questions, our Attorneys are available for consultation. Immigration law is a constantly changing legal field. Harlan York is the best lawyer in the field because of his knowledge and passion for staying up to date with trending legal challenges that could affect your case. Harlan’s Immigration Resource Library and Blog are filled with informative and practical advice, from getting a green card through marriage to detailed explanations of litigation, business immigration, citizenship, waivers and appeals.';
 </script>
 
 <style>

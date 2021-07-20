@@ -2,7 +2,7 @@
 	<div class="testimonials-inner">
 		{#each testimonials as testimonial}
 			<div class="testimonial">
-				<picture>
+				<!-- <picture>
 					{#if testimonial?.Testimonial?.avifImage?.sourceUrl}
 						<source
 							type="image/avif"
@@ -25,7 +25,7 @@
 						width="130"
 						height="130"
 					/>
-				</picture>
+				</picture> -->
 				<div class="testimonial-content">
 					<div class="testimonial-title">
 						<strong>{testimonial?.title}</strong>,
@@ -135,10 +135,14 @@
 	}
 	.testimonial:nth-child(odd) {
 	}
+	.testimonials .testimonials-inner .testimonial {
+		width: 80%;
+		margin: 0 auto;
+	}
 	@media screen and (min-width: 650px) {
 		.testimonial {
-			display: grid;
-			grid-template-columns: 240px calc(100% - 290px - 4em) 50px;
+			/* display: grid;
+			grid-template-columns: 240px calc(100% - 290px - 4em) 50px; */
 			text-align: left;
 			column-gap: 2em;
 			text-align: left;

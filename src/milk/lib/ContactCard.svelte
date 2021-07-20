@@ -260,10 +260,8 @@
 					class="locality p-locality"
 					title="City/Locality"
 					itemprop="addressLocality"
-					property="addressLocality"
-				>
-					{city}
-				</span>,
+					property="addressLocality">{city}</span
+				>,
 			{/if}
 			{#if state_abbr && state_abbr != ''}
 				<span class="state" title="State/Region">
@@ -271,10 +269,8 @@
 						class="region p-region"
 						title={state}
 						itemprop="addressRegion"
-						property="addressRegion"
-					>
-						{state_abbr}
-					</abbr>,
+						property="addressRegion">{state_abbr}</abbr
+					>,
 				</span>
 			{/if}
 			{#if zip && zip != ''}

@@ -7,7 +7,7 @@
 				<p>
 					Our immigration law firm has earned the highest ratings in
 					Best Lawyers in America, Super Lawyers, US News and World
-					Report, Avvo, as well as Martindale-Hubbell.
+					Report, Avvo, and Martindale-Hubbell.
 				</p>
 			</div>
 		</div>

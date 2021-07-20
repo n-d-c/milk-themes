@@ -53,14 +53,14 @@
 			pagination="false"
 		>
 			<span slot="before">
-				<h2>Latest News</h2>
-				<h2>Immigration Law Blog</h2>
+				<h2>Read the Latest From</h2>
+				<h2>The Immigration Law Blog</h2>
 				<div class="block-content">
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Maecenas sollicitudin luctus purus at euismod. Mauris
-						ultrices magna in libero porttitor, id posuere velit
-						venenatis. Fusce in lectus ut nulla ultrices euismod.
+						Harlan's blog has informative and practical advice, from
+						getting a green card through marriage to detailed
+						explanations of litigation, business immigration,
+						citizenship, waivers and appeals.
 					</p>
 				</div>
 			</span>
