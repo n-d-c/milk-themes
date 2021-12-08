@@ -1,7 +1,7 @@
 <div {id} class="layout-main">
 	<Block_StickyHeader type="sticky-hide">
-		<Block_Header id="header" blockstyle="block-style03" />
-		<Block_Navigation id="main-nav" blockstyle="block-style03" />
+		<Block_Header id="header" blockstyle="block-style01" />
+		<Block_Navigation id="main-nav" blockstyle="block-style01" />
 	</Block_StickyHeader>
 	<div class="page-content"><slot /></div>
 	<Block_Footer id="footer" blockstyle="block-style04" />

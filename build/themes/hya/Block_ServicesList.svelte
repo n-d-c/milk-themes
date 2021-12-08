@@ -19,6 +19,10 @@
 						</div>
 						<div>
 							<details>
+								<a
+									href="immigration-law-services/{service?.slug}"
+									class="read-more">Read More</a
+								>
 								<summary>
 									<span class="more">Show More</span>
 									<span class="less">Show Less</span>
