@@ -1,0 +1,21 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ELIFECYCLE",
+    "errno": "ENOENT",
+    "syscall": "spawn",
+    "file": "sh",
+    "pkgid": "milkjs@0.0.08",
+    "stage": "dev",
+    "script": "svelte-kit dev; \"--open\"",
+    "pkgname": "milkjs",
+    "err": {
+      "name": "Error",
+      "message": "milkjs@0.0.08 dev: `svelte-kit dev; \"--open\"`\nspawn ENOENT",
+      "code": "ELIFECYCLE",
+      "stack": "Error: milkjs@0.0.08 dev: `svelte-kit dev; \"--open\"`\nspawn ENOENT\n    at ChildProcess.<anonymous> (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:89015:20)\n    at ChildProcess.emit (events.js:400:28)\n    at maybeClose (internal/child_process.js:1055:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)"
+    }
+  }
+}

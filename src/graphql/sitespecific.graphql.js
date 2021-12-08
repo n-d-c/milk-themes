@@ -20,6 +20,74 @@ export const Q_GET_SERVICES = `query getServices($size: Int = ${config.paginatio
 	}
 }`;
 
+
+export const Q_GET_SERVICE = `query getService($id: ID!){
+	service(id:$id, idType: SLUG) {
+	  id
+	  slug
+	  title
+	  serviceId
+	  content
+	  date
+	  Services {
+		description
+		excerpt
+		serviceFaq {
+      	  faqTitle
+      	  faqContent
+      	}
+		relatedPosts {
+		  ... on Post {
+			id
+			title
+			slug
+			featuredImage {
+          	  node {
+          	    sourceUrl
+          	  }
+          	}
+		  }
+		}
+	  }
+	  enqueuedScripts {
+		nodes {
+		  src
+		}
+	  }
+	  enqueuedStylesheets {
+		nodes {
+		  src
+		}
+	  }
+	  featuredImage {
+		node {
+		  sourceUrl
+		}
+	  }
+	}
+  }`
+
+
+export const Q_GET_SERVICE_RELATED = `query getServiceRelated($id: ID!){
+	service(idType: SLUG, id: $id) {
+	  Services {
+		relatedPosts {
+		  ... on Post {
+			id
+			title
+			slug
+			featuredImage {
+          	  node {
+          	    sourceUrl
+          	  }
+          	}
+		  }
+		}
+	  }
+	}
+  }`
+
+
 export const Q_GET_FEATURED = `query getFeatured($size: Int = ${config.pagination_size}) {
 	featuredOns(first: $size) {
 		nodes {

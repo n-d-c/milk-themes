@@ -16,7 +16,7 @@
 		id="call-out-text"
 		blockstyle="block-style01"
 		extraclasses="floating-calltoaction"
-		title="Immigation Services"
+		title="Immigration Services"
 	>
 		<p>{description}</p>
 	</Block_CallOutText>
