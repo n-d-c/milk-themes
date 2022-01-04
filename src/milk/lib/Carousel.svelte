@@ -222,7 +222,7 @@
 				el.offsetHeight > sliderHeight ? el.offsetHeight : sliderHeight;
 		});
 		sliderHeight = sliderHeight + 20;
-		console.log(sliderHeight);
+		console.log('what is sliderhieght:' + sliderHeight);
 	};
 	const removeAll = () => {
 		slides.forEach(function (el) {

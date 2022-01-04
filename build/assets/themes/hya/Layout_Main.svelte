@@ -1,0 +1,45 @@
+<div {id} class="layout-main">
+	<Block_StickyHeader type="sticky-hide">
+		<Block_Header id="header" blockstyle="block-style01" />
+		<Block_Navigation id="main-nav" blockstyle="block-style01" />
+	</Block_StickyHeader>
+	<div class="page-content"><slot /></div>
+	<Block_Footer id="footer" blockstyle="block-style04" />
+	<Block_AbsoluteFooter id="footer-absolute" blockstyle="block-style06" />
+	<CalendarCard />
+	<CallingCard />
+	<!-- <Block_PaymentCard /> -->
+	<Block_SearchCard />
+	<!-- <Block_GoogleTagManager /> -->
+	<GoogleAnalytics gacode="UA-5989226-33" rootdomain="immigrationlawnj.com" />
+</div>
+
+<script>
+	import Block_StickyHeader from '$milk/lib/Block_StickyHeader.svelte';
+	import Block_Header from '$theme/Block_Header.svelte';
+	import Block_Navigation from '$theme/Block_Navigation.svelte';
+	import Block_Footer from '$theme/Block_Footer.svelte';
+	import Block_AbsoluteFooter from '$milk/lib/Block_AbsoluteFooter.svelte';
+	import CalendarCard from '$milk/lib/CalendarCard.svelte';
+	import CallingCard from '$theme/CallingCard.svelte';
+	// import Block_PaymentCard from '$theme/Block_PaymentCard.svelte';
+	import Block_SearchCard from '$theme/Block_SearchCard.svelte';
+	// import Block_GoogleTagManager from '$theme/Block_GoogleTagManager.svelte';
+	import GoogleAnalytics from '$milk/lib/GoogleAnalytics.svelte';
+	let id;
+	export { id };
+</script>
+
+<style>
+	.layout-main {
+		display: grid;
+		margin: 0;
+		padding: 0;
+		min-height: calc(100vh);
+		grid-template-rows: auto auto 1fr auto auto;
+		z-index: 10;
+	}
+	.page-content {
+		display: block;
+	}
+</style>
