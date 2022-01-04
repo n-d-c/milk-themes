@@ -4,33 +4,18 @@
 			{#each services as service}
 				<div class="service" id={service?.slug}>
 					<div class="service-icon">
-						<img
-							class="icon"
-							src={service?.Services?.icon?.sourceUrl}
-							alt={service?.title}
-							width="40"
-							height="40"
-						/>
+						<h4>{service?.title}</h4>
+						<div class="extra-buttons">
+							<a
+								href="immigration-law-services/{service?.slug}"
+								class="read-more"
+								>Read More
+							</a>
+						</div>
 					</div>
 					<div class="service-content">
-						<h4>{service?.title}</h4>
 						<div>
-							{@html cleanUp(service?.Services?.excerpt)}
-						</div>
-						<div>
-							<details>
-								<a
-									href="immigration-law-services/{service?.slug}"
-									class="read-more">Read More</a
-								>
-								<summary>
-									<span class="more">Show More</span>
-									<span class="less">Show Less</span>
-								</summary>
-								<div class="content">
-									{@html service?.Services?.description}
-								</div>
-							</details>
+							{@html cleanUp(service?.Services?.description)}
 						</div>
 					</div>
 				</div>
@@ -97,6 +82,7 @@
 		max-width: var(--content-constrain);
 	}
 	.service {
+		background-color: white;
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
@@ -108,10 +94,10 @@
 		-webkit-transform: scale(1);
 		-ms-transform: scale(1);
 		transform: scale(1);
-		padding: 20px 15px;
-		border: 3px solid transparent;
-		border-radius: 45px;
+		padding: 0;
 		position: relative;
+		border-radius: 0;
+		border: 0;
 	}
 	.service:hover {
 		-webkit-transform: scale(1.1);
@@ -120,23 +106,33 @@
 		background: rgba(0, 0, 0, 0.05);
 	}
 	.service h4 {
-		font-weight: normal;
-		text-transform: uppercase;
+		font-weight: bold;
+		text-transform: capitalize;
+		font-family: var(--font-special);
 		margin-bottom: 0px;
+		color: var(--color-four);
+		text-align: left;
 	}
 	.service p {
 		font-size: calc(var(--font-size-small, 15px) - 1px);
 	}
 	.service a {
-		text-decoration: none;
-		color: var(--color-black);
+		color: var(--color-white);
+		font-weight: bold;
 	}
 	.service-content {
 		text-align: center;
 	}
+
+	.service-content > div {
+		padding: 2em 1em;
+	}
+
 	.service-icon {
-		text-align: center;
+		background-color: var(--color-six);
+		text-align: left;
 		position: relative;
+		padding: 2em;
 	}
 	.icon {
 		width: 50%;
@@ -207,7 +203,7 @@
 	@media screen and (min-width: 650px) {
 		.service {
 			display: grid;
-			grid-template-columns: 20% calc(100% - 20% - 2em);
+			grid-template-columns: 35% calc(100% - 35% - 2em);
 			column-gap: 2em;
 		}
 		.service-content {

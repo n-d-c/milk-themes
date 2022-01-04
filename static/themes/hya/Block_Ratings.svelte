@@ -87,6 +87,7 @@
 	}
 	h2 {
 		font-size: var(--extralarge-fontsize);
+		margin-bottom: 50px;
 	}
 	h3 {
 		font-family: var(--font-main);

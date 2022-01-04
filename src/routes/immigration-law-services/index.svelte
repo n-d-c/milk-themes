@@ -50,7 +50,6 @@
 		extraclasses="regular-calltoaction"
 	/>
 	<Block_LanguagesWeSpeak />
-	<Block_Languages id="languages" blockstyle="block-style04" />
 	<Block_FAQs id="FAQs" blockstyle="" />
 	<Block_Featured id="featured" blockstyle="" />
 	<Block_Ratings id="ratings" blockstyle="" />
@@ -72,7 +71,6 @@
 	import Block_eBook from '$theme/Block_eBook.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
-	import Block_Languages from '$theme/Block_Languages.svelte';
 	import Block_FAQs from '$theme/Block_FAQs.svelte';
 	import Block_Testimonials from '$theme/Block_Testimonials.svelte';
 	import Block_Featured from '$theme/Block_Featured.svelte';

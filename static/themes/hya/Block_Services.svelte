@@ -32,7 +32,7 @@
 			{#each services as service}
 				<div class="service">
 					<a
-						href={`/immigration-law-services#${service?.slug}`}
+						href={`/immigration-law-services/${service?.slug}`}
 						title={service?.title}
 					>
 						<div>
@@ -133,6 +133,7 @@
 		font-family: var(--font-main);
 	}
 	.service {
+		background-color: white;
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
@@ -146,8 +147,6 @@
 		-ms-transform: scale(1);
 		transform: scale(1);
 		padding: 20px 15px;
-		border: 3px solid transparent;
-		border-radius: 45px;
 	}
 	.service:hover {
 		-webkit-transform: scale(1.1);

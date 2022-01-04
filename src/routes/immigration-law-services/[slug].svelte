@@ -68,6 +68,14 @@
 				
 			</div>
 		</div>
+		<FeaturedVideo
+		id="featured-video"
+		blockstyle=""
+		video_source="//player.vimeo.com/video/108146056"
+		video_jpg="/img/video_featured.jpg"
+		video_webp="/img/video_featured.webp"
+		video_avif="/img/video_featured.avif"
+		/>
 		{#if blog_post?.Services?.serviceFaq}
 		<div class="outer-wrap margin-sides-large bg-white">
 			<h2>frequently asked questions</h2>
@@ -98,6 +106,19 @@
 			</div>
 		</div>
 		{/if}
+		<div class="service-info">
+			<h2>We are here to answer all your questions about {blog_post?.title}</h2>
+			<p>
+				You don't have to try to find the answers to your questions ononline. 
+				Please don't try to do your immigration paperwork on your own. Call a team of experienced professionals in immigration law.
+			</p>
+			<p>
+				<strong>
+					US immigration is processing visas and green createEventDispatcher. We are now seeing clients in carefully aranged times at our offices
+
+				</strong>
+			</p>
+		</div>
 	{/each}
 
 	<Block_Testimonials id="testimonials" blockstyle="block-style05" />
@@ -109,7 +130,6 @@
 		extraclasses="regular-calltoaction"
 	/>
 	<Block_LanguagesWeSpeak />
-	<Block_Languages id="languages" blockstyle="block-style04" />
 	<Block_Featured id="featured" blockstyle="" />
 	<Block_Ratings id="ratings" blockstyle="" />
 	<SocialMedia id="socialmedia" blockstyle="" />
@@ -134,12 +154,12 @@
 	import Block_ServicesList from '$theme/Block_ServicesList.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
-	import Block_Languages from '$theme/Block_Languages.svelte';
 	import Block_Testimonials from '$theme/Block_Testimonials.svelte';
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
 	import Block_FaqItem from '$theme/Block_FaqItem.svelte';
+	import FeaturedVideo from '$milk/lib/FeaturedVideo.svelte';
 	/* ## Variables ## */
 	let title = `Immigration Services - ${$milk?.site?.title}`;
 	let description = $milk?.site?.description;
@@ -168,7 +188,7 @@
 		'December',
 	];
 	import { Q_GET_SERVICE } from '$graphql/sitespecific.graphql.js';
-	import { each } from 'svelte/internal';
+	import { createEventDispatcher, each } from 'svelte/internal';
 // import BlockFaqItem from 'static/themes/hya/Block_FaqItem.svelte';
 	/* ## Main ## */
 	onMount(async () => {
@@ -213,11 +233,17 @@
 		justify-content: space-evenly;
 		gap: 10px;
 	}
+	@media screen and (max-width:768px){
+		.flex-wrap{
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+	}
 
 	
 
 	.outer-wrap{
-		margin: var(--margin-sides-large);
+		margin:0 var(--margin-Xl);
 		padding: var(--padding-med);
 	}
 
@@ -243,6 +269,15 @@
 		box-shadow: -1px 2px 8px -2px;
 	}
 
+	.service-info{
+		margin:0 var(--margin-Xl);
+		padding: var(--padding-med);
+		text-align: center;
+	}
+
+	.service-info h2{
+		font-size: 2em;
+	}
 	
 	
 </style>

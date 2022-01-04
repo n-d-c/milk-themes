@@ -104,7 +104,8 @@
 		margin: 0 auto;
 		max-width: var(--content-constrain);
 	}
-	h2 {
+	h2.title {
+		font-size: var(--extralarge-fontsize);
 		color: var(--color-white, #fff);
 	}
 	button {

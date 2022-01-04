@@ -151,7 +151,6 @@
 		max-width: var(--content-constrain);
 	}
 	h2,
-	h3,
 	p {
 		color: var(--color-white, #fff);
 	}
@@ -166,7 +165,7 @@
 		.testimonials .blurb {
 			margin: var(--padding);
 			display: grid;
-			grid-template-columns: 1fr 2fr;
+			grid-template-columns: 1.5fr 2fr;
 			text-align: left;
 			column-gap: 3em;
 		}

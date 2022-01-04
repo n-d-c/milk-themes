@@ -27,7 +27,7 @@
 	.single-faq-wrap {
 		display: flex;
 		gap: 15px;
-		width: 50%;
+		width: auto;
 	}
 	.icon-wrap {
 		position: relative;

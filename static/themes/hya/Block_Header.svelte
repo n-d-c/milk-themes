@@ -79,6 +79,23 @@
 	a:hover {
 		text-decoration: none;
 	}
+
+	div.logo {
+		max-width: 300px;
+		width: 100%;
+	}
+
+	div.logo a {
+		width: 100%;
+	}
+	img.logo {
+		width: 100%;
+	}
+
+	.contact > div {
+		margin-top: 5px;
+	}
+
 	@media screen and (max-width: 650px) {
 		.header {
 			display: none;

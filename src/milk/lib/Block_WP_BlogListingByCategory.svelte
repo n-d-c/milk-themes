@@ -105,11 +105,9 @@
 		color: var(--color-black, #000);
 		text-align: center;
 		background: var(--background-offwhite, #f4f4f4);
+		margin: var(--margin-sides-large);
 	}
-	.blog-inner {
-		margin: 0 auto;
-		max-width: var(--content-constrain);
-	}
+
 	h2,
 	h3,
 	p {

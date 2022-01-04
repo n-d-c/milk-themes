@@ -28,7 +28,6 @@
 		extraclasses="regular-calltoaction"
 	/>
 	<Block_LanguagesWeSpeak />
-	<Block_Languages id="languages" blockstyle="block-style04" />
 	<Block_Featured id="featured" blockstyle="" />
 	<Block_Ratings id="ratings" blockstyle="" />
 	<SocialMedia id="socialmedia" blockstyle="" />
@@ -49,7 +48,6 @@
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_3DBook from '$theme/Block_3DBook.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
-	import Block_Languages from '$theme/Block_Languages.svelte';
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';

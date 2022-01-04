@@ -2,46 +2,53 @@
 	<div class="attorneys-inner">
 		<div class="attorneys-list">
 			{#each attorneys as attorney}
-				<div class="attorney" id={attorney?.slug}>
-					<picture>
-						<source
-							type="image/avif"
-							srcset={attorney?.Attorney?.avifImage?.sourceUrl}
-						/>
-						<source
-							type="image/webp"
-							srcset={attorney?.Attorney?.webpImage?.sourceUrl}
-						/>
-						<img
-							src={attorney?.Attorney?.pngImage?.sourceUrl}
-							alt={attorney?.title}
-							loading="lazy"
-							width="260"
-							height="260"
-						/>
-					</picture>
-					<h2 class="name">
-						{attorney?.title}
-					</h2>
-					<div class="email">
-						<a href={`mailto:${attorney?.Attorney?.email}`}>
-							{attorney?.Attorney?.email}
-						</a>
-					</div>
-					<div>
-						{@html attorney?.Attorney?.shortDescription}
-					</div>
-					<div>
-						<details>
-							<summary>
-								<span class="more">Show More</span>
-								<span class="less">Show Less</span>
-							</summary>
-							<div class="content">
-								{@html attorney?.Attorney
-									?.additionalDescription}
+				<div class="attorney outer-wrap" id={attorney?.slug}>
+					<div class="inner-attorney-wrap">
+						<div>
+							<picture>
+								<source
+									type="image/avif"
+									srcset={attorney?.Attorney?.avifImage
+										?.sourceUrl}
+								/>
+								<source
+									type="image/webp"
+									srcset={attorney?.Attorney?.webpImage
+										?.sourceUrl}
+								/>
+								<img
+									src={attorney?.Attorney?.pngImage
+										?.sourceUrl}
+									alt={attorney?.title}
+									loading="lazy"
+									width="260"
+									height="260"
+								/>
+							</picture>
+							<h2 class="name">
+								{attorney?.title}
+							</h2>
+							<div class="email">
+								<a href={`mailto:${attorney?.Attorney?.email}`}>
+									{attorney?.Attorney?.email}
+								</a>
 							</div>
-						</details>
+							<div>
+								{@html attorney?.Attorney?.shortDescription}
+							</div>
+						</div>
+						<div>
+							<details>
+								<summary>
+									<span class="more">Show More</span>
+									<span class="less">Show Less</span>
+								</summary>
+								<div class="content">
+									{@html attorney?.Attorney
+										?.additionalDescription}
+								</div>
+							</details>
+						</div>
 					</div>
 				</div>
 			{/each}
@@ -90,10 +97,10 @@
 <style>
 	.attorneys {
 		display: block;
-		padding: 100px var(--padding-inner, 20px);
+		padding: 100px 0;
 		text-align: center;
 	}
-	.attorneys-inner {
+	.inner-attorney-wrap {
 		margin: 0 auto;
 		max-width: var(--content-constrain);
 	}
@@ -141,8 +148,11 @@
 	details {
 		max-width: unset !important;
 	}
+	details {
+		overflow: hidden;
+	}
 	summary {
-		background: var(--color-white);
+		background: transparent;
 		color: var(--color-black);
 		cursor: pointer;
 		padding: 1rem 0;

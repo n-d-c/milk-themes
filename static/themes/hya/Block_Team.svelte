@@ -111,7 +111,7 @@
 <style>
 	.team {
 		display: block;
-		padding: 100px var(--padding-inner, 20px);
+		padding: 50px var(--padding-inner, 20px);
 		text-align: center;
 	}
 	.team-inner {
@@ -124,11 +124,12 @@
 		color: var(--color-white, #fff);
 	}
 	h2 {
-		margin-bottom: 20px;
+		margin-bottom: 50px;
 		font-size: var(--extralarge-fontsize);
 	}
 	h3 {
 		font-family: var(--font-main);
+		color: var(--color-three);
 	}
 	@media screen and (min-width: 650px) {
 		.team .blurb {

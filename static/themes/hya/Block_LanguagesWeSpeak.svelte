@@ -3,7 +3,6 @@
 		<div class="languages-we-speak">
 			<h2>SE HABLA ESPAÑOL</h2>
 			<h2>NÓS FALAMOS PORTUGUÊS</h2>
-			<h2 class="rtl">نحن نتكلم اللغة العربية</h2>
 		</div>
 	</div>
 </div>
@@ -18,7 +17,7 @@
 			calc(var(--padding) * 2);
 		text-align: left;
 		margin: auto;
-		background: var(--color-grey-light);
+		background: var(--color-white);
 	}
 	h2 {
 		text-align: left;
