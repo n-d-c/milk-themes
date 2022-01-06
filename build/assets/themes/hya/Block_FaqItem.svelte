@@ -28,6 +28,7 @@
 		display: flex;
 		gap: 15px;
 		width: auto;
+		flex: 1;
 	}
 	.icon-wrap {
 		position: relative;
@@ -59,10 +60,6 @@
 		margin-left: -8%;
 		transform-origin: center;
 		transition: transform 0.2s ease-in;
-	}
-
-	.dropdown {
-		width: 50%;
 	}
 
 	[aria-expanded='true'] i:nth-child(2) {
