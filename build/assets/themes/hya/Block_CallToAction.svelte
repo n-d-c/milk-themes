@@ -127,6 +127,7 @@
 		display: inline-block;
 		padding: 10px 35px 10px 12px;
 		border: 3px solid var(--color-white, #fff);
+		font-family: var(--font-main);
 		background: transparent;
 		margin: 25px 10px 15px;
 		white-space: nowrap;
@@ -179,6 +180,7 @@
 	.actions button span {
 		display: block;
 		text-align: center;
+		font-family: var(--font-main);
 	}
 	.icon {
 		margin: 30px auto 15px;

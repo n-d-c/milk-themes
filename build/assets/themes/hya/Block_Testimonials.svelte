@@ -142,7 +142,7 @@
 <style>
 	.testimonials {
 		display: block;
-		padding: 100px var(--padding-inner, 20px);
+		padding: 50px var(--padding-inner, 20px);
 		color: var(--color-white, #fff);
 		text-align: center;
 	}
@@ -160,6 +160,7 @@
 	}
 	h3 {
 		font-family: var(--font-main);
+		font-weight: bolder;
 	}
 	@media screen and (min-width: 650px) {
 		.testimonials .blurb {

@@ -1,8 +1,8 @@
 <div class="content">
 	<div class="content-inner">
 		<div class="languages-we-speak">
-			<h2>SE HABLA ESPAÑOL</h2>
-			<h2>NÓS FALAMOS PORTUGUÊS</h2>
+			<h2>Se Habla Español</h2>
+			<h2>Nós Falamos Português</h2>
 		</div>
 	</div>
 </div>
@@ -20,11 +20,11 @@
 		background: var(--color-white);
 	}
 	h2 {
-		text-align: left;
+		text-align: center;
+		font-weight: 600;
+		font-size: 2.5em;
 	}
-	h2.rtl {
-		text-align: right;
-	}
+
 	@media screen and (min-width: 650px) {
 		.languages-we-speak {
 			position: relative;
