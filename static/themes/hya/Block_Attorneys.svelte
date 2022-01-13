@@ -100,6 +100,12 @@
 		padding: 100px 0;
 		text-align: center;
 	}
+
+	h2 {
+		font-size: 2.5em;
+		font-weight: 500;
+	}
+
 	.inner-attorney-wrap {
 		margin: 0 auto;
 		max-width: var(--content-constrain);

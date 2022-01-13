@@ -231,16 +231,22 @@
 	.flex-wrap{
 		display: flex;
 		justify-content: space-evenly;
+		flex-wrap: wrap;
 		gap: 10px;
 	}
 	@media screen and (max-width:768px){
 		.flex-wrap{
-			flex-wrap: wrap;
 			justify-content: flex-start;
 		}
 	}
 
-	
+	.related-post-wrap{
+		width: 49%;
+	}@media screen and (max-width:768px){
+		.related-post-wrap{
+			width: 100%;
+		}
+	}	
 
 	.outer-wrap{
 		margin:0 var(--margin-Xl);
@@ -250,10 +256,12 @@
 	h2{
 		text-transform: capitalize;
 		text-align: center;
-		font-size: 3rem;
+		font-size: var(--extralarge-fontsize);
 		margin: 1em 0;
 		color: var(--color-black);
-	}	
+	}
+	
+	
 
 	.bg-grey{
 		padding: var(--padding-med);
@@ -275,9 +283,7 @@
 		text-align: center;
 	}
 
-	.service-info h2{
-		font-size: 2em;
-	}
+	
 	
 	
 </style>

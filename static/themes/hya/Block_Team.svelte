@@ -130,6 +130,7 @@
 	h3 {
 		font-family: var(--font-main);
 		color: var(--color-three);
+		font-weight: bolder;
 	}
 	@media screen and (min-width: 650px) {
 		.team .blurb {

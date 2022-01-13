@@ -29,6 +29,7 @@
 		gap: 15px;
 		width: auto;
 		flex: 1;
+		min-width: 49%;
 	}
 	.icon-wrap {
 		position: relative;
