@@ -35,12 +35,18 @@
 		bind:count
 		bind:category
 		bind:search
+		bind:totalsize
 		title="Blog Posts"
 	/>
 	<div class="pagination">
 		<div class="pagination-inner">
 			<Block_WP_BlogPerPage bind:size options={[1, 10, 20, 50, 100]} />
-			<Block_WP_BlogPagination bind:count bind:offset bind:size />
+			<Block_WP_BlogPagination
+				bind:count
+				bind:offset
+				bind:size
+				bind:totalsize
+			/>
 		</div>
 	</div>
 	<Block_WP_BlogListAllPages blog_path="/immigration-law-blog" />
@@ -86,6 +92,7 @@
 	let count = 0;
 	let offset = 0;
 	let size = 10;
+	let totalsize = 1;
 </script>
 
 <style>

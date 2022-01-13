@@ -21,10 +21,11 @@
 	let count;
 	let offset = 0;
 	let size = 10;
+	let totalsize = 1;
 	let page = 1;
 	let pages = 0;
 	let doPage = () => {};
-	$: pages = parseInt(count / size) + 1;
+	$: pages = parseInt(totalsize / count);
 	$: page = parseInt(offset / size) + 1;
 	$: {
 		doPage(page);
@@ -40,7 +41,7 @@
 			offset = page * size - size;
 		};
 	});
-	export { count, offset, size };
+	export { count, offset, size, totalsize };
 </script>
 
 <style>

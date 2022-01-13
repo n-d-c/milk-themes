@@ -80,6 +80,7 @@
 	$: blockclass = `featured-blog ${blockstyle}`;
 	let blog_path = '/blog';
 	let size = 10;
+	let totalsize = 1;
 	let offset = 0;
 	let count = 0;
 	let category = '';
@@ -186,6 +187,8 @@
 			// console.log(data);
 			posts = data?.posts?.nodes;
 			count = data?.posts?.nodes?.length ?? 0;
+			totalsize = data.posts.pageInfo.offsetPagination.total;
+
 			if (category != '') {
 				title = `Blog Category: ${category}`;
 			} else if (search && search != '') {
@@ -232,6 +235,7 @@
 		category,
 		search,
 		title,
+		totalsize,
 	};
 </script>
 
