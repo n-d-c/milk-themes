@@ -146,6 +146,11 @@
 						<span>Resources</span>
 					</a>
 				</li>
+				<li>
+					<a href="/contact" class:current={checkCurrent('/contact')}>
+						<span>Contact</span>
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</div>
