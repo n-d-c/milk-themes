@@ -43,17 +43,10 @@
 						<div class="ebook-description">
 							{cleanUp(ebook?.eBook?.shortDescription)}
 						</div>
-						<div>
-							<a
-								href={ebook?.eBook?.pdf?.mediaItemUrl}
-								target="_blank"
-								rel="noreferrer"
-								class="fancy-link"
-								title="Read eBook"
-							>
-								<span> Download The FREE eBook </span>
-							</a>
-						</div>
+						<Block_DownloadEbook
+							downloadLink={ebook?.eBook?.pdf?.mediaItemUrl}
+							eBookTitle={ebook?.title}
+						/>
 					</div>
 				</div>
 			{/each}
@@ -67,10 +60,14 @@
 	/* ## MILK ## */
 	import { milk } from '$milk/milk.js';
 	import { stripTags } from '$milk/util/helpers.js';
+	/* ## Blocks ## */
+	import Block_DownloadEbook from '$theme/Block_DownloadEbook.svelte';
+
 	let id;
 	let blockstyle = '';
 	let blockclass = 'ebooks';
 	$: blockclass = `ebooks ${blockstyle}`;
+
 	/* ## Data Loading ## */
 	import { preload_ebooks } from '$graphql/sitespecific.preload.js';
 	let ebooks = preload_ebooks;
