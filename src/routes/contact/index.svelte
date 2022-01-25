@@ -22,7 +22,6 @@
 	</Block_CallOutText>
 	<Block_ContactForm />
 	<Block_LanguagesWeSpeak />
-	<Block_Languages id="languages" blockstyle="block-style04" />
 	<SocialMedia id="socialmedia" blockstyle="" />
 </Layout_Main>
 
@@ -38,7 +37,6 @@
 	import Hero from '$milk/lib/Hero.svelte';
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
-	import Block_Languages from '$theme/Block_Languages.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_ContactForm from '$theme/Block_ContactForm.svelte';
 	/* ## Variables ## */

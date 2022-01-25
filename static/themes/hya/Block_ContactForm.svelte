@@ -2,6 +2,9 @@
 	<div class="w-half input-label-wrap">
 		<label for="input_1_3">First name</label>
 		<input id="input_1_3" type="text" name="input_1_3" />
+		{#if errorMessages['input_1']}
+			<p>{errorMessages['input_1']}</p>
+		{/if}
 	</div>
 
 	<div class="w-half input-label-wrap">
@@ -11,11 +14,17 @@
 	<div class="w-half input-label-wrap">
 		<label for="input_2">Email Address</label>
 		<input type="email" name="input_2" />
+		{#if errorMessages['input_2']}
+			<p>{errorMessages['input_2']}</p>
+		{/if}
 	</div>
 
 	<div class="w-half input-label-wrap">
 		<label for="input_3">Phone</label>
 		<input type="tel" name="input_3" id="input_3" />
+		{#if errorMessages['input_3']}
+			<p>{errorMessages['input_3']}</p>
+		{/if}
 	</div>
 	<div class="w-full input-label-wrap">
 		<label for="input_4">Message</label>
@@ -27,24 +36,23 @@
 			rows="5"
 			cols="50"
 		/>
+		{#if errorMessages['input_4']}
+			<p>{errorMessages['input_4']}</p>
+		{/if}
 	</div>
+	{#if responseMessage}
+		<p class="form-message">{responseMessage}</p>
+	{/if}
 	<button type="submit">Submit</button>
 </form>
 
 <script>
 	const stripHtml = (string) => string.replace(/(<([^>]+)>)/gi, '');
-	const initialState = {
-		isSuccess: false,
-		message: '',
-		validationError: {},
-	};
-	function updateState(elemState, newState) {
-		Object.keys(newState).forEach(
-			(key) => (elemState[key] = newState[key])
-		);
-	}
+	let errorMessages = {};
+	let responseMessage = '';
+	let submissionSuccess = false;
+
 	const normalizeResponse = (response) => {
-		console.log(response);
 		const isSuccess = response.is_valid;
 		const message = isSuccess
 			? stripHtml(response.confirmation_message)
@@ -57,6 +65,9 @@
 					)
 			  );
 
+		errorMessages = validationError;
+		responseMessage = message;
+		submissionSuccess = isSuccess;
 		return {
 			isSuccess,
 			message,
@@ -78,8 +89,6 @@
 			.then((response) => response.json())
 			.then((response) => normalizeResponse(response))
 			.then((response) => {
-				updateState(formElement, response);
-
 				if (response.isSuccess) {
 					alert('submission success:' + response.isSuccess);
 
@@ -87,103 +96,9 @@
 				}
 			})
 			.catch((error) => {
-				updateState({
-					...initialState,
-					...{
-						message: 'Check the console for the error details.',
-					},
-				});
 				console.log(error);
 			});
 	}
-	// https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/
-
-	// const initialState = {
-	// 	isSuccess: false,
-	// 	message: '',
-	// 	validationError: {},
-	// };
-
-	// const normalizeResponse = (url, response) => {
-	// 	if (url.match(/wp-json\/gf\/v2\/forms\/\d+\/submissions/)) {
-	// 		return normalizeGravityFormsResponse(response);
-	// 	}
-
-	// 	return {
-	// 		...initialState,
-	// 		...{
-	// 			message: 'Are you submitting to the right URL?',
-	// 		},
-	// 	};
-	// };
-
-	// const normalizeGravityFormsResponse = (response) => {
-	// 	const isSuccess = response.is_valid;
-	// 	const message = isSuccess
-	// 		? stripHtml(response.confirmation_message)
-	// 		: 'There was a problem with your submission.';
-	// 	const validationError = isSuccess
-	// 		? {}
-	// 		: Object.fromEntries(
-	// 				Object.entries(response.validation_messages).map(
-	// 					([key, value]) => [`input_${key}`, value]
-	// 				)
-	// 		  );
-
-	// 	return {
-	// 		isSuccess,
-	// 		message,
-	// 		validationError,
-	// 	};
-	// };
-
-	// const wpForm = () => {
-	// 	return {
-	// 		...initialState,
-	// 		submit(event) {
-	// 			console.log('is submit running?');
-	// 			event.preventDefault();
-	// 			event.stopPropagation();
-	// 			const formElement = this.$refs.form,
-	// 				action =
-	// 					'https://admin.immigrationlawnj.com/wp-json/gf/v2/forms/2/submissions',
-	// 				method = formElement,
-	// 				body = new FormData(formElement);
-
-	// 			fetch(action, {
-	// 				method,
-	// 				body,
-	// 			})
-	// 				.then((response) => response.json())
-	// 				.then((response) => normalizeResponse(action, response))
-	// 				.then((response) => {
-	// 					this.updateState(response);
-
-	// 					if (this.isSuccess) {
-	// 						alert('submission success:' + this.isSuccess);
-	// 						formElement.reset();
-	// 					}
-	// 				})
-	// 				.catch((error) => {
-	// 					this.updateState({
-	// 						...initialState,
-	// 						...{
-	// 							message:
-	// 								'Check the console for the error details.',
-	// 						},
-	// 					});
-	// 					alert(error);
-	// 				});
-	// 		},
-	// 		updateState(newState) {
-	// 			Object.keys(newState).forEach(
-	// 				(key) => (this[key] = newState[key])
-	// 			);
-	// 		},
-	// 	};
-	// };
-
-	// window.wpForm = wpForm;
 </script>
 
 <style>
@@ -207,8 +122,13 @@
 		margin: 0 auto;
 		flex-basis: 100%;
 	}
+
+	.form-message {
+		margin: 0 auto;
+		text-align: center;
+	}
 	.w-full {
-		flex: 1;
+		flex: 100%;
 	}
 	.w-half {
 		flex-basis: 49%;

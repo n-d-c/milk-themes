@@ -14,11 +14,23 @@
 <div class="modal">
 	<form method="post" on:submit|preventDefault={formSubmit}>
 		<input type="text" name="input_1_3" placeholder="First Name" />
+		{#if errorMessages['input_1']}
+			<p>{errorMessages['input_1']}</p>
+		{/if}
 		<input type="text" name="input_1_6" placeholder="Last Name" />
 		<input type="email" name="input_2" placeholder="Email" />
+		{#if errorMessages['input_2']}
+			<p>{errorMessages['input_2']}</p>
+		{/if}
 		<input type="tel" name="input_3" placeholder="000-000-0000" />
+		{#if errorMessages['input_3']}
+			<p>{errorMessages['input_3']}</p>
+		{/if}
 		<input type="hidden" name="input_4" value={eBookTitle} />
 		<button type="submit">Submit</button>
+		{#if responseMessage}
+			<p>{responseMessage}</p>
+		{/if}
 	</form>
 </div>
 
@@ -26,18 +38,11 @@
 	let downloadAvailable = false;
 	let eBookTitle;
 	let downloadLink;
-
+	let errorMessages = {};
+	let responseMessage = '';
+	let submissionSuccess = false;
 	const stripHtml = (string) => string.replace(/(<([^>]+)>)/gi, '');
-	const initialState = {
-		isSuccess: false,
-		message: '',
-		validationError: {},
-	};
-	function updateState(elemState, newState) {
-		Object.keys(newState).forEach(
-			(key) => (elemState[key] = newState[key])
-		);
-	}
+
 	const normalizeResponse = (response) => {
 		console.log(response);
 		const isSuccess = response.is_valid;
@@ -51,7 +56,9 @@
 						([key, value]) => [`input_${key}`, value]
 					)
 			  );
-
+		errorMessages = validationError;
+		responseMessage = message;
+		submissionSuccess = isSuccess;
 		return {
 			isSuccess,
 			message,
@@ -73,21 +80,12 @@
 			.then((response) => response.json())
 			.then((response) => normalizeResponse(response))
 			.then((response) => {
-				updateState(formElement, response);
-
 				if (response.isSuccess) {
-					alert('submission success:' + response.isSuccess);
 					downloadAvailable = !downloadAvailable;
 					formElement.reset();
 				}
 			})
 			.catch((error) => {
-				updateState({
-					...initialState,
-					...{
-						message: 'Check the console for the error details.',
-					},
-				});
 				console.log(error);
 			});
 	}
