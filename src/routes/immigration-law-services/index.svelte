@@ -7,6 +7,7 @@
 		id="hero-immigration-services"
 		image_url="/img/hero_services_02.jpg"
 		img_srcset="/img/hero_services_02.jpg"
+		image_loading="eager"
 		avif_srcset="/img/hero_services_02.avif"
 		webp_srcset="/img/hero_services_02.webp"
 		title="Harlan York and Associates"

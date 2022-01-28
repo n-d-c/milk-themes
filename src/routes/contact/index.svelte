@@ -6,6 +6,7 @@
 	<Hero
 		id="hero-espanol"
 		image_url="/img/hero_espanol_01.jpg"
+		image_loading="eager"
 		img_srcset="/img/hero_espanol_01.jpg"
 		avif_srcset="/img/hero_espanol_01.avif"
 		webp_srcset="/img/hero_espanol_01.webp"

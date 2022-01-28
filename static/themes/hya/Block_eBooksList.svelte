@@ -41,7 +41,7 @@
 							</a>
 						</h2>
 						<div class="ebook-description">
-							{cleanUp(ebook?.eBook?.shortDescription)}
+							{@html ebook?.eBook?.shortDescription}
 						</div>
 						<Block_DownloadEbook
 							downloadLink={ebook?.eBook?.pdf?.mediaItemUrl}

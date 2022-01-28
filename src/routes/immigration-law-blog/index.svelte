@@ -7,6 +7,7 @@
 		id="hero-immigration-blog-01"
 		image_url="/img/hero_blog_01.jpg"
 		img_srcset="/img/hero_blog_01.jpg"
+		image_loading="eager"
 		avif_srcset="/img/hero_blog_01.avif"
 		webp_srcset="/img/hero_blog_01.webp"
 		title="Harlan York and Associates"

@@ -1,44 +1,62 @@
 <form method="post" on:submit|preventDefault={formSubmit}>
-	<div class="w-half input-label-wrap">
-		<label for="input_1_3">First name</label>
-		<input id="input_1_3" type="text" name="input_1_3" />
-		{#if errorMessages['input_1']}
-			<p>{errorMessages['input_1']}</p>
-		{/if}
-	</div>
+	<div class="flex-box">
+		<div class="w-half input-label-wrap">
+			<label for="input_1_3">First name</label>
+			<input
+				id="input_1_3"
+				type="text"
+				name="input_1_3"
+				placeholder="First Name *"
+			/>
+			{#if errorMessages['input_1']}
+				<p>{errorMessages['input_1']}</p>
+			{/if}
+		</div>
 
-	<div class="w-half input-label-wrap">
-		<label for="input_1_6">Last Name</label>
-		<input type="text" id="input_1_6" name="input_1_6" />
-	</div>
-	<div class="w-half input-label-wrap">
-		<label for="input_2">Email Address</label>
-		<input type="email" name="input_2" />
-		{#if errorMessages['input_2']}
-			<p>{errorMessages['input_2']}</p>
-		{/if}
-	</div>
+		<div class="w-half input-label-wrap">
+			<label for="input_1_6">Last Name</label>
+			<input
+				type="text"
+				id="input_1_6"
+				name="input_1_6"
+				placeholder="Last Name *"
+			/>
+		</div>
+		<div class="w-half input-label-wrap">
+			<label for="input_2">Email Address</label>
+			<input type="email" name="input_2" placeholder="Email Address *" />
+			{#if errorMessages['input_2']}
+				<p>{errorMessages['input_2']}</p>
+			{/if}
+		</div>
 
-	<div class="w-half input-label-wrap">
-		<label for="input_3">Phone</label>
-		<input type="tel" name="input_3" id="input_3" />
-		{#if errorMessages['input_3']}
-			<p>{errorMessages['input_3']}</p>
-		{/if}
-	</div>
-	<div class="w-full input-label-wrap">
-		<label for="input_4">Message</label>
-		<textarea
-			class="message-box"
-			type="textarea"
-			name="input_4"
-			id="input_4"
-			rows="5"
-			cols="50"
-		/>
-		{#if errorMessages['input_4']}
-			<p>{errorMessages['input_4']}</p>
-		{/if}
+		<div class="w-half input-label-wrap">
+			<label for="input_3">Phone</label>
+			<input
+				type="tel"
+				name="input_3"
+				id="input_3"
+				placeholder="Phone Number *"
+			/>
+			{#if errorMessages['input_3']}
+				<p>{errorMessages['input_3']}</p>
+			{/if}
+		</div>
+		<div class="w-full input-label-wrap">
+			<label for="input_4">Message</label>
+			<textarea
+				placeholder="Your Message..."
+				class="message-box"
+				type="textarea"
+				name="input_4"
+				id="input_4"
+				rows="5"
+				cols="50"
+			/>
+			{#if errorMessages['input_4']}
+				<p>{errorMessages['input_4']}</p>
+			{/if}
+		</div>
 	</div>
 	{#if responseMessage}
 		<p class="form-message">{responseMessage}</p>
@@ -103,24 +121,39 @@
 
 <style>
 	label {
-		display: block;
+		display: none;
 	}
 	form {
+		margin: 0 auto;
+		max-width: 800px;
+	}
+	.flex-box {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		margin: 0 auto;
-		max-width: 800px;
 	}
 
 	input,
 	textarea {
+		margin: 0.7em 0;
+		padding: 0.8em 1em;
 		width: 100%;
+		border-color: var(--color-eight);
 	}
-
+	::placeholder {
+		color: black;
+		opacity: 0.8;
+	}
 	button {
-		margin: 0 auto;
-		flex-basis: 100%;
+		width: 20%;
+		margin-left: auto;
+		padding: 1em 0;
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: var(--button-fontsize);
+		background-color: var(--color-one);
+		color: var(--color-white);
+		border: none;
 	}
 
 	.form-message {

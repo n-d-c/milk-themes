@@ -8,6 +8,7 @@
 		image_url="/img/hero_homepage_01.jpg"
 		img_srcset="/img/hero_homepage_01.jpg"
 		avif_srcset="/img/hero_homepage_01.avif"
+		image_loading="eager"
 		webp_srcset="/img/hero_homepage_01.webp"
 		title="Harlan York and Associates"
 		parallax="false"

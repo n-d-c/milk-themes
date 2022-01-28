@@ -19,7 +19,7 @@
 					srcset={img_srcset}
 					style={img_style}
 					alt={title}
-					loading="lazy"
+					loading={image_loading}
 					width="1600"
 					height="900"
 				/>
@@ -40,6 +40,7 @@
 	let image_position = 'center center';
 	let parallax = false;
 	let aspect_ratio = '16/9';
+	let image_loading = 'lazy';
 	let img_srcset;
 	let avif_srcset;
 	let webp_srcset;
@@ -104,6 +105,7 @@
 		avif_srcset,
 		webp_srcset,
 		title,
+		image_loading,
 	};
 </script>
 

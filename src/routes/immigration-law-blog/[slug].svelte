@@ -32,6 +32,7 @@
 			id="blog-post-hero"
 			image_url={blog_post?.featuredImage?.node?.sourceUrl}
 			img_srcset={blog_post?.featuredImage?.node?.srcSet}
+			image_loading="eager"
 			avif_srcset=""
 			webp_srcset=""
 			title="Harlan York and Associates"
@@ -109,7 +110,7 @@
 			</div>
 		</div>
 	{/each}
-	<Block_Testimonials id="testimonials" blockstyle="block-style05" />
+	<Block_eBooksList id="eBooks"/>
 
 	<Block_CallToAction
 		id="call-to-action"
@@ -117,7 +118,6 @@
 		extraclasses="regular-calltoaction"
 	/>
 	<Block_LanguagesWeSpeak />
-	<Block_Languages id="languages" blockstyle="block-style04" />
 	<Block_Featured id="featured" blockstyle="" />
 	<Block_Ratings id="ratings" blockstyle="" />
 	<SocialMedia id="socialmedia" blockstyle="" />
@@ -146,6 +146,7 @@
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
+	import Block_eBooksList from '$theme/Block_eBooksList.svelte'
 	/* ## Variables ## */
 	let title = `Immigration Services - ${$milk?.site?.title}`;
 	let description = $milk?.site?.description;

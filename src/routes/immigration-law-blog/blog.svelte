@@ -32,6 +32,7 @@
 			id="blog-post-hero"
 			image_url={blog_post?.featuredImage?.node?.sourceUrl}
 			img_srcset={blog_post?.featuredImage?.node?.srcSet}
+			image_loading="eager"
 			avif_srcset=""
 			webp_srcset=""
 			title="Harlan York and Associates"

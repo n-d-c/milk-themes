@@ -6,6 +6,7 @@
 	<Hero
 		id="hero-client-testimonials-02"
 		image_url="/img/hero_testimonial_01.jpg"
+		image_loading="eager"
 		img_srcset="/img/hero_testimonial_01.jpg"
 		avif_srcset="/img/hero_testimonial_01.avif"
 		webp_srcset="/img/hero_testimonial_01.webp"
