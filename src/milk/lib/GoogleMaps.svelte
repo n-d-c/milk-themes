@@ -98,7 +98,7 @@
 		height: 100%;
 	}
 	/* ## in body iframes ## */
-	body .map > iframe {
+	body .map iframe {
 		min-height: 400px;
 	}
 
