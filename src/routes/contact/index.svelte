@@ -23,7 +23,7 @@
 	</Block_CallOutText>
 	<div class="content">
 		<div class="content-inner">
-			<h1>
+			<h1 class="txt-l color-1">
 				Harlan York & Associates Lawyers Work Throughout New Jersey, New
 				York, Pennsylvania And Beyond.
 			</h1>
@@ -41,7 +41,7 @@
 				Immigration, and Naturalization law cases.
 			</p>
 
-			<h2>Harlan York And Associates</h2>
+			<h1 class="txt-c color-1">Harlan York And Associates</h1>
 			<div class="business-info">
 				<div class="row-2-col-25-75">
 					<div>
@@ -161,6 +161,24 @@
 				proceed by foot up Raymond Boulevard towards Broad Street and
 				make a right onto Park Place.
 			</p>
+
+			<p>
+				Harlan York and Associates practices law in the areas of
+				Immigration, Deportation Defense, Family Immigration, Corporate
+				Immigration, Naturalization throughout Essex County – Hudson
+				County – Morris County – Passaic County – Somerset County –
+				Middlesex County – Bergen County – New Jersey -Immigration
+				Lawyer – NJ Immigration Lawyer – Jersey City-Newark-Paterson
+				Passaic Elizabeth Edison Woodbridge Toms River Hamilton Trenton
+				Camden Clifton Passaic Garfield Wallington Cherry Hill East
+				Orange Passaic Union City Bayonne Irvington Old Bridge Lakewood
+				North Bergen Vineland Union Wayne Parsippany-Troy Hills New
+				Brunswick Plainfield Bloomfield Perth Amboy East Brunswick West
+				New York West Orange Hackensack Atlantic City Kearny Mount
+				Laurel Montclair Essex Hoboken North Brunswick Belleville. In
+				addition to serving clients in New York, Pennsylvania, the
+				greater United States, and Internationally.
+			</p>
 		</div>
 	</div>
 	<Block_LanguagesWeSpeak />
@@ -193,7 +211,20 @@
 	.content {
 		margin-bottom: 0;
 	}
-
+	h1 {
+		margin: 3rem 0;
+	}
+	h2 {
+		color: var(--color-one);
+		font-family: var(--font-main);
+	}
+	p:last-child {
+		margin: 3rem 0;
+		font-size: 0.8rem;
+	}
+	.txt-l {
+		text-align: left;
+	}
 	.content-inner {
 		text-align: left;
 	}

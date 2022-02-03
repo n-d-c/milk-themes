@@ -1,74 +1,80 @@
-<h2>Email Us</h2>
-<p>Have a Question About Immigration?</p>
-<p>
-	Contact Harlan York with your questions. We answer emails within 24 hours or
-	less.
-</p>
-<form method="post" on:submit|preventDefault={formSubmit}>
-	<div class="flex-box">
-		<div class="w-half input-label-wrap">
-			<label for="input_1_3">First name</label>
-			<input
-				id="input_1_3"
-				type="text"
-				name="input_1_3"
-				placeholder="First Name *"
-			/>
-			{#if errorMessages['input_1']}
-				<p class="error-msg">{errorMessages['input_1']}</p>
-			{/if}
-		</div>
+<div class="component-contactform">
+	<h1>Email Us</h1>
+	<p>Have a Question About Immigration?</p>
+	<p>
+		Contact Harlan York with your questions. We answer emails within 24
+		hours or less.
+	</p>
+	<form method="post" on:submit|preventDefault={formSubmit}>
+		<div class="flex-box">
+			<div class="w-half input-label-wrap">
+				<label for="input_1_3">First name</label>
+				<input
+					id="input_1_3"
+					type="text"
+					name="input_1_3"
+					placeholder="First Name *"
+				/>
+				{#if errorMessages['input_1']}
+					<p class="error-msg">{errorMessages['input_1']}</p>
+				{/if}
+			</div>
 
-		<div class="w-half input-label-wrap">
-			<label for="input_1_6">Last Name</label>
-			<input
-				type="text"
-				id="input_1_6"
-				name="input_1_6"
-				placeholder="Last Name *"
-			/>
-		</div>
-		<div class="w-half input-label-wrap">
-			<label for="input_2">Email Address</label>
-			<input type="email" name="input_2" placeholder="Email Address *" />
-			{#if errorMessages['input_2']}
-				<p class="error-msg">{errorMessages['input_2']}</p>
-			{/if}
-		</div>
+			<div class="w-half input-label-wrap">
+				<label for="input_1_6">Last Name</label>
+				<input
+					type="text"
+					id="input_1_6"
+					name="input_1_6"
+					placeholder="Last Name *"
+				/>
+			</div>
+			<div class="w-half input-label-wrap">
+				<label for="input_2">Email Address</label>
+				<input
+					type="email"
+					name="input_2"
+					placeholder="Email Address *"
+				/>
+				{#if errorMessages['input_2']}
+					<p class="error-msg">{errorMessages['input_2']}</p>
+				{/if}
+			</div>
 
-		<div class="w-half input-label-wrap">
-			<label for="input_3">Phone</label>
-			<input
-				type="tel"
-				name="input_3"
-				id="input_3"
-				placeholder="Phone Number *"
-			/>
-			{#if errorMessages['input_3']}
-				<p class="error-msg">{errorMessages['input_3']}</p>
-			{/if}
+			<div class="w-half input-label-wrap">
+				<label for="input_3">Phone</label>
+				<input
+					type="tel"
+					name="input_3"
+					id="input_3"
+					placeholder="Phone Number *"
+				/>
+				{#if errorMessages['input_3']}
+					<p class="error-msg">{errorMessages['input_3']}</p>
+				{/if}
+			</div>
+			<div class="w-full input-label-wrap">
+				<label for="input_4">Message</label>
+				<textarea
+					placeholder="Your Message..."
+					class="message-box"
+					type="textarea"
+					name="input_4"
+					id="input_4"
+					rows="5"
+					cols="50"
+				/>
+				{#if errorMessages['input_4']}
+					<p class="error-msg">{errorMessages['input_4']}</p>
+				{/if}
+			</div>
 		</div>
-		<div class="w-full input-label-wrap">
-			<label for="input_4">Message</label>
-			<textarea
-				placeholder="Your Message..."
-				class="message-box"
-				type="textarea"
-				name="input_4"
-				id="input_4"
-				rows="5"
-				cols="50"
-			/>
-			{#if errorMessages['input_4']}
-				<p class="error-msg">{errorMessages['input_4']}</p>
-			{/if}
-		</div>
-	</div>
-	{#if responseMessage}
-		<p class="form-message">{responseMessage}</p>
-	{/if}
-	<button type="submit">Submit</button>
-</form>
+		{#if responseMessage}
+			<p class="form-message">{responseMessage}</p>
+		{/if}
+		<button type="submit">Submit</button>
+	</form>
+</div>
 
 <script>
 	const stripHtml = (string) => string.replace(/(<([^>]+)>)/gi, '');
@@ -132,10 +138,11 @@
 	label {
 		display: none;
 	}
-	form {
-		margin: 0 auto;
+	.component-contactform {
 		max-width: 800px;
+		margin: 5em auto;
 	}
+
 	.flex-box {
 		display: flex;
 		justify-content: space-between;

@@ -97,6 +97,11 @@
 		width: 100%;
 		height: 100%;
 	}
+	/* ## in body iframes ## */
+	body .map > iframe {
+		min-height: 400px;
+	}
+
 	img {
 		position: absolute;
 		object-fit: cover;

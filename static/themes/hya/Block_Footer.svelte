@@ -58,12 +58,7 @@
 			/>
 			<div class="extra-buttons">
 				<a href="#" on:click|preventDefault={doCall}> Call Us </a>
-				<a
-					href={`mailto:${$milk?.site?.email_address}`}
-					on:click|preventDefault={doEmail}
-				>
-					Email
-				</a>
+				<a href="/contact"> Email </a>
 				<a href="#" on:click|preventDefault={doCalendar}>
 					Consultation
 				</a>
