@@ -77,7 +77,7 @@
 	};
 	const doEmail = () => {
 		if (window?.location) {
-			window.location = `mailto:${$milk?.site?.email_address}`;
+			window.location = `/contact`;
 		}
 	};
 	const doCalendar = () => {
@@ -245,6 +245,16 @@
 	@media screen and (max-width: 650px) {
 		.call-button span {
 			font-size: 0.9em;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		.actions .action:first-child {
+			float: left;
+			width: 50%;
+		}
+
+		.actions .action:nth-child(2) {
+			width: 50%;
 		}
 	}
 </style>

@@ -85,7 +85,6 @@
 		width: 100%;
 		text-align: center;
 		overflow-x: hidden;
-		padding: var(--padding);
 	}
 	.video-inner {
 		margin: 0 auto;

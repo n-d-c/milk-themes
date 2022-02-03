@@ -28,30 +28,33 @@
 								/>
 							</picture>
 						</a>
-						<h3>
-							<a
-								href={`${blog_path}/${post?.slug}`}
-								title={`${post?.title}`}
-							>
-								<span class="post-title">{post?.title}</span>
-							</a>
-						</h3>
-						<div class="post-detials">
-							By: {post?.author?.node?.name}
-							&nbsp;&nbsp;|&nbsp;&nbsp;
-							{getDate(post?.date)}
-						</div>
-						<div class="excerpt">
-							{@html post?.excerpt}
-						</div>
-						<div class="more">
-							<a
-								href={`${blog_path}/${post?.slug}`}
-								title={`${post?.title}`}
-								class="fancy-link"
-							>
-								<span>Read More</span>
-							</a>
+						<div class="post-content">
+							<h3>
+								<a
+									href={`${blog_path}/${post?.slug}`}
+									title={`${post?.title}`}
+								>
+									<span class="post-title">{post?.title}</span
+									>
+								</a>
+							</h3>
+							<div class="post-detials">
+								By: {post?.author?.node?.name}
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								{getDate(post?.date)}
+							</div>
+							<div class="excerpt">
+								{@html post?.excerpt}
+							</div>
+							<div class="more">
+								<a
+									href={`${blog_path}/${post?.slug}`}
+									title={`${post?.title}`}
+									class="fancy-link"
+								>
+									<span>Read More</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -256,10 +259,14 @@
 		color: var(--color-black, #000);
 	}
 	.post {
-		padding: var(--padding-large);
 		text-align: left;
 		width: auto;
 		max-width: unset;
+		padding: 0;
+		margin: 1.5rem 0;
+	}
+	.post-content {
+		padding: var(--padding-large);
 	}
 	.post h3 a {
 		color: var(--color-black);
@@ -278,6 +285,12 @@
 		margin-bottom: calc(var(--padding) * 2);
 	}
 	@media screen and (min-width: 650px) {
+		.post {
+			padding: var(--padding-large);
+		}
+		.post-content {
+			padding: 0;
+		}
 		.post:nth-child(odd) img {
 			float: left;
 			margin: 0 calc(var(--padding) * 2) calc(var(--padding) * 2) 0;

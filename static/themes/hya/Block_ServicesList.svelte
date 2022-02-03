@@ -86,7 +86,7 @@
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
-		max-width: 80%;
+		max-width: 100%;
 		height: auto;
 		margin: clamp(10px, 4vw, 30px) auto;
 		transition: all 0.3s ease;

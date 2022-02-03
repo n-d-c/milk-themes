@@ -1,3 +1,9 @@
+<h2>Email Us</h2>
+<p>Have a Question About Immigration?</p>
+<p>
+	Contact Harlan York with your questions. We answer emails within 24 hours or
+	less.
+</p>
 <form method="post" on:submit|preventDefault={formSubmit}>
 	<div class="flex-box">
 		<div class="w-half input-label-wrap">
@@ -9,7 +15,7 @@
 				placeholder="First Name *"
 			/>
 			{#if errorMessages['input_1']}
-				<p>{errorMessages['input_1']}</p>
+				<p class="error-msg">{errorMessages['input_1']}</p>
 			{/if}
 		</div>
 
@@ -26,7 +32,7 @@
 			<label for="input_2">Email Address</label>
 			<input type="email" name="input_2" placeholder="Email Address *" />
 			{#if errorMessages['input_2']}
-				<p>{errorMessages['input_2']}</p>
+				<p class="error-msg">{errorMessages['input_2']}</p>
 			{/if}
 		</div>
 
@@ -39,7 +45,7 @@
 				placeholder="Phone Number *"
 			/>
 			{#if errorMessages['input_3']}
-				<p>{errorMessages['input_3']}</p>
+				<p class="error-msg">{errorMessages['input_3']}</p>
 			{/if}
 		</div>
 		<div class="w-full input-label-wrap">
@@ -54,7 +60,7 @@
 				cols="50"
 			/>
 			{#if errorMessages['input_4']}
-				<p>{errorMessages['input_4']}</p>
+				<p class="error-msg">{errorMessages['input_4']}</p>
 			{/if}
 		</div>
 	</div>
@@ -120,6 +126,9 @@
 </script>
 
 <style>
+	h2 {
+		text-align: center;
+	}
 	label {
 		display: none;
 	}
@@ -145,7 +154,8 @@
 		opacity: 0.8;
 	}
 	button {
-		width: 20%;
+		width: 25%;
+		min-width: 190px;
 		margin-left: auto;
 		padding: 1em 0;
 		text-transform: uppercase;
@@ -155,15 +165,28 @@
 		color: var(--color-white);
 		border: none;
 	}
+	.error-msg {
+		color: red;
+	}
 
 	.form-message {
 		margin: 0 auto;
 		text-align: center;
+		font-size: var(--large-fontsize);
 	}
 	.w-full {
 		flex: 100%;
 	}
 	.w-half {
 		flex-basis: 49%;
+	}
+
+	@media screen and (max-width: 768px) {
+		.w-half {
+			flex-basis: 100%;
+		}
+		button {
+			width: 100%;
+		}
 	}
 </style>

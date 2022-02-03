@@ -114,6 +114,6 @@
 		color: var(--color-black, #000);
 	}
 	.post {
-		max-width: 75%;
+		max-width: 100%;
 	}
 </style>

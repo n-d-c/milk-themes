@@ -559,7 +559,8 @@ div.page-content{
 	@media screen and (max-width: 400px) {
 		#page-homepage #hero-home-01 img,
 		#page-homepage #hero-home-02 img {
-			margin-left: calc(calc(calc(145% / 2) - 50%) * -1);
+			/* margin-left: calc(calc(calc(145% / 2) - 50%) * -1); */
+			margin-left: 0;
 			width: calc(100% + calc(calc(calc(145% / 2) - 50%) * -1)) !important;
 		}
 	}

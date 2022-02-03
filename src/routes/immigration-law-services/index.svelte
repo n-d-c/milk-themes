@@ -21,9 +21,7 @@
 	>
 		<p>{description}</p>
 	</Block_CallOutText>
-	<div class="content">
-		<h1 class="title">Our Services</h1>
-	</div>
+
 	<Block_ServicesList id="services" blockstyle="" />
 	<div class="service-area">
 		<p>
@@ -43,7 +41,7 @@
 			Pennsylvania, the greater United States, and Internationally.
 		</p>
 	</div>
-	<Block_eBook id="marriage-ebook" wpid="cG9zdDoyNDY=" blockstyle="" />
+	<Block_eBooksList />
 	<Block_Testimonials id="testimonials" blockstyle="block-style05" />
 	<Block_CallToAction
 		id="call-to-action"
@@ -51,7 +49,6 @@
 		extraclasses="regular-calltoaction"
 	/>
 	<Block_LanguagesWeSpeak />
-	<Block_FAQs id="FAQs" blockstyle="" />
 	<Block_Featured id="featured" blockstyle="" />
 	<Block_Ratings id="ratings" blockstyle="" />
 	<SocialMedia id="socialmedia" blockstyle="" />
@@ -69,14 +66,13 @@
 	import Hero from '$milk/lib/Hero.svelte';
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
 	import Block_ServicesList from '$theme/Block_ServicesList.svelte';
-	import Block_eBook from '$theme/Block_eBook.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
-	import Block_FAQs from '$theme/Block_FAQs.svelte';
 	import Block_Testimonials from '$theme/Block_Testimonials.svelte';
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
+	import Block_eBooksList from '$theme/Block_eBooksList.svelte';
 	/* ## Variables ## */
 	const title = `Immigration Services - ${$milk?.site?.title}`;
 	const description =

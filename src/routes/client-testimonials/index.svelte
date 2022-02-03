@@ -21,17 +21,7 @@
 	>
 		<p>{description}</p>
 	</Block_CallOutText>
-	<div class="content">
-		<h1 class="title">Client Testimonials</h1>
-	</div>
-	<FeaturedVideo
-		id="testimonial-video-01"
-		blockstyle=""
-		video_source="//www.youtube.com/embed/l071-FSWk4E"
-		video_jpg="/img/testimonial-video-01.jpg"
-		video_webp="/img/testimonial-video-01.webp"
-		video_avif="/img/testimonial-video-01.avif"
-	/>
+
 	<Block_TestimonialsList id="testimonials" blockstyle="" />
 	<FeaturedVideo
 		id="testimonial-video-02"
@@ -48,7 +38,6 @@
 		extraclasses="regular-calltoaction"
 	/>
 	<Block_LanguagesWeSpeak />
-	<Block_Languages id="languages" blockstyle="block-style04" />
 	<Block_Featured id="featured" blockstyle="" />
 	<Block_Ratings id="ratings" blockstyle="" />
 	<SocialMedia id="socialmedia" blockstyle="" />
@@ -68,7 +57,6 @@
 	import FeaturedVideo from '$milk/lib/FeaturedVideo.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
-	import Block_Languages from '$theme/Block_Languages.svelte';
 	import Block_TestimonialsList from '$theme/Block_TestimonialsList.svelte';
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';

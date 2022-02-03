@@ -19,5 +19,7 @@
 </script>
 
 <style>
-	/* */
+	input {
+		width: 100%;
+	}
 </style>

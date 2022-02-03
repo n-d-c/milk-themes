@@ -56,7 +56,6 @@
 		blockstyle="block-style01"
 		extraclasses="regular-calltoaction"
 	/>
-	<Block_Languages id="languages" blockstyle="block-style04" />
 	<Block_Featured id="featured" blockstyle="" />
 	<Block_Ratings id="ratings" blockstyle="" />
 	<SocialMedia id="socialmedia" blockstyle="" />
@@ -74,7 +73,6 @@
 	import Hero from '$milk/lib/Hero.svelte';
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
-	import Block_Languages from '$theme/Block_Languages.svelte';
 	import Block_WP_BlogListing from '$milk/lib/Block_WP_BlogListing.svelte';
 	import Block_WP_BlogListAllPages from '$milk/lib/Block_WP_BlogListAllPages.svelte';
 	import Block_WP_BlogCategorySelector from '$milk/lib/Block_WP_BlogCategorySelector.svelte';
@@ -110,6 +108,7 @@
 		padding: 50px var(--padding-inner, 20px) 0px;
 		color: var(--color-black, #000);
 	}
+
 	.controls-inner,
 	.pagination-inner {
 		margin: 0 auto;

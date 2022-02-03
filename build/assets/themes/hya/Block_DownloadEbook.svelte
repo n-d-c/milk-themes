@@ -1,16 +1,3 @@
-{#if downloadAvailable}
-	<div>
-		<a
-			href={downloadLink}
-			target="_blank"
-			rel="noreferrer"
-			class="fancy-link"
-			title="Read eBook"
-		>
-			<span> Download The FREE eBook </span>
-		</a>
-	</div>
-{/if}
 <div class="modal">
 	<form method="post" on:submit|preventDefault={formSubmit}>
 		<input type="text" name="input_1_3" placeholder="First Name" />
@@ -35,12 +22,14 @@
 </div>
 
 <script>
-	let downloadAvailable = false;
 	let eBookTitle;
 	let downloadLink;
 	let errorMessages = {};
 	let responseMessage = '';
 	let submissionSuccess = false;
+	const doDownload = () => {
+		window.location = downloadLink;
+	};
 	const stripHtml = (string) => string.replace(/(<([^>]+)>)/gi, '');
 
 	const normalizeResponse = (response) => {
@@ -81,7 +70,8 @@
 			.then((response) => normalizeResponse(response))
 			.then((response) => {
 				if (response.isSuccess) {
-					downloadAvailable = !downloadAvailable;
+					doDownload();
+					// downloadAvailable = !downloadAvailable;
 					formElement.reset();
 				}
 			})
@@ -90,5 +80,69 @@
 			});
 	}
 
+	function forceDownload(blob) {
+		// Create an invisible anchor element
+		const anchor = document.createElement('a');
+		anchor.style.display = 'none';
+		anchor.href = window.URL.createObjectURL(blob);
+		anchor.setAttribute('download');
+		document.body.appendChild(anchor);
+
+		// Trigger the download by simulating click
+		anchor.click();
+
+		// Clean up
+		window.URL.revokeObjectURL(anchor.href);
+		document.body.removeChild(anchor);
+	}
+
+	function downloadResource() {
+		const url = this.href;
+		fetch(url, {
+			headers: new Headers({
+				Origin: window.location.origin,
+			}),
+			mode: 'cors',
+		})
+			.then((response) => response.blob())
+			.then((blob) => forceDownload(blob))
+			.catch((e) => console.error(e));
+	}
+
 	export { downloadLink, eBookTitle };
 </script>
+
+<style>
+	input,
+	textarea {
+		margin: 0.4em 0;
+		padding: 0.8em 1em;
+		width: 100%;
+		border-color: var(--color-eight);
+	}
+	::placeholder {
+		color: black;
+		opacity: 0.8;
+	}
+	button {
+		width: 25%;
+		min-width: 190px;
+		margin-left: auto;
+		padding: 1em 0;
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: var(--button-fontsize);
+		background-color: var(--color-one);
+		color: var(--color-white);
+		border: none;
+	}
+	.error-msg {
+		color: red;
+	}
+
+	.form-message {
+		margin: 0 auto;
+		text-align: center;
+		font-size: var(--large-fontsize);
+	}
+</style>

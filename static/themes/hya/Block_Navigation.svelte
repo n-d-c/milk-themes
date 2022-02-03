@@ -275,6 +275,10 @@
 	nav li a:hover {
 		text-decoration: none;
 	}
+
+	nav li a.current {
+		color: var(--color-three);
+	}
 	nav li::before {
 		content: '';
 		display: none;
@@ -301,8 +305,9 @@
 		margin: 0 -10%;
 		width: 120%;
 		opacity: 1;
-		background-color: var(--color-one);
+		background-color: var(--color-three);
 	}
+
 	@media screen and (max-width: 700px) {
 		.navigation-inner {
 			width: 100%;
@@ -332,7 +337,8 @@
 		}
 		nav {
 			display: grid;
-			place-content: center;
+			place-content: normal;
+			padding-top: 2em;
 			height: calc(100vh - 40px);
 			width: 100vw !important;
 			overflow: scroll;

@@ -427,7 +427,6 @@
 		extraclasses="regular-calltoaction"
 	/>
 	<Block_LanguagesWeSpeak />
-	<Block_Languages id="languages" blockstyle="block-style04" />
 	<Block_Featured id="featured" blockstyle="" />
 	<Block_Ratings id="ratings" blockstyle="" />
 	<SocialMedia id="socialmedia" blockstyle="" />
@@ -447,7 +446,6 @@
 	import FeaturedVideo from '$milk/lib/FeaturedVideo.svelte';
 	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
-	import Block_Languages from '$theme/Block_Languages.svelte';
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
@@ -473,7 +471,7 @@
 		height: auto;
 	}
 	.video {
-		margin: 50px 20px;
+		margin: 50px 0;
 		text-align: center;
 	}
 	.video p {
@@ -516,12 +514,11 @@
 		content: '- ';
 	}
 	.image-callout {
-		margin: 25px;
 		text-align: center;
 	}
 	.image-callout img {
-		max-width: 80%;
 		width: 400px;
+		max-width: 100%;
 		margin: 10px auto;
 	}
 	.image-callout p {

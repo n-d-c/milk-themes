@@ -24,6 +24,7 @@
 		grid-template-rows: auto auto 1fr auto auto;
 		z-index: 10;
 	}
+
 	.page-content {
 		display: block;
 	}

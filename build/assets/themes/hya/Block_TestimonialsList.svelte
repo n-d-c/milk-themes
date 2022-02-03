@@ -136,7 +136,7 @@
 	.testimonial:nth-child(odd) {
 	}
 	.testimonials .testimonials-inner .testimonial {
-		width: 80%;
+		width: 100%;
 		margin: 0 auto;
 	}
 	@media screen and (min-width: 650px) {
