@@ -162,7 +162,7 @@
 				make a right onto Park Place.
 			</p>
 
-			<p>
+			<p class="font-small">
 				Harlan York and Associates practices law in the areas of
 				Immigration, Deportation Defense, Family Immigration, Corporate
 				Immigration, Naturalization throughout Essex County – Hudson
@@ -218,7 +218,7 @@
 		color: var(--color-one);
 		font-family: var(--font-main);
 	}
-	p:last-child {
+	p.font-small {
 		margin: 3rem 0;
 		font-size: 0.8rem;
 	}
