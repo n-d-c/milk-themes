@@ -109,9 +109,7 @@
 				<li>
 					<a
 						href="/immigration-law-services"
-						class:current={checkCurrent(
-							'/immigration-law-services'
-						)}
+						class:current={checkIfBlog('/immigration-law-services')}
 					>
 						<span>Services</span>
 					</a>
