@@ -55,7 +55,7 @@
 :root .light-mode {
 	--background: var(--color-white);
 	--text-color: var(--color-black);
-	--link-color: var(--color-three);
+	--link-color: var(--color-one);
 	--link-color-hover: var(--color-four);
 	--link-color-visited: var(--color-two);
 	--text-decoration-color: var(--color-black);
@@ -544,7 +544,7 @@ div.page-content{
 @media screen and (max-width: 500px) {
 	#page-homepage #hero-home-01 img,
 	#page-homepage #hero-home-02 img {
-		margin: 0 calc(calc(calc(110% / 2) - 50%) * -1);
+		margin: 0;
 		width: calc(100% + calc(calc(calc(110% / 2) - 50%) * -1)) !important;
 	}
 }
@@ -552,7 +552,7 @@ div.page-content{
 	@media screen and (max-width: 450px) {
 		#page-homepage #hero-home-01 img,
 		#page-homepage #hero-home-02 img {
-			margin: 0 calc(calc(calc(125% / 2) - 50%) * -1);
+			margin: 0;
 			width: calc(100% + calc(calc(calc(125% / 2) - 50%) * -1)) !important;
 		}
 	}
@@ -567,7 +567,7 @@ div.page-content{
 	@media screen and (max-width: 350px) {
 		#page-homepage #hero-home-01 img
 		#page-homepage #hero-home-02 img {
-			margin-left: calc(calc(calc(180% / 2) - 50%) * -1);
+			margin: 0;
 			width: calc(100% + calc(calc(calc(180% / 2) - 50%) * -1)) !important;
 		}
 	}

@@ -5,7 +5,7 @@
 			<div id="BlogTop" />
 			{#each posts as post}
 				<div class="post">
-					<div title={`${post?.title}`}>
+					<div class="post-inner" title={`${post?.title}`}>
 						<a
 							href={`${blog_path}/${post?.slug}`}
 							title={`${post?.title}`}
@@ -265,6 +265,7 @@
 		padding: 0;
 		margin: 1.5rem 0;
 	}
+
 	.post-content {
 		padding: var(--padding-large);
 	}
@@ -282,23 +283,30 @@
 		clear: both;
 	}
 	.post img {
+		width: 100%;
 		margin-bottom: calc(var(--padding) * 2);
 	}
 	@media screen and (min-width: 650px) {
 		.post {
 			padding: var(--padding-large);
 		}
+
+		.post-inner {
+			display: flex;
+			gap: 1em;
+		}
+
 		.post-content {
 			padding: 0;
+			flex: 3;
 		}
-		.post:nth-child(odd) img {
-			float: left;
-			margin: 0 calc(var(--padding) * 2) calc(var(--padding) * 2) 0;
+		.post-inner > a:first-child {
+			flex: 2;
 		}
-		.post:nth-child(even) img {
-			float: right;
-			margin: 0 0 calc(var(--padding) * 2) calc(var(--padding) * 2);
+		.post:nth-child(odd) > .post-inner {
+			flex-direction: row;
 		}
+
 		.post:nth-child(odd) .more {
 			text-align: right;
 		}

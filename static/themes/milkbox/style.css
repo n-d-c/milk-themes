@@ -55,7 +55,7 @@
 :root .light-mode {
 	--background: var(--color-white);
 	--text-color: var(--color-black);
-	--link-color: var(--color-three);
+	--link-color: var(--color-one);
 	--link-color-hover: var(--color-four);
 	--link-color-visited: var(--color-two);
 	--text-decoration-color: var(--color-black);
@@ -146,7 +146,9 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 	--table-cell-padding: 0.5em 2em;
 }
 /* #### Default Content #### */
-
+ul, ol{
+	margin-left: 1em;
+}
 
 /* ### Blocks ### */
 /* ## Block Style 01 ## */

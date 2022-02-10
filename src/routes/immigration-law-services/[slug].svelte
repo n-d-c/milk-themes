@@ -1,5 +1,5 @@
 <svelte:head>
-	{#each blog_css as css}
+	<!-- {#each blog_css as css}
 		<link
 			async
 			href={ (css.src.startsWith('http')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
@@ -11,7 +11,7 @@
 			href={ (css.src.startsWith('http')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
 			rel="stylesheet"
 		/>
-	{/each}
+	{/each} -->
 	{#each blog_scripts as script}
 		<script
 			defer
@@ -45,11 +45,7 @@
 		>
 
 			{@html description}
-			<div class="callout-detials">
-				{months[post_date.getMonth()]}
-				{post_date.getDate()},
-				{post_date.getFullYear()}
-			</div>
+			
 		</Block_CallOutText>
 		<div class="content">
 			<div class="content-inner">
@@ -223,7 +219,7 @@
 </script>	
 
 <style>
-	.blog-topbar { position: relative; margin: -20px 0 20px; }
+	.blog-topbar { position: relative; margin: 20px 0 20px; }
 	.breadcrumbs { font-size: var(--small-fontsize); }
 	.breadcrumbs a { color: var(--color-black); }
 	.breadcrumbs a:hover { color: var(--color-four); }
@@ -249,8 +245,8 @@
 	}	
 
 	.outer-wrap{
-		margin:0 var(--margin-Xl);
-		padding: var(--padding-med);
+		margin:var(--margin-Xl) var(--margin-Xl);
+		padding: var(--padding);
 	}
 
 	h2{

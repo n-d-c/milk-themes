@@ -120,4 +120,8 @@
 		margin-bottom: 50px;
 		text-align: left;
 	}
+	.pagination-inner {
+		display: flex;
+		justify-content: space-between;
+	}
 </style>

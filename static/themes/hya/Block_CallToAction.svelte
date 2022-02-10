@@ -1,4 +1,4 @@
-<div {id} class={blockclass}>
+<div {id} class="cta-wrapper {blockclass}">
 	<div class="calltoaction-inner">
 		<h2 class="title">Let Us Get To Work On Your Case Now</h2>
 		<div class="call-button">
@@ -99,7 +99,9 @@
 	.calltoaction {
 		display: block;
 		text-align: center;
+		max-width: 700px;
 	}
+
 	.calltoaction-inner {
 		margin: 0 auto;
 		max-width: var(--content-constrain);
@@ -172,6 +174,7 @@
 		color: var(--color-white, #fff);
 		font-size: var(--base-fontsize);
 		text-align: center;
+		padding: 0;
 	}
 	.actions button:hover {
 		filter: brightness(0.55) sepia(1) saturate(300%) hue-rotate(5deg)
@@ -247,7 +250,7 @@
 			font-size: 0.9em;
 		}
 	}
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 401px) {
 		.actions .action:first-child {
 			float: left;
 			width: 50%;

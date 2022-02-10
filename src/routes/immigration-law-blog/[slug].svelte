@@ -1,5 +1,5 @@
 <svelte:head>
-	{#each blog_css as css}
+	<!-- {#each blog_css as css}
 		<link
 			async
 			href={ (css.src.startsWith('http')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
@@ -11,7 +11,7 @@
 			href={ (css.src.startsWith('http')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
 			rel="stylesheet"
 		/>
-	{/each}
+	{/each} -->
 	{#each blog_scripts as script}
 		<script
 			defer
