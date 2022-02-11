@@ -99,7 +99,6 @@
 	.calltoaction {
 		display: block;
 		text-align: center;
-		max-width: 700px;
 	}
 
 	.calltoaction-inner {

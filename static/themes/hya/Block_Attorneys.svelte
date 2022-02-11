@@ -25,29 +25,27 @@
 									height="260"
 								/>
 							</picture>
-							<h2 class="name">
-								{attorney?.title}
-							</h2>
-							<div class="email">
-								<a href={`mailto:${attorney?.Attorney?.email}`}>
-									{attorney?.Attorney?.email}
-								</a>
-							</div>
+
 							<div>
-								{@html attorney?.Attorney?.shortDescription}
-							</div>
-						</div>
-						<div>
-							<details>
-								<summary>
-									<span class="more">Show More</span>
-									<span class="less">Show Less</span>
-								</summary>
-								<div class="content">
-									{@html attorney?.Attorney
-										?.additionalDescription}
+								<h2 class="name">
+									{attorney?.title}
+								</h2>
+								<div class="email">
+									<a
+										href={`mailto:${attorney?.Attorney?.email}`}
+									>
+										{attorney?.Attorney?.email}
+									</a>
 								</div>
-							</details>
+								<div class="short-description">
+									{@html attorney?.Attorney?.shortDescription}
+								</div>
+
+								<AdditonalContent
+									htmlContent={attorney?.Attorney
+										?.additionalDescription}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -66,6 +64,12 @@
 	let blockstyle = '';
 	let blockclass = 'attorneys';
 	$: blockclass = `attorneys ${blockstyle}`;
+	let toggledVal = false;
+	let spanTextVal;
+
+	/* Import Blocks */
+	import AdditonalContent from './Toggle_Button.svelte';
+
 	/* ## Data Loading ## */
 	import { preload_attorneys } from '$graphql/sitespecific.preload.js';
 	let attorneys = preload_attorneys;
@@ -90,6 +94,7 @@
 	onDestroy(() => {
 		unsubscribe_team(); // important for garbage collection otherwise memory leak
 	});
+
 	/* ## Exports ## */
 	export { id, blockstyle };
 </script>
@@ -150,63 +155,5 @@
 	}
 	.attorney .email a {
 		color: var(--color-one);
-	}
-	details {
-		max-width: unset !important;
-	}
-	details {
-		overflow: hidden;
-	}
-	summary {
-		background: transparent;
-		color: var(--color-black);
-		cursor: pointer;
-		padding: 1rem 0;
-	}
-	.attorney:nth-child(even) summary {
-		background: var(--color-offwhite);
-	}
-	summary::before {
-		content: '';
-	}
-	summary span {
-		cursor: pointer;
-		text-transform: uppercase;
-		font-weight: bold;
-		display: inline-block;
-		width: auto;
-		position: relative;
-	}
-	summary .less {
-		display: none;
-	}
-	details[open] summary .less {
-		display: inline-block;
-	}
-	details[open] summary .more {
-		display: none;
-	}
-	details .content {
-		border: 0px none;
-	}
-
-	summary span::after {
-		height: 2px;
-		background-color: transparent;
-		position: absolute;
-		content: '';
-		width: 0;
-		margin: 0 50%;
-		display: block;
-		bottom: 0;
-		left: 0;
-		transition: margin 0.5s, width 0.5s, opacity 0.5s, color 0.5s,
-			background-color 0.5s;
-	}
-	summary:hover span::after {
-		margin: 0 -10%;
-		width: 120%;
-		opacity: 1;
-		background-color: var(--color-three);
 	}
 </style>
