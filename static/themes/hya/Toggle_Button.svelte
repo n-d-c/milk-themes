@@ -29,7 +29,7 @@
 
 	.additional-description.active {
 		overflow-y: visible;
-		max-height: 999px;
+		max-height: 9999px;
 	}
 	details {
 		max-width: unset !important;
