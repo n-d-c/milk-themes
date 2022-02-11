@@ -5,10 +5,10 @@
 <Layout_Main id="immigration-espanol">
 	<Hero
 		id="hero-espanol"
-		image_url="/img/hero_espanol_01.jpg"
-		img_srcset="/img/hero_espanol_01.jpg"
-		avif_srcset="/img/hero_espanol_01.avif"
-		webp_srcset="/img/hero_espanol_01.webp"
+		image_url="/img/espanol_2022.jpg"
+		img_srcset="/img/espanol_2022.jpg"
+		avif_srcset="/img/espanol_2022.avif"
+		webp_srcset="/img/espanol_2022.webp"
 		title="Harlan York and Associates"
 		parallax="false">&nbsp;</Hero
 	>
