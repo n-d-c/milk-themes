@@ -14,7 +14,6 @@
 		parallax="false"
 	>
 		<h1>{description}</h1>
-		<ScrollTo direction="down" target="#AfterMainHero" />
 	</Hero>
 	<Block_CallToAction
 		id="call-to-action-02"

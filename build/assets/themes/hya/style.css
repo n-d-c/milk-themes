@@ -541,6 +541,12 @@ div.page-content{
 #page-homepage .posts-grid .post h3 .more { display: inline-block; vertical-align: middle; line-height: 100%; text-align: center; width: 35px; font-size: var(--small-fontsize);  padding: 20px 0; }
 #page-homepage .posts-grid .post h3 .more svg { width: 20px; height: auto; transition: all var(--transition-speed); }
 #page-homepage .posts-grid .post:hover h3 { background: var(--color-four); color: var(--color-six); transition: all var(--transition-speed); }
+@media screen and (max-width:650px){
+	#page-homepage #hero-home-01 .hero-inner{
+		place-self: end;
+	}
+	
+}
 @media screen and (max-width: 500px) {
 	#page-homepage #hero-home-01 img,
 	#page-homepage #hero-home-02 img {

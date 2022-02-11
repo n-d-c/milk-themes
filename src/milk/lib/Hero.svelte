@@ -26,7 +26,9 @@
 			</picture>
 		{/if}
 	</div>
-	<div class="hero-inner"><div class="hero-content"><slot /></div></div>
+	<div class="hero-inner">
+		<div class="hero-content"><slot /></div>
+	</div>
 </div>
 
 <script>
