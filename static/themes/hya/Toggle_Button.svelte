@@ -23,6 +23,7 @@
 <style>
 	.additional-description {
 		max-height: 0px;
+		overflow-y: hidden;
 		transition: all 0.5s ease-in-out;
 	}
 
