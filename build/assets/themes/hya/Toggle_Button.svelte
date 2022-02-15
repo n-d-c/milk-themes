@@ -23,12 +23,13 @@
 <style>
 	.additional-description {
 		max-height: 0px;
+		overflow-y: hidden;
 		transition: all 0.5s ease-in-out;
 	}
 
 	.additional-description.active {
 		overflow-y: visible;
-		max-height: 999px;
+		max-height: 9999px;
 	}
 	details {
 		max-width: unset !important;
