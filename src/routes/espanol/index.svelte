@@ -444,7 +444,7 @@
 	import Hero from '$milk/lib/Hero.svelte';
 	import Block_CallOutText from '$theme/Block_CallOutText.svelte';
 	import FeaturedVideo from '$milk/lib/FeaturedVideo.svelte';
-	import Block_CallToAction from '$theme/Block_CallToAction.svelte';
+	import Block_CallToAction from '$theme/Block_CallToAction_Spanish.svelte';
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';

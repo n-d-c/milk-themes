@@ -1,20 +1,22 @@
 <div {id} class="cta-wrapper {blockclass}">
 	<div class="calltoaction-inner">
-		<h2 class="title">Let Us Get To Work On Your Case Now</h2>
+		<h2 class="title">Permítanos trabajar en su caso ahora</h2>
 		<div class="call-button">
-			<button class="call-button" on:click={doCall} title="Make Call">
+			<button class="call-button" on:click={doCall} title="Llámanos">
 				<img
 					src="/img/icon-phone-yellow.svg"
 					class="icon icon-phone"
 					loading="lazy"
-					alt="Call Us"
+					alt="Llámanos"
 					width="40"
 					height="40"
 				/>
 				<span>(973) 642-1111</span>
 			</button>
 		</div>
-		<div class="caption">We return most calls within 24 hours</div>
+		<div class="caption">
+			Devolvemos la mayoría de las llamadas dentro de las 24 horas
+		</div>
 		<hr />
 		<div class="actions">
 			<div class="action">
@@ -42,11 +44,11 @@
 						width="30"
 						height="30"
 					/>
-					<span>CONSULTATION</span>
+					<span>CONSULTA</span>
 				</button>
 			</div>
 			<div class="action">
-				<button on:click={doPayment} title="Make Payment">
+				<button on:click={doPayment} title="factura de pago">
 					<img
 						src="/img/icon-invoice.svg"
 						class="icon icon-invoice"
@@ -55,7 +57,7 @@
 						width="30"
 						height="30"
 					/>
-					<span>PAY INVOICE</span>
+					<span>FACTURA DE PAGO</span>
 				</button>
 			</div>
 		</div>
@@ -77,11 +79,11 @@
 			window?.callingCard?.show();
 		}
 	};
-	const doEmail = () => {
-		if (window?.location) {
-			window.location = `/contact`;
-		}
-	};
+	// const doEmail = () => {
+	// 	if (window?.location) {
+	// 		window.location = `/contact`;
+	// 	}
+	// };
 	const doCalendar = () => {
 		if (window?.calendarCard?.show) {
 			window?.calendarCard?.show();

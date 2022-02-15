@@ -5,13 +5,15 @@
 				<div class="service" id={service?.slug}>
 					<div class="service-icon">
 						<h4>{service?.title}</h4>
-						<div class="extra-buttons">
-							<a
-								href="immigration-law-services/{service?.slug}"
-								class="read-more"
-								>Read More
-							</a>
-						</div>
+						{#if 'service-has-single' == service?.categories?.nodes[0].slug}
+							<div class="extra-buttons">
+								<a
+									href="immigration-law-services/{service?.slug}"
+									class="read-more"
+									>Read More
+								</a>
+							</div>
+						{/if}
 					</div>
 					<div class="service-content">
 						<div>

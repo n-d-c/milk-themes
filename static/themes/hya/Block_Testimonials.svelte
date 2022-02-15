@@ -3,8 +3,8 @@
 		<h2>What Our Clients Say</h2>
 		<div class="blurb">
 			<h3>
-				With Hundreds Of Reviews Harlan York Is One Of The Top
-				Immigration Law Firms In America.
+				Harlan York & Associates is one of the top immigration Law Firms
+				In America
 			</h3>
 			<div class="block-content">
 				<p>

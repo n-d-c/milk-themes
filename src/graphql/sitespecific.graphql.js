@@ -16,6 +16,12 @@ export const Q_GET_SERVICES = `query getServices($size: Int = ${config.paginatio
 				excerpt
 				description
 			}
+			categories(where: {slug: "service-has-single"}) {
+				nodes {
+				  id
+				  slug
+				}
+			  }
 		}
 	}
 }`;
