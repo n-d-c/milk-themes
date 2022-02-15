@@ -5,7 +5,7 @@
 				<div class="service" id={service?.slug}>
 					<div class="service-icon">
 						<h4>{service?.title}</h4>
-						{#if 'service-has-single' == service?.categories?.nodes[0].slug}
+						{#if 'service-has-single' === service?.categories?.nodes[0]?.slug}
 							<div class="extra-buttons">
 								<a
 									href="immigration-law-services/{service?.slug}"
