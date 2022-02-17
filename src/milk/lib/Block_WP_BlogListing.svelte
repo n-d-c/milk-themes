@@ -303,8 +303,8 @@
 		.post-inner > a:first-child {
 			flex: 2;
 		}
-		.post:nth-child(odd) > .post-inner {
-			flex-direction: row;
+		.post:nth-child(even) > .post-inner {
+			flex-direction: row-reverse;
 		}
 
 		.post:nth-child(odd) .more {
