@@ -53,14 +53,20 @@
 			pagination="false"
 		>
 			<span slot="before">
-				<h2>Read the Latest From</h2>
-				<h2>The Immigration Law Blog</h2>
+				<h2>Get The Latest Immigration News</h2>
 				<div class="block-content">
 					<p>
-						Harlan's blog has informative and practical advice, from
-						getting a green card through marriage to detailed
-						explanations of litigation, business immigration,
-						citizenship, waivers and appeals.
+						Keep up with the best practices, latest trends and
+						advice on immigration law. Stay informed with the best
+						ways to get legal advice, present your case , and win.
+						Immigration law is a constantly changing legal field.
+						What makes Harlan York the best lawyer in the field is
+						his knowledge and passion for staying up to date with
+						trending legal challenges that could affect your case.
+						Harlan’s blog is filled with informative and practical
+						advice on getting a green card through marriage, to
+						detailed explanations of litigation, business
+						immigration, citizenship, waivers and appeals.
 					</p>
 				</div>
 			</span>

@@ -76,7 +76,7 @@
 	/* ## Variables ## */
 	const title = `Immigration Services - ${$milk?.site?.title}`;
 	const description =
-		'At Harlan York & Associates our immigration attorneys use their extensive experience on thousands of cases and daily reviews of new developments in the constantly changing field of immigration law to give you the best legal counsel available.';
+		'At Harlan York & Associates, our immigration attorneys use their extensive experience with thousands of cases and daily reviews of new developments in the constantly changing field of immigration law to give you the best legal counsel available.';
 </script>
 
 <style>

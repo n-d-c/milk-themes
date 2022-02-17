@@ -13,9 +13,7 @@
 
 	function toggleHandler() {
 		toggled = !toggled;
-		console.log('testing state' + toggled);
 		spanTextContent = toggled ? 'Show Less' : 'Show More';
-		console.log('testing text: ' + spanTextContent);
 	}
 	export { toggled, spanTextContent, htmlContent };
 </script>

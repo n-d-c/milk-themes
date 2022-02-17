@@ -36,7 +36,7 @@
 							rel="noreferrer"
 							title="Purchase the Book"
 						>
-							Three Dregrees of Law
+							Three Degrees of Law
 						</a>
 					</h2>
 					<div class="book-description">
@@ -45,18 +45,16 @@
 							UNIVERSE
 						</h3>
 						<p>
-							“To be happy and successful as a lawyer find a path
+							“To be happy and successful as a lawyer, find a path
 							that you love, practice the best way you can, and
-							work with compassion.” Harlan York
+							work with compassion.” Harlan York.
 						</p>
 						<p>
 							Not just for law students or attorneys, Three
 							Degrees of Law is for anyone who has ever questioned
 							what they do, and wondered how they could improve
-							not only their output, but also their own sense of
-							satisfaction. It lays down a road map for how to be
-							happy, successful and fulfilled no matter your line
-							of work.
+							not only their output but also their own sense of
+							satisfaction.
 						</p>
 					</div>
 					<div>
@@ -67,7 +65,7 @@
 							class="fancy-link"
 							title="Purchase the Book"
 						>
-							<span> Purchase the Book </span>
+							<span>Learn More </span>
 						</a>
 					</div>
 				</div>

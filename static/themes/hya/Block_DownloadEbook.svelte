@@ -16,7 +16,7 @@
 		<input type="hidden" name="input_4" value={eBookTitle} />
 		<button type="submit">Submit</button>
 		{#if responseMessage}
-			<p>{responseMessage}</p>
+			<p class="response-msg">{responseMessage}</p>
 		{/if}
 	</form>
 </div>
@@ -141,8 +141,12 @@
 	}
 
 	.form-message {
-		margin: 0 auto;
+		margin: auto;
 		text-align: center;
 		font-size: var(--large-fontsize);
+	}
+	.response-msg {
+		margin-top: 1em;
+		font-size: 110%;
 	}
 </style>

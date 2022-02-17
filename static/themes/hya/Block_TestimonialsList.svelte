@@ -80,10 +80,11 @@
 			async (fetched_data) => {
 				let data = await fetched_data;
 				// console.log(data);
-				let tmpArray = data?.testimonials?.nodes;
-				shuffleArray(tmpArray);
-				testimonials = tmpArray.slice(0, 20);
-				console.log(testimonials);
+				// let tmpArray = data?.testimonials?.nodes;
+				// shuffleArray(tmpArray);
+				// testimonials = tmpArray.slice(0, 20);
+				testimonials = data?.testimonials?.nodes;
+				// console.log(testimonials);
 			}
 		);
 	});

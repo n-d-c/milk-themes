@@ -160,7 +160,7 @@ date
 modified
 ${POST_AUTHOR}`;
 
-const POST_CONTENT = `id
+export const POST_CONTENT = `id
 title(format: RENDERED)
 slug
 postId
@@ -267,14 +267,27 @@ export const Q_GET_POSTS_BYAUTHORID = `query getPosts($author: Int = 1, $offset:
 	}
 }`;
 
-export const Q_GET_POST_BYID = `query getPost($id: Int = 1) {
-	postBy(postId: $id) {
+export const Q_GET_POST_BYID = `query getPost($id: Int = 1) { postBy(postId: $id) {
 		${POST_CONTENT}
 	}
 }`;
 
 export const Q_GET_POST_BYSLUG = `query getPost($slug: String = "hello-world") {
 	postBy(slug: $slug) {
+		    postsRelated {
+      relatedBlogPosts {
+        ... on Post {
+          id
+          slug
+          title
+          featuredImage {
+            node{
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
 		${POST_CONTENT}
 	}
 }`;

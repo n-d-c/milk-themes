@@ -8,8 +8,8 @@
 			</h3>
 			<div class="block-content">
 				<p>
-					Harlan York & Associates is one of the most successful firms
-					in the country.
+					Harlan York & Associates is one of the most successful
+					immigration law firms in the country.
 				</p>
 				<p>
 					Using our extensive experience on thousands of immigration

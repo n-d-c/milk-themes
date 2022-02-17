@@ -1,7 +1,7 @@
 /* ## Config ## */
 const MILK_CFG = JSON.parse(decodeURI('_MILK_CFG')); // Magic Loading
 const { config } = MILK_CFG;
-
+import { POST_CONTENT } from './wordpress.graphql';
 /* ## Queries ## */
 
 export const Q_GET_SERVICES = `query getServices($size: Int = ${config.pagination_size}) {
@@ -25,7 +25,26 @@ export const Q_GET_SERVICES = `query getServices($size: Int = ${config.paginatio
 		}
 	}
 }`;
-
+export const Q_GET_POST = `query getPost($id: ID!){
+	post(id:$id, idType: SLUG) {
+	 
+	  postsRelated {
+		
+		relatedBlogPosts {
+		  ... on Post {
+			id
+			title
+			slug
+			featuredImage {
+          	  node {
+          	    sourceUrl
+          	  }
+          	}
+		  }
+		}
+	  }
+	  ${POST_CONTENT}
+  }`
 
 export const Q_GET_SERVICE = `query getService($id: ID!){
 	service(id:$id, idType: SLUG) {

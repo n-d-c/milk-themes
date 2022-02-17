@@ -106,9 +106,28 @@
 							</a>
 						</div>
 					</div>
+					
+				</div>
 				</div>
 			</div>
-		</div>
+				{#if blog_post?.postsRelated?.relatedBlogPosts}
+					<div class="outer-wrap margin-sides-large">
+						<h2 class="heading-rp">related blog posts</h2>
+						<div class='flex-wrap'>	
+						{#each blog_post?.postsRelated?.relatedBlogPosts  as relatedPost}
+							
+							<div class="related-post-wrap">
+								<div class='img-wrap'><a href={`/immigration-law-blog/${relatedPost?.slug}`}><img src={relatedPost?.featuredImage?.node.sourceUrl} alt=""></a></div>
+								<div class="bg-grey">
+									<h3><a href={`/immigration-law-blog/${relatedPost?.slug}`}>{relatedPost?.title}</a></h3>
+								</div>
+							</div>
+
+						{/each}
+						</div>
+					</div>
+				{/if}
+
 	{/each}
 	<Block_eBooksList id="eBooks"/>
 
@@ -206,6 +225,43 @@
 </script>
 
 <style>
+	.flex-wrap{
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+	@media screen and (max-width:768px){
+		.flex-wrap{
+			justify-content: flex-start;
+		}
+	}
+
+	.related-post-wrap{
+		width: 49%;
+	}@media screen and (max-width:768px){
+		.related-post-wrap{
+			width: 100%;
+		}
+	}	
+
+	.outer-wrap{
+		margin:var(--margin-Xl) var(--margin-Xl);
+		padding: var(--padding);
+	}
+	.heading-rp{
+		text-transform: capitalize;
+		text-align: center;
+		font-size: var(--extralarge-fontsize);
+	}
+.bg-grey{
+		padding: var(--padding-med);
+		background-color: var(--color-eight);
+	}
+	
+	.bg-grey>h3>a{
+		color: white;
+	}
 	.blog-topbar { position: relative; margin: -20px 0 20px; }
 	.breadcrumbs { font-size: var(--small-fontsize); }
 	.breadcrumbs a { color: var(--color-black); }
