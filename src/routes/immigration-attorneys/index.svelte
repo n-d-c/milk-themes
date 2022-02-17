@@ -5,11 +5,11 @@
 <Layout_Main id="immigration-attorneys">
 	<Hero
 		id="hero-immigration-attorneys-01"
-		image_url="/img/hero_attorneys_01.jpg"
+		image_url="/img/our-attorneys-2022.jpg"
 		image_loading="eager"
-		img_srcset="/img/hero_attorneys_01.jpg"
-		avif_srcset="/img/hero_attorneys_01.avif"
-		webp_srcset="/img/hero_attorneys_01.webp"
+		img_srcset="/img/our-attorneys-2022.jpg"
+		avif_srcset="/img/our-attorneys-2022.avif"
+		webp_srcset="/img/our-attorneys-2022.webp"
 		title="Harlan York and Associates"
 		parallax="false">&nbsp;</Hero
 	>
