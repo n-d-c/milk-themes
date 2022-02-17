@@ -4,41 +4,27 @@
 			{#each ebooks as ebook}
 				<div id={ebook?.slug} class="ebook block-style04">
 					<div class="ebook-img">
-						<a
-							href={ebook?.eBook?.pdf?.mediaItemUrl}
-							target="_blank"
-							rel="noreferrer"
-							title="Read eBook"
-						>
-							<picture>
-								<source
-									type="image/avif"
-									srcset={ebook?.eBook?.avifImage?.sourceUrl}
-								/>
-								<source
-									type="image/webp"
-									srcset={ebook?.eBook?.webpImage?.sourceUrl}
-								/>
-								<img
-									src={ebook?.eBook?.pngImage?.sourceUrl}
-									alt={ebook?.title}
-									loading="lazy"
-									width="200"
-									height="275"
-								/>
-							</picture>
-						</a>
+						<picture>
+							<source
+								type="image/avif"
+								srcset={ebook?.eBook?.avifImage?.sourceUrl}
+							/>
+							<source
+								type="image/webp"
+								srcset={ebook?.eBook?.webpImage?.sourceUrl}
+							/>
+							<img
+								src={ebook?.eBook?.pngImage?.sourceUrl}
+								alt={ebook?.title}
+								loading="lazy"
+								width="200"
+								height="275"
+							/>
+						</picture>
 					</div>
 					<div class="ebook-content">
 						<h2>
-							<a
-								href={ebook?.eBook?.pdf?.mediaItemUrl}
-								target="_blank"
-								rel="noreferrer"
-								title="Read eBook"
-							>
-								{ebook?.title}
-							</a>
+							{ebook?.title}
 						</h2>
 						<div class="ebook-description">
 							{@html ebook?.eBook?.shortDescription}

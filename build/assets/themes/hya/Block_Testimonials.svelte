@@ -1,10 +1,10 @@
 <div {id} class={blockclass}>
 	<div class="testimonials-inner">
-		<h2>What Our Clients Say</h2>
+		<h2>Find Out What Our Clients Think</h2>
 		<div class="blurb">
 			<h3>
-				Harlan York & Associates is one of the top immigration Law Firms
-				In America
+				The freedom we win our clients has earned us excellent reviews
+				and testimonials.
 			</h3>
 			<div class="block-content">
 				<p>
