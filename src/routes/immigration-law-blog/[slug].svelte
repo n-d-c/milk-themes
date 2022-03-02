@@ -142,6 +142,7 @@
 	<SocialMedia id="socialmedia" blockstyle="" />
 </Layout_Main>
 
+
 <script>
 	/* ## Svelte ## */
 	import { onMount, onDestroy } from 'svelte';
@@ -193,8 +194,9 @@
 		'November',
 		'December',
 	];
-	import { Q_GET_POST_BYSLUG } from '$graphql/wordpress.graphql.js';
 	/* ## Main ## */
+	import { Q_GET_POST_BYSLUG } from '$graphql/wordpress.graphql.js';
+
 	onMount(async () => {
 		slug = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 		let queryVariables = { slug: slug };
@@ -211,10 +213,14 @@
 			post_date = new Date(data?.postBy?.date);
 			blog_css = data?.postBy?.enqueuedStylesheets?.nodes || [];
 			blog_scripts = data?.postBy?.enqueuedScripts?.nodes || [];
-			blog_posts = [data?.postBy];
+			blog_posts = [data.postBy];
 			title = data?.title;
 			description = data?.excerpt;
 			image = data?.featuredImage?.node?.sourceUrl;
+			
+			if(data.postBy === null){
+				window.location = "/immigration-law-blog"
+			}
 		});
 	});
 	/* ## Exit ## */
