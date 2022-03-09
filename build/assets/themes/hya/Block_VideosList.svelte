@@ -28,6 +28,14 @@
 								/>
 							</picture>
 						</a>
+						<h2 class="video-title">
+							<a
+								href={video?.Video?.video}
+								target="_blank"
+								rel="noreferrer"
+								title="Watch Video">{video?.title}</a
+							>
+						</h2>
 					</div>
 				</div>
 			{/each}
@@ -92,6 +100,10 @@
 		display: grid;
 		column-gap: 2em;
 		grid-template-columns: 100%;
+	}
+	h2.video-title {
+		font-size: 1.5rem;
+		text-align: left;
 	}
 	@media screen and (min-width: 850px) {
 		.videos-list {
