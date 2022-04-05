@@ -30,6 +30,8 @@
 		</div>
 	</div>
 	<Block_eBooksList id="ebooks" />
+
+	<Block_3DBook id="3dbook-book" blockstyle="" />
 	<div class="content">
 		<div class="content-inner">
 			<h2>Videos</h2>
@@ -87,6 +89,7 @@
 	import Block_Featured from '$theme/Block_Featured.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_Ratings from '$theme/Block_Ratings.svelte';
+	import Block_3DBook from '$theme/Block_3DBook.svelte';
 	/* ## Variables ## */
 	const title = `Immigration Resources - ${$milk?.site?.title}`;
 	const description =

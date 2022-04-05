@@ -85,6 +85,13 @@
 			</div>
 
 			<Block_ContactForm />
+
+			<Block_CallToAction
+				id="call-to-action"
+				blockstyle="block-style01"
+				extraclasses="regular-calltoaction"
+			/>
+			<p />
 			<GoogleMaps
 				url={$milk?.site?.google_maps_embed}
 				image={$milk?.site?.google_maps_image}
@@ -199,6 +206,7 @@
 	import Block_LanguagesWeSpeak from '$theme/Block_LanguagesWeSpeak.svelte';
 	import SocialMedia from '$milk/lib/SocialMedia.svelte';
 	import Block_ContactForm from '$theme/Block_ContactForm.svelte';
+	import Block_CallToAction from '$theme/Block_CallToActionContact.svelte';
 
 	import GoogleMaps from '$milk/lib/GoogleMaps.svelte';
 	/* ## Variables ## */

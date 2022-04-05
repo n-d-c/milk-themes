@@ -54,6 +54,5 @@
 		color: var(--color-white, #fff);
 		margin: 0 calc(var(--padding-large) / 2) -20px;
 		font-style: italic;
-		letter-spacing: 0.5px;
 	}
 </style>

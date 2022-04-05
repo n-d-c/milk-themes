@@ -105,13 +105,11 @@
 		<div class="service-info">
 			<h2>We are here to answer all your questions about {blog_post?.title}</h2>
 			<p>
-				You don't have to try to find the answers to your questions ononline. 
-				Please don't try to do your immigration paperwork on your own. Call a team of experienced professionals in immigration law.
+				You don't have to try to find the answers to your questions online. Please don't try to do your immigration paperwork on your own. Call a team of experienced professionals in immigration law.
 			</p>
 			<p>
 				<strong>
-					US immigration is processing visas and green createEventDispatcher. We are now seeing clients in carefully aranged times at our offices
-
+					US Immigration is processing visas and green cards. We are now seeing clients in carefully arranged times at our offices.
 				</strong>
 			</p>
 		</div>

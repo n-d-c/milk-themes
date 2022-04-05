@@ -22,8 +22,6 @@
 	</Block_CallOutText>
 	<div class="content">
 		<div class="content-inner">
-			<h1>Español</h1>
-			<br /><br />
 			<p class="center">
 				Periodista Natalia Cruz, ganadora de varios premios Emmy, en
 				nuestra oficina para una entrevista en el programa nacional de
