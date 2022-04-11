@@ -1,6 +1,6 @@
 <div {id} class="cta-wrapper {blockclass}">
 	<div class="calltoaction-inner">
-		<h2 class="title">Permítanos trabajar en su caso ahora</h2>
+		<h2 class="title">Permítanos Tomar Su Caso de Inmediato</h2>
 		<div class="call-button">
 			<button class="call-button" on:click={doCall} title="Llámanos">
 				<img
@@ -15,7 +15,7 @@
 			</button>
 		</div>
 		<div class="caption">
-			Devolvemos la mayoría de las llamadas dentro de las 24 horas
+			LE DEVOLVEREMOS LA LLAMADA EN MENOS DE 24 HORAS
 		</div>
 		<hr />
 		<div class="actions">

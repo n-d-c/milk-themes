@@ -1,7 +1,7 @@
 <div {id} class={blockclass}>
 	<div class="socialmedia-inner">
-		<h2>Social Media</h2>
-		<h3>Follow Us On</h3>
+		<h2>{titleH2}</h2>
+		<h3>{titleH3}</h3>
 		<div class="social-icons">
 			{#if $milk?.site?.facebook != ''}
 				<SocialIcon
@@ -160,15 +160,17 @@
 	/* ## Variables ## */
 	let id;
 	let blockstyle = '';
+	let titleH2 = 'Social Media';
+	let titleH3 = 'Follow Us On';
 	let blockclass = 'socialmedia';
 	$: blockclass = `socialmedia ${blockstyle}`;
-	export { id, blockstyle };
+	export { id, blockstyle, titleH2, titleH3 };
 </script>
 
 <style>
 	.socialmedia {
 		display: block;
-		padding: var(--padding) var(--padding) 100px;;
+		padding: var(--padding) var(--padding) 100px;
 		color: var(--color-black, #000);
 		text-align: center;
 		background: var(--color-white, #fff);

@@ -1,6 +1,6 @@
 <div {id} class={blockclass}>
 	<div class="featured-inner">
-		<h2>Harlan York Has Been Featured On</h2>
+		<h2>{description}</h2>
 		<div class="featured-on-listing">
 			{#each featured as feature}
 				<a
@@ -44,6 +44,7 @@
 	let blockstyle = '';
 	let blockclass = 'featured';
 	$: blockclass = `featured ${blockstyle}`;
+	let description = 'Harlan York Has Been Featured On';
 	/* ## Data Loading ## */
 	import { preload_featured } from '$graphql/sitespecific.preload.js';
 	let preload = preload_featured;
@@ -74,7 +75,7 @@
 		unsubscribe_featured(); // important for garbage collection otherwise memory leak
 	});
 	/* ## Exports ## */
-	export { id, blockstyle };
+	export { id, blockstyle, description };
 </script>
 
 <style>
