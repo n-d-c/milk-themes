@@ -2,19 +2,35 @@
 <Head_HTML {title} {description} keywords={$milk?.site?.keywords} />
 <Head_Facebook {title} {description} image="/img/hero_homepage_01.jpg" />
 <Head_Twitter {title} {description} image="/img/hero_homepage_01.jpg" />
+<svelte:window bind:outerWidth />
 <Layout_Main id="page-homepage">
-	<Hero
-		id="hero-home-01"
-		image_url="/img/hero_homepage_01.jpg"
-		img_srcset="/img/hero_homepage_01.jpg"
-		avif_srcset="/img/hero_homepage_01.avif"
-		image_loading="eager"
-		webp_srcset="/img/hero_homepage_01.webp"
-		title="Harlan York and Associates"
-		parallax="false"
-	>
-		<h1>{description}</h1>
-	</Hero>
+	{#if outerWidth < 500}
+		<Hero
+			id="hero-home-01"
+			image_url="/img/main-hero-01-small-portrait.jpg"
+			img_srcset="/img/main-hero-01-small-portrait.jpg"
+			avif_srcset="/img/main-hero-01-small-portrait.avif"
+			image_loading="eager"
+			webp_srcset="/img/main-hero-01-small-portrait.webp"
+			title="Harlan York and Associates"
+			parallax="false"
+		>
+			<h1>{description}</h1>
+		</Hero>
+	{:else}
+		<Hero
+			id="hero-home-01"
+			image_url="/img/hero_homepage_01.jpg"
+			img_srcset="/img/hero_homepage_01.jpg"
+			avif_srcset="/img/hero_homepage_01.avif"
+			image_loading="eager"
+			webp_srcset="/img/hero_homepage_01.webp"
+			title="Harlan York and Associates"
+			parallax="false"
+		>
+			<h1>{description}</h1>
+		</Hero>
+	{/if}
 	<Block_CallToAction
 		id="call-to-action-02"
 		blockstyle="block-style01"
@@ -123,6 +139,8 @@
 	let title = $milk?.site?.title;
 	let description =
 		'Protecting The Rights of Immigrants Across America for a Quarter Century';
+
+	$: outerWidth = 0;
 </script>
 
 <style>
