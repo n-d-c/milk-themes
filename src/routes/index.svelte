@@ -15,6 +15,18 @@
 			title="Harlan York and Associates"
 			parallax="false"
 		>
+			<picture title={$milk.config.organization}>
+				<img
+					class="logo u-logo image"
+					height={$milk.site.logo_height}
+					width={$milk.site.logo_width}
+					src={$milk.site.logo}
+					alt={$milk.site.organization}
+					loading="lazy"
+					itemprop="logo"
+					property="logo"
+				/>
+			</picture>
 			<h1>{description}</h1>
 		</Hero>
 	{:else}
@@ -28,6 +40,18 @@
 			title="Harlan York and Associates"
 			parallax="false"
 		>
+			<picture title={$milk.config.organization}>
+				<img
+					class="logo u-logo image"
+					height={$milk.site.logo_height}
+					width={$milk.site.logo_width}
+					src={$milk.site.logo}
+					alt={$milk.site.organization}
+					loading="lazy"
+					itemprop="logo"
+					property="logo"
+				/>
+			</picture>
 			<h1>{description}</h1>
 		</Hero>
 	{/if}
@@ -144,4 +168,9 @@
 </script>
 
 <style>
+	@media screen and (min-width: 500px) {
+		picture {
+			display: none;
+		}
+	}
 </style>
