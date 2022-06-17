@@ -135,6 +135,10 @@
 		background-color: var(--color-one);
 		color: var(--color-white);
 		border: none;
+		transition: all 0.3s ease-in-out;
+	}
+	button:hover {
+		background-color: color(--color-seven);
 	}
 	.error-msg {
 		color: red;
