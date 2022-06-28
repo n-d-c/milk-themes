@@ -2,20 +2,20 @@
 	{#each blog_css as css}
 		<link
 			async
-			href={ (css.src.startsWith('http')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
+			href={ (css.src.startsWith('https')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
 			rel="preload"
 			as="style"
 		/>
 		<link
 			async
-			href={ (css.src.startsWith('http')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
+			href={ (css.src.startsWith('https')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
 			rel="stylesheet"
 		/>
 	{/each}
 	{#each blog_scripts as script}
 		<script
 			defer
-			src={ (script.src.startsWith('http')) ? `${script.src}` : `${$milk.site.admin_url}${script.src}` }
+			src={ (script.src.startsWith('https')) ? `${script.src}` : `${$milk.site.admin_url}${script.src}` }
 		/>
 	{/each}
 	<link rel="stylesheet" href={themestyle} />
