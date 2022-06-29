@@ -1,23 +1,24 @@
 <svelte:head>
-	{#each blog_css as css}
-		<link
-			async
-			href={ (css.src.startsWith('https')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
-			rel="preload"
-			as="style"
-		/>
-		<link
-			async
-			href={ (css.src.startsWith('https')) ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
-			rel="stylesheet"
-		/>
-	{/each}
-	{#each blog_scripts as script}
-		<script
-			defer
-			src={ (script.src.startsWith('https')) ? `${script.src}` : `${$milk.site.admin_url}${script.src}` }
-		/>
-	{/each}
+	<!-- {#if blog_css.length != 0}
+		{#each blog_css as css}
+			<link
+				async
+				href={ css.src.startsWith('https') ? `${css.src}` : `${$milk.site.admin_url}${css.src}` }
+				rel="preload"
+				as="style"
+				class="testingLocation"
+			/>
+
+		{/each}
+	{/if}
+	{#if blog_scripts.length != 0}
+		{#each blog_scripts as script}
+			<script
+				defer
+				src={ (script.src.startsWith('https')) ? `${script.src}` : `${$milk.site.admin_url}${script.src}` }
+			/>
+		{/each}
+	{/if} -->
 	<link rel="stylesheet" href={themestyle} />
 </svelte:head>
 
@@ -27,7 +28,10 @@
 <Head_Twitter {title} {description} {image} />
 <Layout_Main id="blog-post">
 	{#each blog_posts as blog_post}
-		<Head_Article author={blog_post?.author?.node?.name} pubdate={blog_post?.date} />
+		<Head_Article
+			author={blog_post?.author?.node?.name}
+			pubdate={blog_post?.date}
+		/>
 		<Hero
 			id="blog-post-hero"
 			image_url={blog_post?.featuredImage?.node?.sourceUrl}
@@ -60,7 +64,9 @@
 						›
 						<a href="/immigration-law-blog">Blog</a>
 						›
-						<a href={`/immigration-law-blog/${blog_post?.slug}`}>{blog_post?.title}</a>
+						<a href={`/immigration-law-blog/${blog_post?.slug}`}
+							>{blog_post?.title}</a
+						>
 					</div>
 				</div>
 				<div class="blog-content">
@@ -71,16 +77,17 @@
 						<picture>
 							<source
 								type="image/avif"
-								srcset={blog_post?.author?.node?.Users?.avifImage
-									?.sourceUrl}
+								srcset={blog_post?.author?.node?.Users
+									?.avifImage?.sourceUrl}
 							/>
 							<source
 								type="image/webp"
-								srcset={blog_post?.author?.node?.Users?.webpImage
-									?.sourceUrl}
+								srcset={blog_post?.author?.node?.Users
+									?.webpImage?.sourceUrl}
 							/>
 							<img
-								src={blog_post?.author?.node?.Users?.jpegImage?.sourceUrl}
+								src={blog_post?.author?.node?.Users?.jpegImage
+									?.sourceUrl}
 								alt={blog_post?.author?.node?.name}
 								loading="lazy"
 								width="260"
@@ -94,7 +101,8 @@
 						<div class="author-links">
 							{#if blog_post?.author?.node?.Users?.attorneyLink}
 								<a
-									href={blog_post?.author?.node?.Users?.attorneyLink}
+									href={blog_post?.author?.node?.Users
+										?.attorneyLink}
 									title={blog_post?.author?.node?.name}
 									class="button"
 								>
@@ -177,14 +185,22 @@
 	import { Q_GET_POST_BYSLUG } from '$graphql/wordpress.graphql.js';
 	/* ## Main ## */
 	onMount(async () => {
-		window.history.replaceState({ additionalInformation: 'Dynamic Blog Routing' }, 'Immigation Blog', window.location.href.replace('blog/?slug=', '').replace('blog?slug=', ''));
+		window.history.replaceState(
+			{ additionalInformation: 'Dynamic Blog Routing' },
+			'Immigation Blog',
+			window.location.href
+				.replace('blog/?slug=', '')
+				.replace('blog?slug=', '')
+		);
 		const urlParams = new URLSearchParams(window.location.search);
 		const checkSlug = urlParams.get('slug');
 		if (checkSlug && checkSlug.length > 1) {
 			slug = checkSlug;
 		} else {
-			slug = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
-		};
+			slug = window.location.href.substring(
+				window.location.href.lastIndexOf('/') + 1
+			);
+		}
 		// console.log({slug});
 		let queryVariables = { slug: slug };
 		let getPost = $milk?.data?.gql(
@@ -203,9 +219,18 @@
 			title = data?.title;
 			description = data?.excerpt;
 			image = data?.featuredImage?.node?.sourceUrl;
-			if (window.location.href.includes('blog/?slug=') || window.location.href.includes('blog?slug=')) {
-				window.history.replaceState({ additionalInformation: 'Dynamic Blog Routing' }, title, window.location.href.replace('blog/?slug=', '').replace('blog?slug=', ''));
-			};
+			if (
+				window.location.href.includes('blog/?slug=') ||
+				window.location.href.includes('blog?slug=')
+			) {
+				window.history.replaceState(
+					{ additionalInformation: 'Dynamic Blog Routing' },
+					title,
+					window.location.href
+						.replace('blog/?slug=', '')
+						.replace('blog?slug=', '')
+				);
+			}
 		});
 	});
 	/* ## Exit ## */
@@ -216,13 +241,37 @@
 </script>
 
 <style>
-	.blog-topbar { position: relative; margin: -20px 0 20px; }
-	.breadcrumbs { font-size: var(--small-fontsize); }
-	.breadcrumbs a { color: var(--color-black); }
-	.breadcrumbs a:hover { color: var(--color-four); }
-	.author { background: var(--color-seven); color: var(--color-white); text-align: center; margin: 75px auto 25px; }
-	.author-image { text-align: center; position: relative; }
-	.author-image img { border-radius: 50%; overflow: hidden; margin: 25px; width: 80%; max-width: 250px; height: auto; }
+	.blog-topbar {
+		position: relative;
+		margin: -20px 0 20px;
+	}
+	.breadcrumbs {
+		font-size: var(--small-fontsize);
+	}
+	.breadcrumbs a {
+		color: var(--color-black);
+	}
+	.breadcrumbs a:hover {
+		color: var(--color-four);
+	}
+	.author {
+		background: var(--color-seven);
+		color: var(--color-white);
+		text-align: center;
+		margin: 75px auto 25px;
+	}
+	.author-image {
+		text-align: center;
+		position: relative;
+	}
+	.author-image img {
+		border-radius: 50%;
+		overflow: hidden;
+		margin: 25px;
+		width: 80%;
+		max-width: 250px;
+		height: auto;
+	}
 	@media screen and (min-width: 650px) {
 		.author {
 			display: grid;
@@ -230,11 +279,27 @@
 			text-align: left;
 			column-gap: 3em;
 		}
-		.author-image { text-align: center; }
+		.author-image {
+			text-align: center;
+		}
 	}
-	.author-content { padding: 20px; }
-	.author-content h2 { color: var(--color-white); }
-	.content .author a { color: var(--color-white) !important; }
-	.content .author a.button { background: var(--color-four); text-transform: uppercase; font-weight: bold; margin-right: 25px; border: 0 none; }
-	.content .author a.button:hover { background: var(--color-black); }
+	.author-content {
+		padding: 20px;
+	}
+	.author-content h2 {
+		color: var(--color-white);
+	}
+	.content .author a {
+		color: var(--color-white) !important;
+	}
+	.content .author a.button {
+		background: var(--color-four);
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-right: 25px;
+		border: 0 none;
+	}
+	.content .author a.button:hover {
+		background: var(--color-black);
+	}
 </style>
