@@ -59,7 +59,7 @@
 	$: img_width = parallax != 'true' ? '100%' : '100%';
 	$: img_height = parallax != 'true' ? 'auto' : '100vh';
 	$: img_position = parallax != 'true' ? 'absolute' : 'fixed';
-	$: img_style = `width: ${img_width} !important; height: auto !important; min-height: 100%; position: ${img_position};`;
+	$: img_style = `margin:0; width: ${img_width} !important; height: auto !important; min-height: 100%; position: ${img_position};`;
 	// $: img_srcset =
 	// 	img_srcset && img_srcset.length > 0
 	// 		? addDomainIfMissing(img_srcset)

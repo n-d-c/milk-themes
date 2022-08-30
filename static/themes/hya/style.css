@@ -166,7 +166,7 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 /* #### Default Content #### */
 a { transition: color var(--transition-speed); }
 p {
-	word-break: break-word;
+	word-break: break-word !important;
 }
 
 /* ### Blocks ### */
