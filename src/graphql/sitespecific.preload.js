@@ -280,7 +280,7 @@ export const preload_ratings = [
 	},
 	{
 		"Ratings": {
-			"link": "http://www.bestlawyers.com/logos/showprofile.aspx?lawyer_id=37694",
+			"link": "https://www.bestlawyers.com/lawyers/harlan-g-york/37694",
 			"rating": "Lawyer of the Year"
 		},
 		"slug": "best-lawyers",

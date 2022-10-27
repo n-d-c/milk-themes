@@ -166,7 +166,7 @@ body, h4, h6, p, div, .content { font-family: var(--font-main); }
 /* #### Default Content #### */
 a { transition: color var(--transition-speed); }
 p {
-	word-break: break-word;
+	word-break: break-word !important;
 }
 
 /* ### Blocks ### */
@@ -276,6 +276,11 @@ body { max-width: 100vw; }
 	min-width: 100px;
 }
 .hero h1 { font-size: 1.65em; max-width: 800px; }
+@media screen and (max-width:500px) {
+	.hero h1{
+		font-size: 1.2em;
+	}
+}
 .hero h2 { font-size: 1.65em; }
 .hero p { font-size: 1.15em; font-weight: normal; color: var(--color-grey-light); line-height: 1.85em; margin: 2em auto; }
 .hero .scroll-to button { color: var(--color-white); }

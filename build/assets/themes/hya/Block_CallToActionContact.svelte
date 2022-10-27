@@ -1,39 +1,22 @@
 <div {id} class="cta-wrapper {blockclass}">
 	<div class="calltoaction-inner">
-		<h2 class="title">Permítanos Tomar Su Caso de Inmediato</h2>
+		<h2 class="title">Let Us Get To Work On Your Case Now</h2>
 		<div class="call-button">
-			<button class="call-button" on:click={doCall} title="Llámanos">
+			<button class="call-button" on:click={doCall} title="Make Call">
 				<img
 					src="/img/icon-phone-yellow.svg"
 					class="icon icon-phone"
 					loading="lazy"
-					alt="Llámanos"
+					alt="Call Us"
 					width="40"
 					height="40"
 				/>
 				<span>(973) 642-1111</span>
 			</button>
 		</div>
-		<div class="caption">
-			LE DEVOLVEREMOS LA LLAMADA EN MENOS DE 24 HORAS
-		</div>
+		<div class="caption">We return most calls within 24 hours</div>
 		<hr />
 		<div class="actions">
-			<div class="action">
-				<a href="/contact">
-					<button title="Send Email">
-						<img
-							src="/img/icon-email.svg"
-							class="icon icon-email"
-							loading="lazy"
-							alt="Email Us"
-							width="30"
-							height="23"
-						/>
-						<span>E-MAIL</span>
-					</button>
-				</a>
-			</div>
 			<div class="action">
 				<button on:click={doCalendar} title="Consultation Calendar">
 					<img
@@ -44,11 +27,11 @@
 						width="30"
 						height="30"
 					/>
-					<span>CONSULTA</span>
+					<span>CONSULTATION</span>
 				</button>
 			</div>
 			<div class="action">
-				<button on:click={doPayment} title="factura de pago">
+				<button on:click={doPayment} title="Make Payment">
 					<img
 						src="/img/icon-invoice.svg"
 						class="icon icon-invoice"
@@ -57,7 +40,7 @@
 						width="30"
 						height="30"
 					/>
-					<span>FACTURA DE PAGO</span>
+					<span>PAY INVOICE</span>
 				</button>
 			</div>
 		</div>
@@ -79,11 +62,7 @@
 			window?.callingCard?.show();
 		}
 	};
-	// const doEmail = () => {
-	// 	if (window?.location) {
-	// 		window.location = `/contact`;
-	// 	}
-	// };
+
 	const doCalendar = () => {
 		if (window?.calendarCard?.show) {
 			window?.calendarCard?.show();
@@ -161,8 +140,8 @@
 		border-top: 3px solid var(--color-white, #fff);
 	}
 	.actions {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		display: flex;
+		justify-content: space-evenly;
 	}
 	.actions > div {
 		text-align: center;

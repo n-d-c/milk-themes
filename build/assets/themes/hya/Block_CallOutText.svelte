@@ -52,8 +52,7 @@
 	.callout-content {
 		text-align: left;
 		color: var(--color-white, #fff);
-		margin: 0 calc(var(--padding-large) / 2) -20px;
+		margin: 0 calc(var(--padding-large) / 2);
 		font-style: italic;
-		letter-spacing: 0.5px;
 	}
 </style>

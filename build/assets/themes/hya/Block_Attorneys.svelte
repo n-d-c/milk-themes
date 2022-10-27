@@ -4,7 +4,7 @@
 			{#each attorneys as attorney}
 				<div class="attorney outer-wrap" id={attorney?.slug}>
 					<div class="inner-attorney-wrap">
-						<div>
+						<div class="flex reverse-on-evens">
 							<picture>
 								<source
 									type="image/avif"
@@ -26,7 +26,7 @@
 								/>
 							</picture>
 
-							<div>
+							<div class="attorney-content">
 								<h2 class="name">
 									{attorney?.title}
 								</h2>
@@ -86,7 +86,6 @@
 		unsubscribe_team = await getTeam?.subscribe(async (fetched_data) => {
 			let data = await fetched_data;
 			attorneys = data.attorneys.nodes;
-			// console.log(attorneys);
 			setTimeout(scrollToHash, 1000);
 		});
 	});
@@ -100,6 +99,12 @@
 </script>
 
 <style>
+	.flex {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+
 	.attorneys {
 		display: block;
 		padding: 100px 0;
@@ -118,6 +123,16 @@
 	.attorneys-list {
 		margin-top: -100px;
 	}
+
+	.attorney-content {
+		text-align: left;
+		flex: 3;
+	}
+
+	.flex picture {
+		flex: 1;
+	}
+
 	@media screen and (min-width: 650px) {
 		.attorneys-list {
 			text-align: left;
@@ -136,12 +151,18 @@
 	}
 	@media screen and (min-width: 650px) {
 		.attorney:nth-child(even) img {
-			float: right;
 			margin: 0 0 var(--padding-large) var(--padding-large);
 		}
 		.attorney:nth-child(odd) img {
-			float: left;
 			margin: 0 var(--padding-large) var(--padding-large) 0;
+		}
+
+		.flex {
+			flex-direction: row;
+		}
+
+		.attorney:nth-child(even) .reverse-on-evens {
+			flex-direction: row-reverse;
 		}
 	}
 	.attorney::after {

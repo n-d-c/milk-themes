@@ -15,8 +15,7 @@
 					Using our extensive experience on thousands of immigration
 					cases and daily reviews of new developments in the changing
 					field of immigration law, we offer you the best legal
-					counsel available. Best Lawyers, the most respected
-					publication in the legal profession.
+					counsel available.
 				</p>
 				<p>
 					Harlan York & Associates are the best immigration lawyers

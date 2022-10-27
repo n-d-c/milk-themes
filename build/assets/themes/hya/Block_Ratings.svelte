@@ -1,14 +1,10 @@
 <div class="our-ratings">
 	<div class="ratings-inner">
-		<h2>View Our Ratings</h2>
+		<h2>{title}</h2>
 		<div class="blurb">
-			<h3>Exceptional Service Has Earned Us Exceptional Recognition.</h3>
+			<h3>{subTitle}</h3>
 			<div class="block-content">
-				<p>
-					Our immigration law firm has earned the highest ratings in
-					Best Lawyers in America, Super Lawyers, US News and World
-					Report, Avvo, and Martindale-Hubbell.
-				</p>
+				<p>{text_content}</p>
 			</div>
 		</div>
 		<div class="listing-grid ratings-listing">
@@ -39,6 +35,10 @@
 	let blockstyle = '';
 	let blockclass = 'our-ratings';
 	$: blockclass = `our-ratings ${blockstyle}`;
+	let title = 'View Our Ratings';
+	let subTitle = 'Exceptional Service Has Earned Us Exceptional Recognition.';
+	let text_content =
+		'Our immigration law firm has earned the highest ratings in Best Lawyers in America, Super Lawyers, US News and World Report, Avvo, and Martindale-Hubbell.';
 	/* ## Data Loading ## */
 	import { preload_ratings } from '$graphql/sitespecific.preload.js';
 	let ratings = preload_ratings;
@@ -65,7 +65,7 @@
 		unsubscribe_ratings(); // important for garbage collection otherwise memory leak
 	});
 	/* ## Exports ## */
-	export { id, blockstyle };
+	export { id, blockstyle, title, subTitle, text_content };
 </script>
 
 <style>
