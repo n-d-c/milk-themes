@@ -21,7 +21,15 @@
 	>
 		<p>{description}</p>
 	</Block_CallOutText>
-
+	<h1>Birol & Marina Client Testimonial</h1>
+	<FeaturedVideo
+		id="testimonial-video-01"
+		blockstyle=""
+		video_source="https://www.youtube.com/embed/l071-FSWk4E"
+		video_jpg="/img/espanol-video-02.jpg"
+		video_webp="/img/espanol-video-02.webp"
+		video_avif="/img/espanol-video-02.avif"
+	/>
 	<Block_TestimonialsList id="testimonials" blockstyle="" />
 	<FeaturedVideo
 		id="testimonial-video-02"
@@ -77,5 +85,7 @@
 	}
 	h1 {
 		padding-bottom: 50px;
+		padding-top: 50px;
+		text-align: center;
 	}
 </style>
