@@ -35,9 +35,9 @@
 		logo: '/img/logo.svg',
 		logo_width: '200',
 		logo_height: '28',
-		title: 'Harlan York and Associates',
+		title: 'Harlan York & Associates',
 		tagline: 'Immigration Attorneys',
-		organization: 'Harlan York and Associates',
+		organization: 'Harlan York & Associates',
 		first_name: 'Harlan',
 		last_name: 'York',
 		middle_name: '',
@@ -59,7 +59,7 @@
 		hours_of_operation_dt: 'Mo,Tu,We,Th,Fr 09:00-17:00',
 		price_range: '$$',
 		category: 'Immigration Law',
-		description: 'Harlan York and Associates are the best immigration lawyers for Green Cards, Deportation, Family Immigration, and Naturalization in New York, New Jersey, and surrounding areas.',
+		description: 'Harlan York & Associates are the best immigration lawyers for Green Cards, Deportation, Family Immigration, and Naturalization in New York, New Jersey, and surrounding areas.',
 		keywords: 'Immigration Law, USA Immigration, Lawer, Attourney, Greencard, Visa',
 		established: '',
 		latitude: '40.7385726',
@@ -99,7 +99,7 @@
 	pwa: {
 		app_color: '#800E16',
 		app_background: '#800E16',
-		app_name: 'Harlan York and Associates – Immigration Attorneys'
+		app_name: 'Harlan York & Associates – Immigration Attorneys'
 	},
 	/* #### DATA SOURCES #### */
 	sources: {

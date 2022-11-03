@@ -41,7 +41,7 @@
 				Immigration, and Naturalization law cases.
 			</p>
 
-			<h1 class="txt-c color-1">Harlan York And Associates</h1>
+			<h1 class="txt-c color-1">Harlan York & Associates</h1>
 			<div class="business-info">
 				<div class="row-2-col-25-75">
 					<div>
@@ -99,7 +99,7 @@
 				image_avif={$milk?.site?.google_maps_image_avif}
 				title={`Directions to ${$milk?.site?.organization} - ${$milk?.site?.tagline}`}
 			/>
-			<h1>Directions To Harlan York And Associates</h1>
+			<h1>Directions To Harlan York & Associates</h1>
 			<p>
 				We are located in the Military Park Building at 60 Park Place in
 				downtown Newark – just oﬀ of Raymond Boulevard and Broad Street.
@@ -114,6 +114,7 @@
 				Raymond Boulevard. Continue on Raymond. Go past Penn Station. At
 				corner of Raymond & Broad Street, turn right onto Park Place.
 			</p>
+
 			<h2>VIA GARDEN STATE PARKWAY</h2>
 			<p>
 				Follow the Garden State Parkway North to exit 145 (Route 280)
@@ -123,6 +124,7 @@
 				Boulevard. Continue on Raymond to corner of Raymond & Broad
 				Street, then turn right onto Park Place.
 			</p>
+
 			<h2>VIA ROUTE 280</h2>
 			<p>
 				Follow Route 280 East to exit 15 (Route 21 South – Downtown). At
@@ -161,6 +163,7 @@
 				20 blocks. One block past Prudential Building bear right onto
 				Park Place.
 			</p>
+
 			<h2>VIA PUBLIC TRANSPORTATION</h2>
 			<p>
 				You can use any New Jersey Transit Train to get to Newark Penn
@@ -170,7 +173,7 @@
 			</p>
 
 			<p class="font-small">
-				Harlan York and Associates practices law in the areas of
+				Harlan York & Associates practices law in the areas of
 				Immigration, Deportation Defense, Family Immigration, Corporate
 				Immigration, Naturalization throughout Essex County – Hudson
 				County – Morris County – Passaic County – Somerset County –
@@ -223,6 +226,7 @@
 		margin: 3rem 0;
 	}
 	h2 {
+		padding-top: 5rem;
 		color: var(--color-one);
 		font-family: var(--font-main);
 	}

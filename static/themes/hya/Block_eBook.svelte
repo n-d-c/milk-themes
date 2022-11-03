@@ -126,7 +126,7 @@
 		padding: 25px;
 		margin-bottom: 2em;
 	}
-	@media screen and (min-width: 450px) {
+	@media screen and (min-width: 500px) {
 		.ebook {
 			text-align: left;
 			display: grid;
@@ -144,7 +144,7 @@
 		margin-bottom: 20px;
 	}
 	.ebook-description {
-		font-size: var(--small-fontsize);
+		font-size: initial;
 		font-style: italic;
 	}
 	h2 a:hover {

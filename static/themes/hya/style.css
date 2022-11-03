@@ -583,9 +583,9 @@ div.page-content{
 		}
 	}
 }
-@supports (-webkit-touch-callout: none) {
+/* @supports (-webkit-touch-callout: none) {
 	.hero img { right: -45vw; }
-}
+} */
 .testimonials .prevButton,
 .testimonials .nextButton { border: 0px none !important;  background: var(--color-four) !important; color: var(--color-six); width: 40px !important; text-align: center; padding: 0; }
 .testimonials .prevButton:focus,
