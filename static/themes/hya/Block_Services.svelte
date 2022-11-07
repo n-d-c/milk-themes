@@ -138,7 +138,7 @@
 		position: relative;
 		width: 275px;
 		max-width: 80%;
-		height: auto;
+		height: 350px;
 		margin: clamp(10px, 4vw, 30px);
 		transition: all 0.3s ease;
 		transform-origin: center;
@@ -205,6 +205,7 @@
 		}
 		.service {
 			width: 220px;
+			height: auto;
 		}
 	}
 	@media screen and (min-width: 650px) {
