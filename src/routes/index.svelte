@@ -1,5 +1,48 @@
 <Head_Language lang="en" />
-<Head_HTML {title} {description} keywords={$milk?.site?.keywords} />
+<Head_HTML {title} {description} keywords={$milk?.site?.keywords}>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=UA-5989226-33"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-5989226-33');
+	</script>
+	<!-- Google tag (gtag.js) -->
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=G-MGE2G2TF1N"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-MGE2G2TF1N');
+	</script>
+
+	<!-- Clarity tracking code for http://immigrationlawnj.com/ -->
+	<script>
+		(function (c, l, a, r, i, t, y) {
+			c[a] =
+				c[a] ||
+				function () {
+					(c[a].q = c[a].q || []).push(arguments);
+				};
+			t = l.createElement(r);
+			t.async = 1;
+			t.src = 'https://www.clarity.ms/tag/' + i;
+			y = l.getElementsByTagName(r)[0];
+			y.parentNode.insertBefore(t, y);
+		})(window, document, 'clarity', 'script', '55a56ntkj7');
+	</script>
+</Head_HTML>
 <Head_Facebook {title} {description} image="/img/hero_homepage_01.jpg" />
 <Head_Twitter {title} {description} image="/img/hero_homepage_01.jpg" />
 <svelte:window bind:outerWidth />
