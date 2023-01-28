@@ -26,8 +26,8 @@
 	}
 	/* #### SITE CONFIG #### */
 	site: {
-		domain: 'staging.immigrationlawnj.com',
-		url: 'https://staging.immigrationlawnj.com',
+		domain: 'immigrationlawnj.com',
+		url: 'https://immigrationlawnj.com',
 		admin_url: 'https://admin.immigrationlawnj.com',
 		photo: '/img/profile_1200x1200.jpg',
 		photo_avif: '/img/profile_1200x1200.avif',
