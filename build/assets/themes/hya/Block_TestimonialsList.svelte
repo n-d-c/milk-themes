@@ -27,14 +27,14 @@
 					/>
 				</picture> -->
 				<div class="testimonial-content">
+					<div class="testimonial-quote">
+						"{testimonial?.Testimonial?.testimonial}"
+					</div>
 					<div class="testimonial-title">
 						<strong>{testimonial?.title}</strong>,
 						{#if testimonial?.Testimonial?.relationship}
 							{testimonial?.Testimonial?.relationship}
 						{/if}
-					</div>
-					<div class="testimonial-quote">
-						"{testimonial?.Testimonial?.testimonial}"
 					</div>
 					{#if testimonial?.Testimonial?.rating}
 						<div
@@ -97,6 +97,9 @@
 </script>
 
 <style>
+	.testimonial-title {
+		text-align: left;
+	}
 	.testimonials {
 		display: block;
 		padding: 100px var(--padding-inner, 20px);

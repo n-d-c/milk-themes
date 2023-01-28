@@ -104,11 +104,11 @@
 		margin: 0 auto;
 		max-width: var(--content-constrain);
 	}
-	.ebooks-list {
+	/* .ebooks-list {
 		display: grid;
 		column-gap: 2em;
 		grid-template-columns: 100%;
-	}
+	} */
 	@media screen and (min-width: 850px) {
 		.ebooks-list {
 			grid-template-columns: calc(50% - 1em) calc(50% - 1em);
@@ -119,7 +119,7 @@
 		padding: 25px;
 		margin-bottom: 2em;
 	}
-	@media screen and (min-width: 450px) {
+	@media screen and (min-width: 500px) {
 		.ebook {
 			text-align: left;
 			display: grid;
@@ -137,7 +137,7 @@
 		margin-bottom: 20px;
 	}
 	.ebook-description {
-		font-size: var(--small-fontsize);
+		font-size: initial;
 		font-style: italic;
 	}
 	h2 a:hover {

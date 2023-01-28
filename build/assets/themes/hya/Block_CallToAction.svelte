@@ -230,21 +230,16 @@
 			font-size: var(--base-fontsiz);
 		}
 	}
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 401px) {
 		.actions {
-			display: block;
+			display: flex;
+			flex-direction: column;
 			margin-left: -2vw;
 			margin-right: -2vw;
 		}
-		/* .action {
-			display: inline-block !important;
+		.action {
+			margin: 0 auto;
 		}
-		.action button {
-			padding: 10px;
-		}
-		.calltoaction {
-			padding: 1vw !important;
-		} */
 	}
 	@media screen and (max-width: 650px) {
 		.call-button span {

@@ -21,7 +21,7 @@
 					Harlan York & Associates are the best immigration lawyers
 					for Green Cards, Deportation, Family Immigration, and
 					Naturalization in New York, New Jersey, and the area. Harlan
-					York has been named Immigration Lawyer of the Year three
+					York has been named Immigration Lawyer of the Year four
 					times by Best Lawyers, the most respected publication in the
 					legal profession.
 				</p>
@@ -138,7 +138,7 @@
 		position: relative;
 		width: 275px;
 		max-width: 80%;
-		height: auto;
+		height: 350px;
 		margin: clamp(10px, 4vw, 30px);
 		transition: all 0.3s ease;
 		transform-origin: center;
@@ -205,6 +205,7 @@
 		}
 		.service {
 			width: 220px;
+			height: auto;
 		}
 	}
 	@media screen and (min-width: 650px) {
