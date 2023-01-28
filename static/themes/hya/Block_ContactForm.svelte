@@ -118,13 +118,6 @@
 		})
 			.then((response) => response.json())
 			.then((response) => normalizeResponse(response))
-			.then((response) => {
-				if (response.isSuccess) {
-					alert('submission success:' + response.isSuccess);
-
-					formElement.reset();
-				}
-			})
 			.catch((error) => {
 				console.log(error);
 			});
