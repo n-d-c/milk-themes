@@ -148,6 +148,13 @@
 		object-fit: cover;
 		background-position: center;
 	}
+
+	@media screen and (max-width: 450px) {
+		img.bg-image {
+			bottom: 0;
+		}
+	}
+
 	@media screen and (min-width: 1400px) {
 		.hero-background {
 			filter: blur(0.5px);
